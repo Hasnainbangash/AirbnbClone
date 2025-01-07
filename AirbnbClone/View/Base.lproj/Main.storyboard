@@ -464,7 +464,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6g-Uv-xrB">
                                 <rect key="frame" x="16" y="75" width="165" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -514,6 +514,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Trips" image="airbnb" selectedImage="airbnbcolor" id="Syf-k7-75b"/>
                     <connections>
+                        <outlet property="helpCentreLabel" destination="4hj-iN-VVL" id="71H-cH-VM1"/>
                         <outlet property="startSearchingButton" destination="mik-RW-B9l" id="rec-Lb-DJT"/>
                     </connections>
                 </viewController>
