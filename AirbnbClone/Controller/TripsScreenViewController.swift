@@ -15,6 +15,10 @@ class TripsScreenViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setupCornerRadius()
+        setupBorderWidth()
+        
     }
     
     func setupCornerRadius() {
