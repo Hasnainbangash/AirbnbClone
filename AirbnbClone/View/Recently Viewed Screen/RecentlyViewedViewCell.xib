@@ -46,7 +46,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M6w-s6-05v">
                                                 <rect key="frame" x="0.0" y="27.999999999999986" width="166" height="21"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 beds . " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-WB-hP8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 beds  . " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-WB-hP8">
                                                         <rect key="frame" x="0.0" y="0.0" width="66" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="66" id="AAp-HD-CMa"/>
@@ -91,6 +91,12 @@
                 <constraint firstItem="oGe-Bw-b25" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="x2p-Zn-BBa"/>
             </constraints>
             <size key="customSize" width="184" height="165"/>
+            <connections>
+                <outlet property="bedroomsLabel" destination="chF-0B-Ddz" id="k82-B7-01F"/>
+                <outlet property="bedsLabel" destination="B3V-WB-hP8" id="qAk-lx-zou"/>
+                <outlet property="imageView" destination="gkf-nP-KgE" id="yJs-HR-vkp"/>
+                <outlet property="placeName" destination="vfA-f2-79O" id="OrC-fA-3nr"/>
+            </connections>
             <point key="canvasLocation" x="105.34351145038167" y="60.211267605633807"/>
         </collectionViewCell>
     </objects>
