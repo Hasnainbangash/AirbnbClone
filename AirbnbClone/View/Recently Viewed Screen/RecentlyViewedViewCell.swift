@@ -17,6 +17,7 @@ class RecentlyViewedViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupCornerRadius()
     }
     
     func setupCornerRadius() {
