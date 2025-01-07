@@ -398,6 +398,39 @@
             </objects>
             <point key="canvasLocation" x="137.31343283582089" y="3.432494279176201"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="kcz-Qc-UCI">
+            <objects>
+                <viewController id="hRM-PG-xE5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CMT-NH-i3Q">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YCe-ru-LB3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1jB-Vf-RQw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YC9-JB-xl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819.4029850746267" y="3.432494279176201"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mpQ-O0-cfu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GlI-UN-0Wu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U3B-IW-9rL">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hRM-PG-xE5" kind="relationship" relationship="viewControllers" id="auA-ym-Gjq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdw-yc-xet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="3.432494279176201"/>
+        </scene>
     </scenes>
     <resources>
         <image name="apple" width="170.66667175292969" height="170.66667175292969"/>
