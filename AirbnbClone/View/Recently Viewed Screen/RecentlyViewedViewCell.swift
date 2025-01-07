@@ -24,9 +24,9 @@ class RecentlyViewedViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = imageView.frame.height / 5
     }
     
-    func configureCell(placeImage: String?, placeName: String, totalBeds: String, totalbedRooms: String) {
+    func configureCell(placeImage: String, placeName: String, totalBeds: String, totalbedRooms: String) {
         
-//        self.imageView.image = UIImage(named: placeName)
+        self.imageView.image = UIImage(named: placeImage)
         self.placeName.text = placeName
         self.bedsLabel.text = totalBeds + " beds ."
         self.bedroomsLabel.text = totalbedRooms + " bedrooms"
