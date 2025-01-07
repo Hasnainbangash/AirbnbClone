@@ -436,7 +436,7 @@
             </objects>
             <point key="canvasLocation" x="1106" y="3"/>
         </scene>
-        <!--Explore-->
+        <!--Wishlists-->
         <scene sceneID="akq-Wd-fkO">
             <objects>
                 <viewController id="55d-57-Y9J" sceneMemberID="viewController">
@@ -446,13 +446,13 @@
                         <viewLayoutGuide key="safeArea" id="0iN-IK-XAK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="lnk-9i-MeX"/>
+                    <tabBarItem key="tabBarItem" title="Wishlists" image="heart" catalog="system" selectedImage="heart" id="lnk-9i-MeX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1A-Fu-9Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="735"/>
         </scene>
-        <!--Explore-->
+        <!--Trips-->
         <scene sceneID="q7B-UG-ZSH">
             <objects>
                 <viewController id="czi-qu-Uci" sceneMemberID="viewController">
@@ -462,13 +462,13 @@
                         <viewLayoutGuide key="safeArea" id="paV-3B-Vkg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Syf-k7-75b"/>
+                    <tabBarItem key="tabBarItem" title="Trips" image="magnifyingglass" catalog="system" selectedImage="zipper.page" id="Syf-k7-75b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nv4-Bo-aAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1500" y="735"/>
         </scene>
-        <!--Explore-->
+        <!--Messages-->
         <scene sceneID="7MT-FM-Qet">
             <objects>
                 <viewController id="8Ob-hQ-thf" sceneMemberID="viewController">
@@ -478,13 +478,13 @@
                         <viewLayoutGuide key="safeArea" id="fBb-6F-lrL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="4lS-h6-vcE"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" selectedImage="message" id="4lS-h6-vcE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZR-6M-hqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2181" y="735"/>
         </scene>
-        <!--Explore-->
+        <!--Profile-->
         <scene sceneID="ou0-7c-3bM">
             <objects>
                 <viewController id="nxF-ms-QkI" sceneMemberID="viewController">
@@ -494,7 +494,7 @@
                         <viewLayoutGuide key="safeArea" id="S7x-LM-eWk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="dUV-J4-g7A"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="dUV-J4-g7A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pi-lQ-srC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -507,8 +507,12 @@
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="facebook" width="694.66668701171875" height="694.66668701171875"/>
         <image name="google" width="200" height="200"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="message" catalog="system" width="128" height="116"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="zipper.page" catalog="system" width="111" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
