@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     func setupBorderWidth() {
-        phoneNumberView.layer.borderWidth = 1.0
+        phoneNumberView.layer.borderWidth = 0.7
         emailButtonView.layer.borderWidth = 1.0
         facebookButtonView.layer.borderWidth = 1.0
         googleButtonView.layer.borderWidth = 1.0
