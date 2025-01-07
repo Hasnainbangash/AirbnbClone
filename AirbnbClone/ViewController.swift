@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     func setupCornerRadius() {
-        phoneNumberView.layer.cornerRadius = phoneNumberView.frame.height / 5
+        phoneNumberView.layer.cornerRadius = phoneNumberView.frame.height / 9
         continueButton.layer.cornerRadius = continueButton.frame.height / 5
         emailButtonView.layer.cornerRadius = emailButtonView.frame.height / 5
         facebookButtonView.layer.cornerRadius = facebookButtonView.frame.height / 5
