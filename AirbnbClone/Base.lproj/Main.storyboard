@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-hK-tew">
-                                <rect key="frame" x="16" y="73" width="370" height="686"/>
+                                <rect key="frame" x="16" y="73" width="370" height="694"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-tW-bdT">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="35"/>
@@ -40,10 +40,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBM-cB-qJm">
-                                        <rect key="frame" x="0.0" y="83" width="370" height="168"/>
+                                        <rect key="frame" x="0.0" y="83" width="370" height="176"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="c6f-3n-PXN">
-                                                <rect key="frame" x="0.0" y="0.0" width="370" height="168"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c6f-3n-PXN">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="176"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fe-Ny-eBi">
                                                         <rect key="frame" x="0.0" y="0.0" width="370" height="77"/>
@@ -98,7 +98,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-7X-khq">
-                                                        <rect key="frame" x="0.0" y="83" width="370" height="2"/>
+                                                        <rect key="frame" x="0.0" y="87" width="370" height="2"/>
                                                         <color key="backgroundColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="370" id="gEO-Ua-HZk"/>
@@ -106,7 +106,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqF-ym-svC">
-                                                        <rect key="frame" x="0.0" y="91" width="370" height="77"/>
+                                                        <rect key="frame" x="0.0" y="99" width="370" height="77"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Zd-IC-1FT">
                                                                 <rect key="frame" x="8" y="8" width="354" height="61"/>
@@ -167,7 +167,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll call or text you to conform your number. Standard message and data rates apply." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFR-zO-nh8">
-                                        <rect key="frame" x="0.0" y="261" width="370" height="52"/>
+                                        <rect key="frame" x="0.0" y="269" width="370" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="370" id="PmF-K5-KC8"/>
                                             <constraint firstAttribute="height" constant="52" id="s23-iF-MYG"/>
@@ -177,7 +177,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZe-3I-dpc">
-                                        <rect key="frame" x="0.0" y="323" width="370" height="58"/>
+                                        <rect key="frame" x="0.0" y="331" width="370" height="58"/>
                                         <color key="backgroundColor" red="0.88627450980392153" green="0.098039215686274508" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="370" id="fjM-F8-mz7"/>
@@ -189,7 +189,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWf-wK-0WV">
-                                        <rect key="frame" x="0.0" y="391" width="370" height="23"/>
+                                        <rect key="frame" x="0.0" y="399" width="370" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixJ-XL-e0B">
                                                 <rect key="frame" x="177" y="1" width="16" height="21"/>
@@ -233,10 +233,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKH-Ff-QM4">
-                                        <rect key="frame" x="0.0" y="424" width="370" height="58"/>
+                                        <rect key="frame" x="0.0" y="432" width="370" height="58"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="Oeh-mp-HTz">
-                                                <rect key="frame" x="8" y="12.666666666666686" width="354" height="33"/>
+                                                <rect key="frame" x="8" y="12.666666666666629" width="354" height="33"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nad-bS-UbS">
                                                         <rect key="frame" x="0.0" y="2.3333333333333339" width="43" height="28.999999999999993"/>
@@ -269,7 +269,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-Ss-Ux7">
-                                        <rect key="frame" x="0.0" y="492" width="370" height="58"/>
+                                        <rect key="frame" x="0.0" y="500" width="370" height="58"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="41a-UD-M9X">
                                                 <rect key="frame" x="8" y="12.666666666666629" width="354" height="33"/>
@@ -304,7 +304,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTb-3P-pBs">
-                                        <rect key="frame" x="0.0" y="560" width="370" height="58"/>
+                                        <rect key="frame" x="0.0" y="568" width="370" height="58"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-7J-vzk">
                                                 <rect key="frame" x="8" y="12.666666666666629" width="354" height="33"/>
@@ -339,7 +339,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgW-PE-cUJ">
-                                        <rect key="frame" x="0.0" y="628" width="370" height="58"/>
+                                        <rect key="frame" x="0.0" y="636" width="370" height="58"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-Jc-ecR">
                                                 <rect key="frame" x="8" y="12.666666666666629" width="354" height="33"/>
@@ -398,7 +398,7 @@
             </objects>
             <point key="canvasLocation" x="137.31343283582089" y="3.432494279176201"/>
         </scene>
-        <!--Item-->
+        <!--Explore-->
         <scene sceneID="kcz-Qc-UCI">
             <objects>
                 <viewController id="hRM-PG-xE5" sceneMemberID="viewController">
@@ -408,11 +408,11 @@
                         <viewLayoutGuide key="safeArea" id="YCe-ru-LB3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1jB-Vf-RQw"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="1jB-Vf-RQw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC9-JB-xl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819.4029850746267" y="3.432494279176201"/>
+            <point key="canvasLocation" x="137" y="735"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mpQ-O0-cfu">
@@ -420,16 +420,85 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GlI-UN-0Wu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U3B-IW-9rL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="hRM-PG-xE5" kind="relationship" relationship="viewControllers" id="auA-ym-Gjq"/>
+                        <segue destination="55d-57-Y9J" kind="relationship" relationship="viewControllers" id="MBV-Br-8Sf"/>
+                        <segue destination="czi-qu-Uci" kind="relationship" relationship="viewControllers" id="Ich-B5-4uj"/>
+                        <segue destination="8Ob-hQ-thf" kind="relationship" relationship="viewControllers" id="iUY-R8-0xv"/>
+                        <segue destination="nxF-ms-QkI" kind="relationship" relationship="viewControllers" id="SeZ-Fe-HRE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdw-yc-xet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="3.432494279176201"/>
+            <point key="canvasLocation" x="1106" y="3"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="akq-Wd-fkO">
+            <objects>
+                <viewController id="55d-57-Y9J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tOY-B6-HmP">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0iN-IK-XAK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="lnk-9i-MeX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1A-Fu-9Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="735"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="q7B-UG-ZSH">
+            <objects>
+                <viewController id="czi-qu-Uci" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ma8-F3-E8V">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="paV-3B-Vkg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Syf-k7-75b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nv4-Bo-aAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="735"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="7MT-FM-Qet">
+            <objects>
+                <viewController id="8Ob-hQ-thf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8kg-fy-Tmp">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fBb-6F-lrL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="4lS-h6-vcE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZR-6M-hqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2181" y="735"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="ou0-7c-3bM">
+            <objects>
+                <viewController id="nxF-ms-QkI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yg-Rj-ZTg">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="S7x-LM-eWk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="dUV-J4-g7A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pi-lQ-srC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863" y="735"/>
         </scene>
     </scenes>
     <resources>
@@ -438,6 +507,7 @@
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="facebook" width="694.66668701171875" height="694.66668701171875"/>
         <image name="google" width="200" height="200"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
