@@ -456,7 +456,7 @@
         <!--Trips-->
         <scene sceneID="q7B-UG-ZSH">
             <objects>
-                <viewController id="czi-qu-Uci" sceneMemberID="viewController">
+                <viewController id="czi-qu-Uci" customClass="TripsScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ma8-F3-E8V">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -513,6 +513,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trips" image="airbnb" selectedImage="airbnbcolor" id="Syf-k7-75b"/>
+                    <connections>
+                        <outlet property="startSearchingButton" destination="mik-RW-B9l" id="rec-Lb-DJT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nv4-Bo-aAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
