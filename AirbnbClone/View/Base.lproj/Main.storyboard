@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -451,12 +452,68 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DFx-bX-D4m">
+                                <rect key="frame" x="16" y="132" width="370" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HsK-Qx-6Nr">
+                                    <size key="itemSize" width="128" height="91"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCollectionReuseableCell" id="4eK-rd-GJ3" customClass="CategoryCell" customModule="AirbnbClone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2C7-IE-cNl">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="yiv-Ku-l8N">
+                                                    <rect key="frame" x="12" y="15.333333333333332" width="104" height="60.666666666666671"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="window.awning" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-fv-LlL">
+                                                            <rect key="frame" x="34.666666666666664" y="0.33333333333333215" width="34.999999999999993" height="35"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="FSH-ZU-Uwp"/>
+                                                                <constraint firstAttribute="height" constant="35.666666666666671" id="OWq-Tg-XJf"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing Views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-0Q-qbu">
+                                                            <rect key="frame" x="0.0" y="42.666666666666664" width="104" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="S5x-Jr-1vz"/>
+                                                                <constraint firstAttribute="width" constant="104" id="oTa-4b-IQW"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yiv-Ku-l8N" firstAttribute="centerX" secondItem="2C7-IE-cNl" secondAttribute="centerX" id="ndW-yr-Hka"/>
+                                                <constraint firstItem="yiv-Ku-l8N" firstAttribute="centerY" secondItem="2C7-IE-cNl" secondAttribute="centerY" id="yXO-o3-cwv"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="91"/>
+                                        <connections>
+                                            <outlet property="categoryImageView" destination="VwG-fv-LlL" id="4fU-8z-2tn"/>
+                                            <outlet property="categoryName" destination="5eX-0Q-qbu" id="L1l-8w-3Td"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YCe-ru-LB3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="1jB-Vf-RQw"/>
                     <connections>
+                        <outlet property="collectionView" destination="DFx-bX-D4m" id="By2-26-ilB"/>
                         <outlet property="settingButtonLabel" destination="3B4-YO-dmH" id="RR0-0X-rvT"/>
                     </connections>
                 </viewController>
@@ -2202,6 +2259,7 @@
         <image name="shield.righthalf.filled" catalog="system" width="121" height="128"/>
         <image name="sunglasses" catalog="system" width="128" height="48"/>
         <image name="translate" catalog="system" width="128" height="88"/>
+        <image name="window.awning" catalog="system" width="128" height="118"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="xmark.shield" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">

@@ -21,4 +21,14 @@ struct K {
         }
     }
     
+    struct ExploreCells {
+        struct Identifiers {
+            static let categoryCellIdentifier = "CategoriesCollectionReuseableCell"
+        }
+        
+        struct NibNames {
+            static let categoryCellNibName = "CategoryCell"
+        }
+    }
+    
 }
