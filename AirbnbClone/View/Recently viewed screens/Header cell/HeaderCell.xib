@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecentlyViewHeaderReuseableCell" id="gTV-IL-0wX" customClass="HeaderCell" customModule="AirbnbClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="127" height="31"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="127" height="31"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xx-9T-1DW">
+                        <rect key="frame" x="0.0" y="0.0" width="127" height="31"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBq-Lo-cu5">
+                                <rect key="frame" x="7.9999999999999964" y="0.0" width="61.666666666666657" height="31"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qBq-Lo-cu5" firstAttribute="top" secondItem="0Xx-9T-1DW" secondAttribute="top" id="Z2g-zg-uhI"/>
+                            <constraint firstItem="qBq-Lo-cu5" firstAttribute="leading" secondItem="0Xx-9T-1DW" secondAttribute="leading" constant="8" id="n31-TD-ADW"/>
+                            <constraint firstAttribute="bottom" secondItem="qBq-Lo-cu5" secondAttribute="bottom" id="xaS-rj-6Oy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0Xx-9T-1DW" secondAttribute="trailing" id="1QE-uj-UdL"/>
+                <constraint firstItem="0Xx-9T-1DW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DWX-qn-SdA"/>
+                <constraint firstAttribute="bottom" secondItem="0Xx-9T-1DW" secondAttribute="bottom" id="fW8-bo-HVc"/>
+                <constraint firstItem="0Xx-9T-1DW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pDN-99-6r6"/>
+            </constraints>
+            <size key="customSize" width="127" height="31"/>
+            <connections>
+                <outlet property="dateLabel" destination="qBq-Lo-cu5" id="QCA-ch-4hb"/>
+            </connections>
+            <point key="canvasLocation" x="-2.2900763358778624" y="-1.7605633802816902"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

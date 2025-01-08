@@ -28,6 +28,12 @@ class RecentlyViewedScreenViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        collectionView.register(
+            UINib(nibName: K.RecentlyViewedCell.NibNames.headerCellNibName, bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: K.RecentlyViewedCell.Identifiers.headerCellIdentifier
+        )
+        
         collectionView.register(UINib(nibName: K.RecentlyViewedCell.NibNames.recentlyViewedCellNibName, bundle: nil), forCellWithReuseIdentifier: K.RecentlyViewedCell.Identifiers.recentlyViewedCellIdentifier)
         
     }
@@ -35,6 +41,10 @@ class RecentlyViewedScreenViewController: UIViewController {
 }
 
 extension RecentlyViewedScreenViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recentlyViewed.count
@@ -53,9 +63,19 @@ extension RecentlyViewedScreenViewController: UICollectionViewDataSource {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: K.RecentlyViewedCell.Identifiers.headerCellIdentifier, for: indexPath) as? HeaderCell
+            
+            return headerView ?? UICollectionViewCell()
+            
+        }
+        fatalError("Unexpected Error")
+    }
+    
 }
 
-extension RecentlyViewedScreenViewController: UICollectionViewDelegate {
+extension RecentlyViewedScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
         let padding: CGFloat = 10
@@ -66,7 +86,11 @@ extension RecentlyViewedScreenViewController: UICollectionViewDelegate {
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+            return CGSize(width: collectionView.frame.width, height: 80)
+        }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 15
     }
 }
