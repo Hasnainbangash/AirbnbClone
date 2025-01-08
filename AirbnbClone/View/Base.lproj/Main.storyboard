@@ -456,15 +456,15 @@
                                 <rect key="frame" x="16" y="132" width="370" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HsK-Qx-6Nr">
-                                    <size key="itemSize" width="128" height="91"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HsK-Qx-6Nr">
+                                    <size key="itemSize" width="100" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCollectionReuseableCell" id="4eK-rd-GJ3" customClass="CategoryCell" customModule="AirbnbClone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="91"/>
+                                        <rect key="frame" x="0.0" y="2" width="128" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2C7-IE-cNl">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="91"/>
@@ -481,13 +481,13 @@
                                                                 <constraint firstAttribute="height" constant="35.666666666666671" id="OWq-Tg-XJf"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing Views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-0Q-qbu">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing Views" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-0Q-qbu">
                                                             <rect key="frame" x="0.0" y="42.666666666666664" width="104" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="S5x-Jr-1vz"/>
                                                                 <constraint firstAttribute="width" constant="104" id="oTa-4b-IQW"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
