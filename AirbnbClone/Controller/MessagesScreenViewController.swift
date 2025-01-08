@@ -19,6 +19,8 @@ class MessagesScreenViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        allButtonLabel.backgroundColor = .black
+        allButtonLabel.tintColor = .white
         setupCornerRadius()
     }
     
@@ -29,5 +31,45 @@ class MessagesScreenViewController: UIViewController {
         travellingButtonLabel.layer.cornerRadius = travellingButtonLabel.frame.height / 2
         supportButtonLabel.layer.cornerRadius = supportButtonLabel.frame.height / 2
     }
+    
+    
+    @IBAction func messagesCategoryButtons(_ sender: UIButton) {
+        
+        resetButtonStyles()
+        
+        guard let buttonTitle = sender.titleLabel?.text else {
+            print(sender.titleLabel?.text ?? "No title")
+            return
+        }
 
+        print(buttonTitle)
+        switch buttonTitle {
+        case "All":
+            allButtonLabel.backgroundColor = .black
+            allButtonLabel.tintColor = .white
+            break
+        case "Travelling":
+            travellingButtonLabel.backgroundColor = .black
+            travellingButtonLabel.tintColor = .white
+            break
+        case "Support":
+            supportButtonLabel.backgroundColor = .black
+            supportButtonLabel.tintColor = .white
+            break
+        default:
+            break
+        }
+    }
+
+    func resetButtonStyles() {
+        allButtonLabel.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        allButtonLabel.tintColor = .black
+        
+        travellingButtonLabel.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        travellingButtonLabel.tintColor = .black
+        
+        supportButtonLabel.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        supportButtonLabel.tintColor = .black
+    }
+    
 }
