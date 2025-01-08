@@ -741,6 +741,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-Ma-hsd">
+                                <rect key="frame" x="16" y="125" width="159" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-X6-Lu4">
                                 <rect key="frame" x="266" y="67" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -792,16 +799,62 @@
                                     <action selector="messagesCategoryButtons:" destination="8Ob-hQ-thf" eventType="touchUpInside" id="ecB-A7-aXG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-Ma-hsd">
-                                <rect key="frame" x="16" y="125" width="159" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qu-Xi-iQP">
+                                <rect key="frame" x="67" y="370.33333333333331" width="268" height="133.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="bfw-kF-Y9e">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="133.66666666666666"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis.message" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-3v-geH">
+                                                <rect key="frame" x="114" y="0.33333333333333215" width="40" height="40"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="NGm-Ny-zAk"/>
+                                                    <constraint firstAttribute="height" constant="40.666666666666671" id="vMI-8x-cdI"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-jb-dBk">
+                                                <rect key="frame" x="0.0" y="58.666666666666686" width="268" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any messages " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRF-Yv-lJi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="268" id="Irx-BN-I6x"/>
+                                                            <constraint firstAttribute="height" constant="21" id="dtO-FI-atl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you receive a new message it will appear here." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CU-rg-nWx">
+                                                        <rect key="frame" x="0.0" y="26" width="268" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="268" id="BuM-xv-KWe"/>
+                                                            <constraint firstAttribute="height" constant="49" id="xc0-d6-3nh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bfw-kF-Y9e" firstAttribute="leading" secondItem="5Qu-Xi-iQP" secondAttribute="leading" id="2Nc-WS-ChK"/>
+                                    <constraint firstAttribute="trailing" secondItem="bfw-kF-Y9e" secondAttribute="trailing" id="HWH-Bl-yR8"/>
+                                    <constraint firstAttribute="bottom" secondItem="bfw-kF-Y9e" secondAttribute="bottom" id="M9g-M3-Ds7"/>
+                                    <constraint firstItem="bfw-kF-Y9e" firstAttribute="top" secondItem="5Qu-Xi-iQP" secondAttribute="top" id="mGX-Wd-7FP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fBb-6F-lrL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Qu-Xi-iQP" firstAttribute="centerX" secondItem="8kg-fy-Tmp" secondAttribute="centerX" id="S5z-lj-QF2"/>
+                            <constraint firstItem="5Qu-Xi-iQP" firstAttribute="centerY" secondItem="8kg-fy-Tmp" secondAttribute="centerY" id="TiQ-bR-XRL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" selectedImage="message" id="4lS-h6-vcE"/>
                     <connections>
@@ -904,7 +957,7 @@
                                                                                             <constraint firstAttribute="height" constant="21" id="i7z-z2-ETZ"/>
                                                                                         </constraints>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                        <nil key="textColor"/>
+                                                                                        <color key="textColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
@@ -961,7 +1014,7 @@
                                                                                                     <constraint firstAttribute="width" constant="200" id="V9E-eT-0Sr"/>
                                                                                                 </constraints>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                                <nil key="textColor"/>
+                                                                                                <color key="textColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
@@ -2076,6 +2129,7 @@
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
         <image name="duffle.bag" catalog="system" width="128" height="87"/>
+        <image name="ellipsis.message" catalog="system" width="128" height="116"/>
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="facebook" width="694.66668701171875" height="694.66668701171875"/>
         <image name="gear" catalog="system" width="128" height="122"/>
