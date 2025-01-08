@@ -752,7 +752,7 @@
         <!--Profile-->
         <scene sceneID="ou0-7c-3bM">
             <objects>
-                <viewController id="nxF-ms-QkI" sceneMemberID="viewController">
+                <viewController id="nxF-ms-QkI" customClass="ProfileScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4yg-Rj-ZTg">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="2609"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1970,6 +1970,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="dUV-J4-g7A"/>
                     <size key="freeformSize" width="402" height="2609"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="ZSM-18-8at" id="91J-H4-f12"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pi-lQ-srC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
