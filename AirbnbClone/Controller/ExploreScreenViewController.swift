@@ -9,6 +9,7 @@ import UIKit
 
 class ExploreScreenViewController: UIViewController {
 
+    @IBOutlet weak var searchBarView: UIView!
     @IBOutlet weak var settingButtonLabel: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -90,15 +91,31 @@ class ExploreScreenViewController: UIViewController {
         
         setupCornerRadius()
         setupBorderWidth()
+        setupBorderShadow()
         
     }
     
     func setupCornerRadius() {
         settingButtonLabel.layer.cornerRadius = settingButtonLabel.frame.height / 2
+        searchBarView.layer.cornerRadius = searchBarView.frame.height / 2
     }
     
     func setupBorderWidth() {
         settingButtonLabel.layer.borderWidth = 0.7
+        searchBarView.layer.borderWidth = 0.4
+        searchBarView.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func setupBorderShadow() {
+        // Shadow settings
+        searchBarView.layer.shadowColor = UIColor.black.cgColor  // Shadow color
+        searchBarView.layer.shadowOpacity = 0.1 // Shadow opacity (0.0 to 1.0)
+        searchBarView.layer.shadowOffset = CGSize(width: 0, height: 3) // Shadow offset (you can change this)
+        searchBarView.layer.shadowRadius = 2 // Shadow blur radius (the higher the more blur)
+        
+        // Make the shadow more "realistic" by enabling shadow path
+        searchBarView.layer.masksToBounds = false // Important for shadow to appear outside bounds
+        searchBarView.layer.shadowPath = UIBezierPath(rect: searchBarView.bounds).cgPath
     }
 
 }
