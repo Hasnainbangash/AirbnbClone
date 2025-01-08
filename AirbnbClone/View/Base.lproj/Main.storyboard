@@ -909,7 +909,7 @@
                                                                                 </subviews>
                                                                             </stackView>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="trailing" secondItem="FOB-qZ-Dic" secondAttribute="trailing" constant="8" id="9c4-SR-Zzv"/>
                                                                             <constraint firstItem="FOB-qZ-Dic" firstAttribute="top" secondItem="lCd-aq-80Q" secondAttribute="top" constant="8" id="A4w-8A-bVw"/>
@@ -1972,11 +1972,13 @@
                     <size key="freeformSize" width="402" height="2609"/>
                     <connections>
                         <outlet property="profileImageView" destination="ZSM-18-8at" id="91J-H4-f12"/>
+                        <outlet property="userNameLabel" destination="5T5-G2-q5r" id="NDC-5C-c7k"/>
+                        <outlet property="yourHomeView" destination="lCd-aq-80Q" id="o9L-xv-3ZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pi-lQ-srC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2583.5820895522388" y="858.81006864988547"/>
+            <point key="canvasLocation" x="2583.5820895522388" y="858.46681922196785"/>
         </scene>
         <!--Wishlists-->
         <scene sceneID="Rb2-lc-8Ou">
