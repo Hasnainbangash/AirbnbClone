@@ -115,7 +115,10 @@ class ExploreScreenViewController: UIViewController {
         
         // Make the shadow more "realistic" by enabling shadow path
         searchBarView.layer.masksToBounds = false // Important for shadow to appear outside bounds
-        searchBarView.layer.shadowPath = UIBezierPath(rect: searchBarView.bounds).cgPath
+        // Create a rounded rectangle path that matches the view's corner radius
+        let shadowPath = UIBezierPath(roundedRect: searchBarView.bounds,
+                                      cornerRadius: searchBarView.layer.cornerRadius)
+        searchBarView.layer.shadowPath = shadowPath.cgPath
     }
 
 }
