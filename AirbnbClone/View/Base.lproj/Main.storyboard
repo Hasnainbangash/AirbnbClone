@@ -754,14 +754,13 @@
             <objects>
                 <viewController id="nxF-ms-QkI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4yg-Rj-ZTg">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="2373"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-at-io4">
-                                <rect key="frame" x="16" y="0.0" width="370" height="2262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-at-io4">
+                                <rect key="frame" x="16" y="62" width="370" height="729"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="box-sb-ud2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="box-sb-ud2">
                                         <rect key="frame" x="8" y="8" width="354" height="2242"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="C42-yf-RWW" userLabel="Profile Stack View">
@@ -819,7 +818,7 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0TC-ZD-LmP">
-                                                                                <rect key="frame" x="86" y="10.666666666666671" width="220" height="52"/>
+                                                                                <rect key="frame" x="86" y="10.666666666666657" width="220" height="52"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammad Hasnain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-G2-q5r">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="210" height="23"/>
@@ -832,7 +831,7 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-eh-CKD">
-                                                                                        <rect key="frame" x="0.0" y="30.999999999999986" width="95" height="21"/>
+                                                                                        <rect key="frame" x="0.0" y="31" width="95" height="21"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="95" id="Nwn-Ao-9zM"/>
                                                                                             <constraint firstAttribute="height" constant="21" id="i7z-z2-ETZ"/>
@@ -1950,19 +1949,30 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="box-sb-ud2" firstAttribute="top" secondItem="3hM-at-io4" secondAttribute="top" constant="8" id="0Gl-jN-AXG"/>
+                                    <constraint firstAttribute="trailing" secondItem="box-sb-ud2" secondAttribute="trailing" constant="8" id="OQq-Hm-pNc"/>
+                                    <constraint firstItem="box-sb-ud2" firstAttribute="leading" secondItem="3hM-at-io4" secondAttribute="leading" constant="8" id="TEk-sv-5o9"/>
+                                    <constraint firstAttribute="bottom" secondItem="box-sb-ud2" secondAttribute="bottom" constant="8" id="dZg-Pf-rYe"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="qRP-G0-zau"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="uX7-q5-mrY"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S7x-LM-eWk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3hM-at-io4" firstAttribute="top" secondItem="S7x-LM-eWk" secondAttribute="top" id="MUB-NV-hxu"/>
+                            <constraint firstItem="S7x-LM-eWk" firstAttribute="trailing" secondItem="3hM-at-io4" secondAttribute="trailing" constant="16" id="ig2-sz-yHY"/>
+                            <constraint firstItem="3hM-at-io4" firstAttribute="bottom" secondItem="S7x-LM-eWk" secondAttribute="bottom" id="lwd-4c-DaE"/>
+                            <constraint firstItem="3hM-at-io4" firstAttribute="leading" secondItem="S7x-LM-eWk" secondAttribute="leading" constant="16" id="xX4-0L-om7"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="dUV-J4-g7A"/>
-                    <size key="freeformSize" width="402" height="2373"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pi-lQ-srC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2583.5820895522388" y="859.83981693363842"/>
+            <point key="canvasLocation" x="2583.5820895522388" y="859.4965675057208"/>
         </scene>
         <!--Wishlists-->
         <scene sceneID="Rb2-lc-8Ou">
