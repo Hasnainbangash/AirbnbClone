@@ -27,6 +27,8 @@ class ExploreSecondScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
     }
     
 
@@ -55,7 +57,7 @@ extension ExploreSecondScreenViewController: UITableViewDataSource {
 extension ExploreSecondScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 500
     }
     
 }
