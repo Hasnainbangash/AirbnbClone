@@ -17,6 +17,7 @@ class LocationCell: UITableViewCell {
     @IBOutlet weak var rating: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
 
@@ -26,10 +27,16 @@ class LocationCell: UITableViewCell {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        
         collectionView.isPagingEnabled = true
         
+        // Setup page control
+        pageControl.numberOfPages = images.count
+        pageControl.currentPage = 0
+        pageControl.hidesForSinglePage = true
+        
         collectionView.register(UINib(nibName: K.ExploreCells.NibNames.locationPictureViewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreCells.Identifiers.locationPictureViewCellIdentifier)
+        
+        setupPageControl()
         
     }
 
@@ -50,6 +57,25 @@ class LocationCell: UITableViewCell {
         
     }
     
+}
+
+extension LocationCell: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let page = round(scrollView.contentOffset.x / scrollView.bounds.width)
+        pageControl.currentPage = Int(page)
+    }
+}
+
+extension LocationCell {
+    func setupPageControl() {
+        pageControl.addTarget(self, action: #selector(pageControlValueChanged(_:)), for: .valueChanged)
+    }
+    
+    @objc private func pageControlValueChanged(_ sender: UIPageControl) {
+        let page = CGFloat(sender.currentPage)
+        let offset = page * collectionView.bounds.width
+        collectionView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+    }
 }
 
 extension LocationCell: UICollectionViewDataSource {
