@@ -27,6 +27,8 @@ class LocationCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        collectionView.isPagingEnabled = true
+        
         collectionView.register(UINib(nibName: K.ExploreCells.NibNames.locationPictureViewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreCells.Identifiers.locationPictureViewCellIdentifier)
         
     }
@@ -82,7 +84,7 @@ extension LocationCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 2
+        return 0
     }
     
 }
