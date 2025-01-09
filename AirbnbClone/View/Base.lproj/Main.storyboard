@@ -405,11 +405,11 @@
             <objects>
                 <viewController storyboardIdentifier="ExploreSecondScreenViewController" id="9EH-vp-AqF" customClass="ExploreSecondScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggf-ea-g1m">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-Sn-gSw">
-                                <rect key="frame" x="0.0" y="62" width="402" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -576,6 +576,7 @@
                         <outlet property="collectionView" destination="DFx-bX-D4m" id="By2-26-ilB"/>
                         <outlet property="searchBarView" destination="jZY-8V-lTw" id="q8x-JE-KyO"/>
                         <outlet property="settingButtonLabel" destination="3B4-YO-dmH" id="RR0-0X-rvT"/>
+                        <segue destination="9EH-vp-AqF" kind="presentation" identifier="ExploreSecondScreenViewController" id="yLi-oN-Q3C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC9-JB-xl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

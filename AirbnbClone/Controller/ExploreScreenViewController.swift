@@ -102,14 +102,14 @@ class ExploreScreenViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         // Instantiate from storyboard (make sure to set the Storyboard ID first)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "ExploreSecondScreenViewController") as? ExploreSecondScreenViewController {
+        if let vc = storyboard.instantiateViewController(withIdentifier: K.ExploreCells.Segue.ExploreScreenToBottomSheetSegue) as? ExploreSecondScreenViewController {
             let navVC = UINavigationController(rootViewController: vc)
             
             if let sheet = navVC.sheetPresentationController {
                 navVC.isModalInPresentation = true
                 sheet.detents = [
                     .custom(resolver: { context in
-                        0.1 * context.maximumDetentValue
+                        0.02 * context.maximumDetentValue
                     }),
                     .large()
                 ]
