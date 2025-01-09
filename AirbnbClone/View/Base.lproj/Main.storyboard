@@ -3,6 +3,7 @@
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -407,11 +408,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="sqF-hI-LOO">
-                                <rect key="frame" x="16" y="62" width="370" height="165"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="sqF-hI-LOO">
+                                <rect key="frame" x="0.0" y="62" width="402" height="729"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2wC-gS-CEV">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="52"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZY-8V-lTw">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="52"/>
@@ -448,7 +449,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-YO-dmH">
-                                                <rect key="frame" x="319" y="0.0" width="51" height="52"/>
+                                                <rect key="frame" x="319" y="0.0" width="83" height="52"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal" catalog="system"/>
@@ -456,8 +457,11 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DFx-bX-D4m">
-                                        <rect key="frame" x="0.0" y="70" width="370" height="95"/>
+                                        <rect key="frame" x="0.0" y="65" width="402" height="95"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="eFl-gO-JOu"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HsK-Qx-6Nr">
                                             <size key="itemSize" width="100" height="80"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -509,16 +513,20 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kq-VR-lXn">
+                                        <rect key="frame" x="0.0" y="173" width="402" height="556"/>
+                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                    </mapView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YCe-ru-LB3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sqF-hI-LOO" firstAttribute="leading" secondItem="YCe-ru-LB3" secondAttribute="leading" constant="16" id="CgN-Ci-o3z"/>
-                            <constraint firstItem="YCe-ru-LB3" firstAttribute="trailing" secondItem="sqF-hI-LOO" secondAttribute="trailing" constant="16" id="pqQ-Jm-ALS"/>
-                            <constraint firstItem="sqF-hI-LOO" firstAttribute="top" secondItem="YCe-ru-LB3" secondAttribute="top" id="tqs-fj-Q1H"/>
-                            <constraint firstItem="YCe-ru-LB3" firstAttribute="bottom" secondItem="sqF-hI-LOO" secondAttribute="bottom" constant="564" id="xlh-6r-0v7"/>
+                            <constraint firstItem="YCe-ru-LB3" firstAttribute="trailing" secondItem="sqF-hI-LOO" secondAttribute="trailing" id="EsF-LK-H0v"/>
+                            <constraint firstItem="sqF-hI-LOO" firstAttribute="top" secondItem="YCe-ru-LB3" secondAttribute="top" id="F0S-9n-t77"/>
+                            <constraint firstItem="sqF-hI-LOO" firstAttribute="leading" secondItem="YCe-ru-LB3" secondAttribute="leading" id="Opo-vF-4op"/>
+                            <constraint firstItem="sqF-hI-LOO" firstAttribute="bottom" secondItem="YCe-ru-LB3" secondAttribute="bottom" id="cdH-VE-aN8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="1jB-Vf-RQw"/>
