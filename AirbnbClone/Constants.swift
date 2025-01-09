@@ -24,10 +24,12 @@ struct K {
     struct ExploreCells {
         struct Identifiers {
             static let categoryCellIdentifier = "CategoriesCollectionReuseableCell"
+            static let locationCellIdentifier = "LocationReuseableCell"
         }
         
         struct NibNames {
             static let categoryCellNibName = "CategoryCell"
+            static let locationCellNibName = "LocationCell"
         }
     }
     

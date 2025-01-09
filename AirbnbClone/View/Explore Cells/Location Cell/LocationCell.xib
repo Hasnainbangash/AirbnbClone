@@ -9,17 +9,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="439" id="KGk-i7-Jjw" customClass="LocationCell" customModule="AirbnbClone" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationReuseableCell" rowHeight="439" id="KGk-i7-Jjw" customClass="LocationCell" customModule="AirbnbClone" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="325" height="439"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="325" height="439"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-Xe-aFa">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHI-Rg-NHY">
                         <rect key="frame" x="0.0" y="0.0" width="325" height="295"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-Xe-aFa">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7BR-8v-A38">
+                                <rect key="frame" x="126" y="261" width="73" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="contentLayoutGuide" id="Zty-tk-Sqd"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="pOY-2K-zon"/>
+                    </scrollView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barrio Mellos, Brazil " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-yw-uvN">
                         <rect key="frame" x="0.0" y="303" width="155" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,6 +83,16 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="availableDates" destination="JEb-xY-ntq" id="5D4-UR-CX4"/>
+                <outlet property="dayNightLabel" destination="OQD-VC-cQa" id="VFh-m8-wKz"/>
+                <outlet property="myPageControl" destination="7BR-8v-A38" id="zWc-zE-H8Z"/>
+                <outlet property="myScrollView" destination="lHI-Rg-NHY" id="MJA-Jf-Phn"/>
+                <outlet property="placeHostedName" destination="D6I-Jh-tTN" id="9cM-Ow-Zqe"/>
+                <outlet property="placeName" destination="AGz-yw-uvN" id="dTN-57-Yhb"/>
+                <outlet property="placePrice" destination="Xq0-6w-OdD" id="L7X-aJ-rr3"/>
+                <outlet property="rating" destination="aMZ-cr-0xO" id="hGb-9h-eJN"/>
+            </connections>
             <point key="canvasLocation" x="142.74809160305344" y="158.09859154929578"/>
         </tableViewCell>
     </objects>

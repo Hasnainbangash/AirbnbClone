@@ -405,15 +405,30 @@
             <objects>
                 <viewController storyboardIdentifier="ExploreSecondScreenViewController" id="9EH-vp-AqF" customClass="ExploreSecondScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggf-ea-g1m">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-Sn-gSw">
+                                <rect key="frame" x="0.0" y="62" width="402" height="812"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AL0-dJ-MYd"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcg-Sn-gSw" firstAttribute="trailing" secondItem="AL0-dJ-MYd" secondAttribute="trailing" id="3Yj-6F-kID"/>
+                            <constraint firstAttribute="bottom" secondItem="fcg-Sn-gSw" secondAttribute="bottom" id="Std-uE-s9b"/>
+                            <constraint firstItem="fcg-Sn-gSw" firstAttribute="leading" secondItem="AL0-dJ-MYd" secondAttribute="leading" id="gUZ-bb-jG8"/>
+                            <constraint firstItem="fcg-Sn-gSw" firstAttribute="top" secondItem="AL0-dJ-MYd" secondAttribute="top" id="ytv-al-bwC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="fcg-Sn-gSw" id="hUv-UA-LCF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM5-1w-Q05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1263" y="735"/>
+            <point key="canvasLocation" x="-1264.1791044776119" y="734.55377574370709"/>
         </scene>
         <!--Explore-->
         <scene sceneID="kcz-Qc-UCI">
@@ -561,7 +576,6 @@
                         <outlet property="collectionView" destination="DFx-bX-D4m" id="By2-26-ilB"/>
                         <outlet property="searchBarView" destination="jZY-8V-lTw" id="q8x-JE-KyO"/>
                         <outlet property="settingButtonLabel" destination="3B4-YO-dmH" id="RR0-0X-rvT"/>
-                        <segue destination="9EH-vp-AqF" kind="presentation" identifier="ExploreScreenToBottomSheet" id="ckP-IR-rwH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC9-JB-xl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2311,9 +2325,6 @@
         <image name="xmark.shield" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
