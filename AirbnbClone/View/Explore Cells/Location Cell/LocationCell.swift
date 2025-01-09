@@ -9,9 +9,6 @@ import UIKit
 
 class LocationCell: UITableViewCell {
     
-    @IBOutlet weak var myScrollView: UIScrollView!
-    @IBOutlet weak var myPageControl: UIPageControl!
-    
     @IBOutlet weak var placeName: UILabel!
     @IBOutlet weak var availableDates: UILabel!
     @IBOutlet weak var placeHostedName: UILabel!
@@ -19,28 +16,18 @@ class LocationCell: UITableViewCell {
     @IBOutlet weak var dayNightLabel: UILabel!
     @IBOutlet weak var rating: UILabel!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        // Number of pages in the page control is equal to images array
-        myPageControl.numberOfPages = images.count
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
-        for index in 0..<images.count {
-            frame.origin.x = myScrollView.frame.size.width * CGFloat(index)
-            frame.size = myScrollView.frame.size
-            let imgView = UIImageView(frame: frame)
-            imgView.image = UIImage (named: images[index])
-            imgView.contentMode = .scaleAspectFill
-//            imgView.clipsToBounds = true
-            self.myScrollView.addSubview(imgView)
-            myScrollView.contentSize = CGSize(width: (myScrollView.frame.size.width *
-            CGFloat(images.count)), height: myScrollView.frame.size.height)
-        }
-        
-        myScrollView.delegate = self
+        collectionView.register(UINib(nibName: K.ExploreCells.NibNames.locationPictureViewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreCells.Identifiers.locationPictureViewCellIdentifier)
         
     }
 
@@ -63,11 +50,39 @@ class LocationCell: UITableViewCell {
     
 }
 
-extension LocationCell: UIScrollViewDelegate {
+extension LocationCell: UICollectionViewDataSource {
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageNumber = myScrollView.contentOffset.x/myScrollView.frame.size.width
-        myPageControl.currentPage = Int(pageNumber)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let image = images[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ExploreCells.Identifiers.locationPictureViewCellIdentifier, for: indexPath) as? LocationPictureViewCell
+        
+        cell?.configureData(imageName: image)
+        
+        return cell ?? UICollectionViewCell()
+    }
+    
+}
+
+extension LocationCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 1 : 1
+        let padding: CGFloat = 10
+        let totalPadding = padding * (itemPerRow - 1)
+        let availableWidth = collectionView.frame.width - totalPadding
+        let itemWidth = availableWidth / itemPerRow
+
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
     }
     
 }

@@ -25,11 +25,13 @@ struct K {
         struct Identifiers {
             static let categoryCellIdentifier = "CategoriesCollectionReuseableCell"
             static let locationCellIdentifier = "LocationReuseableCell"
+            static let locationPictureViewCellIdentifier = "LocationPictureViewReuseableCell"
         }
         
         struct NibNames {
             static let categoryCellNibName = "CategoryCell"
             static let locationCellNibName = "LocationCell"
+            static let locationPictureViewCellNibName = "LocationPictureViewCell"
         }
     }
     
