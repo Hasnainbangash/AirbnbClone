@@ -13,10 +13,10 @@ class ExploreSecondScreenViewController: UIViewController {
     
     var ExplorelocationsData: [ExploreLocationData] = [
         
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "232", dateNightTime: "night", rating: "4.98")
+        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98")
         
     ]
     
@@ -57,7 +57,7 @@ extension ExploreSecondScreenViewController: UITableViewDataSource {
 extension ExploreSecondScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+        return 400
     }
     
 }

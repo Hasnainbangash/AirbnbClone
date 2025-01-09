@@ -33,6 +33,8 @@ class LocationCell: UITableViewCell {
             frame.size = myScrollView.frame.size
             let imgView = UIImageView(frame: frame)
             imgView.image = UIImage (named: images[index])
+            imgView.contentMode = .scaleAspectFill
+//            imgView.clipsToBounds = true
             self.myScrollView.addSubview(imgView)
             myScrollView.contentSize = CGSize(width: (myScrollView.frame.size.width *
             CGFloat(images.count)), height: myScrollView.frame.size.height)
@@ -65,7 +67,7 @@ extension LocationCell: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = myScrollView.contentOffset.x/myScrollView.frame.size.width
-        myPageControl.currentPage = Int (pageNumber)
+        myPageControl.currentPage = Int(pageNumber)
     }
     
 }
