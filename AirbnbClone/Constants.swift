@@ -33,6 +33,10 @@ struct K {
             static let locationCellNibName = "LocationCell"
             static let locationPictureViewCellNibName = "LocationPictureViewCell"
         }
+        
+        struct Segue {
+            static let ExploreScreenToBottomSheetSegue = "ExploreSecondScreenViewController"
+        }
     }
     
 }
