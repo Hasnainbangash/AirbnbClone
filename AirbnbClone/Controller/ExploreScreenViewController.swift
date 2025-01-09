@@ -103,31 +103,48 @@ class ExploreScreenViewController: UIViewController {
         
         // Instantiate from storyboard (make sure to set the Storyboard ID first)
         if let vc = storyboard.instantiateViewController(withIdentifier: K.ExploreCells.Segue.ExploreScreenToBottomSheetSegue) as? ExploreSecondScreenViewController {
+            
+            // Initialize Navigation Controller with the second screen
             let navVC = UINavigationController(rootViewController: vc)
             
+            // Make sure the navigation bar is hidden when presenting the bottom sheet
+            navVC.setNavigationBarHidden(true, animated: false)
+            
+            // Configure the bottom sheet presentation controller
             if let sheet = navVC.sheetPresentationController {
+                
                 navVC.isModalInPresentation = true
+                
+                // Configure the detents (sizes) of the bottom sheet
                 sheet.detents = [
                     .custom(resolver: { context in
-                        0.02 * context.maximumDetentValue
+                        0.02 * context.maximumDetentValue // Small detent height, you can tweak this value
                     }),
-                    .large()
+                    .large() // This allows the large detent as an option
                 ]
+                
+                // Allow the grabber to be visible
                 sheet.prefersGrabberVisible = true
+                
+                // Add rounded corners to the bottom sheet
                 sheet.preferredCornerRadius = 40
                 
-                // Add these configurations
+                // Additional configuration for behavior
                 sheet.prefersEdgeAttachedInCompactHeight = true
                 sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
                 sheet.prefersScrollingExpandsWhenScrolledToEdge = false
                 
-                // This prevents dimming of the background
+                // Ensure background does not dim when scrolling (if needed)
                 sheet.largestUndimmedDetentIdentifier = .large
-                
             }
             
+            // Present the navigation controller with the bottom sheet
             present(navVC, animated: true)
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     func setupCornerRadius() {
