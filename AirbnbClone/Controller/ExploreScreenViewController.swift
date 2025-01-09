@@ -95,6 +95,41 @@ class ExploreScreenViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Get reference to storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // Instantiate from storyboard (make sure to set the Storyboard ID first)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ExploreSecondScreenViewController") as? ExploreSecondScreenViewController {
+            let navVC = UINavigationController(rootViewController: vc)
+            
+            if let sheet = navVC.sheetPresentationController {
+                navVC.isModalInPresentation = true
+                sheet.detents = [
+                    .custom(resolver: { context in
+                        0.1 * context.maximumDetentValue
+                    }),
+                    .large()
+                ]
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = 40
+                
+                // Add these configurations
+                sheet.prefersEdgeAttachedInCompactHeight = true
+                sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                
+                // This prevents dimming of the background
+                sheet.largestUndimmedDetentIdentifier = .large
+                
+            }
+            
+            present(navVC, animated: true)
+        }
+    }
+
     func setupCornerRadius() {
         settingButtonLabel.layer.cornerRadius = settingButtonLabel.frame.height / 2
         searchBarView.layer.cornerRadius = searchBarView.frame.height / 2
@@ -120,7 +155,26 @@ class ExploreScreenViewController: UIViewController {
                                       cornerRadius: searchBarView.layer.cornerRadius)
         searchBarView.layer.shadowPath = shadowPath.cgPath
     }
-
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ExploreScreenToBottomSheet" {
+//            if let destinationVC = segue.destination as? ExploreSecondScreenViewController {
+//                
+//                destinationVC.isModalInPresentation = true
+//                
+//                // Configure the sheet presentation controller
+//                if let sheet = destinationVC.sheetPresentationController {
+//                    sheet.preferredCornerRadius = 40
+//                    sheet.detents = [
+//                        .custom(resolver: { context in
+//                            0.1 * context.maximumDetentValue
+//                        }),
+//                        .large()
+//                    ]
+//                }
+//            }
+//        }
+//    }
 }
 
 extension ExploreScreenViewController: UICollectionViewDataSource {

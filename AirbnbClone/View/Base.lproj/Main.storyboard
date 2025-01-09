@@ -400,6 +400,21 @@
             </objects>
             <point key="canvasLocation" x="137.31343283582089" y="3.432494279176201"/>
         </scene>
+        <!--Explore Second Screen View Controller-->
+        <scene sceneID="fxj-wk-zOu">
+            <objects>
+                <viewController storyboardIdentifier="ExploreSecondScreenViewController" id="9EH-vp-AqF" customClass="ExploreSecondScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggf-ea-g1m">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AL0-dJ-MYd"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sM5-1w-Q05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1263" y="735"/>
+        </scene>
         <!--Explore-->
         <scene sceneID="kcz-Qc-UCI">
             <objects>
@@ -546,6 +561,7 @@
                         <outlet property="collectionView" destination="DFx-bX-D4m" id="By2-26-ilB"/>
                         <outlet property="searchBarView" destination="jZY-8V-lTw" id="q8x-JE-KyO"/>
                         <outlet property="settingButtonLabel" destination="3B4-YO-dmH" id="RR0-0X-rvT"/>
+                        <segue destination="9EH-vp-AqF" kind="presentation" identifier="ExploreScreenToBottomSheet" id="ckP-IR-rwH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YC9-JB-xl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2295,6 +2311,9 @@
         <image name="xmark.shield" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
