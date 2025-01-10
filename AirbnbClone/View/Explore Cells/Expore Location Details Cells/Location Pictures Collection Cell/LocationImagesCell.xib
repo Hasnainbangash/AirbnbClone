@@ -42,6 +42,9 @@
                 <constraint firstItem="vQi-D4-CB0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IpR-bt-cxn"/>
             </constraints>
             <size key="customSize" width="158" height="125"/>
+            <connections>
+                <outlet property="locationImageView" destination="zUx-lu-9nZ" id="cFF-lh-tKE"/>
+            </connections>
             <point key="canvasLocation" x="19.847328244274809" y="46.126760563380287"/>
         </collectionViewCell>
     </objects>

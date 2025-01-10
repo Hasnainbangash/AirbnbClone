@@ -9,9 +9,15 @@ import UIKit
 
 class LocationImagesCell: UICollectionViewCell {
 
+    @IBOutlet weak var locationImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func configureData(imageName: String) {
+        self.locationImageView.image = UIImage(named: imageName)
+    }
+    
 }
