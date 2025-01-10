@@ -2273,11 +2273,11 @@
             <objects>
                 <viewController id="s27-dg-Ftb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="to8-cd-S1D">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="8061"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="4718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-iA-CAf">
-                                <rect key="frame" x="16" y="62" width="370" height="7965"/>
+                                <rect key="frame" x="16" y="62" width="370" height="4495"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-wr-Td8">
@@ -3049,11 +3049,11 @@
                         <viewLayoutGuide key="safeArea" id="16N-ov-eay"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <size key="freeformSize" width="402" height="8061"/>
+                    <size key="freeformSize" width="402" height="4718"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFg-Dy-UYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841.7910447761192" y="2347.4828375286038"/>
+            <point key="canvasLocation" x="3841.7910447761192" y="2346.7963386727688"/>
         </scene>
         <!--Wishlists-->
         <scene sceneID="Rb2-lc-8Ou">
