@@ -42,6 +42,7 @@ class ExploreLocationDetailViewController: UIViewController {
         
         imagesCollectionView.dataSource = self
         imagesCollectionView.delegate = self
+        imagesCollectionView.isPagingEnabled = true
         
         bedroomCollectionView.dataSource = self
         bedroomCollectionView.delegate = self
@@ -142,10 +143,26 @@ extension ExploreLocationDetailViewController: UICollectionViewDelegateFlowLayou
 
             return CGSize(width: itemWidth, height: itemWidth)
             
-//        case bedroomCollectionView:
-//            return roomsData.count
-//        case reviewCollectionView:
-//            return 0
+        case bedroomCollectionView:
+            
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 2 : 2
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
+
+            return CGSize(width: itemWidth, height: itemWidth)
+            
+            
+        case reviewCollectionView:
+            
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 2 : 2
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
+
+            return CGSize(width: itemWidth, height: itemWidth)
             
         default:
             return CGSize()
