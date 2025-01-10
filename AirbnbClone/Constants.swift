@@ -39,4 +39,20 @@ struct K {
         }
     }
     
+    struct ExploreLocationDetailCells {
+        
+        struct Identifiers {
+            static let bedroomCellIdentifier = "BedroomCollectionReuseableCell"
+            static let locationImagesCellIdentifier = "LocationImagesCollectionReuseableCell"
+            static let reviewCellIdentifier = "ReviewCellCollectionReuseableCell"
+        }
+        
+        struct NibNames {
+            static let bedroomCellNibName = "BedroomsCell"
+            static let locationImagesCellNibName = "LocationImagesCell"
+            static let reviewCellNibName = "ReviewCell"
+        }
+        
+    }
+    
 }

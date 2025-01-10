@@ -62,7 +62,7 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
 //        case reviewCollectionView:
 //            return 0
         default:
-            return 0
+            return UICollectionViewCell()
         }
         
     }
