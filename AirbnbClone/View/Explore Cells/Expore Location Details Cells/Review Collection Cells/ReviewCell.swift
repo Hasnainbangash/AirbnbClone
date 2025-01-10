@@ -24,11 +24,11 @@ class ReviewCell: UICollectionViewCell {
     func configureData(noOfMonthsAgo: String, reviewDescription: String,
                        reviewerImage: String, reviewerName: String, reviewerTimeOnAirbnb: String) {
         
-        self.noOfMonthsAgo.text = noOfMonthsAgo
+        self.noOfMonthsAgo.text = noOfMonthsAgo + "months ago"
         self.reviewDescription.text = reviewDescription
         self.reviewerImage.image = UIImage(named: reviewerImage)
         self.reviewerName.text = reviewerName
-        self.reviewerTimeoOnAirbnb.text = reviewerTimeOnAirbnb
+        self.reviewerTimeoOnAirbnb.text = reviewerTimeOnAirbnb + "years on Airbnb"
         
         
     }

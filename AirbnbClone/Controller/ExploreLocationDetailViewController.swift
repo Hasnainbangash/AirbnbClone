@@ -15,6 +15,22 @@ class ExploreLocationDetailViewController: UIViewController {
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
+    var roomsData: [RoomData] = [
+        RoomData(noOfBedrooms: "1", bedSize: "1"),
+        RoomData(noOfBedrooms: "3", bedSize: "1"),
+        RoomData(noOfBedrooms: "2", bedSize: "1"),
+        RoomData(noOfBedrooms: "4", bedSize: "1")
+    ]
+    
+    var locationReviewData: [LocationReviewData] = [
+        
+        LocationReviewData(noOfMonthsAgo: "3", reviewDescription: "Aamir sir is a great host and very welcoming. We stayed at My Kashmir Home on our way back from an exhausting 7 day trek...", reviewerImage: "hotelroomimage3", reviewerName: "Peeyush", reviewerTimeoOnAirbnb: "8"),
+        LocationReviewData(noOfMonthsAgo: "3", reviewDescription: "Aamir sir is a great host and very welcoming. We stayed at My Kashmir Home on our way back from an exhausting 7 day trek...", reviewerImage: "hotelroomimage2", reviewerName: "Peeyush", reviewerTimeoOnAirbnb: "8"),
+        LocationReviewData(noOfMonthsAgo: "3", reviewDescription: "Aamir sir is a great host and very welcoming. We stayed at My Kashmir Home on our way back from an exhausting 7 day trek...", reviewerImage: "hotelroomimage4", reviewerName: "Peeyush", reviewerTimeoOnAirbnb: "8"),
+        LocationReviewData(noOfMonthsAgo: "3", reviewDescription: "Aamir sir is a great host and very welcoming. We stayed at My Kashmir Home on our way back from an exhausting 7 day trek...", reviewerImage: "hotelroomimage1", reviewerName: "Peeyush", reviewerTimeoOnAirbnb: "8")
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +56,7 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
         case imagesCollectionView:
             return images.count
         case bedroomCollectionView:
-            return 0
+            return roomsData.count
         case reviewCollectionView:
             return 0
         default:
@@ -53,14 +69,34 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
         switch collectionView {
         case imagesCollectionView:
             
-//            let cell = imagesCollectionView.de
+            let image = images[indexPath.row]
+            
+            let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.locationImagesCellIdentifier, for: indexPath) as? LocationImagesCell
+            
+            cell?.configureData(imageName: image)
+            
+            return cell ?? UICollectionViewCell()
+            
+        case bedroomCollectionView:
+            
+            let room = roomsData[indexPath.row]
+            
+            let cell = bedroomCollectionView.dequeueReusableCell(withReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.bedroomCellIdentifier, for: indexPath) as? BedroomsCell
+            cell?.configureData(bedroomNo: room.noOfBedrooms, bedSize: room.bedSize)
+            return cell ?? UICollectionViewCell()
             
             
+        case reviewCollectionView:
             
-//        case bedroomCollectionView:
-//            return 0
-//        case reviewCollectionView:
-//            return 0
+            let locationReview = locationReviewData[indexPath.row]
+            
+            let cell = reviewCollectionView.dequeueReusableCell(withReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.reviewCellIdentifier, for: indexPath) as? ReviewCell
+            
+            cell?.configureData(noOfMonthsAgo: locationReview.noOfMonthsAgo, reviewDescription: locationReview.reviewDescription, reviewerImage: locationReview.reviewerImage, reviewerName: locationReview.reviewerName, reviewerTimeOnAirbnb: locationReview.reviewerTimeoOnAirbnb)
+            
+            return cell ?? UICollectionViewCell()
+            
+            
         default:
             return UICollectionViewCell()
         }
@@ -71,5 +107,19 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
 }
 
 extension ExploreLocationDetailViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 6 : 4
+        let padding: CGFloat = 10
+        let totalPadding = padding * (itemPerRow - 1)
+        let availableWidth = collectionView.frame.width - totalPadding
+        let itemWidth = availableWidth / itemPerRow
+
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
     
 }

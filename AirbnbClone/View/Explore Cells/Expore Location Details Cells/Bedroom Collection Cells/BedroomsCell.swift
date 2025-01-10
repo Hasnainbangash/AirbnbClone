@@ -21,7 +21,7 @@ class BedroomsCell: UICollectionViewCell {
         
         self.bedroomNo.text = "Bedroom \(bedroomNo)"
         
-        self.bedSize.text = "\(bedSize) bed"
+        self.bedSize.text = "\(bedSize) king bed"
         
     }
 
