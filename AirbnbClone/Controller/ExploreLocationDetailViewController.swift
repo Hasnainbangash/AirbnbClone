@@ -9,6 +9,10 @@ import UIKit
 
 class ExploreLocationDetailViewController: UIViewController {
 
+    @IBOutlet weak var hosterImageView1: UIImageView!
+    @IBOutlet weak var hosterImageView2: UIImageView!
+    @IBOutlet weak var meetYourHostView: UIView!
+    
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var bedroomCollectionView: UICollectionView!
     @IBOutlet weak var reviewCollectionView: UICollectionView!
@@ -52,6 +56,16 @@ class ExploreLocationDetailViewController: UIViewController {
         reviewCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.reviewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.reviewCellIdentifier)
         
         
+        setupCornerRadius()
+        
+    }
+    
+    func setupCornerRadius() {
+        hosterImageView1.layer.cornerRadius = hosterImageView1.frame.height / 2
+        
+        hosterImageView2.layer.cornerRadius = hosterImageView2.frame.height / 2
+        
+        meetYourHostView.layer.cornerRadius = meetYourHostView.frame.height / 2
     }
 
 }

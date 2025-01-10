@@ -3709,7 +3709,10 @@
                     <size key="freeformSize" width="402" height="4718"/>
                     <connections>
                         <outlet property="bedroomCollectionView" destination="r0v-ZL-AnK" id="CGL-aq-2gR"/>
+                        <outlet property="hosterImageView1" destination="H62-XV-0bu" id="jkm-eT-wz1"/>
+                        <outlet property="hosterImageView2" destination="W9b-gV-vQA" id="usK-Xi-dKk"/>
                         <outlet property="imagesCollectionView" destination="qvM-wr-Td8" id="qcW-an-9P9"/>
+                        <outlet property="meetYourHostView" destination="NNZ-jE-RhL" id="GaM-5P-C05"/>
                         <outlet property="reviewCollectionView" destination="Nd0-Dp-Wwt" id="XU1-uM-OB6"/>
                     </connections>
                 </viewController>
