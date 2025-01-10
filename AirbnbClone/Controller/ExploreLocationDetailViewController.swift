@@ -79,7 +79,7 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
         case bedroomCollectionView:
             return roomsData.count
         case reviewCollectionView:
-            return 0
+            return locationReviewData.count
         default:
             return 0
         }
