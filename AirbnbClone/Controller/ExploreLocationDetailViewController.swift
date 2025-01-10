@@ -45,6 +45,13 @@ class ExploreLocationDetailViewController: UIViewController {
         reviewCollectionView.dataSource = self
         reviewCollectionView.delegate = self
         
+        imagesCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.locationImagesCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.locationImagesCellIdentifier)
+        
+        bedroomCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.bedroomCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.bedroomCellIdentifier)
+        
+        reviewCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.reviewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.reviewCellIdentifier)
+        
+        
     }
 
 }
@@ -109,13 +116,27 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
 extension ExploreLocationDetailViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 6 : 4
-        let padding: CGFloat = 10
-        let totalPadding = padding * (itemPerRow - 1)
-        let availableWidth = collectionView.frame.width - totalPadding
-        let itemWidth = availableWidth / itemPerRow
+        
+        switch collectionView {
+        case imagesCollectionView:
+            
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 1 : 1
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
 
-        return CGSize(width: itemWidth, height: itemWidth)
+            return CGSize(width: itemWidth, height: itemWidth)
+            
+//        case bedroomCollectionView:
+//            return roomsData.count
+//        case reviewCollectionView:
+//            return 0
+            
+        default:
+            return CGSize()
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
