@@ -171,7 +171,16 @@ extension ExploreLocationDetailViewController: UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        switch collectionView {
+        case imagesCollectionView:
+            return 0
+        case bedroomCollectionView:
+            return 15
+//        case reviewCollectionView:
+//            return locationReviewData.count
+        default:
+            return 0
+        }
     }
     
 }
