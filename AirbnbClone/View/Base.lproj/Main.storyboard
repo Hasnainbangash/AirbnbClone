@@ -2273,11 +2273,11 @@
             <objects>
                 <viewController id="RfD-LI-hWv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbd-SF-mQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="1275"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-Uo-Jnf">
-                                <rect key="frame" x="16" y="62" width="370" height="812"/>
+                                <rect key="frame" x="16" y="62" width="370" height="1179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-63-q6U">
@@ -2362,6 +2362,27 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Get the badge"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It's time to create your profile" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZi-RW-Mgg">
+                                        <rect key="frame" x="8" y="719" width="285" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Airbnb profile is an important part of every reservation. Create your to help other Hosts and guests get to know you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8E-Ja-N4I">
+                                        <rect key="frame" x="8" y="767" width="354" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM8-ST-WOH">
+                                        <rect key="frame" x="8" y="855" width="354" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Create profile"/>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="XDJ-sT-fuu"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="HnE-2l-X7E"/>
@@ -2370,10 +2391,11 @@
                         <viewLayoutGuide key="safeArea" id="cup-84-Wjg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <size key="freeformSize" width="402" height="1275"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb9-u9-OUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586.5671641791041" y="734.55377574370709"/>
+            <point key="canvasLocation" x="3586.5671641791041" y="837.87185354691064"/>
         </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">
