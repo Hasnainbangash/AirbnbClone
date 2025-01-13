@@ -2414,7 +2414,7 @@
                                                                     <constraint firstAttribute="width" constant="306" id="ckC-yo-nZ4"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -2443,7 +2443,7 @@
                                                         <rect key="frame" x="48" y="0.0" width="306" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hosted by Amir " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sys-MN-YS4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="14"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="6fE-so-XVW"/>
                                                                     <constraint firstAttribute="width" constant="125" id="xbE-8D-96r"/>
@@ -2453,13 +2453,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super host. 9 years hosting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9j-7V-3Wi">
-                                                                <rect key="frame" x="0.0" y="22" width="306" height="18"/>
+                                                                <rect key="frame" x="0.0" y="15" width="306" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="oBC-NR-Vzk"/>
                                                                     <constraint firstAttribute="width" constant="306" id="pmE-uH-wcv"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -2505,7 +2505,7 @@
                                                                     <constraint firstAttribute="height" constant="38" id="OTc-6I-JmC"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -2543,7 +2543,7 @@
                                                                     <constraint firstAttribute="width" constant="272" id="nGX-tq-Dck"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -2581,7 +2581,7 @@
                                                                     <constraint firstAttribute="width" constant="272" id="atL-Jf-nGS"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
