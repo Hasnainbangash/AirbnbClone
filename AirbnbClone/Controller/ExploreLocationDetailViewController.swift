@@ -60,6 +60,7 @@ class ExploreLocationDetailViewController: UIViewController {
         
         setupCornerRadius()
         setupBorderRadius()
+        setupBorderShadow()
         
     }
     
@@ -73,11 +74,27 @@ class ExploreLocationDetailViewController: UIViewController {
         showAllAmentitiesButtonLabel.layer.cornerRadius = showAllAmentitiesButtonLabel.frame.height / 4
         
         showAllReviewsButtonLabel.layer.cornerRadius = showAllReviewsButtonLabel.frame.height / 4
+        
+        meetYourHostView.layer.cornerRadius = meetYourHostView.frame.height / 8
     }
     
     func setupBorderRadius() {
         showAllAmentitiesButtonLabel.layer.borderWidth = 0.7
         showAllReviewsButtonLabel.layer.borderWidth = 0.7
+        meetYourHostView.layer.borderWidth = 5.0
+        meetYourHostView.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func setupBorderShadow() {
+        // Shadow settings
+        meetYourHostView.layer.shadowColor = UIColor.black.cgColor  // Shadow color
+        meetYourHostView.layer.shadowOpacity = 0.1 // Shadow opacity (0.0 to 1.0)
+        meetYourHostView.layer.shadowOffset = CGSize(width: 0, height: 5) // Shadow offset (you can change this)
+        meetYourHostView.layer.shadowRadius = 3 // Shadow blur radius (the higher the more blur)
+        
+        // Make the shadow more "realistic" by enabling shadow path
+        meetYourHostView.layer.masksToBounds = false // Important for shadow to appear outside bounds
+        meetYourHostView.layer.shadowPath = UIBezierPath(rect: meetYourHostView.bounds).cgPath
     }
 
 }
