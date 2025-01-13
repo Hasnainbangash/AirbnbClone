@@ -3789,6 +3789,9 @@
                             <constraint firstItem="shq-N2-E9T" firstAttribute="bottom" secondItem="2yC-iY-0EV" secondAttribute="bottom" id="uzO-Ap-KJE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getStartedButtonLabel" destination="dIn-XL-CtZ" id="sVx-DX-DnH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DW3-Jl-tic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
