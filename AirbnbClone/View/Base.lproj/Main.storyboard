@@ -3803,7 +3803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFg-Dy-UYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841.7910447761192" y="2346.4530892448511"/>
+            <point key="canvasLocation" x="-346" y="1441"/>
         </scene>
         <!--Wishlists-->
         <scene sceneID="Rb2-lc-8Ou">
