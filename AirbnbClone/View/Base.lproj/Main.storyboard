@@ -3469,6 +3469,82 @@
             </objects>
             <point key="canvasLocation" x="9644.7761194029845" y="856.75057208237979"/>
         </scene>
+        <!--Travel For Work Main View Controller-->
+        <scene sceneID="VEb-X5-FJr">
+            <objects>
+                <viewController id="cW6-Au-Myq" customClass="TravelForWorkMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uR1-cx-rHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="iSr-dy-Ty6">
+                                <rect key="frame" x="16" y="77" width="370" height="203"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-fH-yC2">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="98"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Airbnb for Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-61-b0a">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="U1H-LU-aGh"/>
+                                                    <constraint firstAttribute="width" constant="297" id="fhI-kY-gqy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your work email to add extra perks for business trips" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMJ-Dc-h9T">
+                                                <rect key="frame" x="0.0" y="47" width="370" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="370" id="IUt-PN-Wwx"/>
+                                                    <constraint firstAttribute="height" constant="51" id="XhZ-cL-iuf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-Q5-xdc">
+                                        <rect key="frame" x="0.0" y="140" width="370" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCg-hl-qt1">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="87" id="NI6-lM-IuR"/>
+                                                    <constraint firstAttribute="height" constant="21" id="wL5-TD-CEc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEu-c0-bgE">
+                                                <rect key="frame" x="0.0" y="29" width="370" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="370" id="hIK-mC-nq6"/>
+                                                    <constraint firstAttribute="height" constant="34" id="kGj-nq-uUb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cSu-cc-qvr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iSr-dy-Ty6" firstAttribute="leading" secondItem="cSu-cc-qvr" secondAttribute="leading" constant="16" id="DPA-I0-b85"/>
+                            <constraint firstItem="iSr-dy-Ty6" firstAttribute="top" secondItem="cSu-cc-qvr" secondAttribute="top" constant="15" id="Sf8-Se-q4U"/>
+                            <constraint firstItem="cSu-cc-qvr" firstAttribute="trailing" secondItem="iSr-dy-Ty6" secondAttribute="trailing" constant="16" id="wVC-aT-c3r"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-sH-mUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11067.164179104477" y="857.43707093821502"/>
+        </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">
             <objects>
