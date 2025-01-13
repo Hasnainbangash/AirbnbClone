@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lwD-dm-H6a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CvF-kh-lU2">
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -3244,8 +3244,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bes-ZY-tNZ">
-                                <rect key="frame" x="16" y="86" width="370" height="601"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bes-ZY-tNZ">
+                                <rect key="frame" x="16" y="77" width="370" height="601"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-R7-CbE">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="91"/>
@@ -3458,6 +3458,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="32U-xa-Ofx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bes-ZY-tNZ" firstAttribute="top" secondItem="32U-xa-Ofx" secondAttribute="top" constant="15" id="Ve5-lM-7AQ"/>
+                            <constraint firstItem="bes-ZY-tNZ" firstAttribute="leading" secondItem="32U-xa-Ofx" secondAttribute="leading" constant="16" id="ijP-rr-64L"/>
+                            <constraint firstItem="32U-xa-Ofx" firstAttribute="trailing" secondItem="bes-ZY-tNZ" secondAttribute="trailing" constant="16" id="xwR-OU-069"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUA-15-9fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
