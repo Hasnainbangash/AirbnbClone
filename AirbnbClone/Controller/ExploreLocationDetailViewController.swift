@@ -17,6 +17,7 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var reviewCollectionView: UICollectionView!
     @IBOutlet weak var showAllAmentitiesButtonLabel: UIButton!
     @IBOutlet weak var showAllReviewsButtonLabel: UIButton!
+    @IBOutlet weak var totalImagesCountLabel: UILabel!
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
@@ -57,6 +58,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
         reviewCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.reviewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.reviewCellIdentifier)
         
+        // Set total images count
+        totalImagesCountLabel.text = "1 / \(images.count)"
         
         setupCornerRadius()
         setupBorderRadius()
@@ -209,6 +212,18 @@ extension ExploreLocationDetailViewController: UICollectionViewDelegateFlowLayou
         default:
             return 0
         }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        if scrollView == imagesCollectionView {
+            // Get the current index after scrolling stops
+            let currentIndex = Int(scrollView.contentOffset.x / scrollView.frame.width)
+            
+            // Update the totalImagesCountLabel to show the current image index (1-based index)
+            totalImagesCountLabel.text = "\(currentIndex + 1) / \(images.count)"
+        }
+        
     }
     
 }
