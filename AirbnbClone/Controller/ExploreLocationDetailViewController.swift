@@ -18,6 +18,8 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var showAllAmentitiesButtonLabel: UIButton!
     @IBOutlet weak var showAllReviewsButtonLabel: UIButton!
     @IBOutlet weak var totalImagesCountLabel: UILabel!
+    @IBOutlet weak var totalReviewPercentLabel: UILabel!
+    @IBOutlet weak var checkAvailabilityButtonLabel: UIButton!
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
@@ -79,6 +81,8 @@ class ExploreLocationDetailViewController: UIViewController {
         showAllReviewsButtonLabel.layer.cornerRadius = showAllReviewsButtonLabel.frame.height / 4
         
         meetYourHostView.layer.cornerRadius = meetYourHostView.frame.height / 8
+        
+        checkAvailabilityButtonLabel.layer.cornerRadius = checkAvailabilityButtonLabel.frame.height / 5
     }
     
     func setupBorderRadius() {
