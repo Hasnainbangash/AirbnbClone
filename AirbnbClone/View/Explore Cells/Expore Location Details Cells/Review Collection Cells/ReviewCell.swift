@@ -19,6 +19,12 @@ class ReviewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        setupCornerRadius()
+    }
+    
+    func setupCornerRadius() {
+        reviewerImage.layer.cornerRadius = reviewerImage.frame.height / 2
     }
     
     func configureData(noOfMonthsAgo: String, reviewDescription: String,
