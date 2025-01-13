@@ -12,10 +12,11 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var hosterImageView1: UIImageView!
     @IBOutlet weak var hosterImageView2: UIImageView!
     @IBOutlet weak var meetYourHostView: UIView!
-    
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var bedroomCollectionView: UICollectionView!
     @IBOutlet weak var reviewCollectionView: UICollectionView!
+    @IBOutlet weak var showAllAmentitiesButtonLabel: UIButton!
+    @IBOutlet weak var showAllReviewsButtonLabel: UIButton!
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
@@ -58,6 +59,7 @@ class ExploreLocationDetailViewController: UIViewController {
         
         
         setupCornerRadius()
+        setupBorderRadius()
         
     }
     
@@ -67,6 +69,15 @@ class ExploreLocationDetailViewController: UIViewController {
         hosterImageView2.layer.cornerRadius = hosterImageView2.frame.height / 2
         
         meetYourHostView.layer.cornerRadius = meetYourHostView.frame.height / 2
+        
+        showAllAmentitiesButtonLabel.layer.cornerRadius = showAllAmentitiesButtonLabel.frame.height / 4
+        
+        showAllReviewsButtonLabel.layer.cornerRadius = showAllReviewsButtonLabel.frame.height / 4
+    }
+    
+    func setupBorderRadius() {
+        showAllAmentitiesButtonLabel.layer.borderWidth = 0.7
+        showAllReviewsButtonLabel.layer.borderWidth = 0.7
     }
 
 }
