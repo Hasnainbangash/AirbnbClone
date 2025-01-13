@@ -2506,10 +2506,10 @@
             </objects>
             <point key="canvasLocation" x="3586.5671641791041" y="837.52860411899303"/>
         </scene>
-        <!--View Controller-->
+        <!--Loginand Security View Controller-->
         <scene sceneID="e0l-qN-wvM">
             <objects>
-                <viewController id="lwD-dm-H6a" sceneMemberID="viewController">
+                <viewController id="lwD-dm-H6a" customClass="LoginandSecurityViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bci-78-a5t">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
