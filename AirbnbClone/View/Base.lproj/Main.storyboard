@@ -2838,7 +2838,7 @@
                                                     <constraint firstAttribute="height" constant="39" id="xED-O1-XG2"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-Vf-MoC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-Vf-MoC">
                                                 <rect key="frame" x="52" y="0.0" width="294" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="DpF-p5-pLV"/>
@@ -2866,8 +2866,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="zP9-9F-PyT">
                                         <rect key="frame" x="0.0" y="0.0" width="346" height="39"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-Vg-OW8">
-                                                <rect key="frame" x="0.0" y="2" width="35" height="35"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.metering.spot" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-Vg-OW8">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="35" height="36"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="Q5F-Jw-pbq"/>
@@ -4577,6 +4577,7 @@
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="book.pages" catalog="system" width="107" height="128"/>
+        <image name="camera.metering.spot" catalog="system" width="128" height="93"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
