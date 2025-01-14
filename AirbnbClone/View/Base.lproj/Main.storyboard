@@ -4723,6 +4723,108 @@
             </objects>
             <point key="canvasLocation" x="16783.582089552237" y="922.65446224256289"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6yg-TK-4Z8">
+            <objects>
+                <viewController id="OJz-0l-Kzp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bD-O7-9AS">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="yGs-iY-AHJ">
+                                <rect key="frame" x="16" y="75" width="356" height="129"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNq-b8-cv4">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="ANA-aF-ZUl"/>
+                                            <constraint firstAttribute="height" constant="36" id="wN2-kN-7zz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="A03-K5-Jj9">
+                                        <rect key="frame" x="0.0" y="72" width="356" height="57"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="rkJ-bd-xjm">
+                                                <rect key="frame" x="0.0" y="0.0" width="293" height="54"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ug5-tp-Hk3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="54"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHT-aL-9lO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="43"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="175" id="5Hx-Lm-xsI"/>
+                                                                    <constraint firstAttribute="height" constant="43" id="tqz-ma-FBx"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Offers and updates"/>
+                                                                <connections>
+                                                                    <action selector="taxViewButtons:" destination="5HM-0f-fZJ" eventType="touchUpInside" id="eXb-nC-4d9"/>
+                                                                </connections>
+                                                            </button>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMs-xd-u7s">
+                                                                <rect key="frame" x="0.0" y="51" width="175" height="3"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="3" id="Eub-q9-ghN"/>
+                                                                    <constraint firstAttribute="width" constant="175" id="LFJ-AT-trg"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hAX-Gd-bxS">
+                                                        <rect key="frame" x="203" y="0.0" width="90" height="54"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbi-pO-Auo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="43"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="43" id="ZL1-Gr-utF"/>
+                                                                    <constraint firstAttribute="width" constant="90" id="bKv-1r-whq"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Account"/>
+                                                                <connections>
+                                                                    <action selector="taxViewButtons:" destination="5HM-0f-fZJ" eventType="touchUpInside" id="bHD-Rw-HTM"/>
+                                                                </connections>
+                                                            </button>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8h-R9-RK6">
+                                                                <rect key="frame" x="0.0" y="51" width="90" height="3"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="9yf-Mx-YgE"/>
+                                                                    <constraint firstAttribute="height" constant="3" id="hMZ-Fd-qcv"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV2-He-bkl">
+                                                <rect key="frame" x="0.0" y="56" width="356" height="1"/>
+                                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="356" id="UGa-yy-wlP"/>
+                                                    <constraint firstAttribute="height" constant="1" id="Uae-QJ-wgP"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hEl-0x-4xm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTn-A4-4LU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18170" y="923"/>
+        </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">
             <objects>
