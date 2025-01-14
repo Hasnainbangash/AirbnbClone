@@ -3928,6 +3928,28 @@
             </objects>
             <point key="canvasLocation" x="13235.820895522387" y="857.43707093821502"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="r5T-eV-3pF">
+            <objects>
+                <viewController id="yzt-IQ-lAY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hnV-oq-xbm">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-oc-0rQ">
+                                <rect key="frame" x="16" y="62" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NWm-LZ-ghO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzc-wd-n1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14336" y="857"/>
+        </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">
             <objects>
