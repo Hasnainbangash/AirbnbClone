@@ -4019,10 +4019,10 @@
             </objects>
             <point key="canvasLocation" x="14335.820895522387" y="856.75057208237979"/>
         </scene>
-        <!--View Controller-->
+        <!--Ive Us Feedback Main View Controller-->
         <scene sceneID="2bz-3O-GwK">
             <objects>
-                <viewController id="B3E-1f-dnh" sceneMemberID="viewController">
+                <viewController id="B3E-1f-dnh" customClass="GIveUsFeedbackMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ck-ik-TFX">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
