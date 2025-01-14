@@ -9,21 +9,21 @@ import UIKit
 
 class TaxesViewController: UIViewController {
 
+    @IBOutlet weak var taxDocumentsViews: UIView!
+    @IBOutlet weak var taxesPayersView: UIView!
+    @IBOutlet weak var addTaxInfoButtonLabel: UIButton!
+    @IBOutlet weak var addVatIdNumberButtonLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCornerRadius()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupCornerRadius() {
+        addTaxInfoButtonLabel.layer.cornerRadius = addTaxInfoButtonLabel.frame.height / 4
+        addVatIdNumberButtonLabel.layer.cornerRadius = addVatIdNumberButtonLabel.frame.height / 4
     }
-    */
 
 }
