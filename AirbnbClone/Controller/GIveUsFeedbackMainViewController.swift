@@ -9,21 +9,25 @@ import UIKit
 
 class GIveUsFeedbackMainViewController: UIViewController {
 
+    @IBOutlet weak var pleaseSelectView: UIView!
+    @IBOutlet weak var contactUsButtonLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCornerRadius()
+        setupBorderRadius()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupCornerRadius() {
+        pleaseSelectView.layer.cornerRadius = pleaseSelectView.frame.height / 4
+        contactUsButtonLabel.layer.cornerRadius = contactUsButtonLabel.frame.height / 4
     }
-    */
+    
+    func setupBorderRadius() {
+        pleaseSelectView.layer.borderWidth = 0.8
+        contactUsButtonLabel.layer.borderWidth = 0.5
+    }
 
 }
