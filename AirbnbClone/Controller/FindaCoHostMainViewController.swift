@@ -34,13 +34,16 @@ class FindaCoHostMainViewController: UIViewController {
     func setupBorderShadow() {
         // Shadow settings
         searchView.layer.shadowColor = UIColor.black.cgColor  // Shadow color
-        searchView.layer.shadowOpacity = 0.05 // Shadow opacity (0.0 to 1.0)
-        searchView.layer.shadowOffset = CGSize(width: 0, height: 5) // Shadow offset (you can change this)
+        searchView.layer.shadowOpacity = 0.1 // Shadow opacity (0.0 to 1.0)
+        searchView.layer.shadowOffset = CGSize(width: 0, height: 3) // Shadow offset (you can change this)
         searchView.layer.shadowRadius = 2 // Shadow blur radius (the higher the more blur)
         
         // Make the shadow more "realistic" by enabling shadow path
         searchView.layer.masksToBounds = false // Important for shadow to appear outside bounds
-        searchView.layer.shadowPath = UIBezierPath(rect: searchView.bounds).cgPath
+        // Create a rounded rectangle path that matches the view's corner radius
+        let shadowPath = UIBezierPath(roundedRect: searchView.bounds,
+                                      cornerRadius: searchView.layer.cornerRadius)
+        searchView.layer.shadowPath = shadowPath.cgPath
     }
 
 }
