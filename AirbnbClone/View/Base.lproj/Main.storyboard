@@ -3808,54 +3808,92 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupfriendshiking" translatesAutoresizingMaskIntoConstraints="NO" id="NVh-JF-W7m">
                                 <rect key="frame" x="0.0" y="62" width="402" height="778"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="989-6N-IFP">
-                                <rect key="frame" x="0.0" y="403" width="402" height="437"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="989-6N-IFP">
+                                <rect key="frame" x="0.0" y="392" width="402" height="448"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A new hosting journey starts here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-F0-dQ4">
-                                        <rect key="frame" x="23" y="40" width="357" height="84"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMs-DU-vaP">
-                                        <rect key="frame" x="25" y="132" width="357" height="178"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Submit your experience and it will be reviewed to make sure it meets the standards and requirements. Many factors go into whether an experience is approved. If your experience is approved, you'll be able to start hosting.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Xv-kM1">
-                                        <rect key="frame" x="8" y="339" width="386" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-qr-86e">
-                                        <rect key="frame" x="25" y="365" width="357" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.89411764705882346" green="0.10980392156862745" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Let's go">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-e2-Sid">
-                                        <rect key="frame" x="176" y="8" width="50" height="5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="9Nu-SE-dqh">
+                                        <rect key="frame" x="8" y="16" width="386" height="416"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-e2-Sid">
+                                                <rect key="frame" x="168" y="0.0" width="50" height="5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="8Au-yn-mC0"/>
+                                                    <constraint firstAttribute="width" constant="50" id="pfK-1k-ffJ"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-s7-c4V">
+                                                <rect key="frame" x="14.666666666666657" y="59" width="357" height="239"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A new hosting journey starts here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-F0-dQ4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="357" height="84"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="357" id="IXJ-8o-VRd"/>
+                                                            <constraint firstAttribute="height" constant="84" id="q0F-zz-m9g"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMs-DU-vaP">
+                                                        <rect key="frame" x="0.0" y="89" width="357" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="357" id="Mhp-xp-pud"/>
+                                                            <constraint firstAttribute="height" constant="150" id="pC6-Wk-mFf"/>
+                                                        </constraints>
+                                                        <string key="text">Submit your experience and it will be reviewed to make sure it meets the standards and requirements. Many factors go into whether an experience is approved. If your experience is approved, you'll be able to start hosting.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BjY-dz-kl1">
+                                                <rect key="frame" x="0.0" y="352" width="386" height="64"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Xv-kM1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="386" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="0nd-tV-UZU"/>
+                                                            <constraint firstAttribute="width" constant="386" id="eb5-Vg-E4P"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-qr-86e">
+                                                        <rect key="frame" x="14.666666666666657" y="21" width="357" height="43"/>
+                                                        <color key="backgroundColor" red="0.89411764705882346" green="0.10980392156862745" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="357" id="LNy-t2-lnX"/>
+                                                            <constraint firstAttribute="height" constant="43" id="u5E-bs-c0z"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Let's go">
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9Nu-SE-dqh" firstAttribute="leading" secondItem="989-6N-IFP" secondAttribute="leading" constant="8" id="JJC-tO-Hlj"/>
+                                    <constraint firstItem="9Nu-SE-dqh" firstAttribute="top" secondItem="989-6N-IFP" secondAttribute="top" constant="16" id="Zrq-HH-jCa"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Nu-SE-dqh" secondAttribute="bottom" constant="16" id="p6y-Tw-H26"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Nu-SE-dqh" secondAttribute="trailing" constant="8" id="tCr-lo-mbY"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Utw-Na-9GM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NVh-JF-W7m" firstAttribute="bottom" secondItem="Utw-Na-9GM" secondAttribute="bottom" id="BPS-Qr-9J4"/>
+                            <constraint firstItem="989-6N-IFP" firstAttribute="leading" secondItem="Utw-Na-9GM" secondAttribute="leading" id="HpZ-7j-g9h"/>
+                            <constraint firstItem="989-6N-IFP" firstAttribute="trailing" secondItem="Utw-Na-9GM" secondAttribute="trailing" id="Znh-BZ-ECt"/>
                             <constraint firstItem="NVh-JF-W7m" firstAttribute="leading" secondItem="Utw-Na-9GM" secondAttribute="leading" id="h6E-uS-XBM"/>
                             <constraint firstItem="NVh-JF-W7m" firstAttribute="trailing" secondItem="Utw-Na-9GM" secondAttribute="trailing" id="hjT-Ia-43g"/>
+                            <constraint firstItem="989-6N-IFP" firstAttribute="bottom" secondItem="Utw-Na-9GM" secondAttribute="bottom" id="jeC-cr-E4C"/>
                             <constraint firstItem="NVh-JF-W7m" firstAttribute="top" secondItem="Utw-Na-9GM" secondAttribute="top" id="piQ-XQ-3TO"/>
                         </constraints>
                     </view>
