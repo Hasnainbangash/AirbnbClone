@@ -3862,6 +3862,7 @@
                     <connections>
                         <outlet property="grabberView" destination="0bo-e2-Sid" id="ENR-uf-eB3"/>
                         <outlet property="letsGoButtonLabel" destination="hB5-qr-86e" id="Mzc-Ty-EXd"/>
+                        <outlet property="submitYourExperienceLabel" destination="GMs-DU-vaP" id="Ffr-uP-663"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqH-MV-oEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
