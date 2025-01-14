@@ -4713,7 +4713,9 @@
                     <connections>
                         <outlet property="addTaxInfoButtonLabel" destination="MjL-8U-u8D" id="paK-NA-2HM"/>
                         <outlet property="addVatIdNumberButtonLabel" destination="LvP-fS-XLX" id="bVe-CD-1kb"/>
+                        <outlet property="taxDocumentsStackView" destination="d0W-m3-2Lx" id="ii1-mU-Cc1"/>
                         <outlet property="taxDocumentsViews" destination="GDy-fc-qzN" id="ZBO-T6-rXl"/>
+                        <outlet property="taxesPayersStackView" destination="wgp-VH-uvk" id="bjA-D7-t3I"/>
                         <outlet property="taxesPayersView" destination="pON-uX-paU" id="kxI-KV-jSL"/>
                     </connections>
                 </viewController>

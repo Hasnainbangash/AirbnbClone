@@ -14,12 +14,17 @@ class TaxesViewController: UIViewController {
     @IBOutlet weak var addTaxInfoButtonLabel: UIButton!
     @IBOutlet weak var addVatIdNumberButtonLabel: UIButton!
     
+    @IBOutlet weak var taxesPayersStackView: UIStackView!
+    @IBOutlet weak var taxDocumentsStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         taxDocumentsViews.backgroundColor = .white
+        taxesPayersView.isHidden = false
+        taxDocumentsStackView.isHidden = true
         
         setupCornerRadius()
     }
@@ -42,9 +47,13 @@ class TaxesViewController: UIViewController {
         switch buttonTitle {
         case "Taxespayers":
             taxesPayersView.backgroundColor = .black
+            taxesPayersStackView.isHidden = false
+            taxDocumentsStackView.isHidden = true
             break
         case "Tax documents":
             taxDocumentsViews.backgroundColor = .black
+            taxDocumentsStackView.isHidden = false
+            taxesPayersStackView.isHidden = true
             break
         default:
             break
@@ -54,6 +63,9 @@ class TaxesViewController: UIViewController {
     
     func resetButtonsView() {
         taxesPayersView.backgroundColor = .white
+        taxesPayersStackView.isHidden = false
+        
         taxDocumentsViews.backgroundColor = .white
+        taxDocumentsStackView.isHidden = false
     }
 }
