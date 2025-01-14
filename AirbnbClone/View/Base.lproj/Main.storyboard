@@ -3797,10 +3797,10 @@
             </objects>
             <point key="canvasLocation" x="12232.835820895521" y="856.75057208237979"/>
         </scene>
-        <!--View Controller-->
+        <!--Host An Experience Main View Controller-->
         <scene sceneID="EA0-jP-nys">
             <objects>
-                <viewController id="Olj-y3-VrZ" sceneMemberID="viewController">
+                <viewController id="Olj-y3-VrZ" customClass="HostAnExperienceMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZXP-Ag-LVI">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
