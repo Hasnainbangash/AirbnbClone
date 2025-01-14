@@ -4267,10 +4267,10 @@
             </objects>
             <point key="canvasLocation" x="15385.074626865671" y="848.51258581235686"/>
         </scene>
-        <!--View Controller-->
+        <!--Taxes View Controller-->
         <scene sceneID="w6r-SN-SNX">
             <objects>
-                <viewController id="5HM-0f-fZJ" sceneMemberID="viewController">
+                <viewController id="5HM-0f-fZJ" customClass="TaxesViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLz-Vl-TK2">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
