@@ -4267,6 +4267,30 @@
             </objects>
             <point key="canvasLocation" x="15385.074626865671" y="848.51258581235686"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="w6r-SN-SNX">
+            <objects>
+                <viewController id="5HM-0f-fZJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLz-Vl-TK2">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-dw-1SB">
+                                <rect key="frame" x="16" y="62" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TnV-9v-9Yk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giv-v8-36Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16784" y="852"/>
+        </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">
             <objects>
