@@ -3797,6 +3797,73 @@
             </objects>
             <point key="canvasLocation" x="12232.835820895521" y="856.75057208237979"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="EA0-jP-nys">
+            <objects>
+                <viewController id="Olj-y3-VrZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZXP-Ag-LVI">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupfriendshiking" translatesAutoresizingMaskIntoConstraints="NO" id="NVh-JF-W7m">
+                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="989-6N-IFP">
+                                <rect key="frame" x="0.0" y="403" width="402" height="437"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A new hosting journey starts here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-F0-dQ4">
+                                        <rect key="frame" x="23" y="40" width="357" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMs-DU-vaP">
+                                        <rect key="frame" x="25" y="132" width="357" height="178"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Submit your experience and it will be reviewed to make sure it meets the standards and requirements. Many factors go into whether an experience is approved. If your experience is approved, you'll be able to start hosting.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Xv-kM1">
+                                        <rect key="frame" x="8" y="339" width="386" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-qr-86e">
+                                        <rect key="frame" x="25" y="365" width="357" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.89411764705882346" green="0.10980392156862745" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Let's go">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-e2-Sid">
+                                        <rect key="frame" x="176" y="8" width="50" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Utw-Na-9GM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NVh-JF-W7m" firstAttribute="bottom" secondItem="Utw-Na-9GM" secondAttribute="bottom" id="BPS-Qr-9J4"/>
+                            <constraint firstItem="NVh-JF-W7m" firstAttribute="leading" secondItem="Utw-Na-9GM" secondAttribute="leading" id="h6E-uS-XBM"/>
+                            <constraint firstItem="NVh-JF-W7m" firstAttribute="trailing" secondItem="Utw-Na-9GM" secondAttribute="trailing" id="hjT-Ia-43g"/>
+                            <constraint firstItem="NVh-JF-W7m" firstAttribute="top" secondItem="Utw-Na-9GM" secondAttribute="top" id="piQ-XQ-3TO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqH-MV-oEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13235.820895522387" y="857.43707093821502"/>
+        </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">
             <objects>
@@ -5381,6 +5448,7 @@
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="google" width="200" height="200"/>
         <image name="graduationcap" catalog="system" width="128" height="107"/>
+        <image name="groupfriendshiking" width="208.66667175292969" height="139"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="hotelroomimage1" width="432" height="270"/>
         <image name="hotelroomimage2" width="93" height="60.333332061767578"/>

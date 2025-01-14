@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "group-friends-hiking-along-forest_776894-486.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "group-friends-hiking-along-forest_776894-486@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "group-friends-hiking-along-forest_776894-486@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
