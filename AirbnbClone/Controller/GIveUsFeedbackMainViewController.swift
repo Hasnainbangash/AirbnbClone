@@ -12,6 +12,7 @@ class GIveUsFeedbackMainViewController: UIViewController {
     @IBOutlet weak var needHelpLabel: UILabel!
     @IBOutlet weak var pleaseSelectView: UIView!
     @IBOutlet weak var contactUsButtonLabel: UIButton!
+    @IBOutlet weak var submitButtonlabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,9 @@ class GIveUsFeedbackMainViewController: UIViewController {
     }
     
     func setupCornerRadius() {
-        pleaseSelectView.layer.cornerRadius = pleaseSelectView.frame.height / 4
-        contactUsButtonLabel.layer.cornerRadius = contactUsButtonLabel.frame.height / 4
+        pleaseSelectView.layer.cornerRadius = pleaseSelectView.frame.height / 6
+        contactUsButtonLabel.layer.cornerRadius = contactUsButtonLabel.frame.height / 6
+        submitButtonlabel.layer.cornerRadius = submitButtonlabel.frame.height / 6
     }
     
     func setupBorderRadius() {
