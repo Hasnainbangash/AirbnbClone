@@ -18,12 +18,42 @@ class TaxesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        taxDocumentsViews.backgroundColor = .white
+        
         setupCornerRadius()
     }
     
     func setupCornerRadius() {
-        addTaxInfoButtonLabel.layer.cornerRadius = addTaxInfoButtonLabel.frame.height / 4
-        addVatIdNumberButtonLabel.layer.cornerRadius = addVatIdNumberButtonLabel.frame.height / 4
+        addTaxInfoButtonLabel.layer.cornerRadius = addTaxInfoButtonLabel.frame.height / 5
+        addVatIdNumberButtonLabel.layer.cornerRadius = addVatIdNumberButtonLabel.frame.height / 5
     }
 
+    @IBAction func taxViewButtons(_ sender: UIButton) {
+        
+        resetButtonsView()
+        
+        guard let buttonTitle = sender.titleLabel?.text else {
+            print(sender.titleLabel?.text ?? "No title")
+            return
+        }
+
+        print(buttonTitle)
+        switch buttonTitle {
+        case "Taxespayers":
+            taxesPayersView.backgroundColor = .black
+            break
+        case "Tax documents":
+            taxDocumentsViews.backgroundColor = .black
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    func resetButtonsView() {
+        taxesPayersView.backgroundColor = .white
+        taxDocumentsViews.backgroundColor = .white
+    }
 }
