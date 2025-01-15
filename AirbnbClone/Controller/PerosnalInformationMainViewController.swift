@@ -65,7 +65,31 @@ class PerosnalInformationMainViewController: UIViewController {
         setupEditButtonUnderline()
         setupCancelButtonUnderline()
     }
+    
+    
+    @IBAction func legalNameButton(_ sender: UIButton) {
+        
+        guard let buttonTitle = sender.titleLabel?.text else {
+            print(sender.titleLabel?.text ?? "No title")
+            return
+        }
 
+        print(buttonTitle)
+        switch buttonTitle {
+        case "Edit":
+            legalNameSimpleStackView.isHidden = true
+            legalNameEditableStackView.isHidden = false
+            break
+        case "Cancel":
+            legalNameSimpleStackView.isHidden = false
+            legalNameEditableStackView.isHidden = true
+            break
+        default:
+            break
+        }
+        
+    }
+    
 }
 
 // MARK: - setupCornerRadius and setupBoderRadius
