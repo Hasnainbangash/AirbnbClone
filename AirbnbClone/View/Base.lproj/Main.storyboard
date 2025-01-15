@@ -6954,6 +6954,7 @@
                         <outlet property="addressCancelButtonLabel" destination="Xfc-gH-YuW" id="6GV-m6-mHD"/>
                         <outlet property="addressContinueAndSaveButtonLabel" destination="58h-bt-L3Y" id="nHw-Pc-Dvv"/>
                         <outlet property="addressEditButtonLabel" destination="v5U-zS-uV6" id="vUx-PX-hph"/>
+                        <outlet property="cityView" destination="2Z4-hy-KOk" id="B69-zI-wlr"/>
                         <outlet property="countryView" destination="T52-ln-YKu" id="XoL-QJ-Miw"/>
                         <outlet property="emailCancelButtonLabel" destination="tcS-Hl-wAE" id="5ej-eL-z0C"/>
                         <outlet property="emailContinueAndSaveButtonLabel" destination="8PA-7a-ZWS" id="Ght-a2-Bpf"/>
