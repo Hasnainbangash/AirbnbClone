@@ -6460,12 +6460,16 @@
                     </view>
                     <size key="freeformSize" width="402" height="3041"/>
                     <connections>
+                        <outlet property="addressCancelButtonLabel" destination="Xfc-gH-YuW" id="6GV-m6-mHD"/>
                         <outlet property="addressEditButtonLabel" destination="v5U-zS-uV6" id="vUx-PX-hph"/>
+                        <outlet property="emailCancelButtonLabel" destination="tcS-Hl-wAE" id="5ej-eL-z0C"/>
                         <outlet property="emailEditButtonLabel" destination="aiE-Et-B7k" id="Dx5-Vl-Hom"/>
                         <outlet property="emergencyContactEditButtonLabel" destination="Ikf-RC-Esb" id="2ld-YJ-sYr"/>
                         <outlet property="governmentIdEditButtonLabel" destination="c1i-S5-E8v" id="9yL-P2-8M5"/>
+                        <outlet property="legalNameCancelButtonLabel" destination="lbo-sq-R2Q" id="1E7-yZ-J6z"/>
                         <outlet property="legalNameEditButtonLabel" destination="oqm-dF-SzN" id="kMK-MK-9C3"/>
                         <outlet property="phoneNumberEditButtonLabel" destination="vLg-cu-Ffh" id="Yek-eG-drd"/>
+                        <outlet property="preferredFirstNameCancelButtonLabel" destination="QRZ-7l-Zec" id="eS4-Nq-aTz"/>
                         <outlet property="preferredFirstNameEditButtonLabel" destination="7NV-PS-JmF" id="SZV-Cg-0jn"/>
                     </connections>
                 </viewController>

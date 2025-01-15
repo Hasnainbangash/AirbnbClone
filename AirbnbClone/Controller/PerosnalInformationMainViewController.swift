@@ -17,15 +17,30 @@ class PerosnalInformationMainViewController: UIViewController {
     @IBOutlet weak var emergencyContactEditButtonLabel: UIButton!
     @IBOutlet weak var governmentIdEditButtonLabel: UIButton!
     
+    
+    @IBOutlet weak var legalNameCancelButtonLabel: UIButton!
+    @IBOutlet weak var preferredFirstNameCancelButtonLabel: UIButton!
+    @IBOutlet weak var emailCancelButtonLabel: UIButton!
+    @IBOutlet weak var addressCancelButtonLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setupButtonUnderlineMain()
+        setupEditButtonUnderline()
+        setupCancelButtonUnderline()
     }
+
+}
+
+
+
+// MARK: - ButtonUnderlineFunctions
+
+extension PerosnalInformationMainViewController {
     
-    func setupButtonUnderlineMain() {
-        let buttons = [
+    func setupEditButtonUnderline() {
+        let editbuttons = [
             legalNameEditButtonLabel,
             preferredFirstNameEditButtonLabel,
             phoneNumberEditButtonLabel,
@@ -35,7 +50,22 @@ class PerosnalInformationMainViewController: UIViewController {
             governmentIdEditButtonLabel
         ]
         
-        buttons.forEach { button in
+        editbuttons.forEach { button in
+            if let button = button {
+                setupButtonUnderline(editButton: button)
+            }
+        }
+    }
+    
+    func setupCancelButtonUnderline() {
+        let cancelbuttons = [
+            legalNameCancelButtonLabel,
+            preferredFirstNameCancelButtonLabel,
+            emailCancelButtonLabel,
+            addressCancelButtonLabel,
+        ]
+        
+        cancelbuttons.forEach { button in
             if let button = button {
                 setupButtonUnderline(editButton: button)
             }
@@ -57,5 +87,5 @@ class PerosnalInformationMainViewController: UIViewController {
         // Optional: Change the text color (you can set any color you prefer)
         editButton.setTitleColor(UIColor.blue, for: .normal)
     }
-
+    
 }
