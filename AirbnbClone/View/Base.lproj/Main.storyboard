@@ -5938,10 +5938,10 @@
             </objects>
             <point key="canvasLocation" x="17967" y="923"/>
         </scene>
-        <!--View Controller-->
+        <!--Perosnal Information Main View Controller-->
         <scene sceneID="ZLU-dL-zU5">
             <objects>
-                <viewController id="cfj-s5-Sdx" sceneMemberID="viewController">
+                <viewController id="cfj-s5-Sdx" customClass="PerosnalInformationMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2d-FF-sVx">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="1316"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
