@@ -7596,6 +7596,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                     </view>
                     <connections>
                         <outlet property="addanIDButtonLabel" destination="pKV-E0-fNh" id="FQQ-Rz-Nui"/>
+                        <outlet property="identifyVerificationWorksButtonsLabel" destination="MHl-Qb-XwL" id="c2e-wv-qI1"/>
                         <outlet property="privacyPolicyTextView" destination="fjh-k9-8Qm" id="HVl-NB-DBi"/>
                     </connections>
                 </viewController>
