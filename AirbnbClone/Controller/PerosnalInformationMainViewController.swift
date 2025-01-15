@@ -182,6 +182,47 @@ class PerosnalInformationMainViewController: UIViewController {
         
     }
     
+    @IBAction func phoneNumberButton(_ sender: UIButton) {
+        // Get reference to storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // Instantiate from storyboard (make sure to set the Storyboard ID first)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "AddPhoneNumberViewController") as? AddPhoneNumberViewController {
+            
+            // Initialize Navigation Controller with the second screen
+            let navVC = UINavigationController(rootViewController: vc)
+            
+            // Make sure the navigation bar is hidden when presenting the bottom sheet
+            navVC.setNavigationBarHidden(true, animated: false)
+            
+            // Configure the bottom sheet presentation controller
+            if let sheet = navVC.sheetPresentationController {
+                
+                // Configure the detents (sizes) of the bottom sheet
+                sheet.detents = [
+                    .custom(resolver: { context in
+                        0.4 * context.maximumDetentValue // Small detent height, you can tweak this value
+                    }),
+                    .large() // This allows the large detent as an option
+                ]
+                
+                // Add rounded corners to the bottom sheet
+                sheet.preferredCornerRadius = 20
+                
+                // Additional configuration for behavior
+                sheet.prefersEdgeAttachedInCompactHeight = true
+                sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                
+                // Ensure background does not dim when scrolling (if needed)
+                sheet.largestUndimmedDetentIdentifier = .large
+            }
+            
+            // Present the navigation controller with the bottom sheet
+            present(navVC, animated: true)
+        }
+    }
+    
     
     @IBAction func emailButton(_ sender: UIButton) {
         
