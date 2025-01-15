@@ -86,14 +86,6 @@ class PerosnalInformationMainViewController: UIViewController {
         addressEditableStackView.isHidden = true
     }
     
-    func hideStackViews() {
-        legalNameSimpleStackView.isHidden = true
-        legalNameEditableStackView.isHidden = true
-        preferredNameEditableStackView.isHidden = true
-        emailEditableStackView.isHidden = true
-        addressEditableStackView.isHidden = true
-    }
-    
     @IBAction func legalNameButton(_ sender: UIButton) {
         
         guard let buttonTitle = sender.titleLabel?.text else {
