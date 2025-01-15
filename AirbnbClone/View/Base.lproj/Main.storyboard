@@ -6143,6 +6143,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="402" height="1316"/>
+                    <connections>
+                        <outlet property="addressEditButtonLabel" destination="v5U-zS-uV6" id="vUx-PX-hph"/>
+                        <outlet property="emailEditButtonLabel" destination="aiE-Et-B7k" id="Dx5-Vl-Hom"/>
+                        <outlet property="emergencyContactEditButtonLabel" destination="Ikf-RC-Esb" id="2ld-YJ-sYr"/>
+                        <outlet property="governmentIdEditButtonLabel" destination="c1i-S5-E8v" id="9yL-P2-8M5"/>
+                        <outlet property="legalNameEditButtonLabel" destination="oqm-dF-SzN" id="kMK-MK-9C3"/>
+                        <outlet property="phoneNumberEditButtonLabel" destination="vLg-cu-Ffh" id="Yek-eG-drd"/>
+                        <outlet property="preferredFirstNameEditButtonLabel" destination="7NV-PS-JmF" id="SZV-Cg-0jn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv6-VF-Mgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

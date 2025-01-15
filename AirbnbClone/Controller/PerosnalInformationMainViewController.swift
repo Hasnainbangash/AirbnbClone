@@ -9,6 +9,16 @@ import UIKit
 
 class PerosnalInformationMainViewController: UIViewController {
 
+    @IBOutlet weak var legalNameEditButtonLabel: UIButton!
+    @IBOutlet weak var preferredFirstNameEditButtonLabel: UIButton!
+    @IBOutlet weak var phoneNumberEditButtonLabel: UIButton!
+    @IBOutlet weak var emailEditButtonLabel: UIButton!
+    @IBOutlet weak var addressEditButtonLabel: UIButton!
+    @IBOutlet weak var emergencyContactEditButtonLabel: UIButton!
+    @IBOutlet weak var governmentIdEditButtonLabel: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
