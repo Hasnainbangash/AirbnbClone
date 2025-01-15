@@ -30,4 +30,7 @@ class AddPhoneNumberViewController: UIViewController {
         phoneNumberView.layer.borderWidth = 0.7
     }
 
+    @IBAction func closeButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
