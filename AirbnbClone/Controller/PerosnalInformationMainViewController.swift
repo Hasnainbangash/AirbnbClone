@@ -71,7 +71,7 @@ class PerosnalInformationMainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        hideStackViews()
+        hideEditableStackViews()
         
         setupCornerRadius()
         setupBorderRadius()
@@ -79,7 +79,7 @@ class PerosnalInformationMainViewController: UIViewController {
         setupCancelButtonUnderline()
     }
     
-    func hideStackViews() {
+    func hideEditableStackViews() {
         legalNameEditableStackView.isHidden = true
         preferredNameEditableStackView.isHidden = true
         emailEditableStackView.isHidden = true
@@ -111,7 +111,7 @@ class PerosnalInformationMainViewController: UIViewController {
     }
     
     
-    @IBAction func prefferedFirstNameButton(_ sender: UIButton) {
+    @IBAction func preferredFirstNameButton(_ sender: UIButton) {
         
         guard let buttonTitle = sender.titleLabel?.text else {
             print(sender.titleLabel?.text ?? "No title")
@@ -127,6 +127,53 @@ class PerosnalInformationMainViewController: UIViewController {
         case "Cancel":
             preferredNameSimpleStackView.isHidden = false
             preferredNameEditableStackView.isHidden = true
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    
+    @IBAction func emailButton(_ sender: UIButton) {
+        
+        guard let buttonTitle = sender.titleLabel?.text else {
+            print(sender.titleLabel?.text ?? "No title")
+            return
+        }
+
+        print(buttonTitle)
+        switch buttonTitle {
+        case "Edit":
+            emailSimpleStackView.isHidden = true
+            emailEditableStackView.isHidden = false
+            break
+        case "Cancel":
+            emailSimpleStackView.isHidden = false
+            emailEditableStackView.isHidden = true
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    @IBAction func addressButton(_ sender: UIButton) {
+        
+        guard let buttonTitle = sender.titleLabel?.text else {
+            print(sender.titleLabel?.text ?? "No title")
+            return
+        }
+
+        print(buttonTitle)
+        switch buttonTitle {
+        case "Edit":
+            addressSimpleStackView.isHidden = true
+            addressEditableStackView.isHidden = false
+            break
+        case "Cancel":
+            addressSimpleStackView.isHidden = false
+            addressEditableStackView.isHidden = true
             break
         default:
             break

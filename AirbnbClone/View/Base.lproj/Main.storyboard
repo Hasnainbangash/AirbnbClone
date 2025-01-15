@@ -6199,7 +6199,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                                 <connections>
-                                                                    <action selector="prefferedFirstNameButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="t6C-pB-x8e"/>
+                                                                    <action selector="preferredFirstNameButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="t6C-pB-x8e"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -6245,7 +6245,7 @@
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                                                         <connections>
-                                                                            <action selector="prefferedFirstNameButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="K26-qL-bhu"/>
+                                                                            <action selector="preferredFirstNameButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="K26-qL-bhu"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -6399,6 +6399,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                                                <connections>
+                                                                    <action selector="emailButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="P2V-z1-50M"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -6442,6 +6445,9 @@
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                                        <connections>
+                                                                            <action selector="emailButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="hJb-AW-qaI"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -6546,6 +6552,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                                                <connections>
+                                                                    <action selector="addressButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="dvO-3u-75m"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -6589,6 +6598,9 @@
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                                        <connections>
+                                                                            <action selector="addressButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="dmZ-re-C6Q"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
