@@ -43,23 +43,36 @@ class PerosnalInformationMainViewController: UIViewController {
     @IBOutlet weak var addressContinueAndSaveButtonLabel: UIButton!
     
     // Stack views IBOutlet
+    
+    @IBOutlet weak var legalNameStackView: UIStackView!
     @IBOutlet weak var legalNameSimpleStackView: UIStackView!
     @IBOutlet weak var legalNameEditableStackView: UIStackView!
     
+    @IBOutlet weak var preferredNameStackView: UIStackView!
     @IBOutlet weak var preferredNameSimpleStackView: UIStackView!
     @IBOutlet weak var preferredNameEditableStackView: UIStackView!
     
+    @IBOutlet weak var phoneNumberStackView: UIStackView!
+    
+    @IBOutlet weak var emailStackView: UIStackView!
     @IBOutlet weak var emailSimpleStackView: UIStackView!
     @IBOutlet weak var emailEditableStackView: UIStackView!
     
+    @IBOutlet weak var addressStackView: UIStackView!
     @IBOutlet weak var addressSimpleStackView: UIStackView!
     @IBOutlet weak var addressEditableStackView: UIStackView!
     
+    @IBOutlet weak var emergencyContactStackView: UIStackView!
+    
+    @IBOutlet weak var governmentIdStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        hideStackViews()
+        
         setupCornerRadius()
         setupBorderRadius()
         setupEditButtonUnderline()
@@ -95,6 +108,47 @@ class PerosnalInformationMainViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func prefferedFirstNameButton(_ sender: UIButton) {
+        
+        guard let buttonTitle = sender.titleLabel?.text else {
+            print(sender.titleLabel?.text ?? "No title")
+            return
+        }
+
+        print(buttonTitle)
+        switch buttonTitle {
+        case "Edit":
+            preferredNameSimpleStackView.isHidden = true
+            preferredNameEditableStackView.isHidden = false
+            break
+        case "Cancel":
+            preferredNameSimpleStackView.isHidden = false
+            preferredNameEditableStackView.isHidden = true
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    func resetStackViews() {
+        
+        legalNameSimpleStackView.isHidden = false
+        legalNameEditableStackView.isHidden = false
+        
+        preferredNameSimpleStackView.isHidden = false
+        preferredNameEditableStackView.isHidden = false
+        
+        emailSimpleStackView.isHidden = false
+        emailEditableStackView.isHidden = false
+        
+        addressSimpleStackView.isHidden = false
+        addressEditableStackView.isHidden = false
+        
+    }
+    
     
 }
 
