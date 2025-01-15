@@ -46,13 +46,55 @@ class PerosnalInformationMainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCornerRadius()
+        setupBorderRadius()
         setupEditButtonUnderline()
         setupCancelButtonUnderline()
     }
 
 }
 
-// MARK: - ButtonUnderlineFunctions
+// MARK: - setupCornerRadius and setupBoderRadius
+
+extension PerosnalInformationMainViewController {
+    
+    func setupCornerRadius() {
+        // Setting corning radius of text field views
+        firstNameView.layer.cornerRadius = firstNameView.frame.height / 5
+        surnameView.layer.cornerRadius = surnameView.frame.height / 5
+        preferredFirstNameView.layer.cornerRadius = preferredFirstNameView.frame.height / 5
+        emailView.layer.cornerRadius = emailView.frame.height / 5
+        addressAndRegionView.layer.cornerRadius = addressAndRegionView.frame.height / 5
+        streetView.layer.cornerRadius = streetView.frame.height / 5
+        flatSuiteView.layer.cornerRadius = flatSuiteView.frame.height / 5
+        cityView.layer.cornerRadius = cityView.frame.height / 5
+        countryView.layer.cornerRadius = countryView.frame.height / 5
+        postCodeView.layer.cornerRadius = postCodeView.frame.height / 5
+        
+        // Corning radius of continue and save buttons
+        legalNameContinueAndSaveButtonLabel.layer.cornerRadius = legalNameContinueAndSaveButtonLabel.frame.height / 5
+        preferredFirstNameContinueAndSaveButtonLabel.layer.cornerRadius = preferredFirstNameContinueAndSaveButtonLabel.frame.height / 5
+        emailContinueAndSaveButtonLabel.layer.cornerRadius = emailContinueAndSaveButtonLabel.frame.height / 5
+        addressContinueAndSaveButtonLabel.layer.cornerRadius = addressContinueAndSaveButtonLabel.frame.height / 5
+    }
+    
+    func setupBorderRadius() {
+        // Setting border radius of text field views
+        firstNameView.layer.borderWidth = 0.5
+        surnameView.layer.borderWidth = 0.5
+        preferredFirstNameView.layer.borderWidth = 0.5
+        emailView.layer.cornerRadius = 0.5
+        addressAndRegionView.layer.borderWidth = 0.5
+        streetView.layer.borderWidth = 0.5
+        flatSuiteView.layer.borderWidth = 0.5
+        cityView.layer.borderWidth = 0.5
+        countryView.layer.borderWidth = 0.5
+        postCodeView.layer.borderWidth = 0.5
+    }
+    
+}
+
+// MARK: - buttonUnderlineFunctions
 
 extension PerosnalInformationMainViewController {
     
