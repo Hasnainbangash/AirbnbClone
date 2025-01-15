@@ -68,9 +68,11 @@ class PerosnalInformationMainViewController: UIViewController {
     private var mainStackViews: [UIStackView] = []
     private var blurViews: [UIVisualEffectView] = []
     
+    private var blurEffectView: UIVisualEffectView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         setupMainStackViews()
@@ -136,7 +138,7 @@ class PerosnalInformationMainViewController: UIViewController {
             print(sender.titleLabel?.text ?? "No title")
             return
         }
-
+        
         print(buttonTitle)
         
         switch buttonTitle {
@@ -163,7 +165,7 @@ class PerosnalInformationMainViewController: UIViewController {
             print(sender.titleLabel?.text ?? "No title")
             return
         }
-
+        
         print(buttonTitle)
         switch buttonTitle {
         case "Edit":
@@ -182,13 +184,35 @@ class PerosnalInformationMainViewController: UIViewController {
         
     }
     
+    func addBlurEffect() {
+        // Remove existing blur if any
+        removeBlurEffect()
+        
+        // Create and add new blur effect
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        view.addSubview(blurEffectView)
+        self.blurEffectView = blurEffectView
+    }
+    
+    func removeBlurEffect() {
+        blurEffectView?.removeFromSuperview()
+        blurEffectView = nil
+    }
+    
     @IBAction func phoneNumberButton(_ sender: UIButton) {
+        // Add blur effect before presenting the sheet
+        addBlurEffect()
+        
         // Get reference to storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        // Instantiate from storyboard (make sure to set the Storyboard ID first)
+        // Instantiate from storyboard
         if let vc = storyboard.instantiateViewController(withIdentifier: "AddPhoneNumberViewController") as? AddPhoneNumberViewController {
-            
             // Initialize Navigation Controller with the second screen
             let navVC = UINavigationController(rootViewController: vc)
             
@@ -197,25 +221,21 @@ class PerosnalInformationMainViewController: UIViewController {
             
             // Configure the bottom sheet presentation controller
             if let sheet = navVC.sheetPresentationController {
-                
-                // Configure the detents (sizes) of the bottom sheet
                 sheet.detents = [
                     .custom(resolver: { context in
-                        0.4 * context.maximumDetentValue // Small detent height, you can tweak this value
+                        0.6 * context.maximumDetentValue
                     }),
-                    .large() // This allows the large detent as an option
+                    .large()
                 ]
                 
-                // Add rounded corners to the bottom sheet
                 sheet.preferredCornerRadius = 20
-                
-                // Additional configuration for behavior
                 sheet.prefersEdgeAttachedInCompactHeight = true
                 sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
                 sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-                
-                // Ensure background does not dim when scrolling (if needed)
                 sheet.largestUndimmedDetentIdentifier = .large
+                
+                // Add delegate to handle dismissal
+                navVC.presentationController?.delegate = self
             }
             
             // Present the navigation controller with the bottom sheet
@@ -230,7 +250,7 @@ class PerosnalInformationMainViewController: UIViewController {
             print(sender.titleLabel?.text ?? "No title")
             return
         }
-
+        
         print(buttonTitle)
         switch buttonTitle {
         case "Edit":
@@ -255,7 +275,7 @@ class PerosnalInformationMainViewController: UIViewController {
             print(sender.titleLabel?.text ?? "No title")
             return
         }
-
+        
         print(buttonTitle)
         switch buttonTitle {
         case "Edit":
@@ -274,6 +294,14 @@ class PerosnalInformationMainViewController: UIViewController {
         
     }
     
+}
+
+// MARK: - UIAdaptivePresentationControllerDelegate
+extension PerosnalInformationMainViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        // Remove blur effect when sheet is dismissed
+        removeBlurEffect()
+    }
 }
 
 // MARK: - setupCornerRadius and setupBoderRadius
