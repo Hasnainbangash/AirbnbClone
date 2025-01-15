@@ -66,6 +66,12 @@ class PerosnalInformationMainViewController: UIViewController {
         setupCancelButtonUnderline()
     }
     
+    func hideStackViews() {
+        legalNameEditableStackView.isHidden = true
+        preferredNameEditableStackView.isHidden = true
+        emailEditableStackView.isHidden = true
+        addressEditableStackView.isHidden = true
+    }
     
     @IBAction func legalNameButton(_ sender: UIButton) {
         
