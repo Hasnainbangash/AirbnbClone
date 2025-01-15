@@ -8,7 +8,8 @@
 import UIKit
 
 class PerosnalInformationMainViewController: UIViewController {
-
+    
+    // Edit Buttons IBOutlet
     @IBOutlet weak var legalNameEditButtonLabel: UIButton!
     @IBOutlet weak var preferredFirstNameEditButtonLabel: UIButton!
     @IBOutlet weak var phoneNumberEditButtonLabel: UIButton!
@@ -17,11 +18,23 @@ class PerosnalInformationMainViewController: UIViewController {
     @IBOutlet weak var emergencyContactEditButtonLabel: UIButton!
     @IBOutlet weak var governmentIdEditButtonLabel: UIButton!
     
-    
+    // Cancel Buttons IBOutlet
     @IBOutlet weak var legalNameCancelButtonLabel: UIButton!
     @IBOutlet weak var preferredFirstNameCancelButtonLabel: UIButton!
     @IBOutlet weak var emailCancelButtonLabel: UIButton!
     @IBOutlet weak var addressCancelButtonLabel: UIButton!
+    
+    // Views IBOutlet
+    @IBOutlet weak var firstNameView: UIView!
+    @IBOutlet weak var surnameView: UIView!
+    @IBOutlet weak var preferredFirstNameView: UIView!
+    @IBOutlet weak var emailView: UIView!
+    @IBOutlet weak var addressAndRegionView: UIView!
+    @IBOutlet weak var streetView: UIView!
+    @IBOutlet weak var flatSuiteView: UIView!
+    @IBOutlet weak var cityView: UIView!
+    @IBOutlet weak var countryView: UIView!
+    @IBOutlet weak var postCodeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +45,6 @@ class PerosnalInformationMainViewController: UIViewController {
     }
 
 }
-
-
 
 // MARK: - ButtonUnderlineFunctions
 
