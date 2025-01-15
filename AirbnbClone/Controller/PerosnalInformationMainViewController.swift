@@ -86,6 +86,14 @@ class PerosnalInformationMainViewController: UIViewController {
         addressEditableStackView.isHidden = true
     }
     
+    func hideStackViews() {
+        legalNameSimpleStackView.isHidden = true
+        legalNameEditableStackView.isHidden = true
+        preferredNameEditableStackView.isHidden = true
+        emailEditableStackView.isHidden = true
+        addressEditableStackView.isHidden = true
+    }
+    
     @IBAction func legalNameButton(_ sender: UIButton) {
         
         guard let buttonTitle = sender.titleLabel?.text else {
@@ -229,7 +237,7 @@ extension PerosnalInformationMainViewController {
         firstNameView.layer.borderWidth = 0.5
         surnameView.layer.borderWidth = 0.5
         preferredFirstNameView.layer.borderWidth = 0.5
-        emailView.layer.cornerRadius = 0.5
+        emailView.layer.borderWidth = 0.5
         addressAndRegionView.layer.borderWidth = 0.5
         streetView.layer.borderWidth = 0.5
         flatSuiteView.layer.borderWidth = 0.5

@@ -6347,7 +6347,7 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -6551,7 +6551,7 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                                 <connections>
                                                                     <action selector="addressButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="dvO-3u-75m"/>
                                                                 </connections>
