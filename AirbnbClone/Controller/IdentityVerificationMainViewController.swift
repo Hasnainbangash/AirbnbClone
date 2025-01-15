@@ -41,5 +41,9 @@ class IdentityVerificationMainViewController: UIViewController {
         // Optional: Change the text color (you can set any color you prefer)
         identifyVerificationWorksButtonsLabel.setTitleColor(UIColor.blue, for: .normal)
     }
+    
+    @IBAction func closeButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

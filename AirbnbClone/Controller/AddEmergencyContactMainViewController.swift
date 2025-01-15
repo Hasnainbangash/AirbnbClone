@@ -21,5 +21,10 @@ class AddEmergencyContactMainViewController: UIViewController {
     func setupCornerRadius() {
         addNowButtonLabel.layer.cornerRadius = addNowButtonLabel.frame.height / 5
     }
-
+    
+    
+    @IBAction func closeButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
