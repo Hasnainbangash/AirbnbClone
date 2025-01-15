@@ -36,6 +36,12 @@ class PerosnalInformationMainViewController: UIViewController {
     @IBOutlet weak var countryView: UIView!
     @IBOutlet weak var postCodeView: UIView!
     
+    // Save and continue button IBOutlet
+    @IBOutlet weak var legalNameContinueAndSaveButtonLabel: UIButton!
+    @IBOutlet weak var preferredFirstNameContinueAndSaveButtonLabel: UIButton!
+    @IBOutlet weak var emailContinueAndSaveButtonLabel: UIButton!
+    @IBOutlet weak var addressContinueAndSaveButtonLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -6462,10 +6462,12 @@
                     <connections>
                         <outlet property="addressAndRegionView" destination="cDN-BF-cjO" id="GLf-AE-T7T"/>
                         <outlet property="addressCancelButtonLabel" destination="Xfc-gH-YuW" id="6GV-m6-mHD"/>
+                        <outlet property="addressContinueAndSaveButtonLabel" destination="58h-bt-L3Y" id="nHw-Pc-Dvv"/>
                         <outlet property="addressEditButtonLabel" destination="v5U-zS-uV6" id="vUx-PX-hph"/>
                         <outlet property="cityView" destination="ZU5-SA-X0g" id="8Q1-98-O8q"/>
                         <outlet property="countryView" destination="T52-ln-YKu" id="XoL-QJ-Miw"/>
                         <outlet property="emailCancelButtonLabel" destination="tcS-Hl-wAE" id="5ej-eL-z0C"/>
+                        <outlet property="emailContinueAndSaveButtonLabel" destination="8PA-7a-ZWS" id="Ght-a2-Bpf"/>
                         <outlet property="emailEditButtonLabel" destination="aiE-Et-B7k" id="Dx5-Vl-Hom"/>
                         <outlet property="emailView" destination="0yE-7U-GmU" id="Czo-5a-Q8z"/>
                         <outlet property="emergencyContactEditButtonLabel" destination="Ikf-RC-Esb" id="2ld-YJ-sYr"/>
@@ -6473,10 +6475,12 @@
                         <outlet property="flatSuiteView" destination="VIl-hN-0lN" id="IR7-0N-g2B"/>
                         <outlet property="governmentIdEditButtonLabel" destination="c1i-S5-E8v" id="9yL-P2-8M5"/>
                         <outlet property="legalNameCancelButtonLabel" destination="lbo-sq-R2Q" id="1E7-yZ-J6z"/>
+                        <outlet property="legalNameContinueAndSaveButtonLabel" destination="DKR-SZ-pjG" id="Qko-H5-EP3"/>
                         <outlet property="legalNameEditButtonLabel" destination="oqm-dF-SzN" id="kMK-MK-9C3"/>
                         <outlet property="phoneNumberEditButtonLabel" destination="vLg-cu-Ffh" id="Yek-eG-drd"/>
                         <outlet property="postCodeView" destination="eOR-YK-oFL" id="MC8-j7-u61"/>
                         <outlet property="preferredFirstNameCancelButtonLabel" destination="QRZ-7l-Zec" id="eS4-Nq-aTz"/>
+                        <outlet property="preferredFirstNameContinueAndSaveButtonLabel" destination="viH-uB-wLU" id="xmB-Q4-i1j"/>
                         <outlet property="preferredFirstNameEditButtonLabel" destination="7NV-PS-JmF" id="SZV-Cg-0jn"/>
                         <outlet property="preferredFirstNameView" destination="o3d-uK-IgW" id="ogq-0t-aEh"/>
                         <outlet property="streetView" destination="44C-ui-P7t" id="BRa-jS-ZmS"/>
