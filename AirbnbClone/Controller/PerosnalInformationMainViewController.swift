@@ -214,16 +214,16 @@ extension PerosnalInformationMainViewController {
     
     func setupCornerRadius() {
         // Setting corning radius of text field views
-        firstNameView.layer.cornerRadius = firstNameView.frame.height / 5
-        surnameView.layer.cornerRadius = surnameView.frame.height / 5
-        preferredFirstNameView.layer.cornerRadius = preferredFirstNameView.frame.height / 5
-        emailView.layer.cornerRadius = emailView.frame.height / 5
-        addressAndRegionView.layer.cornerRadius = addressAndRegionView.frame.height / 5
-        streetView.layer.cornerRadius = streetView.frame.height / 5
-        flatSuiteView.layer.cornerRadius = flatSuiteView.frame.height / 5
-        cityView.layer.cornerRadius = cityView.frame.height / 5
-        countryView.layer.cornerRadius = countryView.frame.height / 5
-        postCodeView.layer.cornerRadius = postCodeView.frame.height / 5
+        firstNameView.layer.cornerRadius = firstNameView.frame.height / 8
+        surnameView.layer.cornerRadius = surnameView.frame.height / 8
+        preferredFirstNameView.layer.cornerRadius = preferredFirstNameView.frame.height / 8
+        emailView.layer.cornerRadius = emailView.frame.height / 8
+        addressAndRegionView.layer.cornerRadius = addressAndRegionView.frame.height / 8
+        streetView.layer.cornerRadius = streetView.frame.height / 8
+        flatSuiteView.layer.cornerRadius = flatSuiteView.frame.height / 8
+        cityView.layer.cornerRadius = cityView.frame.height / 8
+        countryView.layer.cornerRadius = countryView.frame.height / 8
+        postCodeView.layer.cornerRadius = postCodeView.frame.height / 8
         
         // Corning radius of continue and save buttons
         legalNameContinueAndSaveButtonLabel.layer.cornerRadius = legalNameContinueAndSaveButtonLabel.frame.height / 5
