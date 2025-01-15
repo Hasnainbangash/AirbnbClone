@@ -7288,10 +7288,10 @@
             </objects>
             <point key="canvasLocation" x="20988" y="923"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Emergency Contact Main View Controller-->
         <scene sceneID="isR-zZ-2zF">
             <objects>
-                <viewController id="5cU-2u-N7n" sceneMemberID="viewController">
+                <viewController id="5cU-2u-N7n" customClass="AddEmergencyContactMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="56l-OK-mEl">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
