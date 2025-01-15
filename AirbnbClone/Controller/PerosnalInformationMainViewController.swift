@@ -43,7 +43,6 @@ class PerosnalInformationMainViewController: UIViewController {
     @IBOutlet weak var addressContinueAndSaveButtonLabel: UIButton!
     
     // Stack views IBOutlet
-    
     @IBOutlet weak var legalNameStackView: UIStackView!
     @IBOutlet weak var legalNameSimpleStackView: UIStackView!
     @IBOutlet weak var legalNameEditableStackView: UIStackView!
@@ -66,20 +65,65 @@ class PerosnalInformationMainViewController: UIViewController {
     
     @IBOutlet weak var governmentIdStackView: UIStackView!
     
+    private var mainStackViews: [UIStackView] = []
+    private var blurViews: [UIVisualEffectView] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        setupMainStackViews()
         hideEditableStackViews()
-        
         setupCornerRadius()
         setupBorderRadius()
         setupEditButtonUnderline()
         setupCancelButtonUnderline()
+        setupBlurEffects()
     }
     
-    func hideEditableStackViews() {
+    private func setupMainStackViews() {
+        mainStackViews = [
+            legalNameStackView,
+            preferredNameStackView,
+            phoneNumberStackView,
+            emailStackView,
+            addressStackView,
+            emergencyContactStackView,
+            governmentIdStackView
+        ].compactMap { $0 }
+    }
+    
+    private func setupBlurEffects() {
+        // Create blur effect for each main stack view
+        for stackView in mainStackViews {
+            let blurEffect = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+            blurEffect.frame = stackView.bounds
+            blurEffect.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffect.isHidden = true
+            blurEffect.alpha = 0.5
+            stackView.addSubview(blurEffect)
+            blurViews.append(blurEffect)
+        }
+    }
+    
+    private func enableEditMode(for activeStackView: UIStackView) {
+        // Disable and blur all stack views except the active one
+        for (index, stackView) in mainStackViews.enumerated() {
+            if stackView != activeStackView {
+                stackView.isUserInteractionEnabled = false
+                blurViews[index].isHidden = false
+            }
+        }
+    }
+    
+    private func disableEditMode() {
+        // Enable all stack views and hide all blur effects
+        mainStackViews.forEach { $0.isUserInteractionEnabled = true }
+        blurViews.forEach { $0.isHidden = true }
+    }
+    
+    private func hideEditableStackViews() {
         legalNameEditableStackView.isHidden = true
         preferredNameEditableStackView.isHidden = true
         emailEditableStackView.isHidden = true
@@ -99,10 +143,12 @@ class PerosnalInformationMainViewController: UIViewController {
         case "Edit":
             legalNameSimpleStackView.isHidden = true
             legalNameEditableStackView.isHidden = false
+            enableEditMode(for: legalNameStackView)
             break
         case "Cancel":
             legalNameSimpleStackView.isHidden = false
             legalNameEditableStackView.isHidden = true
+            disableEditMode()
             break
         default:
             break
@@ -123,10 +169,12 @@ class PerosnalInformationMainViewController: UIViewController {
         case "Edit":
             preferredNameSimpleStackView.isHidden = true
             preferredNameEditableStackView.isHidden = false
+            enableEditMode(for: preferredNameStackView)
             break
         case "Cancel":
             preferredNameSimpleStackView.isHidden = false
             preferredNameEditableStackView.isHidden = true
+            disableEditMode()
             break
         default:
             break
@@ -147,10 +195,12 @@ class PerosnalInformationMainViewController: UIViewController {
         case "Edit":
             emailSimpleStackView.isHidden = true
             emailEditableStackView.isHidden = false
+            enableEditMode(for: emailStackView)
             break
         case "Cancel":
             emailSimpleStackView.isHidden = false
             emailEditableStackView.isHidden = true
+            disableEditMode()
             break
         default:
             break
@@ -170,33 +220,18 @@ class PerosnalInformationMainViewController: UIViewController {
         case "Edit":
             addressSimpleStackView.isHidden = true
             addressEditableStackView.isHidden = false
+            enableEditMode(for: addressStackView)
             break
         case "Cancel":
             addressSimpleStackView.isHidden = false
             addressEditableStackView.isHidden = true
+            disableEditMode()
             break
         default:
             break
         }
         
     }
-    
-    func resetStackViews() {
-        
-        legalNameSimpleStackView.isHidden = false
-        legalNameEditableStackView.isHidden = false
-        
-        preferredNameSimpleStackView.isHidden = false
-        preferredNameEditableStackView.isHidden = false
-        
-        emailSimpleStackView.isHidden = false
-        emailEditableStackView.isHidden = false
-        
-        addressSimpleStackView.isHidden = false
-        addressEditableStackView.isHidden = false
-        
-    }
-    
     
 }
 
