@@ -2747,12 +2747,12 @@
         <scene sceneID="R5i-5O-qN0">
             <objects>
                 <viewController id="086-ec-DAI" customClass="PaymentsandPayoutMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zs0-Bi-fVM">
+                    <view key="view" contentMode="scaleToFill" id="zs0-Bi-fVM">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="LN8-7H-JJe">
-                                <rect key="frame" x="16" y="77" width="370" height="483"/>
+                                <rect key="frame" x="16" y="77" width="370" height="490"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments &amp; payouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdY-qg-phv">
                                         <rect key="frame" x="0.0" y="0.0" width="316" height="42"/>
@@ -2765,7 +2765,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-br-CeU">
-                                        <rect key="frame" x="0.0" y="71" width="370" height="412"/>
+                                        <rect key="frame" x="0.0" y="71" width="370" height="419"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-Nb-B25">
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="177"/>
@@ -2904,7 +2904,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-gz-5aa">
-                                                <rect key="frame" x="0.0" y="230" width="370" height="182"/>
+                                                <rect key="frame" x="0.0" y="230" width="370" height="189"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travelling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYj-a3-1BV">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="20"/>
@@ -2917,7 +2917,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fpE-zR-JeQ">
-                                                        <rect key="frame" x="0.0" y="49" width="370" height="133"/>
+                                                        <rect key="frame" x="0.0" y="49" width="370" height="140"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-FQ-joI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="39"/>
@@ -2992,13 +2992,13 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-Ia-rmX">
-                                                                <rect key="frame" x="0.0" y="94" width="370" height="39"/>
+                                                                <rect key="frame" x="0.0" y="94" width="370" height="46"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-zF-JT1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="39"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="46"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-JF-DzN">
-                                                                                <rect key="frame" x="0.0" y="0.66666666666666785" width="35" height="37.666666666666657"/>
+                                                                                <rect key="frame" x="0.0" y="0.66666666666666785" width="35" height="44.666666666666657"/>
                                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="35" id="Pw5-eG-Nrq"/>
@@ -3006,7 +3006,7 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfP-lp-G79">
-                                                                                <rect key="frame" x="52" y="0.0" width="294" height="39"/>
+                                                                                <rect key="frame" x="52" y="0.0" width="294" height="46"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="294" id="aH0-4K-3j7"/>
                                                                                     <constraint firstAttribute="height" constant="39" id="dbn-b1-vkF"/>
@@ -3018,7 +3018,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gMX-6l-a2x">
-                                                                        <rect key="frame" x="354" y="2" width="16" height="35.333333333333329"/>
+                                                                        <rect key="frame" x="354" y="2" width="16" height="42.333333333333329"/>
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="16" id="JbA-m5-mDD"/>
@@ -6954,11 +6954,15 @@
                         <outlet property="addressCancelButtonLabel" destination="Xfc-gH-YuW" id="6GV-m6-mHD"/>
                         <outlet property="addressContinueAndSaveButtonLabel" destination="58h-bt-L3Y" id="nHw-Pc-Dvv"/>
                         <outlet property="addressEditButtonLabel" destination="v5U-zS-uV6" id="vUx-PX-hph"/>
+                        <outlet property="addressEditableStackView" destination="fDP-bM-ETY" id="8uz-rE-mWZ"/>
+                        <outlet property="addressSimpleStackView" destination="FuK-So-q2H" id="fZa-GS-gKQ"/>
                         <outlet property="cityView" destination="2Z4-hy-KOk" id="B69-zI-wlr"/>
                         <outlet property="countryView" destination="T52-ln-YKu" id="XoL-QJ-Miw"/>
                         <outlet property="emailCancelButtonLabel" destination="tcS-Hl-wAE" id="5ej-eL-z0C"/>
                         <outlet property="emailContinueAndSaveButtonLabel" destination="8PA-7a-ZWS" id="Ght-a2-Bpf"/>
                         <outlet property="emailEditButtonLabel" destination="aiE-Et-B7k" id="Dx5-Vl-Hom"/>
+                        <outlet property="emailEditableStackView" destination="CNk-st-CbS" id="jml-M3-yeB"/>
+                        <outlet property="emailSimpleStackView" destination="1Gk-FI-xOI" id="BHy-fL-UGp"/>
                         <outlet property="emailView" destination="0yE-7U-GmU" id="Czo-5a-Q8z"/>
                         <outlet property="emergencyContactEditButtonLabel" destination="Ikf-RC-Esb" id="2ld-YJ-sYr"/>
                         <outlet property="firstNameView" destination="DZV-N6-kmW" id="EKt-KL-M7F"/>
@@ -6967,12 +6971,16 @@
                         <outlet property="legalNameCancelButtonLabel" destination="lbo-sq-R2Q" id="1E7-yZ-J6z"/>
                         <outlet property="legalNameContinueAndSaveButtonLabel" destination="DKR-SZ-pjG" id="Qko-H5-EP3"/>
                         <outlet property="legalNameEditButtonLabel" destination="oqm-dF-SzN" id="kMK-MK-9C3"/>
+                        <outlet property="legalNameEditableStackView" destination="ocj-Nu-MEz" id="Ye7-uA-t7t"/>
+                        <outlet property="legalNameSimpleStackView" destination="qHc-cl-PUb" id="uN6-OH-cL3"/>
                         <outlet property="phoneNumberEditButtonLabel" destination="vLg-cu-Ffh" id="Yek-eG-drd"/>
                         <outlet property="postCodeView" destination="eOR-YK-oFL" id="MC8-j7-u61"/>
                         <outlet property="preferredFirstNameCancelButtonLabel" destination="QRZ-7l-Zec" id="eS4-Nq-aTz"/>
                         <outlet property="preferredFirstNameContinueAndSaveButtonLabel" destination="viH-uB-wLU" id="xmB-Q4-i1j"/>
                         <outlet property="preferredFirstNameEditButtonLabel" destination="7NV-PS-JmF" id="SZV-Cg-0jn"/>
                         <outlet property="preferredFirstNameView" destination="o3d-uK-IgW" id="ogq-0t-aEh"/>
+                        <outlet property="preferredNameEditableStackView" destination="VuT-3d-ESh" id="Gdy-UB-loA"/>
+                        <outlet property="preferredNameSimpleStackView" destination="Hbc-Ja-m7w" id="dRr-oU-ZPb"/>
                         <outlet property="streetView" destination="44C-ui-P7t" id="BRa-jS-ZmS"/>
                         <outlet property="surnameView" destination="xNv-ev-xZp" id="3Fl-XM-MWS"/>
                     </connections>

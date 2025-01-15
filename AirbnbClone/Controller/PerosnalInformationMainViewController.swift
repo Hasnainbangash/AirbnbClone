@@ -42,6 +42,20 @@ class PerosnalInformationMainViewController: UIViewController {
     @IBOutlet weak var emailContinueAndSaveButtonLabel: UIButton!
     @IBOutlet weak var addressContinueAndSaveButtonLabel: UIButton!
     
+    // Stack views IBOutlet
+    @IBOutlet weak var legalNameSimpleStackView: UIStackView!
+    @IBOutlet weak var legalNameEditableStackView: UIStackView!
+    
+    @IBOutlet weak var preferredNameSimpleStackView: UIStackView!
+    @IBOutlet weak var preferredNameEditableStackView: UIStackView!
+    
+    @IBOutlet weak var emailSimpleStackView: UIStackView!
+    @IBOutlet weak var emailEditableStackView: UIStackView!
+    
+    @IBOutlet weak var addressSimpleStackView: UIStackView!
+    @IBOutlet weak var addressEditableStackView: UIStackView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
