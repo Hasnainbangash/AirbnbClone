@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OJz-0l-Kzp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cfj-s5-Sdx">
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -5943,14 +5943,13 @@
             <objects>
                 <viewController id="cfj-s5-Sdx" customClass="PerosnalInformationMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2d-FF-sVx">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="3041"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-d4-hQY">
-                                <rect key="frame" x="16" y="62" width="370" height="2945"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-d4-hQY">
+                                <rect key="frame" x="16" y="62" width="370" height="778"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-IC-1sd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-IC-1sd">
                                         <rect key="frame" x="8" y="8" width="355" height="2597"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-Bb-gsJ">
@@ -6049,6 +6048,9 @@
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                                        <connections>
+                                                                            <action selector="legalNameButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="4Wz-wo-PaO"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -6195,7 +6197,7 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                                 <connections>
                                                                     <action selector="prefferedFirstNameButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="t6C-pB-x8e"/>
                                                                 </connections>
@@ -6950,14 +6952,25 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Bdn-IC-1sd" secondAttribute="bottom" id="JYu-B5-fRl"/>
+                                    <constraint firstItem="Bdn-IC-1sd" firstAttribute="leading" secondItem="MTx-d4-hQY" secondAttribute="leading" constant="8" id="LXY-CN-Ykk"/>
+                                    <constraint firstItem="Bdn-IC-1sd" firstAttribute="top" secondItem="MTx-d4-hQY" secondAttribute="top" constant="8" id="VPK-LZ-Zkw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bdn-IC-1sd" secondAttribute="trailing" constant="7" id="jWR-J1-WMh"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="BQc-ce-Yog"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="STv-cI-UKH"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AEH-LJ-Pct"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MTx-d4-hQY" firstAttribute="bottom" secondItem="AEH-LJ-Pct" secondAttribute="bottom" id="9J1-Uy-PAt"/>
+                            <constraint firstItem="MTx-d4-hQY" firstAttribute="top" secondItem="AEH-LJ-Pct" secondAttribute="top" id="Wxk-o7-lcI"/>
+                            <constraint firstItem="AEH-LJ-Pct" firstAttribute="trailing" secondItem="MTx-d4-hQY" secondAttribute="trailing" constant="16" id="YSl-A8-GjA"/>
+                            <constraint firstItem="MTx-d4-hQY" firstAttribute="leading" secondItem="AEH-LJ-Pct" secondAttribute="leading" constant="16" id="iA4-2y-Oe5"/>
+                        </constraints>
                     </view>
-                    <size key="freeformSize" width="402" height="3041"/>
                     <connections>
                         <outlet property="addressAndRegionView" destination="cDN-BF-cjO" id="GLf-AE-T7T"/>
                         <outlet property="addressCancelButtonLabel" destination="Xfc-gH-YuW" id="6GV-m6-mHD"/>
@@ -7003,7 +7016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv6-VF-Mgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19434.328358208953" y="1344.508009153318"/>
+            <point key="canvasLocation" x="19434.328358208953" y="1343.478260869565"/>
         </scene>
         <!--Explore Location Detail View Controller-->
         <scene sceneID="llt-KE-a5B">

@@ -94,6 +94,7 @@ class PerosnalInformationMainViewController: UIViewController {
         }
 
         print(buttonTitle)
+        
         switch buttonTitle {
         case "Edit":
             legalNameSimpleStackView.isHidden = true
