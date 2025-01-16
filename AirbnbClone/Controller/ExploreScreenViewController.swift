@@ -96,82 +96,34 @@ class ExploreScreenViewController: UIViewController {
         setupBorderWidth()
         setupBorderShadow()
         
+        setupFloatingPanel()
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        /* // Bottom sheet made through the code
-        // Get reference to storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        // Instantiate from storyboard (make sure to set the Storyboard ID first)
-        if let vc = storyboard.instantiateViewController(withIdentifier: K.ExploreCells.Segue.ExploreScreenToBottomSheetSegue) as? ExploreSecondScreenViewController {
-            
-            // Initialize Navigation Controller with the second screen
-            let navVC = UINavigationController(rootViewController: vc)
-            
-            // Make sure the navigation bar is hidden when presenting the bottom sheet
-            navVC.setNavigationBarHidden(true, animated: false)
-            
-            // Configure the bottom sheet presentation controller
-            if let sheet = navVC.sheetPresentationController {
-                
-                navVC.isModalInPresentation = true
-                
-                // Configure the detents (sizes) of the bottom sheet
-                sheet.detents = [
-                    .custom(resolver: { context in
-                        0.02 * context.maximumDetentValue // Small detent height, you can tweak this value
-                    }),
-                    .large() // This allows the large detent as an option
-                ]
-                
-                // Allow the grabber to be visible
-                sheet.prefersGrabberVisible = true
-                
-                // Add rounded corners to the bottom sheet
-                sheet.preferredCornerRadius = 40
-                
-                // Additional configuration for behavior
-                sheet.prefersEdgeAttachedInCompactHeight = true
-                sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
-                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-                
-                // Ensure background does not dim when scrolling (if needed)
-                sheet.largestUndimmedDetentIdentifier = .large
-            }
-            
-            // Present the navigation controller with the bottom sheet
-            present(navVC, animated: true)
-        }
-        */
-        
+    deinit {
+        fpc?.removePanelFromParent(animated: true)
+    }
+    
+    func setupFloatingPanel() {
         // Initialize the FloatingPanelController object.
         fpc = FloatingPanelController()
         fpc?.delegate = self
         
-        // Create the content view controller from storyboard (SecondViewController).
+        // Create the content view controller from storyboard
         let contentVC = storyboard?.instantiateViewController(withIdentifier: K.ExploreCells.Segue.ExploreScreenToBottomSheetSegue) as? ExploreSecondScreenViewController
         
-        // Set the content view controller for the floating panel.
+        // Set the content view controller for the floating panel
         fpc?.set(contentViewController: contentVC)
         
-        // Optionally, track a scroll view if your content is scrollable.
-        // fpc?.track(scrollView: contentVC.tableView)
-        
-        // Add the floating panel to the parent view.
+        // Add the floating panel to the parent view
         fpc?.addPanel(toParent: self)
         
-        // Customize the floating panel if needed.
+        // Customize the floating panel
         fpc?.surfaceView.backgroundColor = .white
-        // Round the corners of the floating panel
-        fpc?.surfaceView.backgroundColor = .white
-        fpc?.surfaceView.layer.cornerRadius = 50 // Set the corner radius to your desired value
-        fpc?.surfaceView.layer.masksToBounds = true // Ensure the rounded corners are visible
-        
+        fpc?.surfaceView.layer.cornerRadius = 50
+        fpc?.surfaceView.layer.masksToBounds = true
     }
-
+    
     func setupCornerRadius() {
         settingButtonLabel.layer.cornerRadius = settingButtonLabel.frame.height / 2
         searchBarView.layer.cornerRadius = searchBarView.frame.height / 2
@@ -220,7 +172,7 @@ class ExploreScreenViewController: UIViewController {
 }
 
 extension ExploreScreenViewController: FloatingPanelControllerDelegate {
-
+    
     // Implement delegate method to handle panel's state changes
     func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
         // Animate corner radius change based on the panel state
@@ -228,35 +180,52 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
             switch fpc.state {
             case .full:
                 fpc.surfaceView.layer.cornerRadius = 0
-                self.setTabBarVisibility(visible: true)
+                self.animateTabBar(show: true)
             case .half:
-                fpc.surfaceView.layer.cornerRadius = 20  // Adjust for half position if needed
-                self.setTabBarVisibility(visible: true)
+                fpc.surfaceView.layer.cornerRadius = 20
+                self.animateTabBar(show: true)
             case .hidden:
                 fpc.surfaceView.layer.cornerRadius = 50
-                self.setTabBarVisibility(visible: false)
+                self.animateTabBar(show: false)
             case .tip:
-                fpc.surfaceView.layer.cornerRadius = 30  // Optionally, adjust for tip position
-                self.setTabBarVisibility(visible: false)
+                fpc.surfaceView.layer.cornerRadius = 30
+                self.animateTabBar(show: false)
             default:
                 break
             }
         }
-
     }
 
-    // Optional: For smoother transitions, you can also implement this method
     func floatingPanelWillBeginDragging(_ fpc: FloatingPanelController) {
-        // Enable animations during dragging (this helps smooth out changes)
         fpc.surfaceView.layer.masksToBounds = true
     }
     
-    // Helper method to hide/show the Tab Bar
-    func setTabBarVisibility(visible: Bool) {
-        guard let tabBarController = self.tabBarController else { return }
+    // Improved tab bar animation
+    private func animateTabBar(show: Bool) {
+        guard let tabBar = self.tabBarController?.tabBar else { return }
         
-        UIView.animate(withDuration: 0.3) {
-            tabBarController.tabBar.isHidden = !visible
+        let tabBarHeight = tabBar.frame.height
+        let screenHeight = UIScreen.main.bounds.height
+        
+        // Make sure tab bar is not hidden before animating
+        tabBar.isHidden = false
+        
+        UIView.animate(withDuration: 0.3,
+                      delay: 0,
+                      options: .curveEaseInOut,
+                      animations: {
+            if show {
+                // Animate tab bar back to its original position
+                tabBar.frame.origin.y = screenHeight - tabBarHeight
+            } else {
+                // Animate tab bar off screen
+                tabBar.frame.origin.y = screenHeight
+            }
+        }) { completed in
+            // Only hide the tab bar after it's fully animated off screen
+            if !show {
+                tabBar.isHidden = true
+            }
         }
     }
 }
