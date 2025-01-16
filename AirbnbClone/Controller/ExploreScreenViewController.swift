@@ -196,6 +196,7 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
                 self.animateTabBar(show: false)
             case .tip:
                 fpc.surfaceView.layer.cornerRadius = 30
+                fpc.surfaceView.grabberHandle.isHidden = false
                 self.animateTabBar(show: false)
             default:
                 break
