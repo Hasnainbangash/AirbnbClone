@@ -410,7 +410,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fcg-Sn-gSw">
-                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                                <rect key="frame" x="0.0" y="20" width="402" height="844"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -420,7 +420,7 @@
                             <constraint firstItem="fcg-Sn-gSw" firstAttribute="trailing" secondItem="AL0-dJ-MYd" secondAttribute="trailing" id="3Yj-6F-kID"/>
                             <constraint firstAttribute="bottom" secondItem="fcg-Sn-gSw" secondAttribute="bottom" id="Std-uE-s9b"/>
                             <constraint firstItem="fcg-Sn-gSw" firstAttribute="leading" secondItem="AL0-dJ-MYd" secondAttribute="leading" id="gUZ-bb-jG8"/>
-                            <constraint firstItem="fcg-Sn-gSw" firstAttribute="top" secondItem="AL0-dJ-MYd" secondAttribute="top" id="ytv-al-bwC"/>
+                            <constraint firstItem="fcg-Sn-gSw" firstAttribute="top" secondItem="AL0-dJ-MYd" secondAttribute="top" constant="20" id="ytv-al-bwC"/>
                         </constraints>
                     </view>
                     <connections>
