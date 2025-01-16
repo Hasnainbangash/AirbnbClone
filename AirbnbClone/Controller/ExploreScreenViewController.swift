@@ -181,34 +181,22 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
         fpc.surfaceView.layer.masksToBounds = true
     }
     
-    // Improved tab bar animation
     private func animateTabBar(show: Bool) {
         guard let tabBar = self.tabBarController?.tabBar else { return }
         
+        // Calculate the screen height and the tab bar height
         let tabBarHeight = tabBar.frame.height
         let screenHeight = UIScreen.main.bounds.height
         
-        // Make sure tab bar is not hidden before animating
-        tabBar.isHidden = false
+        // Set the tab bar position directly, depending on whether we want to show or hide it
+        let targetY = show ? screenHeight - tabBarHeight : screenHeight
         
-        UIView.animate(withDuration: 0.3,
-                      delay: 0,
-                      options: .curveEaseInOut,
-                      animations: {
-            if show {
-                // Animate tab bar back to its original position
-                tabBar.frame.origin.y = screenHeight - tabBarHeight
-            } else {
-                // Animate tab bar off screen
-                tabBar.frame.origin.y = screenHeight
-            }
-        }) { completed in
-            // Only hide the tab bar after it's fully animated off screen
-            if !show {
-                tabBar.isHidden = true
-            }
-        }
+        // Animate the tab bar to the desired position
+        UIView.animate(withDuration: 0.3, animations: {
+            tabBar.frame.origin.y = targetY
+        })
     }
+
 }
 
 extension ExploreScreenViewController: UICollectionViewDataSource {
