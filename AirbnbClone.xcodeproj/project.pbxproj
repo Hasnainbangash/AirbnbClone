@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		129F528E5AD7CB842AF7DB39 /* Pods_AirbnbCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A85BD618F08E934089B2DA5 /* Pods_AirbnbCloneTests.framework */; };
+		6EF85CB38B5B2C0C556D9975 /* Pods_AirbnbClone_AirbnbCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5374581E137D374F410F205E /* Pods_AirbnbClone_AirbnbCloneUITests.framework */; };
+		E556AD1E2AA4986438485EC3 /* Pods_AirbnbClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E06278B4203BB890E8A0EAF /* Pods_AirbnbClone.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D03A19EE2D2CEB3100E1468E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E06278B4203BB890E8A0EAF /* Pods_AirbnbClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirbnbClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25008D64D8A1E099892A2008 /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig"; path = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		421AD63A07B67E676F7C31C9 /* Pods-AirbnbCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbCloneTests.release.xcconfig"; path = "Target Support Files/Pods-AirbnbCloneTests/Pods-AirbnbCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		5374581E137D374F410F205E /* Pods_AirbnbClone_AirbnbCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirbnbClone_AirbnbCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F51AC5C544519A48600493B /* Pods-AirbnbClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbClone.release.xcconfig"; path = "Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone.release.xcconfig"; sourceTree = "<group>"; };
+		7A85BD618F08E934089B2DA5 /* Pods_AirbnbCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirbnbCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6A9ECFF8157ED85BC183E99 /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9E2D6FEFB56550AC51CB74A /* Pods-AirbnbCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-AirbnbCloneTests/Pods-AirbnbCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D03A19D42D2CEB2F00E1468E /* AirbnbClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03A19ED2D2CEB3100E1468E /* AirbnbCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirbnbCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03A19F72D2CEB3100E1468E /* AirbnbCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirbnbCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93EFBC074B14DAB3C627676 /* Pods-AirbnbClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbClone.debug.xcconfig"; path = "Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,11 +65,15 @@
 		};
 		D03A19F02D2CEB3100E1468E /* AirbnbCloneTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AirbnbCloneTests;
 			sourceTree = "<group>";
 		};
 		D03A19FA2D2CEB3100E1468E /* AirbnbCloneUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AirbnbCloneUITests;
 			sourceTree = "<group>";
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E556AD1E2AA4986438485EC3 /* Pods_AirbnbClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129F528E5AD7CB842AF7DB39 /* Pods_AirbnbCloneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +100,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF85CB38B5B2C0C556D9975 /* Pods_AirbnbClone_AirbnbCloneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3708C285EB5C353C1A4F4FF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F93EFBC074B14DAB3C627676 /* Pods-AirbnbClone.debug.xcconfig */,
+				5F51AC5C544519A48600493B /* Pods-AirbnbClone.release.xcconfig */,
+				A6A9ECFF8157ED85BC183E99 /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */,
+				25008D64D8A1E099892A2008 /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */,
+				A9E2D6FEFB56550AC51CB74A /* Pods-AirbnbCloneTests.debug.xcconfig */,
+				421AD63A07B67E676F7C31C9 /* Pods-AirbnbCloneTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4A4558E8C3446DF754315861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E06278B4203BB890E8A0EAF /* Pods_AirbnbClone.framework */,
+				5374581E137D374F410F205E /* Pods_AirbnbClone_AirbnbCloneUITests.framework */,
+				7A85BD618F08E934089B2DA5 /* Pods_AirbnbCloneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D03A19CB2D2CEB2F00E1468E = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +138,8 @@
 				D03A19F02D2CEB3100E1468E /* AirbnbCloneTests */,
 				D03A19FA2D2CEB3100E1468E /* AirbnbCloneUITests */,
 				D03A19D52D2CEB2F00E1468E /* Products */,
+				3708C285EB5C353C1A4F4FF0 /* Pods */,
+				4A4558E8C3446DF754315861 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +160,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D03A1A002D2CEB3100E1468E /* Build configuration list for PBXNativeTarget "AirbnbClone" */;
 			buildPhases = (
+				CFE9A1BB3A0326F331163B22 /* [CP] Check Pods Manifest.lock */,
 				D03A19D02D2CEB2F00E1468E /* Sources */,
 				D03A19D12D2CEB2F00E1468E /* Frameworks */,
 				D03A19D22D2CEB2F00E1468E /* Resources */,
@@ -124,8 +173,6 @@
 				D03A19D62D2CEB2F00E1468E /* AirbnbClone */,
 			);
 			name = AirbnbClone;
-			packageProductDependencies = (
-			);
 			productName = AirbnbClone;
 			productReference = D03A19D42D2CEB2F00E1468E /* AirbnbClone.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D03A1A052D2CEB3100E1468E /* Build configuration list for PBXNativeTarget "AirbnbCloneTests" */;
 			buildPhases = (
+				4C927FB67A3EDD16DD56D1A8 /* [CP] Check Pods Manifest.lock */,
 				D03A19E92D2CEB3100E1468E /* Sources */,
 				D03A19EA2D2CEB3100E1468E /* Frameworks */,
 				D03A19EB2D2CEB3100E1468E /* Resources */,
@@ -147,8 +195,6 @@
 				D03A19F02D2CEB3100E1468E /* AirbnbCloneTests */,
 			);
 			name = AirbnbCloneTests;
-			packageProductDependencies = (
-			);
 			productName = AirbnbCloneTests;
 			productReference = D03A19ED2D2CEB3100E1468E /* AirbnbCloneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D03A1A082D2CEB3100E1468E /* Build configuration list for PBXNativeTarget "AirbnbCloneUITests" */;
 			buildPhases = (
+				BC45782ABA3AD4F73FCA077E /* [CP] Check Pods Manifest.lock */,
 				D03A19F32D2CEB3100E1468E /* Sources */,
 				D03A19F42D2CEB3100E1468E /* Frameworks */,
 				D03A19F52D2CEB3100E1468E /* Resources */,
@@ -170,8 +217,6 @@
 				D03A19FA2D2CEB3100E1468E /* AirbnbCloneUITests */,
 			);
 			name = AirbnbCloneUITests;
-			packageProductDependencies = (
-			);
 			productName = AirbnbCloneUITests;
 			productReference = D03A19F72D2CEB3100E1468E /* AirbnbCloneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -244,6 +289,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C927FB67A3EDD16DD56D1A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirbnbCloneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC45782ABA3AD4F73FCA077E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirbnbClone-AirbnbCloneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFE9A1BB3A0326F331163B22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirbnbClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D03A19D02D2CEB2F00E1468E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,6 +398,7 @@
 /* Begin XCBuildConfiguration section */
 		D03A1A012D2CEB3100E1468E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93EFBC074B14DAB3C627676 /* Pods-AirbnbClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +426,7 @@
 		};
 		D03A1A022D2CEB3100E1468E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F51AC5C544519A48600493B /* Pods-AirbnbClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,6 +573,7 @@
 		};
 		D03A1A062D2CEB3100E1468E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9E2D6FEFB56550AC51CB74A /* Pods-AirbnbCloneTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +592,7 @@
 		};
 		D03A1A072D2CEB3100E1468E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 421AD63A07B67E676F7C31C9 /* Pods-AirbnbCloneTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -493,6 +611,7 @@
 		};
 		D03A1A092D2CEB3100E1468E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A9ECFF8157ED85BC183E99 /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -509,6 +628,7 @@
 		};
 		D03A1A0A2D2CEB3100E1468E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25008D64D8A1E099892A2008 /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

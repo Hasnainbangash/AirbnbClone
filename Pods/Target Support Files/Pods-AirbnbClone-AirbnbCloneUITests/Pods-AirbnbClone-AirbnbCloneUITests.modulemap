@@ -1,0 +1,6 @@
+framework module Pods_AirbnbClone_AirbnbCloneUITests {
+  umbrella header "Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
