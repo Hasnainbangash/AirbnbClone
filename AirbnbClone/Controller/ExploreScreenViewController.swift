@@ -8,6 +8,24 @@
 import UIKit
 import FloatingPanel
 
+// Custom Layout for Floating Panel
+class CustomPanelLayout: FloatingPanelLayout {
+    var position: FloatingPanelPosition = .bottom
+    var initialState: FloatingPanelState = .tip
+    
+    var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
+        return [
+            .full: FloatingPanelLayoutAnchor(absoluteInset: 170, edge: .top, referenceGuide: .safeArea),
+            .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
+            .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.1, edge: .bottom, referenceGuide: .safeArea)
+        ]
+    }
+    
+    func backdropAlpha(for state: FloatingPanelState) -> CGFloat {
+        return 0.0
+    }
+}
+
 class ExploreScreenViewController: UIViewController {
 
     @IBOutlet weak var searchBarView: UIView!
@@ -108,6 +126,9 @@ class ExploreScreenViewController: UIViewController {
         // Initialize the FloatingPanelController object.
         fpc = FloatingPanelController()
         fpc?.delegate = self
+        
+        let layout = CustomPanelLayout()
+        fpc?.layout = layout
         
         // Create the content view controller from storyboard
         let contentVC = storyboard?.instantiateViewController(withIdentifier: K.ExploreCells.Segue.ExploreScreenToBottomSheetSegue) as? ExploreSecondScreenViewController
