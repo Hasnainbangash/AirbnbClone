@@ -143,7 +143,7 @@ class ExploreScreenViewController: UIViewController {
         
         // Customize the floating panel
         fpc?.surfaceView.backgroundColor = .white
-        fpc?.surfaceView.layer.cornerRadius = 50
+        fpc?.surfaceView.layer.cornerRadius = 0
         fpc?.surfaceView.layer.masksToBounds = true
     }
     
