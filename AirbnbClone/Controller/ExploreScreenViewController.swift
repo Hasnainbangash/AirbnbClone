@@ -8,7 +8,7 @@
 import UIKit
 import FloatingPanel
 
-class ExploreScreenViewController: UIViewController, FloatingPanelControllerDelegate {
+class ExploreScreenViewController: UIViewController {
 
     @IBOutlet weak var searchBarView: UIView!
     @IBOutlet weak var settingButtonLabel: UIButton!
@@ -166,14 +166,10 @@ class ExploreScreenViewController: UIViewController, FloatingPanelControllerDele
         // Customize the floating panel if needed.
         fpc?.surfaceView.backgroundColor = .white
         // Round the corners of the floating panel
+        fpc?.surfaceView.backgroundColor = .white
         fpc?.surfaceView.layer.cornerRadius = 50 // Set the corner radius to your desired value
         fpc?.surfaceView.layer.masksToBounds = true // Ensure the rounded corners are visible
         
-        
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        self.dismiss(animated: true, completion: nil)
     }
 
     func setupCornerRadius() {
@@ -221,6 +217,28 @@ class ExploreScreenViewController: UIViewController, FloatingPanelControllerDele
 //            }
 //        }
 //    }
+}
+
+extension ExploreScreenViewController: FloatingPanelControllerDelegate {
+    
+    // Implement delegate method to handle position changes
+    func floatingPanelDidChangePosition(_ fpc: FloatingPanelController) {
+        // Animate corner radius change based on position
+        UIView.animate(withDuration: 0.3) {
+            if fpc.state == .full {
+                fpc.surfaceView.layer.cornerRadius = 0
+            } else {
+                fpc.surfaceView.layer.cornerRadius = 50
+            }
+        }
+    }
+    
+    // Optional: For smoother transitions, you can also implement this method
+    func floatingPanelWillBeginDragging(_ fpc: FloatingPanelController) {
+        // Enable animations during dragging
+        fpc.surfaceView.layer.masksToBounds = true
+    }
+    
 }
 
 extension ExploreScreenViewController: UICollectionViewDataSource {
