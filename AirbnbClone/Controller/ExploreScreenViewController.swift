@@ -150,25 +150,6 @@ class ExploreScreenViewController: UIViewController {
         searchBarView.layer.shadowPath = shadowPath.cgPath
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ExploreScreenToBottomSheet" {
-//            if let destinationVC = segue.destination as? ExploreSecondScreenViewController {
-//                
-//                destinationVC.isModalInPresentation = true
-//                
-//                // Configure the sheet presentation controller
-//                if let sheet = destinationVC.sheetPresentationController {
-//                    sheet.preferredCornerRadius = 40
-//                    sheet.detents = [
-//                        .custom(resolver: { context in
-//                            0.1 * context.maximumDetentValue
-//                        }),
-//                        .large()
-//                    ]
-//                }
-//            }
-//        }
-//    }
 }
 
 extension ExploreScreenViewController: FloatingPanelControllerDelegate {
