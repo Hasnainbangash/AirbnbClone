@@ -228,28 +228,21 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
             switch fpc.state {
             case .full:
                 fpc.surfaceView.layer.cornerRadius = 0
+                self.setTabBarVisibility(visible: true)
             case .half:
                 fpc.surfaceView.layer.cornerRadius = 20  // Adjust for half position if needed
+                self.setTabBarVisibility(visible: true)
             case .hidden:
                 fpc.surfaceView.layer.cornerRadius = 50
+                self.setTabBarVisibility(visible: false)
             case .tip:
                 fpc.surfaceView.layer.cornerRadius = 30  // Optionally, adjust for tip position
+                self.setTabBarVisibility(visible: false)
             default:
                 break
             }
         }
 
-        // Adjust tab bar visibility based on the panel state
-        switch fpc.state {
-        case .full, .half:
-            setTabBarVisibility(visible: true)
-        case .hidden:
-            setTabBarVisibility(visible: false)
-        case .tip:
-            setTabBarVisibility(visible: false)
-        default:
-            break
-        }
     }
 
     // Optional: For smoother transitions, you can also implement this method
