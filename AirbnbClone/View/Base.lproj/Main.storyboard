@@ -6349,8 +6349,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                         <connections>
-                                                            <action selector="phoneNumberButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="UzX-HQ-562"/>
-                                                            <segue destination="Cao-ag-0UI" kind="show" id="fws-Lb-wV2"/>
+                                                            <segue destination="Cao-ag-0UI" kind="presentation" id="kQM-2A-FkJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
