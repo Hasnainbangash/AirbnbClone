@@ -15,7 +15,7 @@ class CustomPanelLayout: FloatingPanelLayout {
     
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
         return [
-            .full: FloatingPanelLayoutAnchor(absoluteInset: 170, edge: .top, referenceGuide: .safeArea),
+            .full: FloatingPanelLayoutAnchor(absoluteInset: 160, edge: .top, referenceGuide: .safeArea),
             .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
             .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.1, edge: .bottom, referenceGuide: .safeArea)
         ]
@@ -139,6 +139,8 @@ class ExploreScreenViewController: UIViewController {
         // Add the floating panel to the parent view
         fpc?.addPanel(toParent: self)
         
+        fpc?.move(to: .full, animated: true)
+        
         // Customize the floating panel
         fpc?.surfaceView.backgroundColor = .white
         fpc?.surfaceView.layer.cornerRadius = 50
@@ -182,12 +184,15 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
             switch fpc.state {
             case .full:
                 fpc.surfaceView.layer.cornerRadius = 0
+                fpc.surfaceView.grabberHandle.isHidden = true
                 self.animateTabBar(show: true)
             case .half:
                 fpc.surfaceView.layer.cornerRadius = 20
+                fpc.surfaceView.grabberHandle.isHidden = false
                 self.animateTabBar(show: true)
             case .hidden:
                 fpc.surfaceView.layer.cornerRadius = 50
+                fpc.surfaceView.grabberHandle.isHidden = false
                 self.animateTabBar(show: false)
             case .tip:
                 fpc.surfaceView.layer.cornerRadius = 30
