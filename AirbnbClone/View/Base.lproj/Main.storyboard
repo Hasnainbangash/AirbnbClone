@@ -6350,6 +6350,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                                         <connections>
                                                             <action selector="phoneNumberButton:" destination="cfj-s5-Sdx" eventType="touchUpInside" id="UzX-HQ-562"/>
+                                                            <segue destination="Cao-ag-0UI" kind="show" id="fws-Lb-wV2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -7044,11 +7045,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddPhoneNumberViewController" id="Cao-ag-0UI" customClass="AddPhoneNumberViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OkN-3e-gWD">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-uX-Kct">
-                                <rect key="frame" x="16" y="62" width="370" height="778"/>
+                                <rect key="frame" x="16" y="0.0" width="370" height="864"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9f-a8-fFD">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="682"/>
@@ -7130,7 +7131,7 @@
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UnitedKingdom (+44)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc1-eJ-FcL">
-                                                                                                <rect key="frame" x="0.0" y="28.333333333333314" width="221" height="24.666666666666671"/>
+                                                                                                <rect key="frame" x="0.0" y="28.333333333333343" width="221" height="24.666666666666671"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="height" constant="24.666666666666671" id="VWb-GS-Mtf"/>
                                                                                                     <constraint firstAttribute="width" constant="250" id="WjF-MM-SAq"/>
@@ -7250,7 +7251,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="v4c-rD-1aO"/>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q23-0H-0NK">
-                                        <rect key="frame" x="0.0" y="684" width="370" height="94"/>
+                                        <rect key="frame" x="0.0" y="684" width="370" height="180"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="kQA-gc-jCf">
                                                 <rect key="frame" x="8" y="8" width="354" height="78"/>
@@ -7291,6 +7292,7 @@
                             <constraint firstItem="Vp5-Dt-q3T" firstAttribute="trailing" secondItem="ueE-uX-Kct" secondAttribute="trailing" constant="16" id="l3e-JA-Qut"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tcl-fZ-XLM"/>
                     <connections>
                         <outlet property="phoneNumberView" destination="Yv8-8f-BrD" id="WQY-zg-tEg"/>
                         <outlet property="varifyButtonLabel" destination="qgc-FD-7TM" id="9Ai-Za-XVC"/>

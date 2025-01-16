@@ -298,6 +298,7 @@ class PerosnalInformationMainViewController: UIViewController {
     
 }
 
+/*
 // MARK: - UIAdaptivePresentationControllerDelegate
 extension PerosnalInformationMainViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
@@ -305,6 +306,7 @@ extension PerosnalInformationMainViewController: UIAdaptivePresentationControlle
         removeBlurEffect()
     }
 }
+ */
 
 // MARK: - setupCornerRadius and setupBoderRadius
 
