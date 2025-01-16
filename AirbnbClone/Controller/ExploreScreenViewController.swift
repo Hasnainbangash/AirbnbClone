@@ -220,25 +220,52 @@ class ExploreScreenViewController: UIViewController {
 }
 
 extension ExploreScreenViewController: FloatingPanelControllerDelegate {
-    
-    // Implement delegate method to handle position changes
-    func floatingPanelDidChangePosition(_ fpc: FloatingPanelController) {
-        // Animate corner radius change based on position
+
+    // Implement delegate method to handle panel's state changes
+    func floatingPanelDidChangeState(_ fpc: FloatingPanelController) {
+        // Animate corner radius change based on the panel state
         UIView.animate(withDuration: 0.3) {
-            if fpc.state == .full {
+            switch fpc.state {
+            case .full:
                 fpc.surfaceView.layer.cornerRadius = 0
-            } else {
+            case .half:
+                fpc.surfaceView.layer.cornerRadius = 20  // Adjust for half position if needed
+            case .hidden:
                 fpc.surfaceView.layer.cornerRadius = 50
+            case .tip:
+                fpc.surfaceView.layer.cornerRadius = 30  // Optionally, adjust for tip position
+            default:
+                break
             }
         }
+
+        // Adjust tab bar visibility based on the panel state
+        switch fpc.state {
+        case .full, .half:
+            setTabBarVisibility(visible: true)
+        case .hidden:
+            setTabBarVisibility(visible: false)
+        case .tip:
+            setTabBarVisibility(visible: false)
+        default:
+            break
+        }
     }
-    
+
     // Optional: For smoother transitions, you can also implement this method
     func floatingPanelWillBeginDragging(_ fpc: FloatingPanelController) {
-        // Enable animations during dragging
+        // Enable animations during dragging (this helps smooth out changes)
         fpc.surfaceView.layer.masksToBounds = true
     }
     
+    // Helper method to hide/show the Tab Bar
+    func setTabBarVisibility(visible: Bool) {
+        guard let tabBarController = self.tabBarController else { return }
+        
+        UIView.animate(withDuration: 0.3) {
+            tabBarController.tabBar.isHidden = !visible
+        }
+    }
 }
 
 extension ExploreScreenViewController: UICollectionViewDataSource {
