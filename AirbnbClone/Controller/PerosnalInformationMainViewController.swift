@@ -184,6 +184,7 @@ class PerosnalInformationMainViewController: UIViewController {
         
     }
     
+    /*
     func addBlurEffect() {
         // Remove existing blur if any
         removeBlurEffect()
@@ -243,6 +244,7 @@ class PerosnalInformationMainViewController: UIViewController {
         }
     }
     
+     */
     
     @IBAction func emailButton(_ sender: UIButton) {
         
