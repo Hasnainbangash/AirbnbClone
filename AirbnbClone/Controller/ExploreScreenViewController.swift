@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import FloatingPanel
 
-class ExploreScreenViewController: UIViewController {
+class ExploreScreenViewController: UIViewController, FloatingPanelControllerDelegate {
 
     @IBOutlet weak var searchBarView: UIView!
     @IBOutlet weak var settingButtonLabel: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var fpc: FloatingPanelController?
     
     var exploreCategories: [ExploreCategories] = [
         
@@ -98,6 +101,7 @@ class ExploreScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        /* // Bottom sheet made through the code
         // Get reference to storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -141,6 +145,27 @@ class ExploreScreenViewController: UIViewController {
             // Present the navigation controller with the bottom sheet
             present(navVC, animated: true)
         }
+        */
+        
+        // Initialize the FloatingPanelController object.
+        fpc = FloatingPanelController()
+        fpc?.delegate = self
+        
+        // Create the content view controller from storyboard (SecondViewController).
+        let contentVC = storyboard?.instantiateViewController(withIdentifier: K.ExploreCells.Segue.ExploreScreenToBottomSheetSegue) as? ExploreSecondScreenViewController
+        
+        // Set the content view controller for the floating panel.
+        fpc?.set(contentViewController: contentVC)
+        
+        // Optionally, track a scroll view if your content is scrollable.
+        // fpc?.track(scrollView: contentVC.tableView)
+        
+        // Add the floating panel to the parent view.
+        fpc?.addPanel(toParent: self)
+        
+        // Customize the floating panel if needed.
+        fpc?.surfaceView.backgroundColor = .white
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
