@@ -165,6 +165,10 @@ class ExploreScreenViewController: UIViewController, FloatingPanelControllerDele
         
         // Customize the floating panel if needed.
         fpc?.surfaceView.backgroundColor = .white
+        // Round the corners of the floating panel
+        fpc?.surfaceView.layer.cornerRadius = 50 // Set the corner radius to your desired value
+        fpc?.surfaceView.layer.masksToBounds = true // Ensure the rounded corners are visible
+        
         
     }
     
