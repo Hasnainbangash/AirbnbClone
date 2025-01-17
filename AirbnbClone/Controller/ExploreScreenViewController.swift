@@ -10,12 +10,18 @@ import FloatingPanel
 
 // Custom Layout for Floating Panel
 class CustomPanelLayout: FloatingPanelLayout {
+    weak var viewController: ExploreScreenViewController?
+    
+    init(viewController: ExploreScreenViewController) {
+        self.viewController = viewController
+    }
+    
     var position: FloatingPanelPosition = .bottom
     var initialState: FloatingPanelState = .tip
     
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
         return [
-            .full: FloatingPanelLayoutAnchor(absoluteInset: 160, edge: .top, referenceGuide: .safeArea),
+            .full: FloatingPanelLayoutAnchor(absoluteInset: viewController?.heightForBottomSheet() ?? 0, edge: .top, referenceGuide: .safeArea),
             .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
             .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.1, edge: .bottom, referenceGuide: .safeArea)
         ]
@@ -127,7 +133,7 @@ class ExploreScreenViewController: UIViewController {
         fpc = FloatingPanelController()
         fpc?.delegate = self
         
-        let layout = CustomPanelLayout()
+        let layout = CustomPanelLayout(viewController: self)
         fpc?.layout = layout
         
         // Create the content view controller from storyboard
@@ -202,6 +208,18 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
                 break
             }
         }
+    }
+    
+    func heightForBottomSheet() -> CGFloat {
+        guard let tabBar = self.tabBarController?.tabBar else { return 0 }
+        guard let collection = self.collectionView else { return 0}
+        
+        let tabBarHeight = tabBar.frame.height
+        let collectionViewHeight = collection.frame.height
+        
+        let heightForBottomSheet = tabBarHeight + collectionViewHeight - 10
+        
+        return heightForBottomSheet
     }
 
     func floatingPanelWillBeginDragging(_ fpc: FloatingPanelController) {
