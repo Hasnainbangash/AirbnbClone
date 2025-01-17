@@ -26,20 +26,20 @@
                                     <constraint firstAttribute="width" constant="80" id="vL0-JU-sav"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ETk-9R-SMc">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ETk-9R-SMc">
                                 <rect key="frame" x="95" y="0.0" width="286" height="76"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-gh-iL6">
-                                        <rect key="frame" x="0.0" y="0.0" width="271.66666666666669" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="20.333333333333332"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AirbnbSupport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ne-cr-sfh">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="AirbnbSupport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ne-cr-sfh">
+                                                <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGH-ZB-v6e">
-                                                <rect key="frame" x="221" y="0.0" width="50.666666666666686" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGH-ZB-v6e">
+                                                <rect key="frame" x="235.33333333333329" y="0.0" width="50.666666666666657" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -47,13 +47,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airbnb: This case is closed. Still new" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ves-6B-aWB">
-                                        <rect key="frame" x="0.0" y="26.333333333333336" width="275.33333333333331" height="28"/>
+                                        <rect key="frame" x="0.0" y="26.333333333333336" width="286" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdO-Ea-znn">
-                                        <rect key="frame" x="0.0" y="60.333333333333336" width="42.333333333333336" height="15.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="60.333333333333336" width="286" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
