@@ -17,7 +17,7 @@ class CategoryCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        categorySelectView.backgroundColor = .red
+        categorySelectView.backgroundColor = .white
         
     }
     

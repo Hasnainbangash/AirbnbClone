@@ -276,4 +276,24 @@ extension ExploreScreenViewController: UICollectionViewDelegateFlowLayout {
         return 5
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell {
+            cell.categorySelectView.backgroundColor = UIColor.black
+            print("I got selected")
+        } else {
+            print("I won't get selected")
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell {
+            cell.categorySelectView.backgroundColor = UIColor.white
+            print("I got deselected")
+        } else {
+            print("I won't get deselected")
+        }
+    }
+    
 }
