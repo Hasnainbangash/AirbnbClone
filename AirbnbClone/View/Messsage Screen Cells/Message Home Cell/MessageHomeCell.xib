@@ -67,6 +67,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lastMessage" destination="ves-6B-aWB" id="WyY-sW-I11"/>
+                <outlet property="messageStatus" destination="vdO-Ea-znn" id="Y9L-SQ-lg3"/>
+                <outlet property="name" destination="9Ne-cr-sfh" id="k1S-JX-z6E"/>
+                <outlet property="receiverImageView" destination="TU2-Ek-3V1" id="TJH-kB-70X"/>
+                <outlet property="timeDay" destination="QGH-ZB-v6e" id="iNA-qC-YNT"/>
+            </connections>
             <point key="canvasLocation" x="164.8854961832061" y="30.633802816901412"/>
         </tableViewCell>
     </objects>
