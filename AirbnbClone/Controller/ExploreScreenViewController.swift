@@ -37,6 +37,8 @@ class ExploreScreenViewController: UIViewController {
     @IBOutlet weak var searchBarView: UIView!
     @IBOutlet weak var settingButtonLabel: UIButton!
     
+    @IBOutlet weak var searchCollectionVIewStackView: UIStackView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var fpc: FloatingPanelController?
@@ -211,13 +213,10 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
     }
     
     func heightForBottomSheet() -> CGFloat {
-        guard let tabBar = self.tabBarController?.tabBar else { return 0 }
-        guard let collection = self.collectionView else { return 0}
         
-        let tabBarHeight = tabBar.frame.height
-        let collectionViewHeight = collection.frame.height
-        
-        let heightForBottomSheet = tabBarHeight + collectionViewHeight - 10
+        let searchCollectionViewStackViewHeight = searchCollectionVIewStackView.frame.height
+
+        let heightForBottomSheet = searchCollectionViewStackViewHeight
         
         return heightForBottomSheet
     }
