@@ -11,10 +11,14 @@ class CategoryCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
+    @IBOutlet weak var categorySelectView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        categorySelectView.backgroundColor = .red
+        
     }
     
     func configureCell(categoryImageName: String, categoryName: String) {

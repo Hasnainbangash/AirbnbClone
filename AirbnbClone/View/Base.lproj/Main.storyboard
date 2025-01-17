@@ -563,6 +563,7 @@
                                                         <connections>
                                                             <outlet property="categoryImageView" destination="VwG-fv-LlL" id="4fU-8z-2tn"/>
                                                             <outlet property="categoryName" destination="5eX-0Q-qbu" id="L1l-8w-3Td"/>
+                                                            <outlet property="categorySelectView" destination="6LP-jP-6aU" id="dKN-8P-572"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
