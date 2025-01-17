@@ -31,7 +31,7 @@ class MessageHomeCell: UITableViewCell {
         receiverImageView.layer.cornerRadius = receiverImageView.frame.height / 2
     }
     
-    func configureCell(receiverImage: String, name: String, timeDay: String, lastMessage: String, messageStatus: String) {
+    func configureCell(receiverImage: String, name: String, timeDay: String, lastMessage: String?, messageStatus: String) {
         
         self.receiverImageView.image = UIImage(named: receiverImage)
         self.name.text = name

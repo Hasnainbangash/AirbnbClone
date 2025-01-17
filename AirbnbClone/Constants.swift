@@ -21,6 +21,16 @@ struct K {
         }
     }
     
+    struct MessageScreenCell {
+        struct Identifiers {
+            static let messageHomeCellIdentifier = "MessageHomeCellReuseableCell"
+        }
+        
+        struct NibNames {
+            static let messageHomeCellNibName = "MessageHomeCell"
+        }
+    }
+    
     struct ExploreCells {
         struct Identifiers {
             static let categoryCellIdentifier = "CategoriesCollectionReuseableCell"
