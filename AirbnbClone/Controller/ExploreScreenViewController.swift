@@ -255,6 +255,7 @@ extension ExploreScreenViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ExploreCells.Identifiers.categoryCellIdentifier, for: indexPath) as? CategoryCell
         cell?.configureCell(categoryImageName: exploreCategory.categoryImage, categoryName: exploreCategory.categoryName)
+        cell?.selectedViewColor(indexNum: indexPath.row)
         return cell ?? UICollectionViewCell()
     }
     
@@ -277,14 +278,21 @@ extension ExploreScreenViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell {
-            cell.categorySelectView.backgroundColor = UIColor.black
-            print("I got selected")
-        } else {
-            print("I won't get selected")
+        // Deselect all other cells first
+        for visibleIndexPath in collectionView.indexPathsForVisibleItems {
+            if visibleIndexPath != indexPath {
+                if let cell = collectionView.cellForItem(at: visibleIndexPath) as? CategoryCell {
+                    cell.categorySelectView.backgroundColor = UIColor.white
+                }
+            }
         }
         
+        // Select the newly tapped cell
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell {
+            cell.categorySelectView.backgroundColor = UIColor.black
+        }
+        
+        print("Selected category at index: \(indexPath.row)")
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

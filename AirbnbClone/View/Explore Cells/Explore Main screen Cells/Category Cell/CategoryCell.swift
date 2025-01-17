@@ -17,8 +17,16 @@ class CategoryCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        categorySelectView.backgroundColor = .white
+        categorySelectView.backgroundColor = UIColor.white
         
+    }
+    
+    func selectedViewColor(indexNum: Int) {
+        if indexNum == 0 {
+            categorySelectView.backgroundColor = UIColor.black
+        } else {
+            categorySelectView.backgroundColor = UIColor.white
+        }
     }
     
     func configureCell(categoryImageName: String, categoryName: String) {
