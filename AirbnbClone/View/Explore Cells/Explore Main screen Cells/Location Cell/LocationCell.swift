@@ -37,6 +37,7 @@ class LocationCell: UITableViewCell {
         collectionView.register(UINib(nibName: K.ExploreCells.NibNames.locationPictureViewCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreCells.Identifiers.locationPictureViewCellIdentifier)
         
         setupPageControl()
+        setupCornerRadius()
         
     }
 
@@ -44,6 +45,10 @@ class LocationCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupCornerRadius() {
+        collectionView.layer.cornerRadius = collectionView.frame.height / 13
     }
     
     func configureCell(placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
