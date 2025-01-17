@@ -48,7 +48,7 @@ class LocationCell: UITableViewCell {
     }
     
     func setupCornerRadius() {
-        collectionView.layer.cornerRadius = collectionView.frame.height / 13
+        collectionView.layer.cornerRadius = collectionView.frame.height / 17
     }
     
     func configureCell(placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
