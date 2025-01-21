@@ -314,6 +314,9 @@ extension ExploreScreenViewController: MKMapViewDelegate {
                 rating: locationData.rating
             )
             
+            // This will get called when detailVC is dismissed
+            detailVC.presentationController?.delegate = self
+            
             // Present the detail view controller
             // self.navigationController?.pushViewController(detailVC, animated: true)
             self.present(detailVC, animated: true)
