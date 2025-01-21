@@ -19,6 +19,8 @@ class MapLocationMainViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var mainStackView: UIStackView!
+    
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
     override func viewDidLoad() {
@@ -42,7 +44,7 @@ class MapLocationMainViewController: UIViewController {
     }
     
     func setupCornerRadius() {
-        collectionView.layer.cornerRadius = collectionView.frame.height / 17
+        mainStackView.layer.cornerRadius = mainStackView.frame.height / 17
     }
     
     func configureCell(placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
