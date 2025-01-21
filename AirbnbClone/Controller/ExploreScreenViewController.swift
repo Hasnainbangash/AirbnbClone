@@ -396,6 +396,16 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
         
         // Animate the tab bar to the desired position
         UIView.animate(withDuration: 0.3, animations: {
+            
+            // Here the custom code to chnage background color while hiding and unhiding
+            if show {
+                tabBar.backgroundColor = .white
+                tabBar.isHidden = false
+            } else {
+                tabBar.backgroundColor = .clear
+                tabBar.isHidden = true
+            }
+            
             tabBar.frame.origin.y = targetY
         })
     }
