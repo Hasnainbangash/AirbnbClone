@@ -288,6 +288,8 @@ extension ExploreScreenViewController: MKMapViewDelegate {
         
         guard !(annotation is MKUserLocation) else { return }
         
+        fpc?.hide(animated: true)
+        
         if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "MapLocationMainViewController") as? MapLocationMainViewController {
             
             if let sheet = detailVC.sheetPresentationController {
@@ -319,6 +321,20 @@ extension ExploreScreenViewController: MKMapViewDelegate {
         
     }
     
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        fpc?.show(animated: true)
+    }
+    
+}
+
+extension ExploreScreenViewController: UIAdaptivePresentationControllerDelegate {
+    
+    // This delegate method is called when the detailVC is dismissed
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        // Show the floating panel again after dismissing the detailVC
+        fpc?.addPanel(toParent: self)
+        fpc?.move(to: .tip, animated: true)
+    }
 }
 
 extension ExploreScreenViewController: FloatingPanelControllerDelegate {
