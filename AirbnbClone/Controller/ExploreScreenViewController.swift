@@ -235,7 +235,6 @@ extension ExploreScreenViewController: MKMapViewDelegate {
         
 //        annotationView?.image = UIImage(named: "google")
         
-        
         // Create a label to display the place's name
         let label = UILabel()
         label.text = annotation.title ?? "$50"
@@ -262,7 +261,18 @@ extension ExploreScreenViewController: MKMapViewDelegate {
             label.heightAnchor.constraint(equalToConstant: 30)
         ])
         
+        // Add an image to the annotation's callout
+        let imageView = UIImageView(image: UIImage(named: "hotelroomimage3"))
+        imageView.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
+        
+        // Add the image view to the callout accessory
+        annotationView?.rightCalloutAccessoryView = imageView
+        
         return annotationView
+
     }
     
 }
