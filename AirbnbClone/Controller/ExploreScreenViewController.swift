@@ -201,7 +201,8 @@ class ExploreScreenViewController: UIViewController {
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
-        pin.title = "Location Title"
+        // pin.title = "Location Title"
+        pin.title = "$30"
         pin.subtitle = "Location subtitle"
         mapView.addAnnotation(pin)
         
@@ -210,6 +211,54 @@ class ExploreScreenViewController: UIViewController {
 }
 
 extension ExploreScreenViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
+        
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            // create the view
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+//        annotationView?.image = UIImage(named: "google")
+        
+        
+        // Create a label to display the place's name
+        let label = UILabel()
+        label.text = annotation.title ?? "$50"
+        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        label.textColor = .black
+        label.textAlignment = .center
+        label.backgroundColor = .white
+        label.layer.cornerRadius = 10
+        label.layer.borderWidth = 0.4
+        label.layer.masksToBounds = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+//        // Remove any previous subviews
+//        annotationView?.subviews.forEach { $0.removeFromSuperview() }
+        
+        // Add the label to the annotation view
+        annotationView?.addSubview(label)
+        
+        // Set the label's constraints
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: annotationView!.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: annotationView!.centerYAnchor),
+            label.widthAnchor.constraint(equalToConstant: 50),
+            label.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        return annotationView
+    }
     
 }
 
