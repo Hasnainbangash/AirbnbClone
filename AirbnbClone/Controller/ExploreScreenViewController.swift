@@ -122,12 +122,15 @@ class ExploreScreenViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        mapView.delegate = self
+        
         setupCornerRadius()
         setupBorderWidth()
         setupBorderShadow()
         
         setupFloatingPanel()
         
+        addCustomPin()
     }
     
     deinit {
@@ -184,6 +187,29 @@ class ExploreScreenViewController: UIViewController {
                                       cornerRadius: searchBarView.layer.cornerRadius)
         searchBarView.layer.shadowPath = shadowPath.cgPath
     }
+    
+    func addCustomPin() {
+        
+        let coordinate = CLLocationCoordinate2D(latitude: 40.728, longitude: -74)
+        
+        mapView.setRegion(MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(
+                latitudeDelta: 0.1,
+                longitudeDelta: 0.1)
+        ), animated: true)
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinate
+        pin.title = "Location Title"
+        pin.subtitle = "Location subtitle"
+        mapView.addAnnotation(pin)
+        
+    }
+    
+}
+
+extension ExploreScreenViewController: MKMapViewDelegate {
     
 }
 
