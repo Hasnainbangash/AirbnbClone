@@ -384,8 +384,11 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
         fpc.surfaceView.layer.masksToBounds = true
     }
     
-    private func animateTabBar(show: Bool) {
+    func animateTabBar(show: Bool) {
         guard let tabBar = self.tabBarController?.tabBar else { return }
+        
+        tabBar.isHidden = false
+        tabBar.isTranslucent = false
         
         // Calculate the screen height and the tab bar height
         let tabBarHeight = tabBar.frame.height
@@ -407,7 +410,12 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
             }
             
             tabBar.frame.origin.y = targetY
-        })
+        }) { completed in
+            if !show {
+                tabBar.isHidden = true
+            }
+        }
+        
     }
 
 }
