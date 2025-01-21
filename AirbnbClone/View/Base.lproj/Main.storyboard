@@ -7753,6 +7753,16 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                             <constraint firstItem="WBB-ba-x78" firstAttribute="top" secondItem="BDw-ZE-CWE" secondAttribute="top" constant="5" id="wR1-G5-7jH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="availableDates" destination="LNT-zt-KP5" id="Uom-bN-SzR"/>
+                        <outlet property="collectionView" destination="paW-VU-UBQ" id="i4a-HP-cdg"/>
+                        <outlet property="dayNightLabel" destination="g3w-75-YVN" id="PQ9-aZ-z9E"/>
+                        <outlet property="pageControl" destination="fE6-ru-O8x" id="27I-h7-iVv"/>
+                        <outlet property="placeHostedName" destination="dYz-Hz-OKa" id="eFc-7l-RTO"/>
+                        <outlet property="placeName" destination="EMC-ml-6pd" id="2fd-Oc-bXB"/>
+                        <outlet property="placePrice" destination="eDK-WO-8c0" id="l9a-zI-aNH"/>
+                        <outlet property="rating" destination="Gsk-lC-dOF" id="LNC-0v-zrh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59w-9O-U6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
