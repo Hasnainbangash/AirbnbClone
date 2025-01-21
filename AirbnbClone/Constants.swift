@@ -9,6 +9,16 @@ import Foundation
 
 struct K {
     
+    struct MapScreensCell {
+        struct Identifiers {
+            static let mapLocationCellIdentifier = "MapLocationImageReuseableCell"
+        }
+        
+        struct NibNames {
+            static let mapLocationCellNibName = "MapLocationCell"
+        }
+    }
+    
     struct RecentlyViewedCell {
         struct Identifiers {
             static let recentlyViewedCellIdentifier = "RecentlyViewedReuseableCell"

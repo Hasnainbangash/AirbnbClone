@@ -19,6 +19,8 @@ class MapLocationMainViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
