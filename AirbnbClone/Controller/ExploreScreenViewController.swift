@@ -314,6 +314,8 @@ extension ExploreScreenViewController: MKMapViewDelegate {
                 rating: locationData.rating
             )
             
+            
+            
             // This will get called when detailVC is dismissed
             detailVC.presentationController?.delegate = self
             

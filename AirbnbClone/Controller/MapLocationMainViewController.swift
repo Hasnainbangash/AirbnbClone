@@ -20,6 +20,9 @@ class MapLocationMainViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var detailViewStack: UIStackView!
+    @IBOutlet weak var collectionViewStackView: UIStackView!
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
@@ -44,7 +47,20 @@ class MapLocationMainViewController: UIViewController {
     }
     
     func setupCornerRadius() {
+        // Round top corners of collectionViewStackView
+        let radius: CGFloat = 20  // Set the radius you want for the top corners
+        let path = UIBezierPath(
+            roundedRect: collectionViewStackView.bounds,
+            byRoundingCorners: [.topLeft, .topRight],
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        collectionViewStackView.layer.mask = maskLayer
         mainStackView.layer.cornerRadius = mainStackView.frame.height / 17
+        detailsView.layer.cornerRadius = detailsView.frame.height / 2
+        detailViewStack.layer.cornerRadius = detailViewStack.frame.height / 2
     }
     
     func configureCell(placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {

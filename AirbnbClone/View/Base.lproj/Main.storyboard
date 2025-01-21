@@ -7773,7 +7773,10 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                     <connections>
                         <outlet property="availableDates" destination="LNT-zt-KP5" id="Uom-bN-SzR"/>
                         <outlet property="collectionView" destination="paW-VU-UBQ" id="i4a-HP-cdg"/>
+                        <outlet property="collectionViewStackView" destination="RYc-1S-TKb" id="Nng-OV-Dsq"/>
                         <outlet property="dayNightLabel" destination="g3w-75-YVN" id="PQ9-aZ-z9E"/>
+                        <outlet property="detailViewStack" destination="6Se-Fa-npa" id="uVy-sJ-8uR"/>
+                        <outlet property="detailsView" destination="mWN-QE-020" id="P8t-aM-XuA"/>
                         <outlet property="mainStackView" destination="WBB-ba-x78" id="xCz-E6-S8k"/>
                         <outlet property="pageControl" destination="fE6-ru-O8x" id="27I-h7-iVv"/>
                         <outlet property="placeHostedName" destination="dYz-Hz-OKa" id="eFc-7l-RTO"/>
