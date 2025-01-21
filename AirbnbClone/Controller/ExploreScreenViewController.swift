@@ -130,7 +130,11 @@ class ExploreScreenViewController: UIViewController {
         
         setupFloatingPanel()
         
-        addCustomPin()
+        addCustomPin(latitute: 40.712742, longitude: -74.006001)
+        addCustomPin(latitute: 40.731245, longitude: -73.997115)
+        addCustomPin(latitute: 40.732706, longitude: -74.035835)
+        addCustomPin(latitute: 40.707320, longitude: -74.037380)
+
     }
     
     deinit {
@@ -188,9 +192,10 @@ class ExploreScreenViewController: UIViewController {
         searchBarView.layer.shadowPath = shadowPath.cgPath
     }
     
-    func addCustomPin() {
+    func addCustomPin(latitute: CLLocationDegrees, longitude: CLLocationDegrees) {
         
-        let coordinate = CLLocationCoordinate2D(latitude: 40.728, longitude: -74)
+        // let coordinate = CLLocationCoordinate2D(latitude: 40.728, longitude: -74)
+        let coordinate = CLLocationCoordinate2D(latitude: latitute, longitude: longitude)
         
         mapView.setRegion(MKCoordinateRegion(
             center: coordinate,
