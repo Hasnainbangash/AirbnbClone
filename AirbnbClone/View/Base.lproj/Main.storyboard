@@ -7748,10 +7748,10 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BDw-ZE-CWE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BDw-ZE-CWE" firstAttribute="trailing" secondItem="WBB-ba-x78" secondAttribute="trailing" constant="16" id="NuQ-Vp-GUJ"/>
                             <constraint firstItem="WBB-ba-x78" firstAttribute="leading" secondItem="BDw-ZE-CWE" secondAttribute="leading" constant="16" id="aT2-Ae-Yy0"/>

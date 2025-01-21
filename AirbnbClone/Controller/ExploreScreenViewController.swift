@@ -293,7 +293,7 @@ extension ExploreScreenViewController: MKMapViewDelegate {
             if let sheet = detailVC.sheetPresentationController {
                 sheet.detents = [.custom(resolver: { context in
                     0.55 * context.maximumDetentValue
-                }), .large()]
+                })]
                 
                 sheet.preferredCornerRadius = 20
             }
