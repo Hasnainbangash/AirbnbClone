@@ -385,9 +385,9 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
     }
     
     func animateTabBar(show: Bool) {
+        
         guard let tabBar = self.tabBarController?.tabBar else { return }
         
-        tabBar.isHidden = false
         tabBar.isTranslucent = false
         
         // Calculate the screen height and the tab bar height
@@ -397,24 +397,19 @@ extension ExploreScreenViewController: FloatingPanelControllerDelegate {
         // Set the tab bar position directly, depending on whether we want to show or hide it
         let targetY = show ? screenHeight - tabBarHeight : screenHeight
         
+        // Here the custom code to chnage background color while hiding and unhiding
+        if show {
+            tabBar.backgroundColor = .white
+            tabBar.isHidden = false
+        } else {
+            tabBar.backgroundColor = .clear
+            tabBar.isHidden = true
+        }
+        
         // Animate the tab bar to the desired position
         UIView.animate(withDuration: 0.3, animations: {
-            
-            // Here the custom code to chnage background color while hiding and unhiding
-            if show {
-                tabBar.backgroundColor = .white
-                tabBar.isHidden = false
-            } else {
-                tabBar.backgroundColor = .clear
-                tabBar.isHidden = true
-            }
-            
             tabBar.frame.origin.y = targetY
-        }) { completed in
-            if !show {
-                tabBar.isHidden = true
-            }
-        }
+        })
         
     }
 
