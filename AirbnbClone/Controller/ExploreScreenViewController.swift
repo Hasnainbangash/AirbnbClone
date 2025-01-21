@@ -7,6 +7,8 @@
 
 import UIKit
 import FloatingPanel
+import MapKit
+import CoreLocation
 
 // Custom Layout for Floating Panel
 class CustomPanelLayout: FloatingPanelLayout {
@@ -40,6 +42,8 @@ class ExploreScreenViewController: UIViewController {
     @IBOutlet weak var searchCollectionVIewStackView: UIStackView!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     var fpc: FloatingPanelController?
     

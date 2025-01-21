@@ -589,6 +589,7 @@
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="1jB-Vf-RQw"/>
                     <connections>
                         <outlet property="collectionView" destination="DFx-bX-D4m" id="By2-26-ilB"/>
+                        <outlet property="mapView" destination="1kq-VR-lXn" id="Rcu-yi-r6Q"/>
                         <outlet property="searchBarView" destination="jZY-8V-lTw" id="q8x-JE-KyO"/>
                         <outlet property="searchCollectionVIewStackView" destination="nky-24-5Zk" id="9Z0-9i-CqZ"/>
                         <outlet property="settingButtonLabel" destination="3B4-YO-dmH" id="RR0-0X-rvT"/>
