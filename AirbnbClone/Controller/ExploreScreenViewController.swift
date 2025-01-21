@@ -289,6 +289,15 @@ extension ExploreScreenViewController: MKMapViewDelegate {
         guard !(annotation is MKUserLocation) else { return }
         
         if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "MapLocationMainViewController") as? MapLocationMainViewController {
+            
+            if let sheet = detailVC.sheetPresentationController {
+                sheet.detents = [.custom(resolver: { context in
+                    0.55 * context.maximumDetentValue
+                }), .large()]
+                
+                sheet.preferredCornerRadius = 20
+            }
+            
             // You have mapLocationsData array with sample data, so you can use that
             // For this example, I'll use the first item, but you might want to match it with the selected annotation
             let locationData = mapLocationsData[0]
