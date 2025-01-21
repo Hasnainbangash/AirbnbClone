@@ -114,6 +114,15 @@ class ExploreScreenViewController: UIViewController {
         
     ]
     
+    var mapLocationsData: [MapLocationData] = [
+        
+        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98")
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -273,6 +282,32 @@ extension ExploreScreenViewController: MKMapViewDelegate {
         
         return annotationView
 
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        
+        guard !(annotation is MKUserLocation) else { return }
+        
+        if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "MapLocationMainViewController") as? MapLocationMainViewController {
+            // You have mapLocationsData array with sample data, so you can use that
+            // For this example, I'll use the first item, but you might want to match it with the selected annotation
+            let locationData = mapLocationsData[0]
+            
+            // Pass data to the detail view controller
+            detailVC.configureCell(
+                placeName: locationData.locationName,
+                placeHosterName: locationData.hosterName,
+                availableDates: locationData.availableDates,
+                priceOfPlace: locationData.price,
+                dayTime: locationData.dateNightTime,
+                rating: locationData.rating
+            )
+            
+            // Present the detail view controller
+            // self.navigationController?.pushViewController(detailVC, animated: true)
+            self.present(detailVC, animated: true)
+        }
+        
     }
     
 }
