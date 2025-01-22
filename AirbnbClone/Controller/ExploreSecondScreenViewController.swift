@@ -60,5 +60,14 @@ extension ExploreSecondScreenViewController: UITableViewDelegate {
         return 450
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let locationData = ExplorelocationsData[indexPath.row]
+        
+        self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
+        
+        
+    }
+    
 }
 
