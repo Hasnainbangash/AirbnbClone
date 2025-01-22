@@ -8283,7 +8283,13 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvt-k3-mpd">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="44"/>
                                         <items>
-                                            <navigationItem title="Title" id="A4E-x1-rcI"/>
+                                            <navigationItem title="Title" id="A4E-x1-rcI">
+                                                <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left.circle.fill" catalog="system" id="mGU-BL-Voe">
+                                                    <connections>
+                                                        <action selector="backButtonPressed:" destination="s27-dg-Ftb" id="QjZ-bC-QDS"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
                                         </items>
                                     </navigationBar>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-iA-CAf">
@@ -9859,6 +9865,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
         <image name="airbnb" width="24" height="24"/>
         <image name="airbnbcolor" width="24" height="24"/>
         <image name="apple" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="arrow.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bed" width="208.66667175292969" height="208.66667175292969"/>
         <image name="bell" catalog="system" width="125" height="128"/>

@@ -103,7 +103,11 @@ class ExploreLocationDetailViewController: UIViewController {
         meetYourHostView.layer.masksToBounds = false // Important for shadow to appear outside bounds
         meetYourHostView.layer.shadowPath = UIBezierPath(rect: meetYourHostView.bounds).cgPath
     }
-
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension ExploreLocationDetailViewController: UICollectionViewDataSource {
