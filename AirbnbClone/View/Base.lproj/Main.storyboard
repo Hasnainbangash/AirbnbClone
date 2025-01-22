@@ -1175,6 +1175,9 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="73"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                                <connections>
+                                                                                    <segue destination="RfD-LI-hWv" kind="show" id="9Aw-f1-4F0"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1327,6 +1330,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="cfj-s5-Sdx" kind="show" id="zeZ-q2-zTt"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1395,6 +1401,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="lwD-dm-H6a" kind="show" id="SRN-Ss-aKg"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1463,6 +1472,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="086-ec-DAI" kind="show" id="5Cz-ly-AWp"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1531,6 +1543,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="QnK-K7-HGH" kind="show" id="Fgd-Sg-f1f"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1599,6 +1614,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="5HM-0f-fZJ" kind="show" id="ijj-Mn-I7q"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1667,6 +1685,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="28w-bB-zRR" kind="show" id="lLJ-Sc-zDV"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1735,6 +1756,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="OJz-0l-Kzp" kind="show" id="pL3-ba-frb"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1803,6 +1827,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="CvF-kh-lU2" kind="show" id="wsM-9e-D9b"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1871,6 +1898,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="cW6-Au-Myq" kind="show" id="xsp-nA-PNO"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1959,6 +1989,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="tWj-VB-xKc" kind="show" id="NT6-Ol-DoN"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2027,6 +2060,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="yzt-IQ-lAY" kind="show" id="Ypd-bf-HT9"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2095,6 +2131,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="Olj-y3-VrZ" kind="show" id="Ven-8p-om0"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2386,6 +2425,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <segue destination="B3E-1f-dnh" kind="show" id="llU-1C-41w"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2717,11 +2759,11 @@
             <objects>
                 <viewController id="RfD-LI-hWv" customClass="ShowProfileMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbd-SF-mQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-Uo-Jnf">
-                                <rect key="frame" x="16" y="62" width="370" height="812"/>
+                                <rect key="frame" x="16" y="0.0" width="370" height="864"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Wr1-fw-2xu">
                                         <rect key="frame" x="8" y="8" width="354" height="885"/>
@@ -2939,6 +2981,7 @@
                             <constraint firstItem="1dy-Uo-Jnf" firstAttribute="top" secondItem="cup-84-Wjg" secondAttribute="top" id="hSD-sG-qxM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xaj-bU-Psq"/>
                     <connections>
                         <outlet property="createProfileButtonLabel" destination="NM8-ST-WOH" id="3R7-Ug-pEz"/>
                         <outlet property="getTheBadgeButtonLabel" destination="jPh-U5-8tA" id="0d4-ee-H24"/>
@@ -2955,11 +2998,11 @@
             <objects>
                 <viewController id="lwD-dm-H6a" customClass="LoginandSecurityViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bci-78-a5t">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdH-IG-XuS">
-                                <rect key="frame" x="0.0" y="62" width="402" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-eU-Cn5">
                                         <rect key="frame" x="16" y="15" width="373" height="717"/>
@@ -3178,6 +3221,7 @@
                             <constraint firstItem="UdH-IG-XuS" firstAttribute="top" secondItem="EJT-uI-g8L" secondAttribute="top" id="YhT-WY-FhL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="X43-Kh-aQb"/>
                     <connections>
                         <outlet property="learnAboutSafetyLabel" destination="ehA-th-Gat" id="QEi-nS-tgT"/>
                     </connections>
@@ -3191,11 +3235,11 @@
             <objects>
                 <viewController id="086-ec-DAI" customClass="PaymentsandPayoutMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zs0-Bi-fVM">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="LN8-7H-JJe">
-                                <rect key="frame" x="16" y="77" width="370" height="483"/>
+                                <rect key="frame" x="16" y="15" width="370" height="483"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments &amp; payouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdY-qg-phv">
                                         <rect key="frame" x="0.0" y="0.0" width="316" height="42"/>
@@ -3488,6 +3532,7 @@
                             <constraint firstItem="LN8-7H-JJe" firstAttribute="top" secondItem="Thv-zU-g7V" secondAttribute="top" constant="15" id="erT-kR-Wfh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gZD-ga-GT4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5E-in-W7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3498,11 +3543,11 @@
             <objects>
                 <viewController id="QnK-K7-HGH" customClass="AccessibiltyMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfA-pK-Lyg">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="xMD-Tq-2Br">
-                                <rect key="frame" x="16" y="77" width="370" height="240"/>
+                                <rect key="frame" x="16" y="15" width="370" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eo-p3-9Ik">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
@@ -3543,7 +3588,7 @@
                                                 </subviews>
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWL-xA-1Rz">
-                                                <rect key="frame" x="302" y="19.666666666666657" width="49" height="31"/>
+                                                <rect key="frame" x="302" y="19.666666666666671" width="49" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="47" id="3oU-at-5P4"/>
                                                     <constraint firstAttribute="height" constant="31" id="5h5-nf-4EY"/>
@@ -3580,7 +3625,7 @@
                                                 </subviews>
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVq-fr-lXc">
-                                                <rect key="frame" x="302" y="19.666666666666686" width="49" height="31"/>
+                                                <rect key="frame" x="302" y="19.666666666666657" width="49" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="47" id="GIC-2Q-otm"/>
                                                     <constraint firstAttribute="height" constant="31" id="l8T-Qt-kHu"/>
@@ -3599,6 +3644,7 @@
                             <constraint firstItem="xMD-Tq-2Br" firstAttribute="top" secondItem="tcD-hR-b0S" secondAttribute="top" constant="15" id="bxz-8H-Dkl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ywy-qt-lke"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6na-Lq-WiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3609,11 +3655,11 @@
             <objects>
                 <viewController id="28w-bB-zRR" customClass="TranslationMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJT-Cl-AxM">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ikV-ws-mTA">
-                                <rect key="frame" x="16" y="77" width="370" height="202"/>
+                                <rect key="frame" x="16" y="15" width="370" height="202"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZw-5t-Y8T">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="36"/>
@@ -3675,6 +3721,7 @@
                             <constraint firstItem="12E-8o-dSh" firstAttribute="trailing" secondItem="ikV-ws-mTA" secondAttribute="trailing" constant="16" id="wAQ-Mo-hmB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ElA-U2-tIy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjy-2s-stc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3685,11 +3732,11 @@
             <objects>
                 <viewController id="CvF-kh-lU2" customClass="PrivacyandSharingMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X12-P6-Dfd">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bes-ZY-tNZ">
-                                <rect key="frame" x="16" y="77" width="370" height="619"/>
+                                <rect key="frame" x="16" y="15" width="370" height="619"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-R7-CbE">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="91"/>
@@ -3908,6 +3955,7 @@
                             <constraint firstItem="32U-xa-Ofx" firstAttribute="trailing" secondItem="bes-ZY-tNZ" secondAttribute="trailing" constant="16" id="xwR-OU-069"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ski-zs-Gp1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUA-15-9fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3918,11 +3966,11 @@
             <objects>
                 <viewController id="cW6-Au-Myq" customClass="TravelForWorkMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uR1-cx-rHQ">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="iSr-dy-Ty6">
-                                <rect key="frame" x="16" y="77" width="370" height="203"/>
+                                <rect key="frame" x="16" y="15" width="370" height="203"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-fH-yC2">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="98"/>
@@ -3984,6 +4032,7 @@
                             <constraint firstItem="cSu-cc-qvr" firstAttribute="trailing" secondItem="iSr-dy-Ty6" secondAttribute="trailing" constant="16" id="wVC-aT-c3r"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SFd-1M-Sh2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-sH-mUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3994,14 +4043,14 @@
             <objects>
                 <viewController id="tWj-VB-xKc" customClass="ListfromSpaceMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k39-L4-snr">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="shq-N2-E9T">
-                                <rect key="frame" x="16" y="85" width="370" height="755"/>
+                                <rect key="frame" x="16" y="23" width="370" height="796.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-mn-97y">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="545"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="586.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's easy to get started on Airbnb" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKI-Vr-KqK">
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="86"/>
@@ -4014,7 +4063,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-Wr-vg2">
-                                                <rect key="frame" x="0.0" y="116" width="370" height="429"/>
+                                                <rect key="frame" x="0.0" y="115.99999999999997" width="370" height="470.33333333333326"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZAB-Sy-YTs">
                                                         <rect key="frame" x="0.0" y="0.0" width="370" height="97"/>
@@ -4137,10 +4186,10 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hq9-Ux-Am3">
-                                                        <rect key="frame" x="0.0" y="304" width="370" height="97"/>
+                                                        <rect key="frame" x="0.0" y="304" width="370" height="138.33333333333337"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pjy-Mb-SfD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="230" height="97"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="230" height="138.33333333333334"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnu-ff-WWl">
                                                                         <rect key="frame" x="0.0" y="0.0" width="12" height="23"/>
@@ -4180,7 +4229,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Door with flower" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-1H-FEi">
-                                                                <rect key="frame" x="238" y="0.0" width="132" height="97"/>
+                                                                <rect key="frame" x="238" y="0.0" width="132" height="138.33333333333334"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="97" id="fhY-Gq-MZX"/>
                                                                     <constraint firstAttribute="width" constant="132" id="v3J-QZ-YIi"/>
@@ -4189,7 +4238,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nck-JG-g9s">
-                                                        <rect key="frame" x="0.0" y="428" width="370" height="1"/>
+                                                        <rect key="frame" x="0.0" y="469.33333333333337" width="370" height="1"/>
                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="370" id="M8D-ze-Sad"/>
@@ -4201,7 +4250,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-Y4-4gd">
-                                        <rect key="frame" x="0.0" y="553" width="370" height="151"/>
+                                        <rect key="frame" x="0.0" y="594.33333333333337" width="370" height="151"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="151" id="TfR-la-aIg"/>
@@ -4211,7 +4260,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIn-XL-CtZ">
-                                        <rect key="frame" x="0.0" y="712" width="370" height="43"/>
+                                        <rect key="frame" x="0.0" y="753.33333333333337" width="370" height="43"/>
                                         <color key="backgroundColor" red="0.85490196078431369" green="0.039215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="46W-39-HYP"/>
@@ -4233,6 +4282,7 @@
                             <constraint firstItem="shq-N2-E9T" firstAttribute="bottom" secondItem="2yC-iY-0EV" secondAttribute="bottom" id="uzO-Ap-KJE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4sj-m1-gmW"/>
                     <connections>
                         <outlet property="getStartedButtonLabel" destination="dIn-XL-CtZ" id="sVx-DX-DnH"/>
                     </connections>
@@ -4246,14 +4296,14 @@
             <objects>
                 <viewController id="Olj-y3-VrZ" customClass="HostAnExperienceMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZXP-Ag-LVI">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupfriendshiking" translatesAutoresizingMaskIntoConstraints="NO" id="NVh-JF-W7m">
-                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="989-6N-IFP">
-                                <rect key="frame" x="0.0" y="392" width="402" height="448"/>
+                                <rect key="frame" x="0.0" y="416" width="402" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="9Nu-SE-dqh">
                                         <rect key="frame" x="8" y="16" width="386" height="416"/>
@@ -4329,7 +4379,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Md-u8-W3x">
-                                <rect key="frame" x="16" y="71.666666666666671" width="44" height="44"/>
+                                <rect key="frame" x="16" y="9.6666666666666643" width="44" height="44"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="8ea-Be-T2G"/>
@@ -4337,7 +4387,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf0-cq-040">
-                                <rect key="frame" x="16" y="71" width="44" height="44"/>
+                                <rect key="frame" x="16" y="9" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9wr-KH-LQ3"/>
                                     <constraint firstAttribute="width" constant="44" id="ESr-yo-ZWg"/>
@@ -4362,6 +4412,7 @@
                             <constraint firstItem="jf0-cq-040" firstAttribute="leading" secondItem="Utw-Na-9GM" secondAttribute="leading" constant="16" id="ym9-f2-fYh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zsa-rj-aj9"/>
                     <connections>
                         <outlet property="grabberView" destination="0bo-e2-Sid" id="ENR-uf-eB3"/>
                         <outlet property="letsGoButtonLabel" destination="hB5-qr-86e" id="Mzc-Ty-EXd"/>
@@ -4377,20 +4428,20 @@
             <objects>
                 <viewController id="yzt-IQ-lAY" customClass="FindaCoHostMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hnV-oq-xbm">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vIC-Wv-e8q">
-                                <rect key="frame" x="16" y="72.000000000000014" width="370" height="155.33333333333337"/>
+                                <rect key="frame" x="16" y="10" width="370" height="153"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-oc-0rQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="64.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="62"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-Ao-HvM">
-                                                <rect key="frame" x="19" y="14" width="332" height="34"/>
+                                                <rect key="frame" x="19" y="14.000000000000002" width="332" height="31.666666666666671"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="axG-U3-AAN">
-                                                        <rect key="frame" x="0.0" y="0.99999999999999645" width="30" height="32.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="30" height="30"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="Jcc-rW-WeC"/>
@@ -4398,7 +4449,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myr-vB-dHJ">
-                                                        <rect key="frame" x="38" y="0.0" width="294" height="34"/>
+                                                        <rect key="frame" x="38" y="0.0" width="294" height="31.666666666666668"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="ZGw-hb-nM9"/>
                                                             <constraint firstAttribute="width" constant="292" id="d15-Gh-XwB"/>
@@ -4418,7 +4469,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-6z-W3m">
-                                        <rect key="frame" x="0.0" y="95.333333333333343" width="370" height="60"/>
+                                        <rect key="frame" x="0.0" y="93" width="370" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-3w-Znn">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -4454,6 +4505,7 @@
                             <constraint firstItem="vIC-Wv-e8q" firstAttribute="top" secondItem="NWm-LZ-ghO" secondAttribute="top" constant="10" id="d1E-7j-qd8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8I5-c2-LP5"/>
                     <connections>
                         <outlet property="locationButtonView" destination="S1F-3w-Znn" id="wTR-xC-DM6"/>
                         <outlet property="searchView" destination="eT0-oc-0rQ" id="twW-1w-2aJ"/>
@@ -4468,11 +4520,11 @@
             <objects>
                 <viewController id="B3E-1f-dnh" customClass="GIveUsFeedbackMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ck-ik-TFX">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-HD-W6u">
-                                <rect key="frame" x="16" y="81" width="370" height="747"/>
+                                <rect key="frame" x="16" y="19" width="370" height="747"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-yz-H5y">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="622"/>
@@ -4699,6 +4751,7 @@
                             <constraint firstItem="Gpe-HD-W6u" firstAttribute="leading" secondItem="BsC-qE-LuM" secondAttribute="leading" constant="16" id="zfX-e7-geN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fYq-Cd-mFN"/>
                     <connections>
                         <outlet property="contactUsButtonLabel" destination="cFh-g4-UgX" id="Ytb-Un-7cm"/>
                         <outlet property="needHelpLabel" destination="oYU-iu-cdc" id="b4Q-Ww-Vcp"/>
@@ -4715,11 +4768,11 @@
             <objects>
                 <viewController id="5HM-0f-fZJ" customClass="TaxesViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLz-Vl-TK2">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="wYg-54-DWd">
-                                <rect key="frame" x="16" y="73" width="370" height="767"/>
+                                <rect key="frame" x="16" y="11" width="370" height="853"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="2FB-al-rhC">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="129"/>
@@ -4807,7 +4860,7 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-CQ-yao">
-                                        <rect key="frame" x="0.0" y="151" width="370" height="616"/>
+                                        <rect key="frame" x="0.0" y="151" width="370" height="702"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="RHP-qL-b9k">
                                                 <rect key="frame" x="8" y="8" width="349" height="1413"/>
@@ -5153,6 +5206,7 @@
                             <constraint firstItem="wYg-54-DWd" firstAttribute="bottom" secondItem="TnV-9v-9Yk" secondAttribute="bottom" id="j2K-YX-Gvw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7xo-6F-JXy"/>
                     <connections>
                         <outlet property="addTaxInfoButtonLabel" destination="MjL-8U-u8D" id="paK-NA-2HM"/>
                         <outlet property="addVatIdNumberButtonLabel" destination="LvP-fS-XLX" id="bVe-CD-1kb"/>
@@ -5171,11 +5225,11 @@
             <objects>
                 <viewController id="OJz-0l-Kzp" customClass="NotificationsMainScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0bD-O7-9AS">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-YE-Aum">
-                                <rect key="frame" x="16" y="73" width="370" height="767"/>
+                                <rect key="frame" x="16" y="11" width="370" height="853"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="yGs-iY-AHJ">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="129"/>
@@ -5263,7 +5317,7 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-Pw-P4B">
-                                        <rect key="frame" x="0.0" y="137" width="370" height="630"/>
+                                        <rect key="frame" x="0.0" y="137" width="370" height="716"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dm3-qY-m0I">
                                                 <rect key="frame" x="8" y="20" width="354" height="2759"/>
@@ -6370,6 +6424,7 @@
                             <constraint firstItem="Qlw-YE-Aum" firstAttribute="leading" secondItem="hEl-0x-4xm" secondAttribute="leading" constant="16" id="Zhj-5T-UDA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hib-zD-kg6"/>
                     <connections>
                         <outlet property="accountStackView" destination="Drz-2g-8LP" id="QKt-vj-6Ps"/>
                         <outlet property="accountsView" destination="c8h-R9-RK6" id="BW3-eW-EDC"/>
@@ -6386,11 +6441,11 @@
             <objects>
                 <viewController id="cfj-s5-Sdx" customClass="PerosnalInformationMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2d-FF-sVx">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-d4-hQY">
-                                <rect key="frame" x="16" y="62" width="370" height="778"/>
+                                <rect key="frame" x="16" y="0.0" width="370" height="864"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-IC-1sd">
                                         <rect key="frame" x="8" y="8" width="355" height="2597"/>
@@ -7435,6 +7490,7 @@
                             <constraint firstItem="MTx-d4-hQY" firstAttribute="leading" secondItem="AEH-LJ-Pct" secondAttribute="leading" constant="16" id="iA4-2y-Oe5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="anW-3D-tl7"/>
                     <connections>
                         <outlet property="addressAndRegionView" destination="cDN-BF-cjO" id="GLf-AE-T7T"/>
                         <outlet property="addressCancelButtonLabel" destination="Xfc-gH-YuW" id="6GV-m6-mHD"/>
