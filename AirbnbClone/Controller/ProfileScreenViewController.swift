@@ -28,11 +28,6 @@ class ProfileScreenViewController: UIViewController {
         setupBorderShadow()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = true
-    }
-    
     func setupCornerRadius() {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         yourHomeView.layer.cornerRadius = yourHomeView.frame.height / 7
@@ -54,6 +49,14 @@ class ProfileScreenViewController: UIViewController {
         // Make the shadow more "realistic" by enabling shadow path
         yourHomeView.layer.masksToBounds = false // Important for shadow to appear outside bounds
         yourHomeView.layer.shadowPath = UIBezierPath(rect: yourHomeView.bounds).cgPath
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == K.ProfileMainScreen.Segues.ProfileScreenToShowProfileSegue {
+            self.tabBarController?.tabBar.isHidden = true
+        }
+        
     }
     
 }
