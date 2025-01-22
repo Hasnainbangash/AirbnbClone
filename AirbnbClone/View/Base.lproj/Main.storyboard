@@ -425,6 +425,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="fcg-Sn-gSw" id="hUv-UA-LCF"/>
+                        <segue destination="s27-dg-Ftb" kind="show" id="1Tu-LF-13C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM5-1w-Q05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -8273,14 +8274,20 @@ Identity verification is one of the ways we keep Aironb secure.</string>
             <objects>
                 <viewController id="s27-dg-Ftb" customClass="ExploreLocationDetailViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="to8-cd-S1D">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-FX-VtW">
-                                <rect key="frame" x="16" y="62" width="370" height="778"/>
+                                <rect key="frame" x="16" y="0.0" width="370" height="864"/>
                                 <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvt-k3-mpd">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="56"/>
+                                        <items>
+                                            <navigationItem title="Title" id="A4E-x1-rcI"/>
+                                        </items>
+                                    </navigationBar>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-iA-CAf">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="676.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="61" width="370" height="701.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="AYt-OH-VZh">
                                                 <rect key="frame" x="8" y="8" width="354" height="4390"/>
@@ -8465,7 +8472,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                 <rect key="frame" x="48" y="0.0" width="306" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hosted by Amir " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sys-MN-YS4">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="14"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="21" id="6fE-so-XVW"/>
                                                                             <constraint firstAttribute="width" constant="125" id="xbE-8D-96r"/>
@@ -8475,7 +8482,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super host. 9 years hosting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9j-7V-3Wi">
-                                                                        <rect key="frame" x="0.0" y="15" width="306" height="25"/>
+                                                                        <rect key="frame" x="0.0" y="22" width="306" height="18"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="25" id="oBC-NR-Vzk"/>
                                                                             <constraint firstAttribute="width" constant="306" id="pmE-uH-wcv"/>
@@ -9721,7 +9728,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                         <viewLayoutGuide key="frameLayoutGuide" id="5rO-eB-ZSY"/>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2px-md-bOw">
-                                        <rect key="frame" x="0.0" y="681.66666666666663" width="370" height="96.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="767.66666666666663" width="370" height="96.333333333333371"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ta2-Zj-aaQ">
                                                 <rect key="frame" x="16.666666666666657" y="11.666666666666742" width="337" height="73.333333333333329"/>
@@ -9781,12 +9788,13 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <viewLayoutGuide key="safeArea" id="16N-ov-eay"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DZJ-FX-VtW" firstAttribute="leading" secondItem="16N-ov-eay" secondAttribute="leading" constant="16" id="Dlr-uu-TuQ"/>
-                            <constraint firstItem="DZJ-FX-VtW" firstAttribute="top" secondItem="16N-ov-eay" secondAttribute="top" id="G6g-B7-zLv"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="DZJ-FX-VtW" secondAttribute="bottom" id="gu6-Va-B3z"/>
-                            <constraint firstItem="16N-ov-eay" firstAttribute="trailing" secondItem="DZJ-FX-VtW" secondAttribute="trailing" constant="16" id="xEN-m6-l4S"/>
+                            <constraint firstAttribute="bottom" secondItem="DZJ-FX-VtW" secondAttribute="bottom" id="13T-bK-WFm"/>
+                            <constraint firstItem="16N-ov-eay" firstAttribute="trailing" secondItem="DZJ-FX-VtW" secondAttribute="trailing" constant="16" id="Ize-1R-xtg"/>
+                            <constraint firstItem="DZJ-FX-VtW" firstAttribute="leading" secondItem="16N-ov-eay" secondAttribute="leading" constant="16" id="Yas-A6-YMX"/>
+                            <constraint firstItem="DZJ-FX-VtW" firstAttribute="top" secondItem="16N-ov-eay" secondAttribute="top" id="ge2-0w-tkR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Q03-Lg-pmg"/>
                     <connections>
                         <outlet property="bedroomCollectionView" destination="r0v-ZL-AnK" id="CGL-aq-2gR"/>
                         <outlet property="checkAvailabilityButtonLabel" destination="iA2-Ub-CvE" id="Xik-ft-sJn"/>
@@ -9803,7 +9811,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFg-Dy-UYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="1441"/>
+            <point key="canvasLocation" x="-346" y="1535"/>
         </scene>
         <!--Wishlists-->
         <scene sceneID="Rb2-lc-8Ou">
