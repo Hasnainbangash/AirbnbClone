@@ -9809,7 +9809,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="hosterImageView2" destination="W9b-gV-vQA" id="usK-Xi-dKk"/>
                         <outlet property="imagesCollectionView" destination="qvM-wr-Td8" id="qcW-an-9P9"/>
                         <outlet property="meetYourHostView" destination="NNZ-jE-RhL" id="GaM-5P-C05"/>
+                        <outlet property="navigationBar" destination="Nvt-k3-mpd" id="QTa-JF-VyA"/>
                         <outlet property="reviewCollectionView" destination="Nd0-Dp-Wwt" id="XU1-uM-OB6"/>
+                        <outlet property="scrollView" destination="G3f-iA-CAf" id="Zwm-Cz-m5E"/>
                         <outlet property="showAllAmentitiesButtonLabel" destination="tEW-xc-XRl" id="4Xm-Wn-7Lf"/>
                         <outlet property="showAllReviewsButtonLabel" destination="FHs-ll-7mb" id="eUN-0f-ZuU"/>
                         <outlet property="totalImagesCountLabel" destination="dSM-Xf-g4U" id="ieY-c3-98c"/>
