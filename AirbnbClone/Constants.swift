@@ -92,6 +92,7 @@ struct K {
         
         struct Segue {
             static let ExploreScreenToBottomSheetSegue = "ExploreSecondScreenViewController"
+            static let ExploreSecondScreenToExploreLocationDataSegue = "ExploreSecondScreenToExploreLocationDataScreen"
         }
     }
     
