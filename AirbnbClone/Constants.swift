@@ -9,6 +9,38 @@ import Foundation
 
 struct K {
     
+    struct ProfileMainScreen {
+        struct Segues {
+            // Settings
+            static let ProfileScreenToPersonalInformationSegue = "ProfileScreenToPersonalInformation"
+            static let ProfileScreenToLoginandSecuritySegue = "ProfileScreenToLoginandSecurity"
+            static let ProfileScreenToPaymentandPayoutsSegue = "ProfileScreenToPaymentandPayouts"
+            static let ProfileScreenToAccessibilitySegue = "ProfileScreenToAccessibility"
+            static let ProfileScreenToTaxesSegue = "ProfileScreenToTaxes"
+            static let ProfileScreenToTranslationSegue = "ProfileScreenToTranslation"
+            static let ProfileScreenToNotificationsSegue = "ProfileScreenToNotifications"
+            static let ProfileScreenToPrivacyandSharingSegue = "ProfileScreenToPrivacyandSharing"
+            static let ProfileScreenToTravelforWorkSegue = "ProfileScreenToTravelforWork"
+            
+            // Hosting
+            static let ProfileScreenToListyourSpaceSegue = "ProfileScreenToListyourSpace"
+            static let ProfileScreenToLearnAboutHostingSegue = "ProfileScreenToLearnAboutHosting"
+            static let ProfileScreenToHostanExperienceSegue = "ProfileScreenToHostanExperience"
+            
+            
+            // Support
+            static let ProfileScreenToVisitHelpCenterSegue = "ProfileScreenToVisitHelpCenter"
+            static let ProfileScreenToGetHelpwithSafetyIssuesSegue = "ProfileScreenToHelpwithSafetyIssues"
+            static let ProfileScreenToHowAirbnbWorksSegue = "ProfileScreenToHowAirbnbWorks"
+            static let ProfileScreenToGiveusFeedbackSegue = "ProfileScreenToGiveusFeedback"
+            
+            // Legal
+            static let ProfileScreenToTermOfServicesSegue = "ProfileScreenToTermOfServices"
+            static let ProfileScreenToPrivacyPolicySegue = "ProfileScreenToPrivacyPolicy"
+            static let ProfileScreenToOpenSourceLicenesSegue = "ProfileScreenToOpenSourceLicenes"
+        }
+    }
+    
     struct MapScreensCell {
         struct Identifiers {
             static let mapLocationCellIdentifier = "MapLocationImageReuseableCell"
