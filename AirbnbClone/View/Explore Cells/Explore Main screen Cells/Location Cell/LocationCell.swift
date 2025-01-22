@@ -19,7 +19,7 @@ class LocationCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
+    var images: [String] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,8 +51,9 @@ class LocationCell: UITableViewCell {
         collectionView.layer.cornerRadius = collectionView.frame.height / 17
     }
     
-    func configureCell(placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
+    func configureCell(images: [String], placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
         
+        self.images = images
         self.placeName.text = placeName
         self.placeHostedName.text = "Hosted by \(placeHosterName)"
         self.availableDates.text = "\(availableDates[0]) - \(availableDates[1])"

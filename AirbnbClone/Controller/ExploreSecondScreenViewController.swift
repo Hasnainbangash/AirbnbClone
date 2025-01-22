@@ -13,13 +13,12 @@ class ExploreSecondScreenViewController: UIViewController {
     
     var ExplorelocationsData: [ExploreLocationData] = [
         
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98")
+        ExploreLocationData(images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        ExploreLocationData(images: ["hotelroomimage2", "hotelroomimage1", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        ExploreLocationData(images: ["hotelroomimage3", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
+        ExploreLocationData(images: ["hotelroomimage4", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98")
         
     ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +45,7 @@ extension ExploreSecondScreenViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier, for: indexPath) as? LocationCell
         
-        cell?.configureCell(placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating)
+        cell?.configureCell(images: locationData.images, placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating)
         
         return cell ?? UITableViewCell()
         
