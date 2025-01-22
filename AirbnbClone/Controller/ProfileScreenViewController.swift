@@ -53,8 +53,53 @@ class ProfileScreenViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == K.ProfileMainScreen.Segues.ProfileScreenToShowProfileSegue {
+        switch segue.identifier {
+        // Profile
+        case K.ProfileMainScreen.Segues.ProfileScreenToShowProfileSegue:
             self.tabBarController?.tabBar.isHidden = true
+            break
+        // Settings
+        case K.ProfileMainScreen.Segues.ProfileScreenToPersonalInformationSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToLoginandSecuritySegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToPaymentandPayoutsSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToTaxesSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToTranslationSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToNotificationsSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToPrivacyandSharingSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToTravelforWorkSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        // Hosting
+        case K.ProfileMainScreen.Segues.ProfileScreenToListyourSpaceSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToLearnAboutHostingSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        case K.ProfileMainScreen.Segues.ProfileScreenToHostanExperienceSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        // Support
+        case K.ProfileMainScreen.Segues.ProfileScreenToGiveusFeedbackSegue:
+            self.tabBarController?.tabBar.isHidden = true
+            break
+        default:
+            break
+
         }
         
     }
