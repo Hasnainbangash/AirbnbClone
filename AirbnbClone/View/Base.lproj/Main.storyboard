@@ -425,7 +425,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="fcg-Sn-gSw" id="hUv-UA-LCF"/>
-                        <segue destination="s27-dg-Ftb" kind="show" id="1Tu-LF-13C"/>
+                        <segue destination="s27-dg-Ftb" kind="show" identifier="ExploreSecondScreenToExploreLocationDataScreen" id="1Tu-LF-13C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM5-1w-Q05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
