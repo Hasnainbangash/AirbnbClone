@@ -13,6 +13,11 @@ class ProfileScreenViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var yourHomeView: UIView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +26,11 @@ class ProfileScreenViewController: UIViewController {
         setupCornerRadius()
         setupBorderWidth()
         setupBorderShadow()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func setupCornerRadius() {

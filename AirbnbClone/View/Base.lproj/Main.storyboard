@@ -617,7 +617,7 @@
                         <segue destination="2T8-aF-IdL" kind="relationship" relationship="viewControllers" id="MBV-Br-8Sf"/>
                         <segue destination="czi-qu-Uci" kind="relationship" relationship="viewControllers" id="Ich-B5-4uj"/>
                         <segue destination="8Ob-hQ-thf" kind="relationship" relationship="viewControllers" id="iUY-R8-0xv"/>
-                        <segue destination="nxF-ms-QkI" kind="relationship" relationship="viewControllers" id="SeZ-Fe-HRE"/>
+                        <segue destination="lT3-fE-Vhb" kind="relationship" relationship="viewControllers" id="SeZ-Fe-HRE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdw-yc-xet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1062,7 +1062,7 @@
             </objects>
             <point key="canvasLocation" x="1841.7910447761194" y="734.55377574370709"/>
         </scene>
-        <!--Profile-->
+        <!--Profile Screen View Controller-->
         <scene sceneID="ou0-7c-3bM">
             <objects>
                 <viewController id="nxF-ms-QkI" customClass="ProfileScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -1071,7 +1071,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-at-io4">
-                                <rect key="frame" x="16" y="62" width="370" height="729"/>
+                                <rect key="frame" x="16" y="106" width="370" height="685"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="box-sb-ud2">
                                         <rect key="frame" x="8" y="8" width="354" height="2508"/>
@@ -2743,7 +2743,7 @@
                             <constraint firstItem="3hM-at-io4" firstAttribute="leading" secondItem="S7x-LM-eWk" secondAttribute="leading" constant="16" id="xX4-0L-om7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="dUV-J4-g7A"/>
+                    <navigationItem key="navigationItem" id="wKc-Kq-JIA"/>
                     <connections>
                         <outlet property="profileImageView" destination="ZSM-18-8at" id="91J-H4-f12"/>
                         <outlet property="userNameLabel" destination="5T5-G2-q5r" id="NDC-5C-c7k"/>
@@ -2752,18 +2752,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pi-lQ-srC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576" y="735"/>
+            <point key="canvasLocation" x="3494.0298507462685" y="734.55377574370709"/>
         </scene>
         <!--Show Profile Main View Controller-->
         <scene sceneID="FJh-MM-Z9Y">
             <objects>
                 <viewController id="RfD-LI-hWv" customClass="ShowProfileMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbd-SF-mQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-Uo-Jnf">
-                                <rect key="frame" x="16" y="0.0" width="370" height="864"/>
+                                <rect key="frame" x="16" y="106" width="370" height="768"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Wr1-fw-2xu">
                                         <rect key="frame" x="8" y="8" width="354" height="885"/>
@@ -2991,18 +2991,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb9-u9-OUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586.5671641791041" y="837.52860411899303"/>
+            <point key="canvasLocation" x="4505.9701492537315" y="837.52860411899303"/>
         </scene>
         <!--Loginand Security View Controller-->
         <scene sceneID="e0l-qN-wvM">
             <objects>
                 <viewController id="lwD-dm-H6a" customClass="LoginandSecurityViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bci-78-a5t">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdH-IG-XuS">
-                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                                <rect key="frame" x="0.0" y="106" width="402" height="768"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-eU-Cn5">
                                         <rect key="frame" x="16" y="15" width="373" height="717"/>
@@ -3228,18 +3228,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zu1-Wp-dhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4617.9104477611936" y="845.76659038901596"/>
+            <point key="canvasLocation" x="5537.313432835821" y="845.76659038901596"/>
         </scene>
         <!--Paymentsand Payout Main View Controller-->
         <scene sceneID="R5i-5O-qN0">
             <objects>
                 <viewController id="086-ec-DAI" customClass="PaymentsandPayoutMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zs0-Bi-fVM">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                    <view key="view" contentMode="scaleToFill" id="zs0-Bi-fVM">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="LN8-7H-JJe">
-                                <rect key="frame" x="16" y="15" width="370" height="483"/>
+                                <rect key="frame" x="16" y="121" width="370" height="483"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments &amp; payouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdY-qg-phv">
                                         <rect key="frame" x="0.0" y="0.0" width="316" height="42"/>
@@ -3536,18 +3536,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5E-in-W7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5920.8955223880594" y="851.9450800915331"/>
+            <point key="canvasLocation" x="6840.2985074626858" y="851.9450800915331"/>
         </scene>
         <!--Accessibilty Main View Controller-->
         <scene sceneID="VdZ-Lz-s7X">
             <objects>
                 <viewController id="QnK-K7-HGH" customClass="AccessibiltyMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfA-pK-Lyg">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="xMD-Tq-2Br">
-                                <rect key="frame" x="16" y="15" width="370" height="240"/>
+                                <rect key="frame" x="16" y="121" width="370" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eo-p3-9Ik">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
@@ -3588,7 +3588,7 @@
                                                 </subviews>
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWL-xA-1Rz">
-                                                <rect key="frame" x="302" y="19.666666666666671" width="49" height="31"/>
+                                                <rect key="frame" x="302" y="19.666666666666657" width="49" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="47" id="3oU-at-5P4"/>
                                                     <constraint firstAttribute="height" constant="31" id="5h5-nf-4EY"/>
@@ -3625,7 +3625,7 @@
                                                 </subviews>
                                             </stackView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVq-fr-lXc">
-                                                <rect key="frame" x="302" y="19.666666666666657" width="49" height="31"/>
+                                                <rect key="frame" x="302" y="19.666666666666686" width="49" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="47" id="GIC-2Q-otm"/>
                                                     <constraint firstAttribute="height" constant="31" id="l8T-Qt-kHu"/>
@@ -3648,18 +3648,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6na-Lq-WiI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6988.059701492537" y="857.43707093821502"/>
+            <point key="canvasLocation" x="7907.4626865671635" y="857.43707093821502"/>
         </scene>
         <!--Translation Main View Controller-->
         <scene sceneID="9ob-mL-jvu">
             <objects>
                 <viewController id="28w-bB-zRR" customClass="TranslationMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJT-Cl-AxM">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ikV-ws-mTA">
-                                <rect key="frame" x="16" y="15" width="370" height="202"/>
+                                <rect key="frame" x="16" y="121" width="370" height="202"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZw-5t-Y8T">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="36"/>
@@ -3725,18 +3725,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjy-2s-stc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8241.7910447761187" y="856.75057208237979"/>
+            <point key="canvasLocation" x="9161.1940298507452" y="856.75057208237979"/>
         </scene>
         <!--Privacyand Sharing Main View Controller-->
         <scene sceneID="mBs-jK-SuV">
             <objects>
                 <viewController id="CvF-kh-lU2" customClass="PrivacyandSharingMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X12-P6-Dfd">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bes-ZY-tNZ">
-                                <rect key="frame" x="16" y="15" width="370" height="619"/>
+                                <rect key="frame" x="16" y="121" width="370" height="619"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-R7-CbE">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="91"/>
@@ -3959,18 +3959,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUA-15-9fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9644.7761194029845" y="856.75057208237979"/>
+            <point key="canvasLocation" x="10564.179104477611" y="856.75057208237979"/>
         </scene>
         <!--Travel For Work Main View Controller-->
         <scene sceneID="VEb-X5-FJr">
             <objects>
                 <viewController id="cW6-Au-Myq" customClass="TravelForWorkMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uR1-cx-rHQ">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="iSr-dy-Ty6">
-                                <rect key="frame" x="16" y="15" width="370" height="203"/>
+                                <rect key="frame" x="16" y="121" width="370" height="203"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-fH-yC2">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="98"/>
@@ -4036,18 +4036,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3H-sH-mUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11067.164179104477" y="857.43707093821502"/>
+            <point key="canvasLocation" x="11986.567164179103" y="857.43707093821502"/>
         </scene>
         <!--Listfrom Space Main View Controller-->
         <scene sceneID="72g-SB-Dke">
             <objects>
                 <viewController id="tWj-VB-xKc" customClass="ListfromSpaceMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k39-L4-snr">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="shq-N2-E9T">
-                                <rect key="frame" x="16" y="23" width="370" height="796.33333333333337"/>
+                                <rect key="frame" x="16" y="129.00000000000006" width="370" height="796.33333333333348"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-mn-97y">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="586.33333333333337"/>
@@ -4289,21 +4289,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DW3-Jl-tic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12232.835820895521" y="856.75057208237979"/>
+            <point key="canvasLocation" x="13152.238805970148" y="856.75057208237979"/>
         </scene>
         <!--Host An Experience Main View Controller-->
         <scene sceneID="EA0-jP-nys">
             <objects>
                 <viewController id="Olj-y3-VrZ" customClass="HostAnExperienceMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZXP-Ag-LVI">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupfriendshiking" translatesAutoresizingMaskIntoConstraints="NO" id="NVh-JF-W7m">
-                                <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                                <rect key="frame" x="0.0" y="106" width="402" height="685"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="989-6N-IFP">
-                                <rect key="frame" x="0.0" y="416" width="402" height="448"/>
+                                <rect key="frame" x="0.0" y="343" width="402" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="9Nu-SE-dqh">
                                         <rect key="frame" x="8" y="16" width="386" height="416"/>
@@ -4379,7 +4379,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Md-u8-W3x">
-                                <rect key="frame" x="16" y="9.6666666666666643" width="44" height="44"/>
+                                <rect key="frame" x="16" y="115.66666666666669" width="44" height="44"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="8ea-Be-T2G"/>
@@ -4387,7 +4387,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf0-cq-040">
-                                <rect key="frame" x="16" y="9" width="44" height="44"/>
+                                <rect key="frame" x="16" y="115" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9wr-KH-LQ3"/>
                                     <constraint firstAttribute="width" constant="44" id="ESr-yo-ZWg"/>
@@ -4421,27 +4421,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqH-MV-oEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13235.820895522387" y="857.43707093821502"/>
+            <point key="canvasLocation" x="14155.223880597014" y="857.43707093821502"/>
         </scene>
         <!--Finda Co Host Main View Controller-->
         <scene sceneID="r5T-eV-3pF">
             <objects>
                 <viewController id="yzt-IQ-lAY" customClass="FindaCoHostMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hnV-oq-xbm">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vIC-Wv-e8q">
-                                <rect key="frame" x="16" y="10" width="370" height="153"/>
+                                <rect key="frame" x="16" y="116.00000000000001" width="370" height="155.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-oc-0rQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="62"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="64.333333333333329"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-Ao-HvM">
-                                                <rect key="frame" x="19" y="14.000000000000002" width="332" height="31.666666666666671"/>
+                                                <rect key="frame" x="19" y="14" width="332" height="34"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="axG-U3-AAN">
-                                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="30" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.99999999999999645" width="30" height="32.333333333333329"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="Jcc-rW-WeC"/>
@@ -4449,7 +4449,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myr-vB-dHJ">
-                                                        <rect key="frame" x="38" y="0.0" width="294" height="31.666666666666668"/>
+                                                        <rect key="frame" x="38" y="0.0" width="294" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="ZGw-hb-nM9"/>
                                                             <constraint firstAttribute="width" constant="292" id="d15-Gh-XwB"/>
@@ -4469,7 +4469,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-6z-W3m">
-                                        <rect key="frame" x="0.0" y="93" width="370" height="60"/>
+                                        <rect key="frame" x="0.0" y="95.333333333333343" width="370" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-3w-Znn">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -4513,18 +4513,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzc-wd-n1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14335.820895522387" y="856.75057208237979"/>
+            <point key="canvasLocation" x="15255.223880597014" y="856.75057208237979"/>
         </scene>
         <!--Ive Us Feedback Main View Controller-->
         <scene sceneID="2bz-3O-GwK">
             <objects>
                 <viewController id="B3E-1f-dnh" customClass="GIveUsFeedbackMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ck-ik-TFX">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-HD-W6u">
-                                <rect key="frame" x="16" y="19" width="370" height="747"/>
+                                <rect key="frame" x="16" y="125" width="370" height="747"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-yz-H5y">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="622"/>
@@ -4533,7 +4533,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="622"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="zDU-S0-QTJ">
-                                                        <rect key="frame" x="8" y="8" width="350" height="607"/>
+                                                        <rect key="frame" x="8" y="-79" width="350" height="607"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="JQc-CZ-Hif">
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="397"/>
@@ -4761,18 +4761,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzO-og-Asr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15385.074626865671" y="848.51258581235686"/>
+            <point key="canvasLocation" x="16304.477611940298" y="848.51258581235686"/>
         </scene>
         <!--Taxes View Controller-->
         <scene sceneID="w6r-SN-SNX">
             <objects>
                 <viewController id="5HM-0f-fZJ" customClass="TaxesViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLz-Vl-TK2">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="wYg-54-DWd">
-                                <rect key="frame" x="16" y="11" width="370" height="853"/>
+                                <rect key="frame" x="16" y="117" width="370" height="674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="2FB-al-rhC">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="129"/>
@@ -4860,7 +4860,7 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-CQ-yao">
-                                        <rect key="frame" x="0.0" y="151" width="370" height="702"/>
+                                        <rect key="frame" x="0.0" y="151" width="370" height="523"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="RHP-qL-b9k">
                                                 <rect key="frame" x="8" y="8" width="349" height="1413"/>
@@ -5218,18 +5218,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giv-v8-36Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16783.582089552237" y="922.65446224256289"/>
+            <point key="canvasLocation" x="17702.985074626864" y="922.65446224256289"/>
         </scene>
         <!--Notifications Main Screen View Controller-->
         <scene sceneID="6yg-TK-4Z8">
             <objects>
                 <viewController id="OJz-0l-Kzp" customClass="NotificationsMainScreenViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0bD-O7-9AS">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-YE-Aum">
-                                <rect key="frame" x="16" y="11" width="370" height="853"/>
+                                <rect key="frame" x="16" y="117" width="370" height="674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="yGs-iY-AHJ">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="129"/>
@@ -5317,7 +5317,7 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-Pw-P4B">
-                                        <rect key="frame" x="0.0" y="137" width="370" height="716"/>
+                                        <rect key="frame" x="0.0" y="137" width="370" height="537"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dm3-qY-m0I">
                                                 <rect key="frame" x="8" y="20" width="354" height="2759"/>
@@ -6434,18 +6434,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTn-A4-4LU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17967" y="923"/>
+            <point key="canvasLocation" x="18885.074626865669" y="922.65446224256289"/>
         </scene>
         <!--Perosnal Information Main View Controller-->
         <scene sceneID="ZLU-dL-zU5">
             <objects>
                 <viewController id="cfj-s5-Sdx" customClass="PerosnalInformationMainViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2d-FF-sVx">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTx-d4-hQY">
-                                <rect key="frame" x="16" y="0.0" width="370" height="864"/>
+                                <rect key="frame" x="16" y="106" width="370" height="685"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-IC-1sd">
                                         <rect key="frame" x="8" y="8" width="355" height="2597"/>
@@ -7536,7 +7536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv6-VF-Mgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19475" y="923"/>
+            <point key="canvasLocation" x="20394.029850746268" y="922.65446224256289"/>
         </scene>
         <!--Add Phone Number View Controller-->
         <scene sceneID="oa5-to-ZS6">
@@ -7798,7 +7798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fV3-u6-ktq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20719" y="348"/>
+            <point key="canvasLocation" x="21637.313432835821" y="347.36842105263156"/>
         </scene>
         <!--Add Emergency Contact Main View Controller-->
         <scene sceneID="isR-zZ-2zF">
@@ -7929,7 +7929,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJr-TG-Xas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20718" y="1252"/>
+            <point key="canvasLocation" x="21637.313432835821" y="1251.487414187643"/>
         </scene>
         <!--Identity Verification Main View Controller-->
         <scene sceneID="d1J-BV-II6">
@@ -9820,6 +9820,25 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVK-EO-L9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377.61194029850742" y="734.55377574370709"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="3FG-tk-gUD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lT3-fE-Vhb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="dUV-J4-g7A"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9DF-mN-7Rq">
+                        <rect key="frame" x="0.0" y="62" width="402" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nxF-ms-QkI" kind="relationship" relationship="rootViewController" id="bkq-wf-7rs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YfE-ow-Gb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574.6268656716416" y="734.55377574370709"/>
         </scene>
     </scenes>
     <resources>
