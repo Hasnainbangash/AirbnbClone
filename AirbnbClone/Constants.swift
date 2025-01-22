@@ -11,6 +11,10 @@ struct K {
     
     struct ProfileMainScreen {
         struct Segues {
+            
+            //Profile
+            static let ProfileScreenToShowProfileSegue = "ProfileScreenToShowProfile"
+            
             // Settings
             static let ProfileScreenToPersonalInformationSegue = "ProfileScreenToPersonalInformation"
             static let ProfileScreenToLoginandSecuritySegue = "ProfileScreenToLoginandSecurity"
