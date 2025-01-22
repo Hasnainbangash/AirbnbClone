@@ -17,6 +17,9 @@ class HostAnExperienceMainViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
         setupCornerRadius()
         setupAttributedString()
     }
@@ -71,6 +74,12 @@ class HostAnExperienceMainViewController: UIViewController {
         print("Standard and requirement screen is open now")
         // let helpCentreVC = HelpCentreViewController()
         // navigationController?.pushViewController(helpCentreVC, animated: true)
+    }
+    
+    
+    @IBAction func closeButton(_ sender: UIButton) {
+        print("Closed button clicked")
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
