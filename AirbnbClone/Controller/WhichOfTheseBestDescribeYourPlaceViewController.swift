@@ -59,6 +59,14 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        collectionView.register(
+            UINib(nibName: K.HostYourPlaceCell.NibNames.describeYourPlaceheaderCellNibName, bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: K.HostYourPlaceCell.Identifiers.describeYourPlaceheaderCellIdentifier
+        )
+        
+        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.describeYourPlaceCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.describeYourPlaceCollectionCellIdentifier)
+        
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
@@ -110,6 +118,19 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDataS
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.describeYourPlaceheaderCellIdentifier, for: indexPath) as? DescribeYourPlaceHeaderCell
+            
+            return headerView ?? UICollectionViewCell()
+            
+        }
+        
+        return UICollectionReusableView()
+        
+    }
+    
 }
 
 extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDelegateFlowLayout {
@@ -123,6 +144,10 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
 
         return CGSize(width: itemWidth, height: itemWidth)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+            return CGSize(width: collectionView.frame.width, height: 120)
+        }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
