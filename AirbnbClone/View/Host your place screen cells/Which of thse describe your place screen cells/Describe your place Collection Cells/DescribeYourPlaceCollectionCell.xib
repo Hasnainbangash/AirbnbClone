@@ -57,6 +57,10 @@
                 <constraint firstAttribute="bottom" secondItem="CWg-X1-XON" secondAttribute="bottom" id="sw8-1k-8EC"/>
             </constraints>
             <size key="customSize" width="192" height="154"/>
+            <connections>
+                <outlet property="placeImageView" destination="BAO-nn-ieu" id="B4a-as-fcM"/>
+                <outlet property="placeName" destination="flK-xb-NzA" id="m8j-Yh-M6e"/>
+            </connections>
             <point key="canvasLocation" x="247.32824427480915" y="56.338028169014088"/>
         </collectionViewCell>
     </objects>
