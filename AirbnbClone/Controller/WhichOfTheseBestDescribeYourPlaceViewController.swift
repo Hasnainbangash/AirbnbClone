@@ -17,37 +17,37 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     
     var describeYourPlace: [DescribeYourPlace] = [
         
-        DescribeYourPlace(placeImageName: "", placeName: "House"),
-        DescribeYourPlace(placeImageName: "", placeName: "Flat/apartment"),
-        DescribeYourPlace(placeImageName: "", placeName: "Barn"),
-        DescribeYourPlace(placeImageName: "", placeName: "Bed & breaktast"),
-        DescribeYourPlace(placeImageName: "", placeName: "Boat"),
-        DescribeYourPlace(placeImageName: "", placeName: "Cabin"),
-        DescribeYourPlace(placeImageName: "", placeName: "Campervan/motorhome"),
-        DescribeYourPlace(placeImageName: "", placeName: "Casa particular"),
-        DescribeYourPlace(placeImageName: "", placeName: "Castle"),
-        DescribeYourPlace(placeImageName: "", placeName: "Cave"),
-        DescribeYourPlace(placeImageName: "", placeName: "Container"),
-        DescribeYourPlace(placeImageName: "", placeName: "Cycladic home"),
-        DescribeYourPlace(placeImageName: "", placeName: "Dammuso"),
-        DescribeYourPlace(placeImageName: "", placeName: "Dome"),
-        DescribeYourPlace(placeImageName: "", placeName: "Earth home"),
-        DescribeYourPlace(placeImageName: "", placeName: "Farm"),
-        DescribeYourPlace(placeImageName: "", placeName: "Guest house"),
-        DescribeYourPlace(placeImageName: "", placeName: "Hotel"),
-        DescribeYourPlace(placeImageName: "", placeName: "Houseboat"),
+        DescribeYourPlace(placeImageName: "house", placeName: "House"),
+        DescribeYourPlace(placeImageName: "building.2", placeName: "Flat/apartment"),
+        DescribeYourPlace(placeImageName: "building.columns", placeName: "Barn"),
+        DescribeYourPlace(placeImageName: "cup.and.heat.waves", placeName: "Bed & breaktast"),
+        DescribeYourPlace(placeImageName: "sailboat", placeName: "Boat"),
+        DescribeYourPlace(placeImageName: "house", placeName: "Cabin"),
+        DescribeYourPlace(placeImageName: "car.side", placeName: "Campervan/motorhome"),
+        DescribeYourPlace(placeImageName: "building", placeName: "Casa particular"),
+        DescribeYourPlace(placeImageName: "building.columns", placeName: "Castle"),
+        DescribeYourPlace(placeImageName: "mountain.2", placeName: "Cave"),
+        DescribeYourPlace(placeImageName: "rectangle.split.3x1", placeName: "Container"),
+        DescribeYourPlace(placeImageName: "house", placeName: "Cycladic home"),
+        DescribeYourPlace(placeImageName: "tree", placeName: "Dammuso"),
+        DescribeYourPlace(placeImageName: "building.columns.circle", placeName: "Dome"),
+        DescribeYourPlace(placeImageName: "globe.asia.australia", placeName: "Earth home"),
+        DescribeYourPlace(placeImageName: "house.lodge", placeName: "Farm"),
+        DescribeYourPlace(placeImageName: "house", placeName: "Guest house"),
+        DescribeYourPlace(placeImageName: "Cycladic homes", placeName: "Hotel"),
+        DescribeYourPlace(placeImageName: "Boat", placeName: "Houseboat"),
         DescribeYourPlace(placeImageName: "", placeName: "Kezhan"),
-        DescribeYourPlace(placeImageName: "", placeName: "Minsu"),
-        DescribeYourPlace(placeImageName: "", placeName: "Riad"),
-        DescribeYourPlace(placeImageName: "", placeName: "Ryokan"),
-        DescribeYourPlace(placeImageName: "", placeName: "Shepherd's hut"),
-        DescribeYourPlace(placeImageName: "", placeName: "Tent"),
-        DescribeYourPlace(placeImageName: "", placeName: "Tiny home"),
-        DescribeYourPlace(placeImageName: "", placeName: "Tower"),
-        DescribeYourPlace(placeImageName: "", placeName: "Tree house"),
-        DescribeYourPlace(placeImageName: "", placeName: "Trullo"),
-        DescribeYourPlace(placeImageName: "", placeName: "Windmill"),
-        DescribeYourPlace(placeImageName: "", placeName: "Yurt")
+        DescribeYourPlace(placeImageName: "sailboat", placeName: "Minsu"),
+        DescribeYourPlace(placeImageName: "building.columns", placeName: "Riad"),
+        DescribeYourPlace(placeImageName: "house.lodge", placeName: "Ryokan"),
+        DescribeYourPlace(placeImageName: "homekit", placeName: "Shepherd's hut"),
+        DescribeYourPlace(placeImageName: "tent", placeName: "Tent"),
+        DescribeYourPlace(placeImageName: "house", placeName: "Tiny home"),
+        DescribeYourPlace(placeImageName: "airport.extreme.tower", placeName: "Tower"),
+        DescribeYourPlace(placeImageName: "tree", placeName: "Tree house"),
+        DescribeYourPlace(placeImageName: "tent.2", placeName: "Trullo"),
+        DescribeYourPlace(placeImageName: "wind", placeName: "Windmill"),
+        DescribeYourPlace(placeImageName: "house", placeName: "Yurt")
         
     ]
     
@@ -57,6 +57,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         setupCornerRadius()
         setupBorderWidth()
@@ -97,7 +98,34 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        let describePlace = describeYourPlace[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.HostYourPlaceCell.Identifiers.describeYourPlaceCollectionCellIdentifier, for: indexPath) as? DescribeYourPlaceCollectionCell
+        
+        cell?.configureCell(placeImageName: describePlace.placeImageName, placeName: describePlace.placeName)
+        
+        return cell ?? UICollectionViewCell()
+        
+        
+    }
+    
+}
+
+extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
+        let padding: CGFloat = 10
+        let totalPadding = padding * (itemPerRow - 1)
+        let availableWidth = collectionView.frame.width - totalPadding
+        let itemWidth = availableWidth / itemPerRow
+
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
     }
     
 }
