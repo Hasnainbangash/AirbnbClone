@@ -25,6 +25,9 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+        
+        entirePlaceView.layer.borderWidth = 2
+        entirePlaceView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
     }
     
     func setupCornerRadius() {
@@ -61,5 +64,42 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
-
+    
+    
+    @IBAction func typeOfPlaceSelectedButton(_ sender: UIButton) {
+        
+        print(sender.tag)
+        
+        resetViewStyles()
+        
+        switch sender.tag {
+        case 1:
+            entirePlaceView.layer.borderWidth = 2
+            entirePlaceView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            break
+        case 2:
+            roomView.layer.borderWidth = 2
+            roomView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            break
+        case 3:
+            sharedRoomView.layer.borderWidth = 2
+            sharedRoomView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    func resetViewStyles() {
+        entirePlaceView.layer.borderWidth = 0.3
+        entirePlaceView.backgroundColor = UIColor.white
+        
+        roomView.layer.borderWidth = 0.3
+        roomView.backgroundColor = UIColor.white
+        
+        sharedRoomView.layer.borderWidth = 0.3
+        sharedRoomView.backgroundColor = UIColor.white
+    }
+    
 }
