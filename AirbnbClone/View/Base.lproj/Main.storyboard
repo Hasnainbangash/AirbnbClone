@@ -4292,10 +4292,10 @@
             </objects>
             <point key="canvasLocation" x="13152.238805970148" y="856.75057208237979"/>
         </scene>
-        <!--View Controller-->
+        <!--Tell Us About Your Place View Controller-->
         <scene sceneID="clb-KV-M7v">
             <objects>
-                <viewController id="mgf-r9-lN4" sceneMemberID="viewController">
+                <viewController id="mgf-r9-lN4" customClass="TellUsAboutYourPlaceViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHA-mV-Osm">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
