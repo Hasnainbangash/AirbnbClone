@@ -59,6 +59,7 @@ class ExploreLocationDetailViewController: UIViewController {
         reviewCollectionView.delegate = self
         
         scrollView.delegate = self
+        navigationBar.isHidden = false
         
         imagesCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.locationImagesCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.locationImagesCellIdentifier)
         
@@ -116,42 +117,45 @@ class ExploreLocationDetailViewController: UIViewController {
     
 }
 
-var lastContentOffset: CGFloat = 0
+//var lastContentOffset: CGFloat = 0
 private var previousOffset: CGFloat = 0
 
 extension ExploreLocationDetailViewController: UIScrollViewDelegate {
 
-    // Called when the scroll view is scrolling (user is dragging)
+    // UIScrollViewDelegate method to track the scrolling behavior
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
         
-        // Track the content offset (vertical scroll position)
-        let offset = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let scrollViewHeight = scrollView.frame.size.height
-
-        // Calculate the scroll progress (percentage)
-        let progress = offset / (contentHeight - scrollViewHeight)
+        if currentOffset > previousOffset { // Scrolling down
+            hideView()
+        } else if currentOffset < previousOffset { // Scrolling up
+            showView()
+        }
         
-        // Optionally, print the scroll position and progress to the console
-        print("Scroll Offset: \(offset)")
-        print("Scroll Progress: \(progress * 100)%")
-
-        // Update the navigation bar color based on scroll progress
-        changeNavigationBarAppearance(progress: progress)
+        // Update the previous offset for the next scroll event
+        previousOffset = currentOffset
     }
 
-    private func changeNavigationBarAppearance(progress: CGFloat) {
-        // Example of changing navigation bar color as a function of scroll progress
-        if progress > 0.07 {
-            navigationBar.backgroundColor = UIColor.clear
-            navigationBar.alpha = 0.1
-            navigationBar.isHidden = true
-        } else {
-            navigationBar.backgroundColor = UIColor.white
-            navigationBar.alpha = 1.0
-            navigationBar.isHidden = false
+    // Function to hide the view
+    func hideView() {
+        if !navigationBar.isHidden {
+            UIView.animate(withDuration: 0.3) {
+                self.navigationBar.alpha = 0
+                self.navigationBar.isHidden = true// Fade out the view
+            }
         }
     }
+
+    // Function to show the view
+    func showView() {
+        if navigationBar.isHidden {
+            UIView.animate(withDuration: 0.3) {
+                self.navigationBar.alpha = 1
+                self.navigationBar.isHidden = false// Fade in the view
+            }
+        }
+    }
+    
 }
 
 extension ExploreLocationDetailViewController: UICollectionViewDataSource {
