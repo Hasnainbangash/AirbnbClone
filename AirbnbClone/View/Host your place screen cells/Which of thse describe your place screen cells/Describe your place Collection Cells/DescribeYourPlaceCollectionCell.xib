@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DescribeYourPlaceCollectionCell" customModule="AirbnbClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="192" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="192" height="154"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWg-X1-XON">
+                        <rect key="frame" x="0.0" y="0.0" width="192" height="154"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yvM-Lf-M5Y">
+                                <rect key="frame" x="6" y="11" width="180.33333333333334" height="132.33333333333334"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAO-nn-ieu">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Le3-P9-tPM"/>
+                                            <constraint firstAttribute="height" constant="80" id="ozH-qc-Dbr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campervan/motorhome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-xb-NzA">
+                                        <rect key="frame" x="0.0" y="100" width="180.33333333333334" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yvM-Lf-M5Y" firstAttribute="top" secondItem="CWg-X1-XON" secondAttribute="top" constant="11" id="0md-zm-uPy"/>
+                            <constraint firstItem="yvM-Lf-M5Y" firstAttribute="leading" secondItem="CWg-X1-XON" secondAttribute="leading" constant="6" id="T8R-CR-fJi"/>
+                            <constraint firstAttribute="trailing" secondItem="yvM-Lf-M5Y" secondAttribute="trailing" constant="5.6699999999999999" id="c0o-av-q2p"/>
+                            <constraint firstAttribute="bottom" secondItem="yvM-Lf-M5Y" secondAttribute="bottom" constant="10.67" id="r07-Nn-MW7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="CWg-X1-XON" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bRh-tI-yS3"/>
+                <constraint firstAttribute="trailing" secondItem="CWg-X1-XON" secondAttribute="trailing" id="iPF-Ku-kk4"/>
+                <constraint firstItem="CWg-X1-XON" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="n8U-dm-4gJ"/>
+                <constraint firstAttribute="bottom" secondItem="CWg-X1-XON" secondAttribute="bottom" id="sw8-1k-8EC"/>
+            </constraints>
+            <size key="customSize" width="192" height="154"/>
+            <point key="canvasLocation" x="247.32824427480915" y="56.338028169014088"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
