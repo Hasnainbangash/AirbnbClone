@@ -9,21 +9,25 @@ import UIKit
 
 class TellUsAboutYourPlaceViewController: UIViewController {
 
+    @IBOutlet weak var saveAndExitButtonLabel: UIButton!
+    @IBOutlet weak var backButtonLabel: UIButton!
+    @IBOutlet weak var nextButtonLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCornerRadius()
+        setupBorderWidth()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupCornerRadius() {
+        saveAndExitButtonLabel.layer.cornerRadius = saveAndExitButtonLabel.frame.height / 4
+        nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 4
     }
-    */
+    
+    func setupBorderWidth() {
+        saveAndExitButtonLabel.layer.borderWidth = 0.3
+    }
 
 }

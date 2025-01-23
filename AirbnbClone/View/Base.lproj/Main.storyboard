@@ -4596,6 +4596,11 @@
                             <constraint firstItem="kWn-kn-nKO" firstAttribute="bottom" secondItem="tIp-aB-033" secondAttribute="bottom" id="XTT-mi-h4R"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButtonLabel" destination="488-AC-hUr" id="N6G-Zi-aCe"/>
+                        <outlet property="nextButtonLabel" destination="dZa-Cv-7dQ" id="Y3P-O1-ZbL"/>
+                        <outlet property="saveAndExitButtonLabel" destination="jIj-h1-Q2f" id="E4s-T1-Cie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwg-Cq-NbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
