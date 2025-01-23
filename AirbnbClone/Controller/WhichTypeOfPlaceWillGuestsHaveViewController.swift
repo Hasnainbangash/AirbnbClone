@@ -14,6 +14,10 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
     
+    @IBOutlet weak var entirePlaceView: UIView!
+    @IBOutlet weak var roomView: UIView!
+    @IBOutlet weak var sharedRoomView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,11 +31,19 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         saveAndExitButtonLabel.layer.cornerRadius = saveAndExitButtonLabel.frame.height / 2
         questionsButtonLabel.layer.cornerRadius = questionsButtonLabel.frame.height / 2
         nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 5
+        
+        entirePlaceView.layer.cornerRadius = entirePlaceView.frame.height / 5
+        roomView.layer.cornerRadius = roomView.frame.height / 5
+        sharedRoomView.layer.cornerRadius = sharedRoomView.frame.height / 5
     }
     
     func setupBorderWidth() {
         saveAndExitButtonLabel.layer.borderWidth = 0.3
         questionsButtonLabel.layer.borderWidth = 0.3
+        
+        entirePlaceView.layer.borderWidth = 0.3
+        roomView.layer.borderWidth = 0.3
+        sharedRoomView.layer.borderWidth = 0.3
     }
     
     func setupButtonUnderline() {
