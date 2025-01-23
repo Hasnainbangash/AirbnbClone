@@ -161,6 +161,7 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
         if let cell = collectionView.cellForItem(at: indexPath) as? DescribeYourPlaceCollectionCell {
             cell.mainView.layer.borderWidth = 2
             cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            cell.isSelected = true
         }
         
     }
@@ -170,6 +171,7 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
         if let cell = collectionView.cellForItem(at: indexPath) as? DescribeYourPlaceCollectionCell {
             cell.mainView.layer.borderWidth = 0.4
             cell.mainView.backgroundColor = UIColor.white
+            cell.isSelected = false
         }
         
     }
