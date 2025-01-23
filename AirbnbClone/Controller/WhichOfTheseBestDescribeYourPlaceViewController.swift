@@ -156,4 +156,22 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
         return 5
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? DescribeYourPlaceCollectionCell {
+            cell.mainView.layer.borderWidth = 2
+            cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? DescribeYourPlaceCollectionCell {
+            cell.mainView.layer.borderWidth = 0.4
+            cell.mainView.backgroundColor = UIColor.white
+        }
+        
+    }
+    
 }
