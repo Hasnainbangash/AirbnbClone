@@ -10,6 +10,7 @@ import UIKit
 class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
 
     @IBOutlet weak var saveAndExitButtonLabel: UIButton!
+    @IBOutlet weak var questionsButtonLabel: UIButton!
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
     
@@ -74,11 +75,13 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     
     func setupCornerRadius() {
         saveAndExitButtonLabel.layer.cornerRadius = saveAndExitButtonLabel.frame.height / 2
+        questionsButtonLabel.layer.cornerRadius = questionsButtonLabel.frame.height / 2
         nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 5
     }
     
     func setupBorderWidth() {
         saveAndExitButtonLabel.layer.borderWidth = 0.3
+        questionsButtonLabel.layer.borderWidth = 0.3
     }
     
     func setupButtonUnderline() {
