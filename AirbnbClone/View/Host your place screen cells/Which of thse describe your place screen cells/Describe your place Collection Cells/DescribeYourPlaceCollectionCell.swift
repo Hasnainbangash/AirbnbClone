@@ -9,12 +9,23 @@ import UIKit
 
 class DescribeYourPlaceCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var placeName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupCornerRadius()
+        setupBorderWidth()
+    }
+    
+    func setupCornerRadius() {
+        mainView.layer.cornerRadius = mainView.frame.height / 7
+    }
+    
+    func setupBorderWidth() {
+        mainView.layer.borderWidth = 0.4
     }
 
     func configureCell(placeImageName: String, placeName: String) {
