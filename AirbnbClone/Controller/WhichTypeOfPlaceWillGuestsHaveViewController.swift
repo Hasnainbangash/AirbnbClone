@@ -32,9 +32,9 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         questionsButtonLabel.layer.cornerRadius = questionsButtonLabel.frame.height / 2
         nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 5
         
-        entirePlaceView.layer.cornerRadius = entirePlaceView.frame.height / 5
-        roomView.layer.cornerRadius = roomView.frame.height / 5
-        sharedRoomView.layer.cornerRadius = sharedRoomView.frame.height / 5
+        entirePlaceView.layer.cornerRadius = entirePlaceView.frame.height / 7
+        roomView.layer.cornerRadius = roomView.frame.height / 7
+        sharedRoomView.layer.cornerRadius = sharedRoomView.frame.height / 7
     }
     
     func setupBorderWidth() {
