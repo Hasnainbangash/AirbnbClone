@@ -9,6 +9,18 @@ import Foundation
 
 struct K {
     
+    struct HostYourPlaceCell {
+        struct Identifiers {
+            static let describeYourPlaceCollectionCellIdentifier = "DescribeYourPlaceCollectionReusebaleCell"
+            static let describeYourPlaceheaderCellIdentifier = "DescribeYourPlaceHeaderReusebaleCell"
+        }
+        
+        struct NibNames {
+            static let describeYourPlaceCollectionCellNibName = "DescribeYourPlaceCollectionCell"
+            static let describeYourPlaceheaderCellNibName = "DescribeYourPlaceHeaderCell"
+        }
+    }
+    
     struct ProfileMainScreen {
         struct Segues {
             
