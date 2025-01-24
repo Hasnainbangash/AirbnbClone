@@ -18,42 +18,42 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     
     var guestFavourates: [DescribeYourPlace] = [
         
-        DescribeYourPlace(placeImageName: "", placeName: "Wifi"),
-        DescribeYourPlace(placeImageName: "", placeName: "TV"),
-        DescribeYourPlace(placeImageName: "", placeName: "Kitchen"),
-        DescribeYourPlace(placeImageName: "", placeName: "Washing machine"),
-        DescribeYourPlace(placeImageName: "", placeName: "Free parking on premises"),
-        DescribeYourPlace(placeImageName: "", placeName: "Paid parking on premises"),
-        DescribeYourPlace(placeImageName: "", placeName: "Air conditioning"),
-        DescribeYourPlace(placeImageName: "", placeName: "Dedicated workspace"),
+        DescribeYourPlace(placeImageName: "wifi", placeName: "Wifi"),
+        DescribeYourPlace(placeImageName: "tv", placeName: "TV"),
+        DescribeYourPlace(placeImageName: "square.split.bottomrightquarter", placeName: "Kitchen"),
+        DescribeYourPlace(placeImageName: "washer", placeName: "Washing machine"),
+        DescribeYourPlace(placeImageName: "parkingsign.radiowaves.left.and.right", placeName: "Free parking on premises"),
+        DescribeYourPlace(placeImageName: "parkingsign.radiowaves.left.and.right.slash", placeName: "Paid parking on premises"),
+        DescribeYourPlace(placeImageName: "snowflake", placeName: "Air conditioning"),
+        DescribeYourPlace(placeImageName: "lamp.table.fill", placeName: "Dedicated workspace"),
         
     ]
     
     var safetyItems: [DescribeYourPlace] = [
         
-        DescribeYourPlace(placeImageName: "", placeName: "Pool"),
-        DescribeYourPlace(placeImageName: "", placeName: "Hot tub"),
-        DescribeYourPlace(placeImageName: "", placeName: "Patio"),
-        DescribeYourPlace(placeImageName: "", placeName: "BBQ grill"),
-        DescribeYourPlace(placeImageName: "", placeName: "Outdoor dining area"),
-        DescribeYourPlace(placeImageName: "", placeName: "Firepit"),
-        DescribeYourPlace(placeImageName: "", placeName: "Pool table"),
-        DescribeYourPlace(placeImageName: "", placeName: "Indoor fireplace"),
-        DescribeYourPlace(placeImageName: "", placeName: "Piano"),
-        DescribeYourPlace(placeImageName: "", placeName: "Exercise equipment"),
-        DescribeYourPlace(placeImageName: "", placeName: "Lake access"),
-        DescribeYourPlace(placeImageName: "", placeName: "Beach access"),
-        DescribeYourPlace(placeImageName: "", placeName: "Ski-in/out"),
-        DescribeYourPlace(placeImageName: "", placeName: "Outdoor Shower"),
+        DescribeYourPlace(placeImageName: "figure.pool.swim", placeName: "Pool"),
+        DescribeYourPlace(placeImageName: "bathtub", placeName: "Hot tub"),
+        DescribeYourPlace(placeImageName: "building", placeName: "Patio"),
+        DescribeYourPlace(placeImageName: "fork.knife", placeName: "BBQ grill"),
+        DescribeYourPlace(placeImageName: "table.furniture", placeName: "Outdoor dining area"),
+        DescribeYourPlace(placeImageName: "flame", placeName: "Firepit"),
+        DescribeYourPlace(placeImageName: "fork.knife", placeName: "Pool table"),
+        DescribeYourPlace(placeImageName: "fireplace", placeName: "Indoor fireplace"),
+        DescribeYourPlace(placeImageName: "pianokeys", placeName: "Piano"),
+        DescribeYourPlace(placeImageName: "figure.walk.treadmill", placeName: "Exercise equipment"),
+        DescribeYourPlace(placeImageName: "water.waves", placeName: "Lake access"),
+        DescribeYourPlace(placeImageName: "cloud.sun", placeName: "Beach access"),
+        DescribeYourPlace(placeImageName: "figure.skiing.downhill", placeName: "Ski-in/out"),
+        DescribeYourPlace(placeImageName: "shower", placeName: "Outdoor Shower"),
         
     ]
     
     var standoutAmenities: [DescribeYourPlace] = [
         
-        DescribeYourPlace(placeImageName: "", placeName: "Smoke alarm"),
-        DescribeYourPlace(placeImageName: "", placeName: "First aid kit"),
-        DescribeYourPlace(placeImageName: "", placeName: "Fire extingusher"),
-        DescribeYourPlace(placeImageName: "", placeName: "Carbon monoxide alarm"),
+        DescribeYourPlace(placeImageName: "light.beacon.min", placeName: "Smoke alarm"),
+        DescribeYourPlace(placeImageName: "cross.case", placeName: "First aid kit"),
+        DescribeYourPlace(placeImageName: "fire.extinguisher", placeName: "Fire extingusher"),
+        DescribeYourPlace(placeImageName: "light.beacon.max", placeName: "Carbon monoxide alarm"),
         
     ]
     
