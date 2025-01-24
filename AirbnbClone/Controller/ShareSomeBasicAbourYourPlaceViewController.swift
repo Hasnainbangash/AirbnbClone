@@ -18,6 +18,9 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCornerRadius()
+        setupBorderWidth()
+        setupButtonUnderline()
     }
     
     func setupCornerRadius() {
