@@ -59,7 +59,6 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
     @IBAction func guestsButtons(_ sender: UIButton) {
     }
     
-    
     @IBAction func bedroomsButtons(_ sender: UIButton) {
     }
     

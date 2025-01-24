@@ -11359,6 +11359,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                 <color key="tintColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="minus.circle" catalog="system"/>
+                                                                                <connections>
+                                                                                    <action selector="guestsButtons:" destination="GO1-jo-K2t" eventType="touchUpInside" id="nGt-Ns-eiy"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-zl-8gf">
                                                                                 <rect key="frame" x="58" y="0.0" width="42" height="43"/>
@@ -11420,6 +11423,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                 <color key="tintColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="minus.circle" catalog="system"/>
+                                                                                <connections>
+                                                                                    <action selector="bedroomsButtons:" destination="GO1-jo-K2t" eventType="touchUpInside" id="tQe-Uc-PY7"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AET-bW-Bp0">
                                                                                 <rect key="frame" x="58" y="0.0" width="42" height="43"/>
@@ -11481,6 +11487,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                 <color key="tintColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="minus.circle" catalog="system"/>
+                                                                                <connections>
+                                                                                    <action selector="bedsButtons:" destination="GO1-jo-K2t" eventType="touchUpInside" id="5tz-5s-iok"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xad-1c-Fyl">
                                                                                 <rect key="frame" x="58" y="0.0" width="42" height="43"/>
@@ -11542,6 +11551,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                 <color key="tintColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="minus.circle" catalog="system"/>
+                                                                                <connections>
+                                                                                    <action selector="bathroomsButtons:" destination="GO1-jo-K2t" eventType="touchUpInside" id="vfk-mK-gI9"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKn-cr-XGY">
                                                                                 <rect key="frame" x="58" y="0.0" width="42" height="43"/>
