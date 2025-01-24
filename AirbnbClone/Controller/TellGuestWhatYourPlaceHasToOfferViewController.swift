@@ -63,6 +63,34 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        // Guest favourate cell registeration
+        collectionView.register(
+            UINib(nibName: K.HostYourPlaceCell.NibNames.guestFavourateHeaderCellNibName, bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: K.HostYourPlaceCell.Identifiers.guestFavourateHeaderCellIdentifier
+        )
+        
+        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.guestFavourateBodyCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.guestFavourateBodyCollectionCellIdentifier)
+        
+        // Standout amentities cell registeration
+        collectionView.register(
+            UINib(nibName: K.HostYourPlaceCell.NibNames.standoutAmenitiesHeaderCellNibName, bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: K.HostYourPlaceCell.Identifiers.standoutAmenitiesHeaderCellIdentifier
+        )
+        
+        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.standoutAmenitiesCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.standoutAmenitiesBodyCollectionCellIdentifier)
+        
+        // Safety items cell registeration
+        collectionView.register(
+            UINib(nibName: K.HostYourPlaceCell.NibNames.safetyItemsHeaderCellNibName, bundle: nil),
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier
+        )
+        
+        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.safetyItemsCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier)
         
         setupCornerRadius()
         setupBorderWidth()
@@ -159,4 +187,68 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
     }
     
     
+}
+
+extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        switch indexPath.section {
+        case 1:
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
+            return CGSize(width: itemWidth, height: itemWidth)
+        case 2:
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
+            return CGSize(width: itemWidth, height: itemWidth)
+        case 3:
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
+            return CGSize(width: itemWidth, height: itemWidth)
+        default:
+            return CGSize()
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        switch section {
+        case 1:
+            return CGSize(width: collectionView.frame.width, height: 120)
+        case 2:
+            return CGSize(width: collectionView.frame.width, height: 120)
+        case 3:
+            return CGSize(width: collectionView.frame.width, height: 120)
+        default:
+            return CGSize()
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        switch section {
+        case 1:
+            return 5
+        case 2:
+            return 5
+        case 3:
+            return 5
+        default:
+            return CGFloat()
+        }
+        
+    }
+
 }
