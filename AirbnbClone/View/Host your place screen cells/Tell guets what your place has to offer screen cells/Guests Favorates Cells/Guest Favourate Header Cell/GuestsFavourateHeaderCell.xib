@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GuestsFavourateHeaderCell" customModule="AirbnbClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="316" height="179"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vub-rj-c0D">
+                        <rect key="frame" x="0.0" y="0.0" width="316" height="179"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="07p-f1-o3q">
+                                <rect key="frame" x="10" y="10" width="296" height="159"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-eg-3l8">
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="113"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell guests what your place has to offer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-P1-uuD">
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="62"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="295" id="jm7-e1-jPU"/>
+                                                    <constraint firstAttribute="height" constant="62" id="rGv-4w-9nj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can add more amenities after you publish your listing" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-oD-a0e">
+                                                <rect key="frame" x="0.0" y="67" width="296" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="MJI-la-A32"/>
+                                                    <constraint firstAttribute="width" constant="295" id="ygp-zK-roP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What about these guests favourates? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vM-Ne-2xN">
+                                        <rect key="frame" x="0.0" y="138" width="296" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="RCp-VT-gpx"/>
+                                            <constraint firstAttribute="width" constant="295" id="w8b-fb-WCM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="07p-f1-o3q" secondAttribute="bottom" constant="10" id="9NV-05-r7z"/>
+                            <constraint firstItem="07p-f1-o3q" firstAttribute="top" secondItem="vub-rj-c0D" secondAttribute="top" constant="10" id="Qlp-Dv-oKG"/>
+                            <constraint firstAttribute="trailing" secondItem="07p-f1-o3q" secondAttribute="trailing" constant="10" id="dGF-dN-cIH"/>
+                            <constraint firstItem="07p-f1-o3q" firstAttribute="leading" secondItem="vub-rj-c0D" secondAttribute="leading" constant="10" id="izA-kd-svA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vub-rj-c0D" secondAttribute="bottom" id="8gn-Ay-0mX"/>
+                <constraint firstAttribute="trailing" secondItem="vub-rj-c0D" secondAttribute="trailing" id="UaA-aH-bQj"/>
+                <constraint firstItem="vub-rj-c0D" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Xki-mB-aHX"/>
+                <constraint firstItem="vub-rj-c0D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ccw-Zd-LrX"/>
+            </constraints>
+            <size key="customSize" width="316" height="179"/>
+            <point key="canvasLocation" x="141.98473282442748" y="63.732394366197184"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
