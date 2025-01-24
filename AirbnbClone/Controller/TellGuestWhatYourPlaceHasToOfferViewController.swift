@@ -8,7 +8,7 @@
 import UIKit
 
 class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
-
+    
     @IBOutlet weak var saveAndExitButtonLabel: UIButton!
     @IBOutlet weak var questionsButtonLabel: UIButton!
     @IBOutlet weak var backButtonLabel: UIButton!
@@ -29,7 +29,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
         
     ]
     
-    var safetyItems: [DescribeYourPlace] = [
+    var standoutAmenities: [DescribeYourPlace] = [
         
         DescribeYourPlace(placeImageName: "figure.pool.swim", placeName: "Pool"),
         DescribeYourPlace(placeImageName: "bathtub", placeName: "Hot tub"),
@@ -48,7 +48,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
         
     ]
     
-    var standoutAmenities: [DescribeYourPlace] = [
+    var safetyItems: [DescribeYourPlace] = [
         
         DescribeYourPlace(placeImageName: "light.beacon.min", placeName: "Smoke alarm"),
         DescribeYourPlace(placeImageName: "cross.case", placeName: "First aid kit"),
@@ -59,7 +59,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         collectionView.dataSource = self
@@ -123,7 +123,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
-
+    
 }
 
 extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSource {
@@ -186,6 +186,28 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionView.elementKindSectionHeader {
+            switch indexPath.section {
+            case 1:
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.guestFavourateHeaderCellIdentifier, for: indexPath) as? GuestsFavourateHeaderCell
+
+                return headerView ?? UICollectionViewCell()
+            case 2:
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.standoutAmenitiesHeaderCellIdentifier, for: indexPath) as? StandoutAmenitiesHeaderCell
+
+                return headerView ?? UICollectionViewCell()
+            case 3:
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier, for: indexPath) as? SafetyItemsHeaderCell
+
+                return headerView ?? UICollectionViewCell()
+            default:
+                return UICollectionViewCell()
+            }
+        }
+        return UICollectionViewCell()
+    }
     
 }
 
@@ -225,7 +247,7 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
         
         switch section {
         case 1:
-            return CGSize(width: collectionView.frame.width, height: 120)
+            return CGSize(width: collectionView.frame.width, height: 150)
         case 2:
             return CGSize(width: collectionView.frame.width, height: 120)
         case 3:
@@ -250,5 +272,5 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
         }
         
     }
-
+    
 }
