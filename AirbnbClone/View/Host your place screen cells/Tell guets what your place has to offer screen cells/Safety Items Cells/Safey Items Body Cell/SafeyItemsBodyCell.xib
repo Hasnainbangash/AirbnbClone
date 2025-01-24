@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SafeyItemsBodyCell" customModule="AirbnbClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="144"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-P6-43X">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="144"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUi-9e-Dvm">
+                                <rect key="frame" x="20" y="15" width="206" height="114"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xDU-uL-NZP">
+                                        <rect key="frame" x="18" y="12" width="183" height="90"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="muk-hV-faB">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="55" height="54.333333333333343"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="213-2C-i50"/>
+                                                    <constraint firstAttribute="width" constant="55" id="bRd-6r-iMK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campervan/motorhome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipa-P7-Xhh">
+                                                <rect key="frame" x="0.0" y="60" width="180.33333333333334" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xDU-uL-NZP" firstAttribute="leading" secondItem="DUi-9e-Dvm" secondAttribute="leading" constant="18" id="1y2-tP-fJ2"/>
+                                    <constraint firstItem="xDU-uL-NZP" firstAttribute="top" secondItem="DUi-9e-Dvm" secondAttribute="top" constant="12" id="M2A-dx-atg"/>
+                                    <constraint firstAttribute="bottom" secondItem="xDU-uL-NZP" secondAttribute="bottom" constant="12" id="UoH-It-iC3"/>
+                                    <constraint firstAttribute="trailing" secondItem="xDU-uL-NZP" secondAttribute="trailing" constant="5" id="k80-K2-j0A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DUi-9e-Dvm" firstAttribute="top" secondItem="zzp-P6-43X" secondAttribute="top" constant="15" id="IPB-uK-Ern"/>
+                            <constraint firstAttribute="trailing" secondItem="DUi-9e-Dvm" secondAttribute="trailing" constant="20" id="cj4-h3-5rF"/>
+                            <constraint firstAttribute="bottom" secondItem="DUi-9e-Dvm" secondAttribute="bottom" constant="15" id="gdO-hT-Fnr"/>
+                            <constraint firstItem="DUi-9e-Dvm" firstAttribute="leading" secondItem="zzp-P6-43X" secondAttribute="leading" constant="20" id="jU3-i3-1ww"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zzp-P6-43X" secondAttribute="trailing" id="C67-v9-qWk"/>
+                <constraint firstAttribute="bottom" secondItem="zzp-P6-43X" secondAttribute="bottom" id="GfS-Sc-lWV"/>
+                <constraint firstItem="zzp-P6-43X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tg5-Og-aLb"/>
+                <constraint firstItem="zzp-P6-43X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XMa-3B-RyY"/>
+            </constraints>
+            <connections>
+                <outlet property="mainView" destination="DUi-9e-Dvm" id="ag9-jH-l6L"/>
+                <outlet property="placeImageView" destination="muk-hV-faB" id="5AW-M2-7l1"/>
+                <outlet property="placeName" destination="ipa-P7-Xhh" id="MHp-Dd-Tmq"/>
+            </connections>
+            <point key="canvasLocation" x="-63" y="20"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
