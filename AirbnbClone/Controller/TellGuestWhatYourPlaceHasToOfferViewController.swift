@@ -64,6 +64,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.allowsMultipleSelection = true
         
         // Guest favourate cell registeration
         collectionView.register(
@@ -276,6 +277,54 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
             return 5
         default:
             return CGFloat()
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 0:
+            if let cell = collectionView.cellForItem(at: indexPath) as? GuestsFavourateBodyCell {
+                cell.mainView.layer.borderWidth = 2
+                cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            }
+        case 1:
+            if let cell = collectionView.cellForItem(at: indexPath) as? StandoutAmenitiesBodyCell {
+                cell.mainView.layer.borderWidth = 2
+                cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            }
+        case 2:
+            if let cell = collectionView.cellForItem(at: indexPath) as? SafeyItemsBodyCell {
+                cell.mainView.layer.borderWidth = 2
+                cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            }
+        default:
+            break
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 0:
+            if let cell = collectionView.cellForItem(at: indexPath) as? GuestsFavourateBodyCell {
+                cell.mainView.layer.borderWidth = 0.4
+                cell.mainView.backgroundColor = UIColor.white
+            }
+        case 1:
+            if let cell = collectionView.cellForItem(at: indexPath) as? StandoutAmenitiesBodyCell {
+                cell.mainView.layer.borderWidth = 0.4
+                cell.mainView.backgroundColor = UIColor.white
+            }
+        case 2:
+            if let cell = collectionView.cellForItem(at: indexPath) as? SafeyItemsBodyCell {
+                cell.mainView.layer.borderWidth = 0.4
+                cell.mainView.backgroundColor = UIColor.white
+            }
+        default:
+            break
         }
         
     }
