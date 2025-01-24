@@ -14,6 +14,9 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
     
+    @IBOutlet weak var addPhotosView: UIView!
+    @IBOutlet weak var takeNewPhotosView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +30,17 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
         saveAndExitButtonLabel.layer.cornerRadius = saveAndExitButtonLabel.frame.height / 2
         questionsButtonLabel.layer.cornerRadius = questionsButtonLabel.frame.height / 2
         nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 5
+        
+        addPhotosView.layer.cornerRadius = addPhotosView.frame.height / 5
+        takeNewPhotosView.layer.cornerRadius = takeNewPhotosView.frame.height / 5
     }
     
     func setupBorderWidth() {
         saveAndExitButtonLabel.layer.borderWidth = 0.3
         questionsButtonLabel.layer.borderWidth = 0.3
+        
+        addPhotosView.layer.borderWidth = 0.3
+        takeNewPhotosView.layer.borderWidth = 0.3
     }
     
     func setupButtonUnderline() {
