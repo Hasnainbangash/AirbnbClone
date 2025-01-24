@@ -13,7 +13,12 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
     @IBOutlet weak var questionsButtonLabel: UIButton!
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
-
+    
+    @IBOutlet weak var numberofGuests: UILabel!
+    @IBOutlet weak var numberOfBedrooms: UILabel!
+    @IBOutlet weak var numberOfBeds: UILabel!
+    @IBOutlet weak var numberOfBathrooms: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,4 +55,17 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
 
+    
+    @IBAction func guestsButtons(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func bedroomsButtons(_ sender: UIButton) {
+    }
+    
+    @IBAction func bedsButtons(_ sender: UIButton) {
+    }
+    
+    @IBAction func bathroomsButtons(_ sender: UIButton) {
+    }
 }
