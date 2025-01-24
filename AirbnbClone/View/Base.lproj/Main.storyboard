@@ -8604,6 +8604,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                         <action selector="backButtonPressed:" destination="s27-dg-Ftb" id="QjZ-bC-QDS"/>
                                                     </connections>
                                                 </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" title="Item" image="heart.circle.fill" catalog="system" id="2Uz-Fh-5KC">
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </barButtonItem>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
@@ -11282,6 +11285,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
         <image name="graduationcap" catalog="system" width="128" height="107"/>
         <image name="groupfriendshiking" width="208.66667175292969" height="139"/>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="hotelroomimage1" width="432" height="270"/>
         <image name="hotelroomimage2" width="93" height="60.333332061767578"/>
         <image name="hotelroomimage3" width="320" height="240"/>
