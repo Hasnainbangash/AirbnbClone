@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="346" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have any of these safety items?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dL-Ge-tzf">
-                                <rect key="frame" x="8" y="12" width="330" height="26"/>
+                                <rect key="frame" x="20" y="12" width="318" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0dL-Ge-tzf" firstAttribute="leading" secondItem="d1H-By-WSy" secondAttribute="leading" constant="8" id="HAO-Ct-CWC"/>
+                            <constraint firstItem="0dL-Ge-tzf" firstAttribute="leading" secondItem="d1H-By-WSy" secondAttribute="leading" constant="20" id="HAO-Ct-CWC"/>
                             <constraint firstAttribute="trailing" secondItem="0dL-Ge-tzf" secondAttribute="trailing" constant="8" id="U1O-S7-vUq"/>
                             <constraint firstItem="0dL-Ge-tzf" firstAttribute="top" secondItem="d1H-By-WSy" secondAttribute="top" constant="12" id="lJ4-k6-p38"/>
                             <constraint firstAttribute="bottom" secondItem="0dL-Ge-tzf" secondAttribute="bottom" constant="12" id="xoJ-J8-QRi"/>

@@ -21,13 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="316" height="179"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="07p-f1-o3q">
-                                <rect key="frame" x="10" y="10" width="296" height="159"/>
+                                <rect key="frame" x="20" y="10" width="286" height="159"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-eg-3l8">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="113"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="113"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell guests what your place has to offer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-P1-uuD">
-                                                <rect key="frame" x="0.0" y="0.0" width="296" height="62"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="62"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="295" id="jm7-e1-jPU"/>
                                                     <constraint firstAttribute="height" constant="62" id="rGv-4w-9nj"/>
@@ -37,7 +37,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can add more amenities after you publish your listing" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-oD-a0e">
-                                                <rect key="frame" x="0.0" y="67" width="296" height="46"/>
+                                                <rect key="frame" x="0.0" y="67" width="286" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="MJI-la-A32"/>
                                                     <constraint firstAttribute="width" constant="295" id="ygp-zK-roP"/>
@@ -49,7 +49,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What about these guests favourates? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vM-Ne-2xN">
-                                        <rect key="frame" x="0.0" y="138" width="296" height="21"/>
+                                        <rect key="frame" x="0.0" y="138" width="286" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="RCp-VT-gpx"/>
                                             <constraint firstAttribute="width" constant="295" id="w8b-fb-WCM"/>
@@ -66,7 +66,7 @@
                             <constraint firstAttribute="bottom" secondItem="07p-f1-o3q" secondAttribute="bottom" constant="10" id="9NV-05-r7z"/>
                             <constraint firstItem="07p-f1-o3q" firstAttribute="top" secondItem="vub-rj-c0D" secondAttribute="top" constant="10" id="Qlp-Dv-oKG"/>
                             <constraint firstAttribute="trailing" secondItem="07p-f1-o3q" secondAttribute="trailing" constant="10" id="dGF-dN-cIH"/>
-                            <constraint firstItem="07p-f1-o3q" firstAttribute="leading" secondItem="vub-rj-c0D" secondAttribute="leading" constant="10" id="izA-kd-svA"/>
+                            <constraint firstItem="07p-f1-o3q" firstAttribute="leading" secondItem="vub-rj-c0D" secondAttribute="leading" constant="20" id="izA-kd-svA"/>
                         </constraints>
                     </view>
                 </subviews>

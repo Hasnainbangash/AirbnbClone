@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="319" height="54"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have any standout amenities?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-7y-Jkb">
-                                <rect key="frame" x="8" y="12" width="303" height="30"/>
+                                <rect key="frame" x="20" y="12" width="291" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2qd-7y-Jkb" firstAttribute="leading" secondItem="cAB-Fp-UOo" secondAttribute="leading" constant="8" id="4zD-Ia-Ax7"/>
+                            <constraint firstItem="2qd-7y-Jkb" firstAttribute="leading" secondItem="cAB-Fp-UOo" secondAttribute="leading" constant="20" id="4zD-Ia-Ax7"/>
                             <constraint firstItem="2qd-7y-Jkb" firstAttribute="top" secondItem="cAB-Fp-UOo" secondAttribute="top" constant="12" id="HQA-0n-43n"/>
                             <constraint firstAttribute="bottom" secondItem="2qd-7y-Jkb" secondAttribute="bottom" constant="12" id="MqF-nx-LaU"/>
                             <constraint firstAttribute="trailing" secondItem="2qd-7y-Jkb" secondAttribute="trailing" constant="8" id="icb-W5-v4R"/>
