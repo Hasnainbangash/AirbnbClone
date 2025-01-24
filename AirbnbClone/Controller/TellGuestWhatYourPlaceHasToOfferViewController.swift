@@ -90,7 +90,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
             withReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier
         )
         
-        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.safetyItemsCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier)
+        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.safetyItemsCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsBodyCollectionCellIdentifier)
         
         setupCornerRadius()
         setupBorderWidth()
@@ -135,11 +135,11 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch section {
-        case 1:
+        case 0:
             return guestFavourates.count
-        case 2:
+        case 1:
             return standoutAmenities.count
-        case 3:
+        case 2:
             return safetyItems.count
         default:
             return 0
@@ -150,7 +150,7 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch indexPath.section {
-        case 1:
+        case 0:
             
             let guestFavourate = guestFavourates[indexPath.row]
             
@@ -160,7 +160,7 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
             
             return cell ?? UICollectionViewCell()
             
-        case 2:
+        case 1:
             
             let standoutAmenity = standoutAmenities[indexPath.row]
             
@@ -170,7 +170,7 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
             
             return cell ?? UICollectionViewCell()
             
-        case 3:
+        case 2:
             
             let safetyItem = safetyItems[indexPath.row]
             
@@ -186,28 +186,35 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        if kind == UICollectionView.elementKindSectionHeader {
-            switch indexPath.section {
-            case 1:
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.guestFavourateHeaderCellIdentifier, for: indexPath) as? GuestsFavourateHeaderCell
-
-                return headerView ?? UICollectionViewCell()
-            case 2:
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.standoutAmenitiesHeaderCellIdentifier, for: indexPath) as? StandoutAmenitiesHeaderCell
-
-                return headerView ?? UICollectionViewCell()
-            case 3:
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier, for: indexPath) as? SafetyItemsHeaderCell
-
-                return headerView ?? UICollectionViewCell()
-            default:
-                return UICollectionViewCell()
-            }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
         }
-        return UICollectionViewCell()
+        
+        switch indexPath.section {
+        case 0:
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: K.HostYourPlaceCell.Identifiers.guestFavourateHeaderCellIdentifier,
+                for: indexPath) as? GuestsFavourateHeaderCell
+            return header ?? UICollectionViewCell()
+        case 1:
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: K.HostYourPlaceCell.Identifiers.standoutAmenitiesHeaderCellIdentifier,
+                for: indexPath) as? StandoutAmenitiesHeaderCell
+            return header ?? UICollectionViewCell()
+        case 2:
+            let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: K.HostYourPlaceCell.Identifiers.safetyItemsHeaderCellIdentifier,
+                for: indexPath) as? SafetyItemsHeaderCell
+            return header ?? UICollectionViewCell()
+        default:
+            return UICollectionReusableView()
+        }
     }
+
     
 }
 
@@ -216,6 +223,13 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         switch indexPath.section {
+        case 0:
+            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
+            let padding: CGFloat = 10
+            let totalPadding = padding * (itemPerRow - 1)
+            let availableWidth = collectionView.frame.width - totalPadding
+            let itemWidth = availableWidth / itemPerRow
+            return CGSize(width: itemWidth, height: itemWidth)
         case 1:
             let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
             let padding: CGFloat = 10
@@ -224,13 +238,6 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
             let itemWidth = availableWidth / itemPerRow
             return CGSize(width: itemWidth, height: itemWidth)
         case 2:
-            let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
-            let padding: CGFloat = 10
-            let totalPadding = padding * (itemPerRow - 1)
-            let availableWidth = collectionView.frame.width - totalPadding
-            let itemWidth = availableWidth / itemPerRow
-            return CGSize(width: itemWidth, height: itemWidth)
-        case 3:
             let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
             let padding: CGFloat = 10
             let totalPadding = padding * (itemPerRow - 1)
@@ -246,12 +253,12 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         switch section {
+        case 0:
+            return CGSize(width: collectionView.frame.width, height: 200)
         case 1:
-            return CGSize(width: collectionView.frame.width, height: 150)
+            return CGSize(width: collectionView.frame.width, height: 60)
         case 2:
-            return CGSize(width: collectionView.frame.width, height: 120)
-        case 3:
-            return CGSize(width: collectionView.frame.width, height: 120)
+            return CGSize(width: collectionView.frame.width, height: 60)
         default:
             return CGSize()
         }
@@ -261,11 +268,11 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         switch section {
+        case 0:
+            return 5
         case 1:
             return 5
         case 2:
-            return 5
-        case 3:
             return 5
         default:
             return CGFloat()

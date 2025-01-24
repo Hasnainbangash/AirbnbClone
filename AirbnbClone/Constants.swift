@@ -31,7 +31,7 @@ struct K {
             static let guestFavourateBodyCollectionCellNibName = "GuestsFavourateBodyCell"
             static let guestFavourateHeaderCellNibName = "GuestsFavourateHeaderCell"
             
-            static let safetyItemsCollectionCellNibName = "SafetyItemsBodyCell"
+            static let safetyItemsCollectionCellNibName = "SafeyItemsBodyCell"
             static let safetyItemsHeaderCellNibName = "SafetyItemsHeaderCell"
             
             static let standoutAmenitiesCollectionCellNibName = "StandoutAmenitiesBodyCell"
