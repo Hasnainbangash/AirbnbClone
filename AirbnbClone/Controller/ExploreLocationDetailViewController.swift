@@ -117,45 +117,41 @@ class ExploreLocationDetailViewController: UIViewController {
     
 }
 
-//var lastContentOffset: CGFloat = 0
 private var previousOffset: CGFloat = 0
 
 extension ExploreLocationDetailViewController: UIScrollViewDelegate {
 
-    // UIScrollViewDelegate method to track the scrolling behavior
+    // Track the scrolling behavior
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
         
-        if currentOffset > previousOffset { // Scrolling down
-            hideView()
-        } else if currentOffset < previousOffset { // Scrolling up
-            showView()
+        // If scrolling down, hide navigation bar
+        if currentOffset > previousOffset {
+            hideNavigationBar()
+        }
+        // If scrolling up, show navigation bar
+        else if currentOffset < previousOffset {
+            showNavigationBar()
         }
         
-        // Update the previous offset for the next scroll event
         previousOffset = currentOffset
     }
 
-    // Function to hide the view
-    func hideView() {
-        if !navigationBar.isHidden {
-            UIView.animate(withDuration: 0.3) {
-                self.navigationBar.alpha = 0
-                self.navigationBar.isHidden = true// Fade out the view
-            }
+    // Function to hide the navigation bar
+    func hideNavigationBar() {
+        UIView.animate(withDuration: 0.3) {
+            self.navigationBar.alpha = 0
         }
+        self.navigationBar.isHidden = true
     }
 
-    // Function to show the view
-    func showView() {
-        if navigationBar.isHidden {
-            UIView.animate(withDuration: 0.3) {
-                self.navigationBar.alpha = 1
-                self.navigationBar.isHidden = false// Fade in the view
-            }
+    // Function to show the navigation bar
+    func showNavigationBar() {
+        UIView.animate(withDuration: 0.3) {
+            self.navigationBar.alpha = 1
         }
+        self.navigationBar.isHidden = false
     }
-    
 }
 
 extension ExploreLocationDetailViewController: UICollectionViewDataSource {
