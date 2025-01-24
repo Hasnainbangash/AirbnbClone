@@ -19,13 +19,36 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
     @IBOutlet weak var numberOfBeds: UILabel!
     @IBOutlet weak var numberOfBathrooms: UILabel!
     
+    var currentGuests: Int = 0
+    var currentBedrooms: Int = 0
+    var currentBeds: Int = 0
+    var currentBathrooms: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setupInitialCount()
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+    }
+    
+    func setupInitialCount() {
+        
+        // Set the initial guest count
+        numberofGuests.text = "\(currentGuests)"
+        
+        // Set the initial bedrooms count
+        numberOfBedrooms.text = "\(currentBedrooms)"
+        
+        // Set the initial beds count
+        numberOfBeds.text = "\(currentBeds)"
+        
+        // Set the initial bathrooms count
+        numberOfBathrooms.text = "\(currentBathrooms)"
+        
     }
     
     func setupCornerRadius() {
@@ -54,17 +77,69 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
-
     
     @IBAction func guestsButtons(_ sender: UIButton) {
+        
+        // Increase or decrease the guest count based on the tag
+        if sender.tag == 1 {
+            currentGuests += 1  // Add 1 guest
+        } else if sender.tag == 2 {
+            if currentGuests > 0 {
+                currentGuests -= 1  // Subtract 1 guest (but not below 0)
+            }
+        }
+        
+        // Update the numberofGuests label
+        numberofGuests.text = "\(currentGuests)"
+        
     }
     
     @IBAction func bedroomsButtons(_ sender: UIButton) {
+        
+        // Increase or decrease the guest count based on the tag
+        if sender.tag == 1 {
+            currentBedrooms += 1  // Add 1 guest
+        } else if sender.tag == 2 {
+            if currentBedrooms > 0 {
+                currentBedrooms -= 1  // Subtract 1 guest (but not below 0)
+            }
+        }
+        
+        // Update the numberofGuests label
+        numberOfBedrooms.text = "\(currentBedrooms)"
+        
     }
     
     @IBAction func bedsButtons(_ sender: UIButton) {
+        
+        // Increase or decrease the guest count based on the tag
+        if sender.tag == 1 {
+            currentBeds += 1  // Add 1 guest
+        } else if sender.tag == 2 {
+            if currentBeds > 0 {
+                currentBeds -= 1  // Subtract 1 guest (but not below 0)
+            }
+        }
+        
+        // Update the numberofGuests label
+        numberOfBeds.text = "\(currentBeds)"
+        
     }
     
     @IBAction func bathroomsButtons(_ sender: UIButton) {
+        
+        // Increase or decrease the guest count based on the tag
+        if sender.tag == 1 {
+            currentBathrooms += 1  // Add 1 guest
+        } else if sender.tag == 2 {
+            if currentBathrooms > 0 {
+                currentBathrooms -= 1  // Subtract 1 guest (but not below 0)
+            }
+        }
+        
+        // Update the numberofGuests label
+        numberOfBathrooms.text = "\(currentBathrooms)"
+        
     }
+    
 }
