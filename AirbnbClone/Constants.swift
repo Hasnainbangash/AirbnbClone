@@ -13,11 +13,29 @@ struct K {
         struct Identifiers {
             static let describeYourPlaceCollectionCellIdentifier = "DescribeYourPlaceCollectionReusebaleCell"
             static let describeYourPlaceheaderCellIdentifier = "DescribeYourPlaceHeaderReusebaleCell"
+            
+            static let guestFavourateBodyCollectionCellIdentifier = "GuestsFavourateBodyReusebaleCell"
+            static let guestFavourateHeaderCellIdentifier = "GuestsFavourateHeaderReusebaleCell"
+            
+            static let safetyItemsBodyCollectionCellIdentifier = "SafetyItemsBodyReusebaleCell"
+            static let safetyItemsHeaderCellIdentifier = "SafetyItemsHeaderReusebaleCell"
+            
+            static let standoutAmenitiesBodyCollectionCellIdentifier = "StandoutAmenitiesBodyReusebaleCell"
+            static let standoutAmenitiesHeaderCellIdentifier = "StandoutAmenitiesHeaderReusebaleCell"
         }
         
         struct NibNames {
             static let describeYourPlaceCollectionCellNibName = "DescribeYourPlaceCollectionCell"
             static let describeYourPlaceheaderCellNibName = "DescribeYourPlaceHeaderCell"
+            
+            static let guestFavourateBodyCollectionCellNibName = "GuestsFavourateBodyCell"
+            static let guestFavourateHeaderCellNibName = "GuestsFavourateHeaderCell"
+            
+            static let safetyItemsCollectionCellNibName = "SafetyItemsBodyCell"
+            static let safetyItemsHeaderCellNibName = "SafetyItemsHeaderCell"
+            
+            static let standoutAmenitiesCollectionCellNibName = "StandoutAmenitiesBodyCell"
+            static let standoutAmenitiesHeaderCellNibName = "StandoutAmenitiesHeaderCell"
         }
     }
     
