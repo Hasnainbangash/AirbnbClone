@@ -8,8 +8,7 @@
 import UIKit
 
 class MakeYourPlaceStandOutViewController: UIViewController {
-    
-    
+
     @IBOutlet weak var saveAndExitButtonLabel: UIButton!
     @IBOutlet weak var questionsButtonLabel: UIButton!
     @IBOutlet weak var backButtonLabel: UIButton!
