@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StandoutAmenitiesBodyCell" customModule="AirbnbClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="144"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfb-7u-FyM">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="144"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-UG-qEB">
+                                <rect key="frame" x="20" y="15" width="206" height="114"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oHN-5O-Rhu">
+                                        <rect key="frame" x="18" y="12" width="183" height="90"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Ix-un-rMV">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="55" height="54.333333333333343"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="DVe-Fp-AQO"/>
+                                                    <constraint firstAttribute="width" constant="55" id="vfx-Ol-5TG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campervan/motorhome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-Sg-yjx">
+                                                <rect key="frame" x="0.0" y="60" width="180.33333333333334" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oHN-5O-Rhu" secondAttribute="bottom" constant="12" id="Svv-Uc-AKZ"/>
+                                    <constraint firstItem="oHN-5O-Rhu" firstAttribute="top" secondItem="gY2-UG-qEB" secondAttribute="top" constant="12" id="jWP-RY-GlD"/>
+                                    <constraint firstAttribute="trailing" secondItem="oHN-5O-Rhu" secondAttribute="trailing" constant="5" id="sqh-BH-gv2"/>
+                                    <constraint firstItem="oHN-5O-Rhu" firstAttribute="leading" secondItem="gY2-UG-qEB" secondAttribute="leading" constant="18" id="xrg-mf-If6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gY2-UG-qEB" secondAttribute="trailing" constant="20" id="6kb-P1-yjH"/>
+                            <constraint firstItem="gY2-UG-qEB" firstAttribute="top" secondItem="Cfb-7u-FyM" secondAttribute="top" constant="15" id="eME-y6-Bho"/>
+                            <constraint firstItem="gY2-UG-qEB" firstAttribute="leading" secondItem="Cfb-7u-FyM" secondAttribute="leading" constant="20" id="hS5-cv-zwK"/>
+                            <constraint firstAttribute="bottom" secondItem="gY2-UG-qEB" secondAttribute="bottom" constant="15" id="w3S-d1-DfW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Cfb-7u-FyM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HuR-RA-wlP"/>
+                <constraint firstItem="Cfb-7u-FyM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Zty-mQ-KAM"/>
+                <constraint firstAttribute="trailing" secondItem="Cfb-7u-FyM" secondAttribute="trailing" id="ifU-X4-Jfa"/>
+                <constraint firstAttribute="bottom" secondItem="Cfb-7u-FyM" secondAttribute="bottom" id="yuZ-4k-2Rf"/>
+            </constraints>
+            <connections>
+                <outlet property="mainView" destination="gY2-UG-qEB" id="o5U-GC-W94"/>
+                <outlet property="placeImageView" destination="9Ix-un-rMV" id="XTK-es-eUv"/>
+                <outlet property="placeName" destination="lhT-Sg-yjx" id="cdE-wi-t6L"/>
+            </connections>
+            <point key="canvasLocation" x="-61" y="20"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
