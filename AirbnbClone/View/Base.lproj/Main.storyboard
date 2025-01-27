@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFY-jc-Ovm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jMM-tx-ItW">
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -14420,13 +14420,25 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                             </imageView>
                                                                         </subviews>
                                                                     </stackView>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJe-gQ-Qzn">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="132"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="chooseWhoToWelcomeSelectedButton:" destination="jMM-tx-ItW" eventType="touchUpInside" id="MOa-eQ-MYF"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="SJe-gQ-Qzn" firstAttribute="leading" secondItem="Ihv-fB-qY3" secondAttribute="leading" id="97q-PP-13n"/>
+                                                                    <constraint firstItem="SJe-gQ-Qzn" firstAttribute="top" secondItem="Ihv-fB-qY3" secondAttribute="top" id="d2d-5j-Fbe"/>
                                                                     <constraint firstItem="NzA-wE-5i4" firstAttribute="top" secondItem="Ihv-fB-qY3" secondAttribute="top" constant="18" id="dNX-WE-7gc"/>
                                                                     <constraint firstAttribute="trailing" secondItem="NzA-wE-5i4" secondAttribute="trailing" constant="16" id="dn2-mx-fky"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="SJe-gQ-Qzn" secondAttribute="bottom" id="l7u-fg-MDL"/>
                                                                     <constraint firstAttribute="bottom" secondItem="NzA-wE-5i4" secondAttribute="bottom" constant="18" id="n6j-hI-zsw"/>
                                                                     <constraint firstItem="NzA-wE-5i4" firstAttribute="leading" secondItem="Ihv-fB-qY3" secondAttribute="leading" constant="16" id="n8L-1V-3p0"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="SJe-gQ-Qzn" secondAttribute="trailing" id="xaf-7J-8eZ"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-q6-54A">
@@ -14470,12 +14482,24 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                             </imageView>
                                                                         </subviews>
                                                                     </stackView>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LM1-oj-Bev">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="157"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="chooseWhoToWelcomeSelectedButton:" destination="jMM-tx-ItW" eventType="touchUpInside" id="5Jd-fX-Gjn"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="LM1-oj-Bev" firstAttribute="top" secondItem="1Rq-q6-54A" secondAttribute="top" id="FJr-rB-lop"/>
+                                                                    <constraint firstItem="LM1-oj-Bev" firstAttribute="leading" secondItem="1Rq-q6-54A" secondAttribute="leading" id="G8M-9v-anA"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="LM1-oj-Bev" secondAttribute="trailing" id="IeE-Dn-DD7"/>
                                                                     <constraint firstItem="eqL-ak-0WE" firstAttribute="leading" secondItem="1Rq-q6-54A" secondAttribute="leading" constant="16" id="cHn-6z-jAt"/>
                                                                     <constraint firstAttribute="bottom" secondItem="eqL-ak-0WE" secondAttribute="bottom" constant="18" id="giW-KL-snM"/>
                                                                     <constraint firstItem="eqL-ak-0WE" firstAttribute="top" secondItem="1Rq-q6-54A" secondAttribute="top" constant="18" id="gnr-Cs-wNV"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="LM1-oj-Bev" secondAttribute="bottom" id="qpX-IU-5uq"/>
                                                                     <constraint firstAttribute="trailing" secondItem="eqL-ak-0WE" secondAttribute="trailing" constant="16" id="x3J-Zd-QM0"/>
                                                                 </constraints>
                                                             </view>
@@ -14699,7 +14723,16 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="afterYourFIrstGuestLabel" destination="FEt-I3-0Cn" id="KnL-cN-5Ha"/>
+                        <outlet property="anExperiencedGuestView" destination="1Rq-q6-54A" id="jcZ-mo-pLT"/>
+                        <outlet property="anExperiencedSelectedImage" destination="5mx-qh-nSU" id="jbj-A6-a4c"/>
+                        <outlet property="anyAirbnbGuestView" destination="Ihv-fB-qY3" id="vPs-a9-5mZ"/>
+                        <outlet property="anyAirbnbSelectedImage" destination="3YC-2o-LaH" id="Qcn-4a-l06"/>
                         <outlet property="approvedYourBookingView" destination="Ihv-fB-qY3" id="d3h-W7-1cM"/>
+                        <outlet property="backButtonLabel" destination="xrq-cS-xuf" id="1lk-mf-aLH"/>
+                        <outlet property="nextButtonLabel" destination="e1t-Sx-EBl" id="YmJ-va-uUi"/>
+                        <outlet property="questionsButtonLabel" destination="b0g-vm-emQ" id="n74-6X-tOF"/>
+                        <outlet property="saveAndExitButtonLabel" destination="Yqw-yy-1dE" id="zXs-De-TX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcY-d9-iTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
