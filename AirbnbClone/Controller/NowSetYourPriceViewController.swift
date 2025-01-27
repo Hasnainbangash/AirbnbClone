@@ -110,6 +110,7 @@ class NowSetYourPriceViewController: UIViewController {
         
         allPricesStackView.isHidden = false
         guestPricesBeforeTaxesStackView.isHidden = true
+        showLessStackView.isHidden = false
         
     }
     
@@ -118,6 +119,7 @@ class NowSetYourPriceViewController: UIViewController {
         
         showLessStackView.isHidden = true
         allPricesStackView.isHidden = true
+        guestPricesBeforeTaxesStackView.isHidden = false
         
     }
     
