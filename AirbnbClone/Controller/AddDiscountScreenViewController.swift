@@ -18,7 +18,15 @@ class AddDiscountScreenViewController: UIViewController {
     @IBOutlet weak var weeklyDiscountView: UIView!
     @IBOutlet weak var monthlyDiscountView: UIView!
     
+    @IBOutlet weak var newListingPromotionButtonLabel: UIButton!
+    @IBOutlet weak var weeklyDiscountButtonLabel: UIButton!
+    @IBOutlet weak var monthlyDiscountButtonLabel: UIButton!
+    
     @IBOutlet weak var onlyOneDiscountAppliedLabel: UILabel!
+    
+    var newListingPromotionisSelected = true
+    var weeklyDiscountisSelected = true
+    var monthlyDisocuntisSelected = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +37,10 @@ class AddDiscountScreenViewController: UIViewController {
         setupBorderWidth()
         setupButtonUnderline()
         setupLabelUnderline()
+        
+        newListingPromotionButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        weeklyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        monthlyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
     }
     
     func setupCornerRadius() {
@@ -36,9 +48,9 @@ class AddDiscountScreenViewController: UIViewController {
         questionsButtonLabel.layer.cornerRadius = questionsButtonLabel.frame.height / 2
         nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 5
         
-        newListingPromotionView.layer.cornerRadius = newListingPromotionView.frame.height / 7
-        weeklyDiscountView.layer.cornerRadius = weeklyDiscountView.frame.height / 7
-        monthlyDiscountView.layer.cornerRadius = monthlyDiscountView.frame.height / 7
+        newListingPromotionView.layer.cornerRadius = newListingPromotionView.frame.height / 9
+        weeklyDiscountView.layer.cornerRadius = weeklyDiscountView.frame.height / 9
+        monthlyDiscountView.layer.cornerRadius = monthlyDiscountView.frame.height / 9
     }
     
     func setupBorderWidth() {
@@ -109,5 +121,48 @@ class AddDiscountScreenViewController: UIViewController {
         // let helpCentreVC = HelpCentreViewController()
         // navigationController?.pushViewController(helpCentreVC, animated: true)
     }
-
+    
+    
+    @IBAction func newListingPromotionSeletedButtonPressed(_ sender: UIButton) {
+        
+        // Toggle the state
+        newListingPromotionisSelected.toggle()  // This flips the value of isSelected
+        
+        // Change the button's image based on the state
+        if newListingPromotionisSelected {
+            newListingPromotionButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        } else {
+            newListingPromotionButtonLabel.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+        }
+        
+    }
+    
+    @IBAction func weeklyDiscountSelectedButtonPressed(_ sender: UIButton) {
+        
+        // Toggle the state
+        weeklyDiscountisSelected.toggle()  // This flips the value of isSelected
+        
+        // Change the button's image based on the state
+        if weeklyDiscountisSelected {
+            weeklyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        } else {
+            weeklyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+        }
+        
+    }
+    
+    @IBAction func monthlyDiscountSelectedButtonPressed(_ sender: UIButton) {
+        
+        // Toggle the state
+        monthlyDisocuntisSelected.toggle()  // This flips the value of isSelected
+        
+        // Change the button's image based on the state
+        if monthlyDisocuntisSelected {
+            monthlyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+        } else {
+            monthlyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+        }
+        
+    }
+    
 }
