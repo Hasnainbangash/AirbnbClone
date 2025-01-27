@@ -35,6 +35,8 @@ class NowSetYourPriceViewController: UIViewController {
     
     @IBOutlet weak var similarListingStackView: UIStackView!
     
+    @IBOutlet weak var showLessStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -99,6 +101,22 @@ class NowSetYourPriceViewController: UIViewController {
         
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
+    }
+    
+    
+    @IBAction func showPricesButtonPressed(_ sender: UIButton) {
+        
+        allPricesStackView.isHidden = false
+        guestPricesBeforeTaxesStackView.isHidden = true
+        
+    }
+    
+    
+    @IBAction func showLessButtonPressed(_ sender: UIButton) {
+        
+        showLessStackView.isHidden = true
+        allPricesStackView.isHidden = true
+        
     }
     
 }
