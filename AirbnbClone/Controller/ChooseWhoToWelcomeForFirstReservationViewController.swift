@@ -71,7 +71,7 @@ class ChooseWhoToWelcomeForFirstReservationViewController: UIViewController {
     
     func setupLabelUnderline() {
         
-        let fullText = "You can change this at any time. Learn more"
+        let fullText = "After your first guest anyone can book your place. Learn more"
         // Create an attributed string with the full text
         let attributedString = NSMutableAttributedString(string: fullText)
         
