@@ -14290,6 +14290,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="questionsButtonLabel" destination="Leb-md-7sa" id="1Y0-R8-MTB"/>
                         <outlet property="saveAndExitButtonLabel" destination="IJq-7g-YKs" id="WmK-uA-MeX"/>
                         <outlet property="useInstantBookView" destination="iRc-Tz-fMM" id="QdR-Km-zSB"/>
+                        <outlet property="youCanChangeThisLabel" destination="vKc-6N-Hls" id="ImI-kv-mIt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SED-7H-JnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

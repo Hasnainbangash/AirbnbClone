@@ -14,6 +14,8 @@ class PickYourBookingSettingsViewController: UIViewController {
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
     
+    @IBOutlet weak var youCanChangeThisLabel: UILabel!
+    
     @IBOutlet weak var approvedYourBookingView: UIView!
     @IBOutlet weak var useInstantBookView: UIView!
     
@@ -24,6 +26,7 @@ class PickYourBookingSettingsViewController: UIViewController {
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+        setupLabelUnderline()
         
         approvedYourBookingView.layer.borderWidth = 2
         useInstantBookView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
@@ -60,6 +63,50 @@ class PickYourBookingSettingsViewController: UIViewController {
         
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
+    }
+    
+    func setupLabelUnderline() {
+        
+        let fullText = "You can change this at any time. Learn more"
+        // Create an attributed string with the full text
+        let attributedString = NSMutableAttributedString(string: fullText)
+        
+        // Define the range of the clickable part ("Visit the Help Centre")
+        let clickableRange = (fullText as NSString).range(of: "Learn more")
+        
+        // Add the link attribute to make it look like a hyperlink
+        attributedString.addAttribute(.link, value: "helpCentre://", range: clickableRange)
+        
+        // Change textColor to black
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: clickableRange)
+        
+        // Adding the underline
+        attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: clickableRange)
+        
+        // Set the attributed text to the UILabel
+        youCanChangeThisLabel.attributedText = attributedString
+        
+        // Enable interaction on the label
+        youCanChangeThisLabel.isUserInteractionEnabled = true
+        
+        // Add tap gesture recognizer to detect taps on the label
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+        youCanChangeThisLabel.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    // Handle the tap event
+    @objc func labelTapped(_ gesture: UITapGestureRecognizer) {
+        print("Learn more label tapped")
+        print("Going to learn screen now")
+        navigateToHelpCentre()
+    }
+
+    // Method to navigate to the Help Centre screen
+    func navigateToHelpCentre() {
+        print("Learn screen is open now")
+        // let helpCentreVC = HelpCentreViewController()
+        // navigationController?.pushViewController(helpCentreVC, animated: true)
     }
     
     @IBAction func pickYourBookingSelectedButton(_ sender: UIButton) {
