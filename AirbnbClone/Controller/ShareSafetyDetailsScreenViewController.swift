@@ -61,7 +61,10 @@ class ShareSafetyDetailsScreenViewController: UIViewController {
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
-
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func exteriorSecurityButtonPressed(_ sender: UIButton) {
         

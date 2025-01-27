@@ -78,6 +78,10 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func guestsButtons(_ sender: UIButton) {
         
         // Increase or decrease the guest count based on the tag

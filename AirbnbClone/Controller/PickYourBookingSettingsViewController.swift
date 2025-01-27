@@ -109,6 +109,10 @@ class PickYourBookingSettingsViewController: UIViewController {
         // navigationController?.pushViewController(helpCentreVC, animated: true)
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func pickYourBookingSelectedButton(_ sender: UIButton) {
         
         print(sender.tag)
