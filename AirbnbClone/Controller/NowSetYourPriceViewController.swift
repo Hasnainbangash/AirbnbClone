@@ -46,6 +46,8 @@ class NowSetYourPriceViewController: UIViewController {
         setupButtonUnderline()
         
         allPricesStackView.isHidden = true
+        guestPriceMainView.isHidden = true
+        youEarnSubView.isHidden = true
     }
     
     func setupCornerRadius() {
@@ -66,10 +68,10 @@ class NowSetYourPriceViewController: UIViewController {
         questionsButtonLabel.layer.borderWidth = 0.3
         
         guestPriceMainView.layer.borderWidth = 0.3
-        guestPriceSubView.layer.borderWidth = 0.3
+        guestPriceSubView.layer.borderWidth = 1.0
         
         youEarnMainView.layer.borderWidth = 0.3
-        youEarnSubView.layer.borderWidth = 0.3
+        youEarnSubView.layer.borderWidth = 1.0
         
     }
     
@@ -120,6 +122,26 @@ class NowSetYourPriceViewController: UIViewController {
         showLessStackView.isHidden = true
         allPricesStackView.isHidden = true
         guestPricesBeforeTaxesStackView.isHidden = false
+        
+    }
+    
+    @IBAction func guestPriceMainViewButtonPressed(_ sender: UIButton) {
+        
+        guestPriceMainStackView.isHidden = true
+        guestPriceSubStackView.isHidden = false
+        
+        youEarnMainStackView.isHidden = false
+        youEarnSubStackView.isHidden = true
+        
+    }
+    
+    @IBAction func youEarnMainViewButtonPressed(_ sender: UIButton) {
+        
+        youEarnMainStackView.isHidden = true
+        youEarnSubStackView.isHidden = false
+        
+        guestPriceMainStackView.isHidden = false
+        guestPriceSubStackView.isHidden = true
         
     }
     
