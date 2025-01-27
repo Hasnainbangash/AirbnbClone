@@ -44,6 +44,8 @@ class NowSetYourPriceViewController: UIViewController {
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+        
+        allPricesStackView.isHidden = true
     }
     
     func setupCornerRadius() {
