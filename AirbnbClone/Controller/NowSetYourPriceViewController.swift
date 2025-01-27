@@ -14,14 +14,26 @@ class NowSetYourPriceViewController: UIViewController {
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
     
+    @IBOutlet weak var guestPricesBeforeTaxesStackView: UIStackView!
+    
+    @IBOutlet weak var allPricesStackView: UIStackView!
+    
     @IBOutlet weak var guestPriceMainView: UIView!
     @IBOutlet weak var guestPriceSubView: UIView!
+    
+    @IBOutlet weak var guestPriceMainStackView: UIStackView!
+    @IBOutlet weak var guestPriceSubStackView: UIStackView!
     
     @IBOutlet weak var youEarnMainView: UIView!
     @IBOutlet weak var youEarnSubView: UIView!
     
+    @IBOutlet weak var youEarnMainStackView: UIStackView!
+    @IBOutlet weak var youEarnSubStackView: UIStackView!
+    
     @IBOutlet weak var similarListingView: UIView!
     @IBOutlet weak var learnMoreAboutPricingButtonLabel: UIButton!
+    
+    @IBOutlet weak var similarListingStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
