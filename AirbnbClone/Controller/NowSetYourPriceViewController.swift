@@ -46,7 +46,7 @@ class NowSetYourPriceViewController: UIViewController {
         setupButtonUnderline()
         
         allPricesStackView.isHidden = true
-        guestPriceMainView.isHidden = true
+        guestPriceMainStackView.isHidden = true
         youEarnSubStackView.isHidden = true
     }
     
@@ -56,10 +56,12 @@ class NowSetYourPriceViewController: UIViewController {
         nextButtonLabel.layer.cornerRadius = nextButtonLabel.frame.height / 5
         
         guestPriceMainView.layer.cornerRadius = guestPriceMainView.frame.height / 5
-        guestPriceSubView.layer.cornerRadius = guestPriceSubView.frame.height / 7
+        guestPriceSubView.layer.cornerRadius = guestPriceSubView.frame.height / 9
         
         youEarnMainView.layer.cornerRadius = youEarnMainView.frame.height / 5
-        youEarnSubView.layer.cornerRadius = youEarnSubView.frame.height / 7
+        youEarnSubView.layer.cornerRadius = youEarnSubView.frame.height / 9
+        
+        similarListingView.layer.cornerRadius = similarListingView.frame.height / 2
 
     }
     
@@ -72,6 +74,8 @@ class NowSetYourPriceViewController: UIViewController {
         
         youEarnMainView.layer.borderWidth = 0.3
         youEarnSubView.layer.borderWidth = 1.0
+        
+        similarListingView.layer.borderWidth = 0.3
         
     }
     
@@ -113,6 +117,7 @@ class NowSetYourPriceViewController: UIViewController {
         allPricesStackView.isHidden = false
         guestPricesBeforeTaxesStackView.isHidden = true
         showLessStackView.isHidden = false
+        similarListingStackView.isHidden = true
         
     }
     
@@ -122,6 +127,7 @@ class NowSetYourPriceViewController: UIViewController {
         showLessStackView.isHidden = true
         allPricesStackView.isHidden = true
         guestPricesBeforeTaxesStackView.isHidden = false
+        similarListingStackView.isHidden = false
         
     }
     
