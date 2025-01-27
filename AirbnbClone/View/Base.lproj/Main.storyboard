@@ -14728,7 +14728,6 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="anExperiencedSelectedImage" destination="5mx-qh-nSU" id="jbj-A6-a4c"/>
                         <outlet property="anyAirbnbGuestView" destination="Ihv-fB-qY3" id="vPs-a9-5mZ"/>
                         <outlet property="anyAirbnbSelectedImage" destination="3YC-2o-LaH" id="Qcn-4a-l06"/>
-                        <outlet property="approvedYourBookingView" destination="Ihv-fB-qY3" id="d3h-W7-1cM"/>
                         <outlet property="backButtonLabel" destination="xrq-cS-xuf" id="1lk-mf-aLH"/>
                         <outlet property="nextButtonLabel" destination="e1t-Sx-EBl" id="YmJ-va-uUi"/>
                         <outlet property="questionsButtonLabel" destination="b0g-vm-emQ" id="n74-6X-tOF"/>
