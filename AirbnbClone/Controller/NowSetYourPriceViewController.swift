@@ -47,7 +47,7 @@ class NowSetYourPriceViewController: UIViewController {
         
         allPricesStackView.isHidden = true
         guestPriceMainView.isHidden = true
-        youEarnSubView.isHidden = true
+        youEarnSubStackView.isHidden = true
     }
     
     func setupCornerRadius() {
