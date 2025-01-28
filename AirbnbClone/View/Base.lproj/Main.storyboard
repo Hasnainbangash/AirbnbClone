@@ -4047,11 +4047,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="shq-N2-E9T">
-                                <rect key="frame" x="16" y="129" width="370" height="695.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="shq-N2-E9T">
+                                <rect key="frame" x="16" y="129" width="370" height="662"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-mn-97y">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="586.33333333333337"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-mn-97y">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="545"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's easy to get started on Airbnb" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKI-Vr-KqK">
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="86"/>
@@ -4064,7 +4064,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-Wr-vg2">
-                                                <rect key="frame" x="0.0" y="115.99999999999997" width="370" height="470.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="116" width="370" height="429"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZAB-Sy-YTs">
                                                         <rect key="frame" x="0.0" y="0.0" width="370" height="97"/>
@@ -4187,10 +4187,10 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hq9-Ux-Am3">
-                                                        <rect key="frame" x="0.0" y="304" width="370" height="138.33333333333337"/>
+                                                        <rect key="frame" x="0.0" y="304" width="370" height="97"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pjy-Mb-SfD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="230" height="138.33333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="230" height="97"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnu-ff-WWl">
                                                                         <rect key="frame" x="0.0" y="0.0" width="12" height="23"/>
@@ -4230,7 +4230,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Door with flower" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-1H-FEi">
-                                                                <rect key="frame" x="238" y="0.0" width="132" height="138.33333333333334"/>
+                                                                <rect key="frame" x="238" y="0.0" width="132" height="97"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="97" id="fhY-Gq-MZX"/>
                                                                     <constraint firstAttribute="width" constant="132" id="v3J-QZ-YIi"/>
@@ -4239,7 +4239,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nck-JG-g9s">
-                                                        <rect key="frame" x="0.0" y="469.33333333333337" width="370" height="1"/>
+                                                        <rect key="frame" x="0.0" y="428" width="370" height="1"/>
                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="370" id="M8D-ze-Sad"/>
@@ -4251,7 +4251,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-Y4-4gd">
-                                        <rect key="frame" x="0.0" y="594.33333333333337" width="370" height="50"/>
+                                        <rect key="frame" x="0.0" y="557" width="370" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="151" id="TfR-la-aIg"/>
@@ -4261,7 +4261,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIn-XL-CtZ">
-                                        <rect key="frame" x="0.0" y="652.33333333333337" width="370" height="43"/>
+                                        <rect key="frame" x="0.0" y="619" width="370" height="43"/>
                                         <color key="backgroundColor" red="0.85490196078431369" green="0.039215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="46W-39-HYP"/>
