@@ -7,19 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04BB3347FA2278AF80262C0E3A656087 /* Pods-AirbnbClone-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE9E10574596B20C36FE2D0268FE9E0 /* Pods-AirbnbClone-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BE0511323B6ED5AFCCC0D6B385BEA24 /* Pods-AirbnbClone-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B6DDCFE52A3918755474C690B168C0 /* Pods-AirbnbClone-dummy.m */; };
-		5F880505EDE9C04A90A1FA2BA2312298 /* Pods-AirbnbCloneTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34476F220AD61520CAE201514A7F7279 /* Pods-AirbnbCloneTests-dummy.m */; };
-		7CCB16D67E4C120DF2A4D12C1CCFD99B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		890E7BB4A3EFBD45E1D1EB6D1ED2EA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		19DC68BBACCF1CF524168017BA3AF910 /* Pods-AirbnbClone-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7971A37CDC034B01DC7C755A4B2CE3 /* Pods-AirbnbClone-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		363C3AEBA886770F0A578D43504E7AC3 /* CountryPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49055CBB4703B1712762D6821653A208 /* CountryPickerView.xib */; };
+		389B7EA19BF60C882EBA6A84E632D880 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F62EE2B6E9C8A4C2CAB382AE41D9AFA1 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50924E7C8B700A2AFC3BE0E6C62166C8 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 27BCD9A50EC95E8F044E6160607FCCA7 /* Images */; };
+		51863C894BA8823C3098F7785F0EE4A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		54A0154DE2FFEB174112A4D3B8DF4618 /* CountryPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D81C1E8AE56E802F40DE29B24F8422 /* CountryPickerView-dummy.m */; };
+		5F880505EDE9C04A90A1FA2BA2312298 /* Pods-AirbnbCloneTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DBBB2E1CBAE2A98392C21C9362DD2A /* Pods-AirbnbCloneTests-dummy.m */; };
+		6384FF7CACFA1EA54154CF83BE4A3F3D /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCD2B99CC6412D4C1D857F0033C3944 /* CountryPickerView.swift */; };
+		645DB3FD8D19E0D42996EDA759633AE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		649C125E7AF042FC64E5AC32F430DA84 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 5FD242B00FAF7F64E742D1E9D2D20AD3 /* Data */; };
+		659A3C2F97E8FA6B1341A6612D6C9702 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		687D1BA10DF10D5130C3B64D5C42F838 /* Delegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC463E5DE2EB98AFD5126392324B0A2 /* Delegate+DataSource.swift */; };
+		6B57CAB5B45E564FECC4B514EB78360F /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F19E9DB93C5552CEF0DB7C7FE85C7 /* Bundle.swift */; };
+		8BBFED2F8AE6719F852151F699EC8836 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1A9F56171C17A5399EFF25823129F8 /* NibView.swift */; };
+		8DBB93BBAC8585F15BBC8CAAD0A9F62B /* CountryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B0906021DB8E7D730C3E6C0EB9FC0 /* CountryPickerViewController.swift */; };
+		8DD39BA60007593FD2D349560B041D47 /* CountryPickerView-CountryPickerView_CountryPickerView in Resources */ = {isa = PBXBuildFile; fileRef = 920624790A09310F9E506BCF1D4CC9E7 /* CountryPickerView-CountryPickerView_CountryPickerView */; };
 		A97F022F1A558CE88183C19998C7739B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		D2B56C86E383E9810BA72AAC240E60B8 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C88808ABBB4B12D771C20C485435189 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3D0E82CB03D8AC8F704C9B4CBE4BAE9 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B77F52EF631C4035E27155FF515A3 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m */; };
-		E5C9FAF9114C229C1E2FC44BF4218088 /* Pods-AirbnbCloneTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB770B2B05E23CD950C4D1C7C7A3F587 /* Pods-AirbnbCloneTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBC5A737A277EFF7B507B47F8AED690B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967B9BFB63AF3DDB769803093478C94 /* Extensions.swift */; };
+		E0AD8C7B200E13C18A21880CFEB3BCF4 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3280EEF4E6E9337196A3BC95E6B5598 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m */; };
+		E5C9FAF9114C229C1E2FC44BF4218088 /* Pods-AirbnbCloneTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60AD091CD432696645D8E8EC9DFFDA0A /* Pods-AirbnbCloneTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7219D555F888BE411F99EAE7FBACF5F /* CountryPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB5864250CD6DE0A11E772A5346FF08 /* CountryPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB9A542917B1E2853B7380D09C88188A /* Pods-AirbnbClone-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876596345BBD21C036948B804E681A3 /* Pods-AirbnbClone-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AA0CD6802B2F5DA33CEBEAD6C9E52623 /* PBXContainerItemProxy */ = {
+		611BBE333D6E8410B3D1117D51380C79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81AA88F2453B4A0E544BF0FB08E13D87;
+			remoteInfo = CountryPickerView;
+		};
+		6DA1B824E3AA6BE5C791CF66CB4AA7BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43E53E03FD1BE73C8433078A971781F1;
+			remoteInfo = "CountryPickerView-CountryPickerView_CountryPickerView";
+		};
+		8A141AC481BC3FB6E99A16904C5CAFB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81AA88F2453B4A0E544BF0FB08E13D87;
+			remoteInfo = CountryPickerView;
+		};
+		C8DB36FAEEEC45B714E3159A6ADD155A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -29,43 +63,80 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC5A04BE75A04585AF05134B49192F9 /* Pods-AirbnbCloneTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbCloneTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0DE9E10574596B20C36FE2D0268FE9E0 /* Pods-AirbnbClone-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirbnbClone-umbrella.h"; sourceTree = "<group>"; };
-		113A17C3010816FC88750CA14C5465B7 /* Pods-AirbnbClone-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-acknowledgements.plist"; sourceTree = "<group>"; };
-		1D8B77F52EF631C4035E27155FF515A3 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirbnbClone-AirbnbCloneUITests-dummy.m"; sourceTree = "<group>"; };
-		29B6DDCFE52A3918755474C690B168C0 /* Pods-AirbnbClone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirbnbClone-dummy.m"; sourceTree = "<group>"; };
-		2C88808ABBB4B12D771C20C485435189 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h"; sourceTree = "<group>"; };
-		34476F220AD61520CAE201514A7F7279 /* Pods-AirbnbCloneTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirbnbCloneTests-dummy.m"; sourceTree = "<group>"; };
-		347BD61954B85E2152530F5743A60CAD /* Pods-AirbnbCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		14101CD9E65E7BCAFF70F49C15DF13AD /* Pods-AirbnbClone-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirbnbClone-frameworks.sh"; sourceTree = "<group>"; };
+		1876596345BBD21C036948B804E681A3 /* Pods-AirbnbClone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirbnbClone-dummy.m"; sourceTree = "<group>"; };
+		1B1A9F56171C17A5399EFF25823129F8 /* NibView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibView.swift; path = CountryPickerView/NibView.swift; sourceTree = "<group>"; };
+		1D7971A37CDC034B01DC7C755A4B2CE3 /* Pods-AirbnbClone-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirbnbClone-umbrella.h"; sourceTree = "<group>"; };
+		202B699C2C8ADB01A9D26262EA27538F /* Pods-AirbnbCloneTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbCloneTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		220F19E9DB93C5552CEF0DB7C7FE85C7 /* Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = CountryPickerView/Bundle.swift; sourceTree = "<group>"; };
+		27BCD9A50EC95E8F044E6160607FCCA7 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; name = Images; path = CountryPickerView/Resources/Images; sourceTree = "<group>"; };
+		2BCD2B99CC6412D4C1D857F0033C3944 /* CountryPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryPickerView.swift; path = CountryPickerView/CountryPickerView.swift; sourceTree = "<group>"; };
+		2CA57EC60DB33A699AC11A7D5DF8CD4E /* Pods-AirbnbCloneTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirbnbCloneTests.modulemap"; sourceTree = "<group>"; };
+		304977EB8BA8FDDBFC792C115B1D36CD /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4C9CF11AFBD87847EFE26BE5FA25C004 /* Pods-AirbnbCloneTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbCloneTests-Info.plist"; sourceTree = "<group>"; };
-		51453A0195482386BDD98F43A6C4823C /* Pods-AirbnbClone-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-Info.plist"; sourceTree = "<group>"; };
-		5800DDA08FF78BDE5D5FBCEB89450653 /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7A01842778CDE8C52E237B9968F9D940 /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49055CBB4703B1712762D6821653A208 /* CountryPickerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CountryPickerView.xib; path = CountryPickerView/Resources/CountryPickerView.xib; sourceTree = "<group>"; };
+		5C8E1C01A8DC36717C1DCABABC4112A8 /* Pods-AirbnbClone-AirbnbCloneUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-AirbnbCloneUITests-Info.plist"; sourceTree = "<group>"; };
+		5D3B0983FCF8A20539F28B790BC35179 /* Pods-AirbnbClone-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-acknowledgements.plist"; sourceTree = "<group>"; };
+		5FD242B00FAF7F64E742D1E9D2D20AD3 /* Data */ = {isa = PBXFileReference; includeInIndex = 1; name = Data; path = CountryPickerView/Resources/Data; sourceTree = "<group>"; };
+		60AD091CD432696645D8E8EC9DFFDA0A /* Pods-AirbnbCloneTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirbnbCloneTests-umbrella.h"; sourceTree = "<group>"; };
+		6511155669CBA3587FA19B1F94DEF222 /* CountryPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CountryPickerView.debug.xcconfig; sourceTree = "<group>"; };
+		694ADD4D42B1AB5C624EEE11EB11F8E5 /* Pods-AirbnbCloneTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbCloneTests-Info.plist"; sourceTree = "<group>"; };
+		6B41C0051021E00061FAA75F0E8A7996 /* CountryPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CountryPickerView.release.xcconfig; sourceTree = "<group>"; };
+		6BB508197740FB4FD504BF7CDA2B75D0 /* Pods-AirbnbClone-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirbnbClone-acknowledgements.markdown"; sourceTree = "<group>"; };
+		78B29DB9CAA78479DD39AF0D5A050DAF /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		790902BB6B0AA024F38EFDB7C4372D76 /* Pods-AirbnbCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B2BC309BE369E187E41ACE1F390D2DF /* Pods-AirbnbClone */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AirbnbClone"; path = Pods_AirbnbClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8387D5AAC8F719414F888700DEA7DD16 /* Pods-AirbnbCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
-		943D52FA408AEE5108363E20B2271517 /* Pods-AirbnbClone-AirbnbCloneUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirbnbClone-AirbnbCloneUITests.modulemap"; sourceTree = "<group>"; };
+		7CC463E5DE2EB98AFD5126392324B0A2 /* Delegate+DataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Delegate+DataSource.swift"; path = "CountryPickerView/Delegate+DataSource.swift"; sourceTree = "<group>"; };
+		7E5385AF218504F74CBDF293CE3865B6 /* Pods-AirbnbCloneTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirbnbCloneTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8ABCE1A64F7C93CE854DC6FC65AF7843 /* Pods-AirbnbCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B4B0906021DB8E7D730C3E6C0EB9FC0 /* CountryPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryPickerViewController.swift; path = CountryPickerView/CountryPickerViewController.swift; sourceTree = "<group>"; };
+		920624790A09310F9E506BCF1D4CC9E7 /* CountryPickerView-CountryPickerView_CountryPickerView */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CountryPickerView-CountryPickerView_CountryPickerView"; path = CountryPickerView_CountryPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		927EEE3A2D28ED5A2421EA746F3E083B /* Pods-AirbnbClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone.release.xcconfig"; sourceTree = "<group>"; };
+		9967B9BFB63AF3DDB769803093478C94 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = CountryPickerView/Extensions.swift; sourceTree = "<group>"; };
+		99DBBB2E1CBAE2A98392C21C9362DD2A /* Pods-AirbnbCloneTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirbnbCloneTests-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DB852058B2DCA29668106E3AB2F036C /* Pods-AirbnbClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone.release.xcconfig"; sourceTree = "<group>"; };
-		AECF7E0CA05CB7C56C1D4853328943BF /* Pods-AirbnbClone-AirbnbCloneUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-AirbnbCloneUITests-Info.plist"; sourceTree = "<group>"; };
-		B2E38E6DF1ADE31225E0AD4814CA400E /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C6B79A68FFD19679E04AACB11923A3C3 /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBDFAA16EA1FF23A7BDEC0DEBB93B04A /* Pods-AirbnbCloneTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirbnbCloneTests.modulemap"; sourceTree = "<group>"; };
-		DACE03C7960E72C36166A0502DE5BE21 /* Pods-AirbnbClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone.debug.xcconfig"; sourceTree = "<group>"; };
-		DB770B2B05E23CD950C4D1C7C7A3F587 /* Pods-AirbnbCloneTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirbnbCloneTests-umbrella.h"; sourceTree = "<group>"; };
-		E7B9F890DD62FA208675E5010396A9F8 /* Pods-AirbnbClone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirbnbClone.modulemap"; sourceTree = "<group>"; };
-		E9EA6EC6D1236DAAEE38DC1311C5B8AA /* Pods-AirbnbClone-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirbnbClone-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EFA11DB5A9D37B67576A75A6B83A358C /* Pods-AirbnbCloneTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirbnbCloneTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AAD74660C39A4FA54B2F9B75BBD51D6C /* ResourceBundle-CountryPickerView_CountryPickerView-CountryPickerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CountryPickerView_CountryPickerView-CountryPickerView-Info.plist"; sourceTree = "<group>"; };
+		B042242D4B10B5807280E2D0579BD9A2 /* CountryPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountryPickerView-prefix.pch"; sourceTree = "<group>"; };
+		C5D81C1E8AE56E802F40DE29B24F8422 /* CountryPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CountryPickerView-dummy.m"; sourceTree = "<group>"; };
+		CBDB76E453E61C88822E5C6398608E2F /* Pods-AirbnbClone-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-Info.plist"; sourceTree = "<group>"; };
+		CFA2DC9DBAC7DC430F5AE6F4DBB62AC4 /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D0DC7E3A00290A68D16B954356B88F21 /* Pods-AirbnbClone-AirbnbCloneUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirbnbClone-AirbnbCloneUITests-frameworks.sh"; sourceTree = "<group>"; };
+		D58E736356D48E0A1ACAAE5F7489E22B /* CountryPickerView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CountryPickerView; path = CountryPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE40A249C616F7E3B19DA280D5AD05DE /* Pods-AirbnbClone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirbnbClone.modulemap"; sourceTree = "<group>"; };
+		E591FF35C4C10DE44F463635A36F87A4 /* CountryPickerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CountryPickerView-Info.plist"; sourceTree = "<group>"; };
+		E7EC39F83F3FC12FDE93CD3E18E379FC /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E857BDBF1A5F2DF56A59A75DA18F41FA /* Pods-AirbnbClone-AirbnbCloneUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirbnbClone-AirbnbCloneUITests.modulemap"; sourceTree = "<group>"; };
+		EAB5864250CD6DE0A11E772A5346FF08 /* CountryPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountryPickerView-umbrella.h"; sourceTree = "<group>"; };
+		EC7366D81D2B6D72B9A58D70F859EE61 /* Pods-AirbnbClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirbnbClone.debug.xcconfig"; sourceTree = "<group>"; };
+		F3280EEF4E6E9337196A3BC95E6B5598 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirbnbClone-AirbnbCloneUITests-dummy.m"; sourceTree = "<group>"; };
+		F361A60B3BAA0A7C6C56A758A91E8AEB /* CountryPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CountryPickerView.modulemap; sourceTree = "<group>"; };
+		F62EE2B6E9C8A4C2CAB382AE41D9AFA1 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h"; sourceTree = "<group>"; };
 		FAB7B2C5069DEE5AAC6611FDF4766D66 /* Pods-AirbnbClone-AirbnbCloneUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AirbnbClone-AirbnbCloneUITests"; path = Pods_AirbnbClone_AirbnbCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2A004AAD02513D3EB7B8CA6BCC94C5 /* Pods-AirbnbCloneTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AirbnbCloneTests"; path = Pods_AirbnbCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2556FED94EED5963ECFACE669B29316A /* Frameworks */ = {
+		0F6717E2A36B2D0E77B046EEBCF6A65D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCB16D67E4C120DF2A4D12C1CCFD99B /* Foundation.framework in Frameworks */,
+				645DB3FD8D19E0D42996EDA759633AE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAE50E50A762E6C7951FA9CEA869C16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659A3C2F97E8FA6B1341A6612D6C9702 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F8C175076D9942642243131AB7F11F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51863C894BA8823C3098F7785F0EE4A5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,52 +148,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F309D4300FFBC330FA6EE4E646615709 /* Frameworks */ = {
+		EE032A8F4AC57CE4ACBFFF1FE15DF3C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890E7BB4A3EFBD45E1D1EB6D1ED2EA3B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5070D00B03560A3330E4D7955B1E63BB /* Pods-AirbnbClone-AirbnbCloneUITests */ = {
+		0ECD1E25618F35C099E4E67B90A54539 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				943D52FA408AEE5108363E20B2271517 /* Pods-AirbnbClone-AirbnbCloneUITests.modulemap */,
-				7A01842778CDE8C52E237B9968F9D940 /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.markdown */,
-				C6B79A68FFD19679E04AACB11923A3C3 /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.plist */,
-				1D8B77F52EF631C4035E27155FF515A3 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m */,
-				AECF7E0CA05CB7C56C1D4853328943BF /* Pods-AirbnbClone-AirbnbCloneUITests-Info.plist */,
-				2C88808ABBB4B12D771C20C485435189 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h */,
-				5800DDA08FF78BDE5D5FBCEB89450653 /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */,
-				B2E38E6DF1ADE31225E0AD4814CA400E /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */,
+				9399F102086B3F9F11374B1D8FD411AC /* CountryPickerView */,
 			);
-			name = "Pods-AirbnbClone-AirbnbCloneUITests";
-			path = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		617CE02DC421D2DD9275F1C39CDA9CBA /* Pods-AirbnbClone */ = {
+		312D604E031A3D8E8D3FEE1C4250FC2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7B9F890DD62FA208675E5010396A9F8 /* Pods-AirbnbClone.modulemap */,
-				E9EA6EC6D1236DAAEE38DC1311C5B8AA /* Pods-AirbnbClone-acknowledgements.markdown */,
-				113A17C3010816FC88750CA14C5465B7 /* Pods-AirbnbClone-acknowledgements.plist */,
-				29B6DDCFE52A3918755474C690B168C0 /* Pods-AirbnbClone-dummy.m */,
-				51453A0195482386BDD98F43A6C4823C /* Pods-AirbnbClone-Info.plist */,
-				0DE9E10574596B20C36FE2D0268FE9E0 /* Pods-AirbnbClone-umbrella.h */,
-				DACE03C7960E72C36166A0502DE5BE21 /* Pods-AirbnbClone.debug.xcconfig */,
-				9DB852058B2DCA29668106E3AB2F036C /* Pods-AirbnbClone.release.xcconfig */,
-			);
-			name = "Pods-AirbnbClone";
-			path = "Target Support Files/Pods-AirbnbClone";
-			sourceTree = "<group>";
-		};
-		7B3E5E0C6F43396B0A1EB2476C033E6B /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				D58E736356D48E0A1ACAAE5F7489E22B /* CountryPickerView */,
+				920624790A09310F9E506BCF1D4CC9E7 /* CountryPickerView-CountryPickerView_CountryPickerView */,
 				7B2BC309BE369E187E41ACE1F390D2DF /* Pods-AirbnbClone */,
 				FAB7B2C5069DEE5AAC6611FDF4766D66 /* Pods-AirbnbClone-AirbnbCloneUITests */,
 				FF2A004AAD02513D3EB7B8CA6BCC94C5 /* Pods-AirbnbCloneTests */,
@@ -130,30 +178,90 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE22A5FDB1ABF3C4D80206AFE79C40BF /* Targets Support Files */ = {
+		6C0349720D0580FBCE3A54489498AEDA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				617CE02DC421D2DD9275F1C39CDA9CBA /* Pods-AirbnbClone */,
-				5070D00B03560A3330E4D7955B1E63BB /* Pods-AirbnbClone-AirbnbCloneUITests */,
-				BDFF9290407FA821980014297694FBA5 /* Pods-AirbnbCloneTests */,
+				49055CBB4703B1712762D6821653A208 /* CountryPickerView.xib */,
+				5FD242B00FAF7F64E742D1E9D2D20AD3 /* Data */,
+				27BCD9A50EC95E8F044E6160607FCCA7 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8F0F6DB345E11E1FA7EB53E0797E03D4 /* Pods-AirbnbClone-AirbnbCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E857BDBF1A5F2DF56A59A75DA18F41FA /* Pods-AirbnbClone-AirbnbCloneUITests.modulemap */,
+				E7EC39F83F3FC12FDE93CD3E18E379FC /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.markdown */,
+				CFA2DC9DBAC7DC430F5AE6F4DBB62AC4 /* Pods-AirbnbClone-AirbnbCloneUITests-acknowledgements.plist */,
+				F3280EEF4E6E9337196A3BC95E6B5598 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m */,
+				D0DC7E3A00290A68D16B954356B88F21 /* Pods-AirbnbClone-AirbnbCloneUITests-frameworks.sh */,
+				5C8E1C01A8DC36717C1DCABABC4112A8 /* Pods-AirbnbClone-AirbnbCloneUITests-Info.plist */,
+				F62EE2B6E9C8A4C2CAB382AE41D9AFA1 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h */,
+				304977EB8BA8FDDBFC792C115B1D36CD /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */,
+				78B29DB9CAA78479DD39AF0D5A050DAF /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */,
+			);
+			name = "Pods-AirbnbClone-AirbnbCloneUITests";
+			path = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests";
+			sourceTree = "<group>";
+		};
+		91F8722CA8E9B5871A3C15D78DFF835C /* Pods-AirbnbClone */ = {
+			isa = PBXGroup;
+			children = (
+				DE40A249C616F7E3B19DA280D5AD05DE /* Pods-AirbnbClone.modulemap */,
+				6BB508197740FB4FD504BF7CDA2B75D0 /* Pods-AirbnbClone-acknowledgements.markdown */,
+				5D3B0983FCF8A20539F28B790BC35179 /* Pods-AirbnbClone-acknowledgements.plist */,
+				1876596345BBD21C036948B804E681A3 /* Pods-AirbnbClone-dummy.m */,
+				14101CD9E65E7BCAFF70F49C15DF13AD /* Pods-AirbnbClone-frameworks.sh */,
+				CBDB76E453E61C88822E5C6398608E2F /* Pods-AirbnbClone-Info.plist */,
+				1D7971A37CDC034B01DC7C755A4B2CE3 /* Pods-AirbnbClone-umbrella.h */,
+				EC7366D81D2B6D72B9A58D70F859EE61 /* Pods-AirbnbClone.debug.xcconfig */,
+				927EEE3A2D28ED5A2421EA746F3E083B /* Pods-AirbnbClone.release.xcconfig */,
+			);
+			name = "Pods-AirbnbClone";
+			path = "Target Support Files/Pods-AirbnbClone";
+			sourceTree = "<group>";
+		};
+		9399F102086B3F9F11374B1D8FD411AC /* CountryPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				220F19E9DB93C5552CEF0DB7C7FE85C7 /* Bundle.swift */,
+				2BCD2B99CC6412D4C1D857F0033C3944 /* CountryPickerView.swift */,
+				8B4B0906021DB8E7D730C3E6C0EB9FC0 /* CountryPickerViewController.swift */,
+				7CC463E5DE2EB98AFD5126392324B0A2 /* Delegate+DataSource.swift */,
+				9967B9BFB63AF3DDB769803093478C94 /* Extensions.swift */,
+				1B1A9F56171C17A5399EFF25823129F8 /* NibView.swift */,
+				6C0349720D0580FBCE3A54489498AEDA /* Resources */,
+				A10C9D31C8E9DDD1AED7A3B4ACC1439C /* Support Files */,
+			);
+			name = CountryPickerView;
+			path = CountryPickerView;
+			sourceTree = "<group>";
+		};
+		975DA361BBF242375379E60BBDE6AF1C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91F8722CA8E9B5871A3C15D78DFF835C /* Pods-AirbnbClone */,
+				8F0F6DB345E11E1FA7EB53E0797E03D4 /* Pods-AirbnbClone-AirbnbCloneUITests */,
+				DB69A5DD0790557F31362FEAAE4AB369 /* Pods-AirbnbCloneTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BDFF9290407FA821980014297694FBA5 /* Pods-AirbnbCloneTests */ = {
+		A10C9D31C8E9DDD1AED7A3B4ACC1439C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CBDFAA16EA1FF23A7BDEC0DEBB93B04A /* Pods-AirbnbCloneTests.modulemap */,
-				EFA11DB5A9D37B67576A75A6B83A358C /* Pods-AirbnbCloneTests-acknowledgements.markdown */,
-				0BC5A04BE75A04585AF05134B49192F9 /* Pods-AirbnbCloneTests-acknowledgements.plist */,
-				34476F220AD61520CAE201514A7F7279 /* Pods-AirbnbCloneTests-dummy.m */,
-				4C9CF11AFBD87847EFE26BE5FA25C004 /* Pods-AirbnbCloneTests-Info.plist */,
-				DB770B2B05E23CD950C4D1C7C7A3F587 /* Pods-AirbnbCloneTests-umbrella.h */,
-				8387D5AAC8F719414F888700DEA7DD16 /* Pods-AirbnbCloneTests.debug.xcconfig */,
-				347BD61954B85E2152530F5743A60CAD /* Pods-AirbnbCloneTests.release.xcconfig */,
+				F361A60B3BAA0A7C6C56A758A91E8AEB /* CountryPickerView.modulemap */,
+				C5D81C1E8AE56E802F40DE29B24F8422 /* CountryPickerView-dummy.m */,
+				E591FF35C4C10DE44F463635A36F87A4 /* CountryPickerView-Info.plist */,
+				B042242D4B10B5807280E2D0579BD9A2 /* CountryPickerView-prefix.pch */,
+				EAB5864250CD6DE0A11E772A5346FF08 /* CountryPickerView-umbrella.h */,
+				6511155669CBA3587FA19B1F94DEF222 /* CountryPickerView.debug.xcconfig */,
+				6B41C0051021E00061FAA75F0E8A7996 /* CountryPickerView.release.xcconfig */,
+				AAD74660C39A4FA54B2F9B75BBD51D6C /* ResourceBundle-CountryPickerView_CountryPickerView-CountryPickerView-Info.plist */,
 			);
-			name = "Pods-AirbnbCloneTests";
-			path = "Target Support Files/Pods-AirbnbCloneTests";
+			name = "Support Files";
+			path = "../Target Support Files/CountryPickerView";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -161,8 +269,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				7B3E5E0C6F43396B0A1EB2476C033E6B /* Products */,
-				AE22A5FDB1ABF3C4D80206AFE79C40BF /* Targets Support Files */,
+				0ECD1E25618F35C099E4E67B90A54539 /* Pods */,
+				312D604E031A3D8E8D3FEE1C4250FC2E /* Products */,
+				975DA361BBF242375379E60BBDE6AF1C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +281,22 @@
 				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB69A5DD0790557F31362FEAAE4AB369 /* Pods-AirbnbCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA57EC60DB33A699AC11A7D5DF8CD4E /* Pods-AirbnbCloneTests.modulemap */,
+				7E5385AF218504F74CBDF293CE3865B6 /* Pods-AirbnbCloneTests-acknowledgements.markdown */,
+				202B699C2C8ADB01A9D26262EA27538F /* Pods-AirbnbCloneTests-acknowledgements.plist */,
+				99DBBB2E1CBAE2A98392C21C9362DD2A /* Pods-AirbnbCloneTests-dummy.m */,
+				694ADD4D42B1AB5C624EEE11EB11F8E5 /* Pods-AirbnbCloneTests-Info.plist */,
+				60AD091CD432696645D8E8EC9DFFDA0A /* Pods-AirbnbCloneTests-umbrella.h */,
+				790902BB6B0AA024F38EFDB7C4372D76 /* Pods-AirbnbCloneTests.debug.xcconfig */,
+				8ABCE1A64F7C93CE854DC6FC65AF7843 /* Pods-AirbnbCloneTests.release.xcconfig */,
+			);
+			name = "Pods-AirbnbCloneTests";
+			path = "Target Support Files/Pods-AirbnbCloneTests";
 			sourceTree = "<group>";
 		};
 		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
@@ -185,19 +310,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1486D6AFF14D0570EB952C3ADE133B90 /* Headers */ = {
+		10BA2334451157EFB1D472D912C4A175 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BB3347FA2278AF80262C0E3A656087 /* Pods-AirbnbClone-umbrella.h in Headers */,
+				E7219D555F888BE411F99EAE7FBACF5F /* CountryPickerView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2DB5EF762E7B5799E34B4DC7AA65EB6F /* Headers */ = {
+		18D7E8220C0654BE1B6EA1D4E14438C2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B56C86E383E9810BA72AAC240E60B8 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h in Headers */,
+				389B7EA19BF60C882EBA6A84E632D880 /* Pods-AirbnbClone-AirbnbCloneUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,39 +334,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6F62C29464FF9C4D1531ED10FBF0A35 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DC68BBACCF1CF524168017BA3AF910 /* Pods-AirbnbClone-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0C82F9BFA0CD9976D01938CD508EC917 /* Pods-AirbnbClone-AirbnbCloneUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 647138BB1840C6D644B969B2E5A84EAF /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone-AirbnbCloneUITests" */;
+			buildConfigurationList = 70D01F9EF8361831DD17C64CFF8176C6 /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone-AirbnbCloneUITests" */;
 			buildPhases = (
-				2DB5EF762E7B5799E34B4DC7AA65EB6F /* Headers */,
-				A50322559D1C1BABF13EA528F64EF7D0 /* Sources */,
-				F309D4300FFBC330FA6EE4E646615709 /* Frameworks */,
-				B73172442CC1C96D15EEEABDEA7DB9A8 /* Resources */,
+				18D7E8220C0654BE1B6EA1D4E14438C2 /* Headers */,
+				F17C32786A178D020DA777753A16168D /* Sources */,
+				D4F8C175076D9942642243131AB7F11F /* Frameworks */,
+				F31F1396E442DCC58F3B2B139EBBA52C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E120921A840DF7967FA2D9D99D94C83E /* PBXTargetDependency */,
 			);
 			name = "Pods-AirbnbClone-AirbnbCloneUITests";
 			productName = Pods_AirbnbClone_AirbnbCloneUITests;
 			productReference = FAB7B2C5069DEE5AAC6611FDF4766D66 /* Pods-AirbnbClone-AirbnbCloneUITests */;
 			productType = "com.apple.product-type.framework";
 		};
-		B566B66154D1F886EB2AB3F3F3368679 /* Pods-AirbnbClone */ = {
+		43E53E03FD1BE73C8433078A971781F1 /* CountryPickerView-CountryPickerView_CountryPickerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 448EE130722A3D06CFCD70FB7566B714 /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone" */;
+			buildConfigurationList = A7AF093225DE9D81B26B8FC2C35C5412 /* Build configuration list for PBXNativeTarget "CountryPickerView-CountryPickerView_CountryPickerView" */;
 			buildPhases = (
-				1486D6AFF14D0570EB952C3ADE133B90 /* Headers */,
-				FB8BFBBAC7D750B072C85D9D3911BFCF /* Sources */,
-				2556FED94EED5963ECFACE669B29316A /* Frameworks */,
-				69F2F8D82DAA4159E89235A7C29220BC /* Resources */,
+				6F77E0B4A540414E12CB2D8B3FE7F414 /* Sources */,
+				EE032A8F4AC57CE4ACBFFF1FE15DF3C1 /* Frameworks */,
+				C5294B43E71EDE25545F2928040F769A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = "CountryPickerView-CountryPickerView_CountryPickerView";
+			productName = CountryPickerView_CountryPickerView;
+			productReference = 920624790A09310F9E506BCF1D4CC9E7 /* CountryPickerView-CountryPickerView_CountryPickerView */;
+			productType = "com.apple.product-type.bundle";
+		};
+		81AA88F2453B4A0E544BF0FB08E13D87 /* CountryPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2873C06089D8086FBAB0E68DA5F0634 /* Build configuration list for PBXNativeTarget "CountryPickerView" */;
+			buildPhases = (
+				10BA2334451157EFB1D472D912C4A175 /* Headers */,
+				99CAC1D3DFDB121245C0915365C1C4BF /* Sources */,
+				2CAE50E50A762E6C7951FA9CEA869C16 /* Frameworks */,
+				223395802E0F01A64E82E8B89B4F8667 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1461EB882933FAC7EE23D845A910B72 /* PBXTargetDependency */,
+			);
+			name = CountryPickerView;
+			productName = CountryPickerView;
+			productReference = D58E736356D48E0A1ACAAE5F7489E22B /* CountryPickerView */;
+			productType = "com.apple.product-type.framework";
+		};
+		B566B66154D1F886EB2AB3F3F3368679 /* Pods-AirbnbClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3725667FEED13567FA112ECFD5A4B0 /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone" */;
+			buildPhases = (
+				A6F62C29464FF9C4D1531ED10FBF0A35 /* Headers */,
+				FA5630493877780586B1CD96D032BD93 /* Sources */,
+				0F6717E2A36B2D0E77B046EEBCF6A65D /* Frameworks */,
+				7741035F14E52CBDF68C8DE07CF5D196 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DBF5AD3D312DC00B76CA8A9D0AE2EF0 /* PBXTargetDependency */,
 			);
 			name = "Pods-AirbnbClone";
 			productName = Pods_AirbnbClone;
@@ -260,7 +431,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				62E04ED5652FF59A72817E987D702E5F /* PBXTargetDependency */,
+				3D11F037E43CA730C1214BA4296DB521 /* PBXTargetDependency */,
 			);
 			name = "Pods-AirbnbCloneTests";
 			productName = Pods_AirbnbCloneTests;
@@ -287,10 +458,12 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 7B3E5E0C6F43396B0A1EB2476C033E6B /* Products */;
+			productRefGroup = 312D604E031A3D8E8D3FEE1C4250FC2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				81AA88F2453B4A0E544BF0FB08E13D87 /* CountryPickerView */,
+				43E53E03FD1BE73C8433078A971781F1 /* CountryPickerView-CountryPickerView_CountryPickerView */,
 				B566B66154D1F886EB2AB3F3F3368679 /* Pods-AirbnbClone */,
 				0C82F9BFA0CD9976D01938CD508EC917 /* Pods-AirbnbClone-AirbnbCloneUITests */,
 				DB5D8088D5AE207D55E4F5B169823208 /* Pods-AirbnbCloneTests */,
@@ -299,7 +472,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		69F2F8D82DAA4159E89235A7C29220BC /* Resources */ = {
+		223395802E0F01A64E82E8B89B4F8667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD39BA60007593FD2D349560B041D47 /* CountryPickerView-CountryPickerView_CountryPickerView in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7741035F14E52CBDF68C8DE07CF5D196 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +494,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B73172442CC1C96D15EEEABDEA7DB9A8 /* Resources */ = {
+		C5294B43E71EDE25545F2928040F769A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363C3AEBA886770F0A578D43504E7AC3 /* CountryPickerView.xib in Resources */,
+				649C125E7AF042FC64E5AC32F430DA84 /* Data in Resources */,
+				50924E7C8B700A2AFC3BE0E6C62166C8 /* Images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31F1396E442DCC58F3B2B139EBBA52C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,37 +522,269 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A50322559D1C1BABF13EA528F64EF7D0 /* Sources */ = {
+		6F77E0B4A540414E12CB2D8B3FE7F414 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D0E82CB03D8AC8F704C9B4CBE4BAE9 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB8BFBBAC7D750B072C85D9D3911BFCF /* Sources */ = {
+		99CAC1D3DFDB121245C0915365C1C4BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE0511323B6ED5AFCCC0D6B385BEA24 /* Pods-AirbnbClone-dummy.m in Sources */,
+				6B57CAB5B45E564FECC4B514EB78360F /* Bundle.swift in Sources */,
+				6384FF7CACFA1EA54154CF83BE4A3F3D /* CountryPickerView.swift in Sources */,
+				54A0154DE2FFEB174112A4D3B8DF4618 /* CountryPickerView-dummy.m in Sources */,
+				8DBB93BBAC8585F15BBC8CAAD0A9F62B /* CountryPickerViewController.swift in Sources */,
+				687D1BA10DF10D5130C3B64D5C42F838 /* Delegate+DataSource.swift in Sources */,
+				CBC5A737A277EFF7B507B47F8AED690B /* Extensions.swift in Sources */,
+				8BBFED2F8AE6719F852151F699EC8836 /* NibView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F17C32786A178D020DA777753A16168D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0AD8C7B200E13C18A21880CFEB3BCF4 /* Pods-AirbnbClone-AirbnbCloneUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5630493877780586B1CD96D032BD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB9A542917B1E2853B7380D09C88188A /* Pods-AirbnbClone-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		62E04ED5652FF59A72817E987D702E5F /* PBXTargetDependency */ = {
+		3D11F037E43CA730C1214BA4296DB521 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-AirbnbClone";
 			target = B566B66154D1F886EB2AB3F3F3368679 /* Pods-AirbnbClone */;
-			targetProxy = AA0CD6802B2F5DA33CEBEAD6C9E52623 /* PBXContainerItemProxy */;
+			targetProxy = C8DB36FAEEEC45B714E3159A6ADD155A /* PBXContainerItemProxy */;
+		};
+		7DBF5AD3D312DC00B76CA8A9D0AE2EF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CountryPickerView;
+			target = 81AA88F2453B4A0E544BF0FB08E13D87 /* CountryPickerView */;
+			targetProxy = 611BBE333D6E8410B3D1117D51380C79 /* PBXContainerItemProxy */;
+		};
+		C1461EB882933FAC7EE23D845A910B72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CountryPickerView-CountryPickerView_CountryPickerView";
+			target = 43E53E03FD1BE73C8433078A971781F1 /* CountryPickerView-CountryPickerView_CountryPickerView */;
+			targetProxy = 6DA1B824E3AA6BE5C791CF66CB4AA7BE /* PBXContainerItemProxy */;
+		};
+		E120921A840DF7967FA2D9D99D94C83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CountryPickerView;
+			target = 81AA88F2453B4A0E544BF0FB08E13D87 /* CountryPickerView */;
+			targetProxy = 8A141AC481BC3FB6E99A16904C5CAFB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1495389B8F85898B923676B3496BE36F /* Release */ = {
+		098E0740D0260EE01C8AB3760F53314A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DB852058B2DCA29668106E3AB2F036C /* Pods-AirbnbClone.release.xcconfig */;
+			baseConfigurationReference = 304977EB8BA8FDDBFC792C115B1D36CD /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2E9F75A50214266BDDB56A13FF03C958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B41C0051021E00061FAA75F0E8A7996 /* CountryPickerView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/CountryPickerView/CountryPickerView-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/CountryPickerView/CountryPickerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CountryPickerView/CountryPickerView.modulemap";
+				PRODUCT_MODULE_NAME = CountryPickerView;
+				PRODUCT_NAME = CountryPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AE388F220BD850D56710A9E92B5E006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B29DB9CAA78479DD39AF0D5A050DAF /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		557E77AF135F72E467E43864069DBE7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6511155669CBA3587FA19B1F94DEF222 /* CountryPickerView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/CountryPickerView/CountryPickerView-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/CountryPickerView/CountryPickerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CountryPickerView/CountryPickerView.modulemap";
+				PRODUCT_MODULE_NAME = CountryPickerView;
+				PRODUCT_NAME = CountryPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		641D99E76C9CF5803AE5CFD8AD964311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790902BB6B0AA024F38EFDB7C4372D76 /* Pods-AirbnbCloneTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbCloneTests/Pods-AirbnbCloneTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbCloneTests/Pods-AirbnbCloneTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7906968BC3A49343FC4177880D0A55D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927EEE3A2D28ED5A2421EA746F3E083B /* Pods-AirbnbClone.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -398,45 +821,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		641D99E76C9CF5803AE5CFD8AD964311 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8387D5AAC8F719414F888700DEA7DD16 /* Pods-AirbnbCloneTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbCloneTests/Pods-AirbnbCloneTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbCloneTests/Pods-AirbnbCloneTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -504,124 +888,6 @@
 			};
 			name = Debug;
 		};
-		945B155B9DC514D84FB6837DFDB20D73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DACE03C7960E72C36166A0502DE5BE21 /* Pods-AirbnbClone.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9642FD37C35F9D68ABDF51737418AFC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2E38E6DF1ADE31225E0AD4814CA400E /* Pods-AirbnbClone-AirbnbCloneUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		96DC9FBC763506A37E62EA2D09D46F2A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5800DDA08FF78BDE5D5FBCEB89450653 /* Pods-AirbnbClone-AirbnbCloneUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -684,9 +950,26 @@
 			};
 			name = Release;
 		};
+		AF82AA899F1B6FD2A9CA19D706E7287B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B41C0051021E00061FAA75F0E8A7996 /* CountryPickerView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CountryPickerView";
+				IBSC_MODULE = CountryPickerView;
+				INFOPLIST_FILE = "Target Support Files/CountryPickerView/ResourceBundle-CountryPickerView_CountryPickerView-CountryPickerView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = CountryPickerView_CountryPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		B8862B1ADDD1C3F9B2823E1AC201F239 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 347BD61954B85E2152530F5743A60CAD /* Pods-AirbnbCloneTests.release.xcconfig */;
+			baseConfigurationReference = 8ABCE1A64F7C93CE854DC6FC65AF7843 /* Pods-AirbnbCloneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -724,6 +1007,62 @@
 			};
 			name = Release;
 		};
+		D62D954C51ED605879D739AAEA246867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7366D81D2B6D72B9A58D70F859EE61 /* Pods-AirbnbClone.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC8659D80F44314DAB8EB900708DC1B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6511155669CBA3587FA19B1F94DEF222 /* CountryPickerView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CountryPickerView";
+				IBSC_MODULE = CountryPickerView;
+				INFOPLIST_FILE = "Target Support Files/CountryPickerView/ResourceBundle-CountryPickerView_CountryPickerView-CountryPickerView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = CountryPickerView_CountryPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -732,15 +1071,6 @@
 			buildConfigurations = (
 				641D99E76C9CF5803AE5CFD8AD964311 /* Debug */,
 				B8862B1ADDD1C3F9B2823E1AC201F239 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		448EE130722A3D06CFCD70FB7566B714 /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				945B155B9DC514D84FB6837DFDB20D73 /* Debug */,
-				1495389B8F85898B923676B3496BE36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -754,11 +1084,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		647138BB1840C6D644B969B2E5A84EAF /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone-AirbnbCloneUITests" */ = {
+		70D01F9EF8361831DD17C64CFF8176C6 /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone-AirbnbCloneUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96DC9FBC763506A37E62EA2D09D46F2A /* Debug */,
-				9642FD37C35F9D68ABDF51737418AFC5 /* Release */,
+				098E0740D0260EE01C8AB3760F53314A /* Debug */,
+				4AE388F220BD850D56710A9E92B5E006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AF093225DE9D81B26B8FC2C35C5412 /* Build configuration list for PBXNativeTarget "CountryPickerView-CountryPickerView_CountryPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8659D80F44314DAB8EB900708DC1B0 /* Debug */,
+				AF82AA899F1B6FD2A9CA19D706E7287B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF3725667FEED13567FA112ECFD5A4B0 /* Build configuration list for PBXNativeTarget "Pods-AirbnbClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62D954C51ED605879D739AAEA246867 /* Debug */,
+				7906968BC3A49343FC4177880D0A55D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2873C06089D8086FBAB0E68DA5F0634 /* Build configuration list for PBXNativeTarget "CountryPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				557E77AF135F72E467E43864069DBE7C /* Debug */,
+				2E9F75A50214266BDDB56A13FF03C958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
