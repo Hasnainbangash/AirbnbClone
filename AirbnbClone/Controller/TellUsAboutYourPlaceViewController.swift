@@ -20,6 +20,8 @@ class TellUsAboutYourPlaceViewController: UIViewController {
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+        
+        self.transitioningDelegate = self
     }
     
     func setupCornerRadius() {
@@ -49,6 +51,14 @@ class TellUsAboutYourPlaceViewController: UIViewController {
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension TellUsAboutYourPlaceViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }
