@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		129F528E5AD7CB842AF7DB39 /* Pods_AirbnbCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A85BD618F08E934089B2DA5 /* Pods_AirbnbCloneTests.framework */; };
 		6EF85CB38B5B2C0C556D9975 /* Pods_AirbnbClone_AirbnbCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5374581E137D374F410F205E /* Pods_AirbnbClone_AirbnbCloneUITests.framework */; };
+		D0002B5B2D4904D40006CDC3 /* CountryPickerView in Frameworks */ = {isa = PBXBuildFile; productRef = D0002B5A2D4904D40006CDC3 /* CountryPickerView */; };
 		D00DBBD22D38E0D600357168 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = D00DBBD12D38E0D600357168 /* FloatingPanel */; };
 		D0DDF2602D48DE9900EAF68C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D0DDF25F2D48DE9900EAF68C /* FirebaseAuth */; };
 		D0DDF2622D48DE9900EAF68C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D0DDF2612D48DE9900EAF68C /* FirebaseFirestore */; };
@@ -68,15 +69,11 @@
 		};
 		D03A19F02D2CEB3100E1468E /* AirbnbCloneTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = AirbnbCloneTests;
 			sourceTree = "<group>";
 		};
 		D03A19FA2D2CEB3100E1468E /* AirbnbCloneUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = AirbnbCloneUITests;
 			sourceTree = "<group>";
 		};
@@ -88,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E556AD1E2AA4986438485EC3 /* Pods_AirbnbClone.framework in Frameworks */,
+				D0002B5B2D4904D40006CDC3 /* CountryPickerView in Frameworks */,
 				D0DDF2622D48DE9900EAF68C /* FirebaseFirestore in Frameworks */,
 				D0DDF2602D48DE9900EAF68C /* FirebaseAuth in Frameworks */,
 				D00DBBD22D38E0D600357168 /* FloatingPanel in Frameworks */,
@@ -261,6 +259,7 @@
 			packageReferences = (
 				D00DBBD02D38E0D600357168 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 				D0DDF25E2D48DE9900EAF68C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D0002B592D4904D40006CDC3 /* XCRemoteSwiftPackageReference "CountryPickerView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D03A19D52D2CEB2F00E1468E /* Products */;
@@ -696,6 +695,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D0002B592D4904D40006CDC3 /* XCRemoteSwiftPackageReference "CountryPickerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kizitonwose/CountryPickerView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
 		D00DBBD02D38E0D600357168 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scenee/FloatingPanel";
@@ -715,6 +722,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D0002B5A2D4904D40006CDC3 /* CountryPickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0002B592D4904D40006CDC3 /* XCRemoteSwiftPackageReference "CountryPickerView" */;
+			productName = CountryPickerView;
+		};
 		D00DBBD12D38E0D600357168 /* FloatingPanel */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D00DBBD02D38E0D600357168 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
