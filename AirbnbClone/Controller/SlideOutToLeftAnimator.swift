@@ -9,28 +9,94 @@ import UIKit
 
 class SlideOutToLeftAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    // Duration of the transition
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.0
+    // MARK: - Properties
+    
+    private let isPresenting: Bool
+    private let duration: TimeInterval
+    
+    // MARK: - Initialization
+    
+    init(isPresenting: Bool = true, duration: TimeInterval = 0.3) {
+        self.isPresenting = isPresenting
+        self.duration = duration
+        super.init()
     }
     
-    // Animation logic for the transition
+    // MARK: - UIViewControllerAnimatedTransitioning
+    
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return duration
+    }
+    
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromView = transitionContext.view(forKey: .from) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else {
+            transitionContext.completeTransition(false)
+            return
+        }
+        
         let containerView = transitionContext.containerView
+        let finalFrame = transitionContext.finalFrame(for: transitionContext.viewController(forKey: .to)!)
         
-        // Add the fromView to the container view (so we can animate it)
-        containerView.addSubview(fromView)
+        // Configure initial states
+        if isPresenting {
+            containerView.addSubview(toView)
+            toView.frame = finalFrame.offsetBy(dx: -containerView.frame.width, dy: 0)
+        } else {
+            containerView.insertSubview(toView, belowSubview: fromView)
+            toView.frame = finalFrame
+        }
         
-        // Set the initial position off-screen to the left
-        fromView.frame = CGRect(x: -containerView.frame.width, y: 0, width: containerView.frame.width, height: containerView.frame.height)
+        // Add spring animation for more natural feel
+        let animator = UIViewPropertyAnimator(duration: duration, dampingRatio: 0.8) {
+            if self.isPresenting {
+                toView.frame = finalFrame
+            } else {
+                fromView.frame = finalFrame.offsetBy(dx: -containerView.frame.width, dy: 0)
+            }
+        }
         
-        // Animate the view sliding in from left to right (from off-screen to on-screen)
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-            fromView.frame = CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height)
-        }) { _ in
-            // Complete the transition when the animation finishes
-            transitionContext.completeTransition(true)
+        // Add completion handler
+        animator.addCompletion { _ in
+            let success = !transitionContext.transitionWasCancelled
+            if !success {
+                toView.removeFromSuperview()
+            }
+            transitionContext.completeTransition(success)
+        }
+        
+        // Start animation
+        animator.startAnimation()
+    }
+}
+
+// MARK: - Usage Example
+
+extension SlideOutToLeftAnimator {
+    static func configureNavigationController(_ navigationController: UINavigationController) {
+        navigationController.delegate = NavigationControllerTransitionDelegate.shared
+    }
+}
+
+// Singleton delegate to handle navigation controller transitions
+final class NavigationControllerTransitionDelegate: NSObject, UINavigationControllerDelegate {
+    static let shared = NavigationControllerTransitionDelegate()
+    
+    private override init() {}
+    
+    func navigationController(
+        _ navigationController: UINavigationController,
+        animationControllerFor operation: UINavigationController.Operation,
+        from fromVC: UIViewController,
+        to toVC: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
+        switch operation {
+        case .push:
+            return SlideOutToLeftAnimator(isPresenting: true)
+        case .pop:
+            return SlideOutToLeftAnimator(isPresenting: false)
+        default:
+            return nil
         }
     }
 }
