@@ -9,21 +9,58 @@ import UIKit
 
 class SmsCodeScreenViewController: UIViewController {
 
+    
+    @IBOutlet weak var sendAgainButtonLabel: UIButton!
+    @IBOutlet weak var moreOptionsButtonLabel: UIButton!
+    @IBOutlet weak var continueButtonLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupCornerRadius()
+        setupButtonUnderline()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupCornerRadius() {
+        continueButtonLabel.layer.cornerRadius = continueButtonLabel.frame.height / 5
     }
-    */
+    
+    func setupButtonUnderline() {
+        
+        // For send again button
+        guard let sendAgainbuttonText = sendAgainButtonLabel.titleLabel?.text else {return}
+        
+        // Create an NSMutableAttributedString from the button's title text
+        let sendAgainAttributedString = NSMutableAttributedString(string: sendAgainbuttonText)
+        
+        // Add underline attribute to the full text
+        sendAgainAttributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: sendAgainbuttonText.count))
+        
+        // Set the attributed text to the button's title
+        sendAgainButtonLabel.setAttributedTitle(sendAgainAttributedString, for: .normal)
+        
+        // Optional: Change the text color (you can set any color you prefer)
+        sendAgainButtonLabel.setTitleColor(UIColor.black, for: .normal)
+        
+        // For more options button
+        guard let moreOptionbuttonText = moreOptionsButtonLabel.titleLabel?.text else {return}
+        
+        // Create an NSMutableAttributedString from the button's title text
+        let moreOptionAttributedString = NSMutableAttributedString(string: moreOptionbuttonText)
+        
+        // Add underline attribute to the full text
+        moreOptionAttributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: moreOptionbuttonText.count))
+        
+        // Set the attributed text to the button's title
+        moreOptionsButtonLabel.setAttributedTitle(moreOptionAttributedString, for: .normal)
+        
+        // Optional: Change the text color (you can set any color you prefer)
+        moreOptionsButtonLabel.setTitleColor(UIColor.black, for: .normal)
 
+    }
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+    }
+    
 }
