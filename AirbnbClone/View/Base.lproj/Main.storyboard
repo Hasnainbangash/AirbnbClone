@@ -128,19 +128,19 @@
                                                                         <rect key="frame" x="0.0" y="29" width="354" height="32"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+92" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pZ-IC-bIr">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="43" height="32"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="32"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="32" id="0bL-6t-ls2"/>
-                                                                                    <constraint firstAttribute="width" constant="43" id="6Uf-et-eGx"/>
+                                                                                    <constraint firstAttribute="width" constant="63" id="6Uf-et-eGx"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="22"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-Fm-51w">
-                                                                                <rect key="frame" x="51" y="0.0" width="303" height="32"/>
+                                                                                <rect key="frame" x="71" y="0.0" width="283" height="32"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="303" id="7ka-AO-alR"/>
+                                                                                    <constraint firstAttribute="width" constant="283" id="7ka-AO-alR"/>
                                                                                     <constraint firstAttribute="height" constant="32" id="wq5-3i-a29"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="22"/>

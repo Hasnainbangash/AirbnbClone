@@ -28,9 +28,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         countryPickerView.delegate = self
+        countryPickerView.isHidden = false
+        
+        countryNameLabel.text = ""
         
         setupCornerRadius()
         setupBorderWidth()
+        
+        // Add CountryPickerView as a subview and set its constraints
+        view.addSubview(countryPickerView)
+        countryPickerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            countryPickerView.leadingAnchor.constraint(equalTo: countryNameLabel.leadingAnchor),
+            countryPickerView.trailingAnchor.constraint(equalTo: countryNameLabel.trailingAnchor),
+            countryPickerView.bottomAnchor.constraint(equalTo: countryNameLabel.bottomAnchor),
+            countryPickerView.heightAnchor.constraint(equalToConstant: countryNameLabel.frame.height) // Adjust height as needed
+        ])
         
     }
     
@@ -67,6 +80,12 @@ extension ViewController: CountryPickerViewDelegate {
             // Add the '+' sign manually if it doesn't already exist
             countryCodeLabel.text = "+" + phoneCode
         }
+        
+        // Optionally, update the country name label if needed
+        // countryNameLabel.text = country.name
+        
+        // Hide the picker when a country is selected
+//        countryPickerView.isHidden = true
         
     }
     
