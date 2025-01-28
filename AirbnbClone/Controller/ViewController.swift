@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CountryPickerView
 
 class ViewController: UIViewController {
 
@@ -16,9 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var googleButtonView: UIView!
     @IBOutlet weak var appleButtonView: UIView!
     
+    @IBOutlet weak var countryNameLabel: UILabel!
+    @IBOutlet weak var countryCodeLabel: UILabel!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    let countryPickerView = CountryPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        countryPickerView.delegate = self
         
         setupCornerRadius()
         setupBorderWidth()
@@ -42,6 +51,23 @@ class ViewController: UIViewController {
         appleButtonView.layer.borderWidth = 1.0
     }
     
+}
+
+extension ViewController: CountryPickerViewDelegate {
     
+    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
+        
+        // Get the phone code
+        let phoneCode = country.phoneCode
+        
+        // Check if the phone code already contains the '+' sign
+        if phoneCode.hasPrefix("+") {
+            countryCodeLabel.text = phoneCode
+        } else {
+            // Add the '+' sign manually if it doesn't already exist
+            countryCodeLabel.text = "+" + phoneCode
+        }
+        
+    }
     
 }
