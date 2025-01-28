@@ -8,7 +8,7 @@
 import UIKit
 import CountryPickerView
 
-class ViewController: UIViewController {
+class LoginScreenViewController: UIViewController {
 
     @IBOutlet weak var phoneNumberView: UIView!
     @IBOutlet weak var continueButton: UIButton!
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: CountryPickerViewDelegate {
+extension LoginScreenViewController: CountryPickerViewDelegate {
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         
