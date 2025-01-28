@@ -21,6 +21,9 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        self.transitioningDelegate = self
+        
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
@@ -63,4 +66,12 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+}
+
+extension AddSomePhotosOfYourCasaParticularViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
+    }
+    
 }

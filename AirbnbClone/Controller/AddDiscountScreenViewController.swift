@@ -38,6 +38,8 @@ class AddDiscountScreenViewController: UIViewController {
         setupButtonUnderline()
         setupLabelUnderline()
         
+        self.transitioningDelegate = self
+        
         newListingPromotionButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
         weeklyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
         monthlyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
@@ -166,6 +168,14 @@ class AddDiscountScreenViewController: UIViewController {
             monthlyDiscountButtonLabel.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
         }
         
+    }
+    
+}
+
+extension AddDiscountScreenViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

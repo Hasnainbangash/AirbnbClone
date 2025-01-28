@@ -31,6 +31,8 @@ class ChooseWhoToWelcomeForFirstReservationViewController: UIViewController {
         setupButtonUnderline()
         setupLabelUnderline()
         
+        self.transitioningDelegate = self
+        
         anyAirbnbGuestView.layer.borderWidth = 2
         anyAirbnbSelectedImage.image = UIImage(systemName: "circle.circle.fill")
         anyAirbnbGuestView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
@@ -148,6 +150,14 @@ class ChooseWhoToWelcomeForFirstReservationViewController: UIViewController {
         anExperiencedGuestView.layer.borderWidth = 0.3
         anExperiencedSelectedImage.image = UIImage(systemName: "circle")
         anExperiencedGuestView.backgroundColor = UIColor.white
+    }
+    
+}
+
+extension ChooseWhoToWelcomeForFirstReservationViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

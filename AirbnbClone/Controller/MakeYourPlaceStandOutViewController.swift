@@ -18,6 +18,9 @@ class MakeYourPlaceStandOutViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        self.transitioningDelegate = self
+        
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
@@ -54,4 +57,12 @@ class MakeYourPlaceStandOutViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+}
+
+extension MakeYourPlaceStandOutViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
+    }
+    
 }

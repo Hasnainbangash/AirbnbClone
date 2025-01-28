@@ -60,6 +60,8 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        self.transitioningDelegate = self
+        
         collectionView.register(
             UINib(nibName: K.HostYourPlaceCell.NibNames.describeYourPlaceheaderCellNibName, bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -178,6 +180,14 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
             cell.isSelected = false
         }
         
+    }
+    
+}
+
+extension WhichOfTheseBestDescribeYourPlaceViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

@@ -28,6 +28,8 @@ class PickYourBookingSettingsViewController: UIViewController {
         setupButtonUnderline()
         setupLabelUnderline()
         
+        self.transitioningDelegate = self
+        
         approvedYourBookingView.layer.borderWidth = 2
         approvedYourBookingView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
     }
@@ -142,4 +144,12 @@ class PickYourBookingSettingsViewController: UIViewController {
         useInstantBookView.backgroundColor = UIColor.white
     }
 
+}
+
+extension PickYourBookingSettingsViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
+    }
+    
 }

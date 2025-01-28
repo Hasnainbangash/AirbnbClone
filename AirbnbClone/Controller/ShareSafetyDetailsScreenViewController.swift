@@ -30,6 +30,8 @@ class ShareSafetyDetailsScreenViewController: UIViewController {
         setupBorderWidth()
         setupButtonUnderline()
         
+        self.transitioningDelegate = self
+        
         exteriorSecurityButtonLabel.setImage(UIImage(systemName: "square"), for: .normal)
         noiseDecibelButtonLabel.setImage(UIImage(systemName: "square"), for: .normal)
         weaponsButtonLabel.setImage(UIImage(systemName: "square"), for: .normal)
@@ -107,6 +109,14 @@ class ShareSafetyDetailsScreenViewController: UIViewController {
             weaponsButtonLabel.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
         }
         
+    }
+    
+}
+
+extension ShareSafetyDetailsScreenViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

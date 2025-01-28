@@ -45,6 +45,8 @@ class NowSetYourPriceViewController: UIViewController {
         setupBorderWidth()
         setupButtonUnderline()
         
+        self.transitioningDelegate = self
+        
         allPricesStackView.isHidden = true
         guestPriceMainStackView.isHidden = true
         youEarnSubStackView.isHidden = true
@@ -152,6 +154,14 @@ class NowSetYourPriceViewController: UIViewController {
         guestPriceMainStackView.isHidden = false
         guestPriceSubStackView.isHidden = true
         
+    }
+    
+}
+
+extension NowSetYourPriceViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

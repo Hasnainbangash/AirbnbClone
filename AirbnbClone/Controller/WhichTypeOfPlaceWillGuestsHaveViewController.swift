@@ -22,6 +22,9 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.transitioningDelegate = self
+        
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
@@ -103,6 +106,14 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         
         sharedRoomView.layer.borderWidth = 0.3
         sharedRoomView.backgroundColor = UIColor.white
+    }
+    
+}
+
+extension WhichTypeOfPlaceWillGuestsHaveViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

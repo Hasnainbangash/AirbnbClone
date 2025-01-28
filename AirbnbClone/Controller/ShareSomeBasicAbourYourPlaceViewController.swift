@@ -29,6 +29,8 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.transitioningDelegate = self
+        
         setupInitialCount()
         setupCornerRadius()
         setupBorderWidth()
@@ -144,6 +146,14 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
         // Update the numberofGuests label
         numberOfBathrooms.text = "\(currentBathrooms)"
         
+    }
+    
+}
+
+extension ShareSomeBasicAbourYourPlaceViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }

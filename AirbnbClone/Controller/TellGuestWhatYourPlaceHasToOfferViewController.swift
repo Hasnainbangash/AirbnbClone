@@ -66,6 +66,8 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
         collectionView.delegate = self
         collectionView.allowsMultipleSelection = true
         
+        self.transitioningDelegate = self
+        
         // Guest favourate cell registeration
         collectionView.register(
             UINib(nibName: K.HostYourPlaceCell.NibNames.guestFavourateHeaderCellNibName, bundle: nil),
@@ -331,6 +333,14 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
             break
         }
         
+    }
+    
+}
+
+extension TellGuestWhatYourPlaceHasToOfferViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
 }
