@@ -22,7 +22,7 @@ class FinishAFewLastStepsViewController: UIViewController {
     }
 
     func setupCornerRadius() {
-        listingImageView.layer.cornerRadius = listingImageView.frame.height / 5
+        listingImageView.layer.cornerRadius = listingImageView.frame.height / 9
         finishupButtonLabel.layer.cornerRadius = finishupButtonLabel.frame.height / 5
     }
     
