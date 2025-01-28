@@ -68,11 +68,15 @@
 		};
 		D03A19F02D2CEB3100E1468E /* AirbnbCloneTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AirbnbCloneTests;
 			sourceTree = "<group>";
 		};
 		D03A19FA2D2CEB3100E1468E /* AirbnbCloneUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AirbnbCloneUITests;
 			sourceTree = "<group>";
 		};
@@ -165,7 +169,6 @@
 				D03A19D02D2CEB2F00E1468E /* Sources */,
 				D03A19D12D2CEB2F00E1468E /* Frameworks */,
 				D03A19D22D2CEB2F00E1468E /* Resources */,
-				78D9B50E6033D7D8A1C607D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,7 +212,6 @@
 				D03A19F32D2CEB3100E1468E /* Sources */,
 				D03A19F42D2CEB3100E1468E /* Frameworks */,
 				D03A19F52D2CEB3100E1468E /* Resources */,
-				7F9D597256731051232D9D28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,40 +319,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78D9B50E6033D7D8A1C607D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirbnbClone/Pods-AirbnbClone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F9D597256731051232D9D28 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirbnbClone-AirbnbCloneUITests/Pods-AirbnbClone-AirbnbCloneUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC45782ABA3AD4F73FCA077E /* [CP] Check Pods Manifest.lock */ = {

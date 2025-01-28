@@ -6,7 +6,6 @@ target 'AirbnbClone' do
   use_frameworks!
 
   # Pods for AirbnbClone
-  pod 'CountryPickerView'
 
 
   target 'AirbnbCloneTests' do
