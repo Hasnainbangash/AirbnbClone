@@ -8,30 +8,24 @@
 import UIKit
 
 class SlideFromRightSegue: UIStoryboardSegue {
-
     override func perform() {
-        // Access the source and destination view controllers
-        let sourceVC = self.source
-        let destinationVC = self.destination
-
-        // Set the destination view controller's modal presentation style to full screen
-        destinationVC.modalPresentationStyle = .fullScreen
-
-        // Add the destination view to the source view's container
-        sourceVC.view.addSubview(destinationVC.view)
-
-        // Set initial position off-screen to the right
-        destinationVC.view.frame = CGRect(x: sourceVC.view.frame.width, y: 0,
-                                          width: sourceVC.view.frame.width,
-                                          height: sourceVC.view.frame.height)
-
-        // Animate the destination view sliding in from the right
-        UIView.animate(withDuration: 0.5, animations: {
-            destinationVC.view.frame = sourceVC.view.frame // Slide to the center
-        }) { _ in
-            // Once the animation finishes, present the destination view controller
-            sourceVC.present(destinationVC, animated: false, completion: nil)
+        let src = self.source
+        let dst = self.destination
+        dst.modalPresentationStyle = .fullScreen
+        src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+        dst.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
+        /*For the FromRight transition remove minus (-) before -src to turn the direction 180 degrees as in the following example:
+         dst.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
+         ***********************************************/
+        UIView.animate(withDuration: 0.25,
+                       delay: 0.0,
+                       options: .curveEaseInOut,
+                       animations: {
+            dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
+        },
+                       completion: { finished in
+            src.present(dst, animated: false, completion: nil)
         }
+        )
     }
 }
-
