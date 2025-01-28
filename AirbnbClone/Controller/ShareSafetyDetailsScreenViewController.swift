@@ -68,6 +68,29 @@ class ShareSafetyDetailsScreenViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func createLisitngButtonPressed(_ sender: UIButton) {
+        
+        if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "FinishAFewLastStepsViewController") as? FinishAFewLastStepsViewController {
+            
+            if let sheet = detailVC.sheetPresentationController {
+                sheet.detents = [.custom(resolver: { context in
+                    0.7 * context.maximumDetentValue
+                })]
+                
+                sheet.preferredCornerRadius = 20
+            }
+            
+            // This will get called when detailVC is dismissed
+//            detailVC.presentationController?.delegate = self
+            
+            // Present the detail view controller
+            // self.navigationController?.pushViewController(detailVC, animated: true)
+            self.present(detailVC, animated: true)
+        }
+        
+        
+    }
+    
     @IBAction func exteriorSecurityButtonPressed(_ sender: UIButton) {
         
         // Toggle the state
