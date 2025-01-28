@@ -26,4 +26,13 @@ class FinishAFewLastStepsViewController: UIViewController {
         finishupButtonLabel.layer.cornerRadius = finishupButtonLabel.frame.height / 5
     }
     
+    
+    @IBAction func closeXButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
