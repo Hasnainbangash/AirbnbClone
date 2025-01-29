@@ -85,7 +85,8 @@ class SmsCodeScreenViewController: UIViewController {
                 if let error = error {
                     print("Login is failed due to error \(error.localizedDescription)")
                 } else {
-                    
+                    print("Login get successfull")
+                    self.performSegue(withIdentifier: K.LoginAndSignupScreen.Segues.smsCodeToExploreMainScreenSegue, sender: self)
                 }
 
             }
