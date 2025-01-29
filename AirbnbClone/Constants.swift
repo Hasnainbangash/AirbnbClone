@@ -61,9 +61,19 @@ struct K {
             static let usersField = "users"
             static let userIDField = "userID"
             static let dateField = "date"
-            static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
-            static let bestDescribeYourPlaceImageField = "BestDescribeYourPlaceImage"
-            static let placeDescriptionField = "PlaceDescription"
+            
+            struct WhichOfTheseBestDescribeYourPlace {
+                static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
+                static let bestDescribeYourPlaceImageField = "BestDescribeYourPlaceImage"
+                static let placeDescriptionField = "PlaceDescription"
+            }
+            
+            struct WhichTypeOfplaceWillGuestHave {
+                static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
+                static let bestDescribeYourPlaceImageField = "BestDescribeYourPlaceImage"
+                static let placeDescriptionField = "PlaceDescription"
+            }
+            
         }
         
     }

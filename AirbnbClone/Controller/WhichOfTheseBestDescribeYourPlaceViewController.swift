@@ -121,9 +121,9 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         
         if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName {
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField).document(userID).collection(K.HostYourPlaceCell.FStore.placeDescriptionField).addDocument(data: [
+            db.collection(K.HostYourPlaceCell.FStore.usersField).document(userID).collection(K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.placeDescriptionField).addDocument(data: [
                 K.HostYourPlaceCell.FStore.userIDField : userID,
-                K.HostYourPlaceCell.FStore.bestDescribeYourPlaceNameField : placeName,
+                K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.bestDescribeYourPlaceNameField : placeName,
                 K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
             ]) { error in
                 if let e = error {

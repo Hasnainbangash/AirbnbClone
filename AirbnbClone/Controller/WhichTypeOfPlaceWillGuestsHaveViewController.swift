@@ -87,6 +87,7 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         print("Next button pressed")
+    
         
     }
     
