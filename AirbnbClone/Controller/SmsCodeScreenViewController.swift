@@ -9,7 +9,6 @@ import UIKit
 
 class SmsCodeScreenViewController: UIViewController {
 
-    
     @IBOutlet weak var sendAgainButtonLabel: UIButton!
     @IBOutlet weak var moreOptionsButtonLabel: UIButton!
     @IBOutlet weak var continueButtonLabel: UIButton!
@@ -61,6 +60,7 @@ class SmsCodeScreenViewController: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
