@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
 
@@ -15,6 +17,10 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     @IBOutlet weak var nextButtonLabel: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let db = Firestore.firestore()
+    
+    var selectedPlaceName: String?
     
     var describeYourPlace: [DescribeYourPlace] = [
         
@@ -112,6 +118,21 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         print("Next Button is pressed")
+        
+        if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName {
+            
+            db.collection(K.HostYourPlaceCell.FStore.placeDescriptionField).addDocument(data: [
+                K.HostYourPlaceCell.FStore.userIDField : userID,
+                K.HostYourPlaceCell.FStore.bestDescribeYourPlaceNameField : placeName,
+                K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+            ]) { error in
+                if let e = error {
+                    print("There was an issue saving data to Firestore, \(e.localizedDescription)")
+                }
+            }
+            
+        }
+        
     }
 }
 
@@ -175,6 +196,9 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
             cell.mainView.layer.borderWidth = 2
             cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
             cell.isSelected = true
+            
+            let selectedPlace = describeYourPlace[indexPath.row]
+            self.selectedPlaceName = selectedPlace.placeName
         }
         
         // Enable the next button when a cell is selected

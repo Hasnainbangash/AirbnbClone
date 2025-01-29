@@ -55,6 +55,15 @@ struct K {
             static let standoutAmenitiesCollectionCellNibName = "StandoutAmenitiesBodyCell"
             static let standoutAmenitiesHeaderCellNibName = "StandoutAmenitiesHeaderCell"
         }
+        
+        struct FStore {
+            static let userIDField = "userID"
+            static let dateField = "date"
+            static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
+            static let bestDescribeYourPlaceImageField = "BestDescribeYourPlaceImage"
+            static let placeDescriptionField = "PlaceDescription"
+        }
+        
     }
     
     struct ProfileMainScreen {
