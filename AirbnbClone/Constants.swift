@@ -57,6 +57,7 @@ struct K {
         }
         
         struct FStore {
+            static let usersField = "users"
             static let userIDField = "userID"
             static let dateField = "date"
             static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
