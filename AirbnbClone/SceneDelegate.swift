@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Navigate to the Login screen
     func navigateToLoginScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let loginVC = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as? LoginAndSignupToAirbnbScreenViewController {
+        if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginAndSignupToAirbnbScreenViewController") as? LoginAndSignupToAirbnbScreenViewController {
             let navController = UINavigationController(rootViewController: loginVC)
             window?.rootViewController = navController
             window?.makeKeyAndVisible()

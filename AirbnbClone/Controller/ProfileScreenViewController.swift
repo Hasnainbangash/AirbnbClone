@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileScreenViewController: UIViewController {
 
@@ -49,6 +50,31 @@ class ProfileScreenViewController: UIViewController {
         // Make the shadow more "realistic" by enabling shadow path
         yourHomeView.layer.masksToBounds = false // Important for shadow to appear outside bounds
         yourHomeView.layer.shadowPath = UIBezierPath(rect: yourHomeView.bounds).cgPath
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+        print("Logout button pressed")
+        do {
+            try Auth.auth().signOut()
+            
+            // Instantiate the storyboard and the login view controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginAndSignupToAirbnbScreenViewController") as? LoginAndSignupToAirbnbScreenViewController {
+                
+                // Create a new UINavigationController with loginVC as the root
+                let navController = UINavigationController(rootViewController: loginVC)
+                
+                // Set the new navigation controller as the root view controller of the app window
+                if let window = UIApplication.shared.keyWindow {
+                    window.rootViewController = navController
+                    window.makeKeyAndVisible()
+                }
+            }
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
