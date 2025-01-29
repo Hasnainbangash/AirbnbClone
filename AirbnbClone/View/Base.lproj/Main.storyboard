@@ -401,7 +401,7 @@
                         <outlet property="googleButtonView" destination="uTb-3P-pBs" id="UaB-ew-jfk"/>
                         <outlet property="phoneNumberTextField" destination="cYd-Fm-51w" id="2m3-FB-NdK"/>
                         <outlet property="phoneNumberView" destination="RBM-cB-qJm" id="h1S-pj-TcP"/>
-                        <segue destination="3nO-cv-Vvp" kind="presentation" modalPresentationStyle="fullScreen" id="amE-CV-oDd"/>
+                        <segue destination="3nO-cv-Vvp" kind="presentation" identifier="LoginSingupToSmsCode" modalPresentationStyle="fullScreen" id="amE-CV-oDd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
