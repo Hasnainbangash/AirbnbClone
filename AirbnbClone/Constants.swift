@@ -13,6 +13,11 @@ struct K {
         
         struct Segues {
             static let loginSingupToSmsCodeScreenSegue = "LoginSingupToSmsCode"
+            static let smsCodeToExploreMainScreenSegue = "SmsCodeToExploreMain"
+        }
+        
+        struct FStore {
+            static let authVerificationId = "authVerificationID"
         }
         
     }

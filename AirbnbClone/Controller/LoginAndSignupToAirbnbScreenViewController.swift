@@ -73,9 +73,11 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
             PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumberWithCountryCode, uiDelegate: nil) { verificationID, error in
                   if let error = error {
                       print(error.localizedDescription)
-                      return
                   } else {
                       // Sign in using the verificationID and the code sent to the user
+                      
+                      // Storing the verificationID in UserDefaults
+                      UserDefaults.standard.set(verificationID, forKey: K.LoginAndSignupScreen.FStore.authVerificationId)
                       
                       self.performSegue(withIdentifier: K.LoginAndSignupScreen.Segues.loginSingupToSmsCodeScreenSegue, sender: self)
                       

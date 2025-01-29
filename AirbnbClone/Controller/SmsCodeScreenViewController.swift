@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SmsCodeScreenViewController: UIViewController {
 
@@ -14,10 +15,16 @@ class SmsCodeScreenViewController: UIViewController {
     @IBOutlet weak var continueButtonLabel: UIButton!
     @IBOutlet weak var smsCodeTextField: UITextField!
     
+    var verificationID: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Retrieving the verificationID from UserDefaults
+        verificationID = UserDefaults.standard.string(forKey: K.LoginAndSignupScreen.FStore.authVerificationId)
+        
         setupCornerRadius()
         setupButtonUnderline()
     }
@@ -69,6 +76,21 @@ class SmsCodeScreenViewController: UIViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
+        if let verificationCode = smsCodeTextField.text, !verificationCode.isEmpty, let verificationID = verificationID {
+            
+            // Use the verificationID and verificationCode to create credentials
+            let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: verificationCode)
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    print("Login is failed due to error \(error.localizedDescription)")
+                } else {
+                    
+                }
+
+            }
+
+        }
         
     }
     
