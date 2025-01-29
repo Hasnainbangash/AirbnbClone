@@ -388,7 +388,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gu6-hK-tew" secondAttribute="trailing" constant="16" id="2Bz-kp-LAf"/>
                             <constraint firstItem="gu6-hK-tew" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vxj-gt-bMF"/>
                             <constraint firstItem="gu6-hK-tew" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="jdP-KA-3Q0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gu6-hK-tew" secondAttribute="bottom" constant="73" id="nNH-Ed-T8X"/>
                         </constraints>
                     </view>
                     <connections>
