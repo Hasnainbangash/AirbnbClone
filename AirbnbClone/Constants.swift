@@ -9,6 +9,14 @@ import Foundation
 
 struct K {
     
+    struct LoginAndSignupScreen {
+        
+        struct Segues {
+            static let loginSingupToSmsCodeScreenSegue = "LoginSingupToSmsCode"
+        }
+        
+    }
+    
     struct HostYourPlaceCell {
         struct Identifiers {
             static let describeYourPlaceCollectionCellIdentifier = "DescribeYourPlaceCollectionReusebaleCell"

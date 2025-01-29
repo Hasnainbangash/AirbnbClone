@@ -8,7 +8,7 @@
 import UIKit
 import CountryPickerView
 
-class LoginScreenViewController: UIViewController {
+class LoginAndSignupToAirbnbScreenViewController: UIViewController {
 
     @IBOutlet weak var phoneNumberView: UIView!
     @IBOutlet weak var continueButton: UIButton!
@@ -64,9 +64,13 @@ class LoginScreenViewController: UIViewController {
         appleButtonView.layer.borderWidth = 1.0
     }
     
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        
+    }
+    
 }
 
-extension LoginScreenViewController: CountryPickerViewDelegate {
+extension LoginAndSignupToAirbnbScreenViewController: CountryPickerViewDelegate {
     
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         
