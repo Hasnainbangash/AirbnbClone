@@ -62,6 +62,10 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         
         self.transitioningDelegate = self
         
+        nextButtonLabel.isEnabled = false
+        nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+        nextButtonLabel.tintColor = UIColor.white
+        
         collectionView.register(
             UINib(nibName: K.HostYourPlaceCell.NibNames.describeYourPlaceheaderCellNibName, bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -106,6 +110,9 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        print("Next Button is pressed")
+    }
 }
 
 extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDataSource {
@@ -170,6 +177,11 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
             cell.isSelected = true
         }
         
+        // Enable the next button when a cell is selected
+        nextButtonLabel.isEnabled = true
+        nextButtonLabel.backgroundColor = UIColor.black
+        nextButtonLabel.tintColor = UIColor.white
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -178,6 +190,13 @@ extension WhichOfTheseBestDescribeYourPlaceViewController: UICollectionViewDeleg
             cell.mainView.layer.borderWidth = 0.4
             cell.mainView.backgroundColor = UIColor.white
             cell.isSelected = false
+        }
+        
+        // Disable the next button if no cells are selected
+        if collectionView.indexPathsForSelectedItems?.isEmpty ?? true {
+            nextButtonLabel.isEnabled = false
+            nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+            nextButtonLabel.tintColor = UIColor.white
         }
         
     }

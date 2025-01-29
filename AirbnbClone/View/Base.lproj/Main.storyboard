@@ -10621,6 +10621,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                                                        <connections>
+                                                                            <action selector="nextButtonPressed:" destination="VId-G8-CU1" eventType="touchUpInside" id="ph0-ek-M59"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
