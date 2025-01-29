@@ -72,6 +72,9 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+    }
+    
     @IBAction func typeOfPlaceSelectedButton(_ sender: UIButton) {
         
         print(sender.tag)
