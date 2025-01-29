@@ -23,6 +23,11 @@ struct K {
     }
     
     struct HostYourPlaceCell {
+        
+        struct Segues {
+            static let whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue = "WhichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHave"
+        }
+        
         struct Identifiers {
             static let describeYourPlaceCollectionCellIdentifier = "DescribeYourPlaceCollectionReusebaleCell"
             static let describeYourPlaceheaderCellIdentifier = "DescribeYourPlaceHeaderReusebaleCell"

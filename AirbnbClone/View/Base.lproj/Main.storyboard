@@ -10621,9 +10621,6 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                                                        <connections>
-                                                                            <segue destination="alU-GA-2bU" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="C1u-0x-nXI"/>
-                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -10664,6 +10661,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="nextButtonLabel" destination="3w2-gJ-TCK" id="stD-CQ-Syf"/>
                         <outlet property="questionsButtonLabel" destination="Ceg-ZU-7uz" id="Eta-UF-AFb"/>
                         <outlet property="saveAndExitButtonLabel" destination="XDX-Ab-JQ0" id="3uC-Fu-KTY"/>
+                        <segue destination="alU-GA-2bU" kind="custom" identifier="WhichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHave" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="mHv-1h-8NR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJ8-9a-vlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
