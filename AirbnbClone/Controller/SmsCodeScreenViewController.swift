@@ -12,6 +12,7 @@ class SmsCodeScreenViewController: UIViewController {
     @IBOutlet weak var sendAgainButtonLabel: UIButton!
     @IBOutlet weak var moreOptionsButtonLabel: UIButton!
     @IBOutlet weak var continueButtonLabel: UIButton!
+    @IBOutlet weak var smsCodeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,14 @@ class SmsCodeScreenViewController: UIViewController {
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func sendAgainCodeButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        
     }
     
 }
