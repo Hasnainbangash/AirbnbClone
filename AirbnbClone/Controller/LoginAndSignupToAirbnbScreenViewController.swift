@@ -94,6 +94,15 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? SmsCodeScreenViewController {
+            
+            destinationVC.countryCode = countryCodeLabel.text
+            destinationVC.phoneNumber = phoneNumberTextField.text
+            
+        }
+    }
+    
 }
 
 extension LoginAndSignupToAirbnbScreenViewController: CountryPickerViewDelegate {
