@@ -15,8 +15,16 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     @IBOutlet weak var nextButtonLabel: UIButton!
     
     @IBOutlet weak var entirePlaceView: UIView!
+    @IBOutlet weak var entirePlaceNameLabel: UILabel!
+    @IBOutlet weak var entirePlaceDescriptionLabel: UILabel!
+    
     @IBOutlet weak var roomView: UIView!
+    @IBOutlet weak var roomNameLabel: UILabel!
+    @IBOutlet weak var roomDescriptionLabel: UILabel!
+    
     @IBOutlet weak var sharedRoomView: UIView!
+    @IBOutlet weak var sharedRoomNameLabel: UILabel!
+    @IBOutlet weak var shareRoomDescriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
