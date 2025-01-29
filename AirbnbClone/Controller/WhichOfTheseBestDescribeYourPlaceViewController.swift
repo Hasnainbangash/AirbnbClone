@@ -130,7 +130,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
                     print("There was an issue saving data to Firestore, \(e.localizedDescription)")
                 } else {
                     print("Successfully saved place description to Firestore.")
-                    // self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue, sender: self)
+                    self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue, sender: self)
                 }
             }
             
