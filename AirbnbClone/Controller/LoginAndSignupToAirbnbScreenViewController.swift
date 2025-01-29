@@ -7,6 +7,7 @@
 
 import UIKit
 import CountryPickerView
+import FirebaseAuth
 
 class LoginAndSignupToAirbnbScreenViewController: UIViewController {
 
@@ -65,7 +66,24 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        
+        if let phoneNumber = phoneNumberTextField.text, !phoneNumber.isEmpty, let countryCode = countryCodeLabel.text, !countryCode.isEmpty {
+            
+            let phoneNumberWithCountryCode = countryCode + phoneNumber
+            
+            PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumberWithCountryCode, uiDelegate: nil) { verificationID, error in
+                  if let error = error {
+                      print(error.localizedDescription)
+                      return
+                  } else {
+                      // Sign in using the verificationID and the code sent to the user
+                      
+                      self.performSegue(withIdentifier: K.LoginAndSignupScreen.Segues.loginSingupToSmsCodeScreenSegue, sender: self)
+                      
+                  }
+              }
+            
+            
+        }
     }
     
 }
