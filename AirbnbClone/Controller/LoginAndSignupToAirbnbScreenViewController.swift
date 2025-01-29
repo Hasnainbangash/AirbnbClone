@@ -69,6 +69,7 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
         if let phoneNumber = phoneNumberTextField.text, !phoneNumber.isEmpty, let countryCode = countryCodeLabel.text, !countryCode.isEmpty {
             
             let phoneNumberWithCountryCode = countryCode + phoneNumber
+            print(phoneNumberWithCountryCode)
             
             PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumberWithCountryCode, uiDelegate: nil) { verificationID, error in
                 if let error = error {
@@ -77,7 +78,7 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
                 } else {
                     // Sign in using the verificationID and the code sent to the user
                     
-                    print("Phone vaification is cucceesful moving to next screne now")
+                    print("Phone number verification is successful now moving to sms code screen")
                     // Storing the verificationID in UserDefaults
                     UserDefaults.standard.set(verificationID, forKey: K.LoginAndSignupScreen.FStore.authVerificationId)
                     
@@ -86,6 +87,10 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
                 }
             }
             
+        } else {
+            print("Please enter the number in the text field")
+            print(countryCodeLabel.text ?? "No country Code")
+            print(phoneNumberTextField.text ?? "phone number text field is empty")
         }
     }
     

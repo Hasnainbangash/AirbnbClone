@@ -78,6 +78,8 @@ class SmsCodeScreenViewController: UIViewController {
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         if let verificationCode = smsCodeTextField.text, !verificationCode.isEmpty, let verificationID = verificationID {
             
+            print("Verification ID is \(verificationID)")
+            
             // Use the verificationID and verificationCode to create credentials
             let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: verificationCode)
             
