@@ -10,7 +10,7 @@ import CountryPickerView
 import FirebaseAuth
 
 class LoginAndSignupToAirbnbScreenViewController: UIViewController {
-
+    
     @IBOutlet weak var phoneNumberView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var emailButtonView: UIView!
@@ -71,21 +71,20 @@ class LoginAndSignupToAirbnbScreenViewController: UIViewController {
             let phoneNumberWithCountryCode = countryCode + phoneNumber
             
             PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumberWithCountryCode, uiDelegate: nil) { verificationID, error in
-                  if let error = error {
-                      print("Error occured")
-                      print(error.localizedDescription)
-                  } else {
-                      // Sign in using the verificationID and the code sent to the user
-                      
-                      print("Phone vaification is cucceesful moving to next screne now")
-                      // Storing the verificationID in UserDefaults
-                      UserDefaults.standard.set(verificationID, forKey: K.LoginAndSignupScreen.FStore.authVerificationId)
-                      
-                      self.performSegue(withIdentifier: K.LoginAndSignupScreen.Segues.loginSingupToSmsCodeScreenSegue, sender: self)
-                      
-                  }
-              }
-            
+                if let error = error {
+                    print("Error occured")
+                    print(error.localizedDescription)
+                } else {
+                    // Sign in using the verificationID and the code sent to the user
+                    
+                    print("Phone vaification is cucceesful moving to next screne now")
+                    // Storing the verificationID in UserDefaults
+                    UserDefaults.standard.set(verificationID, forKey: K.LoginAndSignupScreen.FStore.authVerificationId)
+                    
+                    self.performSegue(withIdentifier: K.LoginAndSignupScreen.Segues.loginSingupToSmsCodeScreenSegue, sender: self)
+                    
+                }
+            }
             
         }
     }
@@ -111,7 +110,7 @@ extension LoginAndSignupToAirbnbScreenViewController: CountryPickerViewDelegate 
         // countryNameLabel.text = country.name
         
         // Hide the picker when a country is selected
-//        countryPickerView.isHidden = true
+        //        countryPickerView.isHidden = true
         
     }
     
