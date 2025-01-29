@@ -26,6 +26,9 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     @IBOutlet weak var sharedRoomNameLabel: UILabel!
     @IBOutlet weak var shareRoomDescriptionLabel: UILabel!
     
+    var typeOfPlaceName: String?
+    var typeOfPlaceDescription: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +42,8 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         
         entirePlaceView.layer.borderWidth = 2
         entirePlaceView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        typeOfPlaceName = entirePlaceNameLabel.text
+        typeOfPlaceDescription = entirePlaceDescriptionLabel.text
     }
     
     func setupCornerRadius() {
@@ -81,6 +86,8 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        print("Next button pressed")
+        
     }
     
     @IBAction func typeOfPlaceSelectedButton(_ sender: UIButton) {
@@ -93,14 +100,20 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
         case 1:
             entirePlaceView.layer.borderWidth = 2
             entirePlaceView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            typeOfPlaceName = entirePlaceNameLabel.text
+            typeOfPlaceDescription = entirePlaceDescriptionLabel.text
             break
         case 2:
             roomView.layer.borderWidth = 2
             roomView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            typeOfPlaceName = roomNameLabel.text
+            typeOfPlaceDescription = roomDescriptionLabel.text
             break
         case 3:
             sharedRoomView.layer.borderWidth = 2
             sharedRoomView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+            typeOfPlaceName = sharedRoomNameLabel.text
+            typeOfPlaceDescription = shareRoomDescriptionLabel.text
             break
         default:
             break
@@ -109,6 +122,10 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     }
     
     func resetViewStyles() {
+        
+        typeOfPlaceName = ""
+        typeOfPlaceDescription = ""
+        
         entirePlaceView.layer.borderWidth = 0.3
         entirePlaceView.backgroundColor = UIColor.white
         
