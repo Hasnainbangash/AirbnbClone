@@ -69,9 +69,9 @@ struct K {
             }
             
             struct WhichTypeOfplaceWillGuestHave {
-                static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
-                static let bestDescribeYourPlaceImageField = "BestDescribeYourPlaceImage"
+                static let placeNameField = "Placename"
                 static let placeDescriptionField = "PlaceDescription"
+                static let placeTypeDescriptionField = "PlaceTypeDescription"
             }
             
         }
