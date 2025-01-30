@@ -50,6 +50,8 @@ class NowSetYourPriceViewController: UIViewController {
         
         self.transitioningDelegate = self
         
+        priceTextField.delegate = self
+        
         allPricesStackView.isHidden = true
         guestPriceMainStackView.isHidden = true
         youEarnSubStackView.isHidden = true
@@ -174,6 +176,30 @@ extension NowSetYourPriceViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
+    }
+    
+}
+
+extension NowSetYourPriceViewController: UITextFieldDelegate {
+    
+    func updateNextButtonState() {
+        if let text = priceTextField.text, text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            // If the text field is empty, disable the next button
+            nextButtonLabel.isEnabled = false
+            nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+            nextButtonLabel.tintColor = UIColor.white
+        } else {
+            // If the text field contains text, enable the next button
+            nextButtonLabel.isEnabled = true
+            nextButtonLabel.backgroundColor = UIColor.black
+            nextButtonLabel.tintColor = UIColor.white
+        }
+    }
+
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        // Check if the priceTextField is empty or not
+        updateNextButtonState()
     }
     
 }
