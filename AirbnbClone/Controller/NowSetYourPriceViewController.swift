@@ -116,13 +116,18 @@ class NowSetYourPriceViewController: UIViewController {
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
     
-    
     @IBAction func priceEditButtonPressed(_ sender: UIButton) {
         priceTextField.becomeFirstResponder()
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        
+        
+        
     }
     
     @IBAction func showPricesButtonPressed(_ sender: UIButton) {
@@ -133,7 +138,6 @@ class NowSetYourPriceViewController: UIViewController {
         similarListingStackView.isHidden = true
         
     }
-    
     
     @IBAction func showLessButtonPressed(_ sender: UIButton) {
         
