@@ -76,6 +76,14 @@ struct K {
                 static let placeTypeDescriptionField = "PlaceTypeDescription"
             }
             
+            struct ShareSomeBasicAboutYourPlace {
+                static let numberOfGuestsField = "NumberOfGuests"
+                static let numberOfBedroomsField = "NumberOfBedrooms"
+                static let numberOfBedsField = "NumberOfBeds"
+                static let numberOfBathroomsField = "NumberOfBathrooms"
+                static let shareSomeBasicAboutYourPlaceField = "ShareSomeBasicAboutYourPlace"
+            }
+            
         }
         
     }

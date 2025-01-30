@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
     
@@ -23,6 +25,8 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
     var currentBedrooms: Int = 0
     var currentBeds: Int = 0
     var currentBathrooms: Int = 0
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +90,34 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
-        
+        if let userID = Auth.auth().currentUser?.uid {
+            
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.shareSomeBasicAboutYourPlaceField)
+                .document(listingID)
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField : currentGuests,
+                    K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField : currentBedrooms,
+                    K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField : currentBeds,
+                    K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField : currentBathrooms,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved place description to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.shareSomeBasicAboutYourPlaceToMakeYourPlaceStandoutSegue, sender: self)
+                    }
+                }
+            
+        }
         
     }
     
