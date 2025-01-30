@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import FirebaseCore
 import FirebaseFirestore
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         let db = Firestore.firestore()
+        print(db)
+        
+        // Enabling the IQKeyboard
+        IQKeyboardManager.shared.isEnabled = true
+        
+        // When the user click outside the keyword get gone
+        IQKeyboardManager.shared.resignOnTouchOutside = true
         
         return true
     }
