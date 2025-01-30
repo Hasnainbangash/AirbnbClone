@@ -86,6 +86,21 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
     }
     
     @IBAction func takeNewPhotosButtonPressed(_ sender: UIButton) {
+        
+        // Check if the device has a camera
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = .camera
+            imagePickerController.allowsEditing = true // Optional: Allow editing the captured image
+            present(imagePickerController, animated: true, completion: nil)
+        } else {
+            // Show an alert if the device doesn't have a camera
+            let alert = UIAlertController(title: "No Camera", message: "Your device does not have a camera.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
