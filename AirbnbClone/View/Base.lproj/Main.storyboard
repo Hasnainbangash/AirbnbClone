@@ -12357,6 +12357,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                                                        <connections>
+                                                                            <segue destination="UtJ-dt-sA3" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="jb5-5l-Nl1"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -12397,7 +12400,6 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="nextButtonLabel" destination="MiF-Zo-epd" id="SEg-0y-IaK"/>
                         <outlet property="questionsButtonLabel" destination="JOj-Rj-zWZ" id="reG-Wf-JVD"/>
                         <outlet property="saveAndExitButtonLabel" destination="2le-BN-4xc" id="6U4-W8-cFH"/>
-                        <segue destination="UtJ-dt-sA3" kind="custom" identifier="MakeYourPlaceStandoutToTellGuestWhatyourPlaceHasToOffer" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="Ouc-0D-qgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJO-oo-7lp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -12413,13 +12415,13 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VlC-By-3xX">
-                                <rect key="frame" x="0.0" y="62" width="404" height="778"/>
+                                <rect key="frame" x="0.0" y="62" width="398" height="778"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-kB-qQy">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="43"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="160" translatesAutoresizingMaskIntoConstraints="NO" id="Kpt-ep-LFf">
-                                                <rect key="frame" x="10" y="0.0" width="384" height="43"/>
+                                                <rect key="frame" x="10" y="0.0" width="378" height="43"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utg-Z7-Dc9">
                                                         <rect key="frame" x="0.0" y="0.0" width="109" height="43"/>
@@ -12432,7 +12434,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                         <buttonConfiguration key="configuration" style="plain" title="Save &amp; exit"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y6-Dw-TPK">
-                                                        <rect key="frame" x="269" y="0.0" width="115" height="43"/>
+                                                        <rect key="frame" x="269" y="0.0" width="109" height="43"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="112" id="9PR-My-yir"/>
                                                             <constraint firstAttribute="height" constant="43" id="q86-0I-qOK"/>
@@ -12453,7 +12455,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rhb-wz-WQ8">
-                                        <rect key="frame" x="0.0" y="51" width="404" height="609"/>
+                                        <rect key="frame" x="0.0" y="51" width="398" height="609"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UIP-2Q-AsP">
                                             <size key="itemSize" width="128" height="128"/>
@@ -12464,13 +12466,13 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                         <cells/>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-EP-hM7">
-                                        <rect key="frame" x="0.0" y="668" width="404" height="110"/>
+                                        <rect key="frame" x="0.0" y="668" width="398" height="110"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Y-ok-thQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="87"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="87"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="5mE-bt-Rro">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-Y9-cea">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="5"/>
@@ -12563,7 +12565,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wql-hX-Cye">
-                                                                <rect key="frame" x="274" y="0.0" width="130" height="5"/>
+                                                                <rect key="frame" x="274" y="0.0" width="124" height="5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20j-Mo-QHl">
                                                                         <rect key="frame" x="0.0" y="0.0" width="26" height="5"/>
@@ -12598,7 +12600,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="US9-bC-46a">
-                                                                        <rect key="frame" x="104" y="0.0" width="26" height="5"/>
+                                                                        <rect key="frame" x="104" y="0.0" width="20" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="5" id="Mru-me-8Dm"/>
@@ -12610,10 +12612,10 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99v-eN-SvT">
-                                                        <rect key="frame" x="0.0" y="30" width="404" height="57"/>
+                                                        <rect key="frame" x="0.0" y="30" width="398" height="57"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="210" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-vn-NKG">
-                                                                <rect key="frame" x="12" y="7" width="380" height="43"/>
+                                                                <rect key="frame" x="12" y="7" width="374" height="43"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-R3-nT6">
                                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="43"/>
@@ -12629,7 +12631,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z95-sN-WMR">
-                                                                        <rect key="frame" x="295" y="0.0" width="85" height="43"/>
+                                                                        <rect key="frame" x="295" y="0.0" width="79" height="43"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="43" id="WL9-1k-vf3"/>
@@ -12640,7 +12642,6 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                                         <connections>
                                                                             <action selector="nextButtonPressed:" destination="UtJ-dt-sA3" eventType="touchUpInside" id="i6J-5P-aiG"/>
-                                                                            <segue destination="9ai-T6-TzD" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="BL6-ea-Z86"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -12683,6 +12684,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="nextButtonLabel" destination="z95-sN-WMR" id="Ebj-qo-KgM"/>
                         <outlet property="questionsButtonLabel" destination="6Y6-Dw-TPK" id="OnH-v2-fs5"/>
                         <outlet property="saveAndExitButtonLabel" destination="Utg-Z7-Dc9" id="FVL-3N-4DI"/>
+                        <segue destination="9ai-T6-TzD" kind="custom" identifier="TellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasa" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="PeH-DQ-bHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyM-3X-gEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -13068,6 +13070,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                             <constraint firstItem="I8s-Hm-1Fj" firstAttribute="trailing" secondItem="DuZ-KV-Ap3" secondAttribute="trailing" id="zuc-1W-dQ8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SOj-rO-ntR"/>
                     <connections>
                         <outlet property="addPhotosView" destination="bVu-zl-MIm" id="MqB-2N-G9A"/>
                         <outlet property="backButtonLabel" destination="z1O-2N-1lv" id="ENx-wS-h2m"/>

@@ -16,6 +16,10 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var guestFavouratesField: [String] = []
+    var standoutAmenitiesField: [String] = []
+    var safetyItemsField: [String] = []
+    
     var guestFavourates: [PlaceOffers] = [
         
         PlaceOffers(placeImageName: "wifi", placeName: "Wifi"),
@@ -296,18 +300,25 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
         switch indexPath.section {
         case 0:
             if let cell = collectionView.cellForItem(at: indexPath) as? GuestsFavourateBodyCell {
+                let guestFavourate = guestFavourates[indexPath.row]
                 cell.mainView.layer.borderWidth = 2
                 cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+                guestFavouratesField.append(guestFavourate.placeName)
+                print(guestFavouratesField)
             }
         case 1:
             if let cell = collectionView.cellForItem(at: indexPath) as? StandoutAmenitiesBodyCell {
+                let standoutAmenity = standoutAmenities[indexPath.row]
                 cell.mainView.layer.borderWidth = 2
                 cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+                standoutAmenitiesField.append(standoutAmenity.placeName)
             }
         case 2:
             if let cell = collectionView.cellForItem(at: indexPath) as? SafeyItemsBodyCell {
+                let safetyItem = safetyItems[indexPath.row]
                 cell.mainView.layer.borderWidth = 2
                 cell.mainView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+                safetyItemsField.append(safetyItem.placeName)
             }
         default:
             break
@@ -320,18 +331,25 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDelega
         switch indexPath.section {
         case 0:
             if let cell = collectionView.cellForItem(at: indexPath) as? GuestsFavourateBodyCell {
+                let guestFavourate = guestFavourates[indexPath.row]
                 cell.mainView.layer.borderWidth = 0.4
                 cell.mainView.backgroundColor = UIColor.white
+                guestFavouratesField.removeAll { $0 == guestFavourate.placeName }
+                print(guestFavouratesField)
             }
         case 1:
             if let cell = collectionView.cellForItem(at: indexPath) as? StandoutAmenitiesBodyCell {
+                let standoutAmenity = standoutAmenities[indexPath.row]
                 cell.mainView.layer.borderWidth = 0.4
                 cell.mainView.backgroundColor = UIColor.white
+                standoutAmenitiesField.removeAll { $0 == standoutAmenity.placeName }
             }
         case 2:
             if let cell = collectionView.cellForItem(at: indexPath) as? SafeyItemsBodyCell {
+                let safetyItem = safetyItems[indexPath.row]
                 cell.mainView.layer.borderWidth = 0.4
                 cell.mainView.backgroundColor = UIColor.white
+                safetyItemsField.removeAll { $0 == safetyItem.placeName }
             }
         default:
             break
