@@ -100,7 +100,7 @@ struct K {
             
             struct NowLetsGiveYourCasaATitle {
                 static let placeTitleField = "PlaceTitle"
-                static let giveYourCasaATitleField = "WhatYourPlaceHasToOffer"
+                static let giveYourCasaATitleField = "GiveYourCasaATitle"
             }
             
         }

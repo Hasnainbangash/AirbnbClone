@@ -31,6 +31,7 @@ class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
         self.transitioningDelegate = self
         
         textFieldView.delegate = self
+        textFieldView.text = ""
         
         setupCornerRadius()
         setupBorderWidth()
