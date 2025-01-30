@@ -31,17 +31,10 @@ class CreateYourDescriptionViewController: UIViewController {
         self.transitioningDelegate = self
         
         textFieldView.delegate = self
-        
-        initialSetup()
+
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
-    }
-    
-    func initialSetup() {
-        nextButtonLabel.isEnabled = false
-        nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
-        nextButtonLabel.tintColor = UIColor.white
     }
     
     func setupCornerRadius() {
