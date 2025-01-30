@@ -61,6 +61,7 @@ struct K {
             static let usersField = "users"
             static let userIDField = "userID"
             static let dateField = "date"
+            static let listingIDField = "ListingID"
             
             struct WhichOfTheseBestDescribeYourPlace {
                 static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"

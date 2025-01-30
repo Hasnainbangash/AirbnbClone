@@ -121,7 +121,15 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         
         if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName {
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField).document(userID).collection(K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.placeDescriptionField).addDocument(data: [
+            let listingID = UUID().uuidString
+            UserDefaults.standard.set(listingID, forKey: "Listing ID")
+            print(listingID)
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.placeDescriptionField)
+                .document(listingID)
+                .setData([
                 K.HostYourPlaceCell.FStore.userIDField : userID,
                 K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.bestDescribeYourPlaceNameField : placeName,
                 K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,

@@ -91,22 +91,33 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         print("Next button pressed")
-    
+        
         if let userID = Auth.auth().currentUser?.uid, let placeName = typeOfPlaceName, let placeDescription = typeOfPlaceDescription {
-            
-            db.collection(K.HostYourPlaceCell.FStore.usersField).document(userID).collection(K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeTypeDescriptionField).addDocument(data: [
-                K.HostYourPlaceCell.FStore.userIDField : userID,
-                K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeNameField : placeName,
-                K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeDescriptionField : placeDescription,
-                K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
-            ]) { error in
-                if let e = error {
-                    print("There was an issue saving data to Firestore, \(e.localizedDescription)")
-                } else {
-                    print("Successfully saved place description to Firestore.")
-                    self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.whichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue, sender: self)
-                }
+    
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
             }
+            
+            print(listingID)
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeTypeDescriptionField)
+                .document(listingID)  // Use the unique listing ID
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeNameField : placeName,
+                    K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeDescriptionField : placeDescription,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved place description to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.whichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue, sender: self)
+                    }
+                }
         }
         
     }
