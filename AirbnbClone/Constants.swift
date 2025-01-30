@@ -30,6 +30,7 @@ struct K {
             static let shareSomeBasicAboutYourPlaceToMakeYourPlaceStandoutSegue = "ShareSomeBasicAboutYourPlaceToMakeYourPlaceStandout"
             static let tellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasaSegue = "TellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasa"
             static let nowLetsGiveYourCasaATitleToCreateYourDescriptionSegue = "NowLetsGiveYourCasaATitleToCreateYourDescription"
+            static let createYourDescriptionToFinishUpAndPublishSegue = "CreateYourDescriptionToFinishUpAndPublish"
         }
         
         struct Identifiers {
@@ -101,6 +102,11 @@ struct K {
             struct NowLetsGiveYourCasaATitle {
                 static let placeTitleField = "PlaceTitle"
                 static let giveYourCasaATitleField = "GiveYourCasaATitle"
+            }
+            
+            struct CreateYourDescription {
+                static let placeDescriptionField = "PlaceDescriptionTitle"
+                static let createYourDescriptionField = "CreateYourDescription"
             }
             
         }

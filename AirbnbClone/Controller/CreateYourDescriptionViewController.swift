@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class CreateYourDescriptionViewController: UIViewController {
 
@@ -13,7 +15,13 @@ class CreateYourDescriptionViewController: UIViewController {
     @IBOutlet weak var questionsButtonLabel: UIButton!
     @IBOutlet weak var backButtonLabel: UIButton!
     @IBOutlet weak var nextButtonLabel: UIButton!
+    
     @IBOutlet weak var textFieldView: UITextView!
+    @IBOutlet weak var charactersAvailableCount: UILabel!
+    
+    let db = Firestore.firestore()
+    
+    let maxCharacterLimit = 500
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +29,9 @@ class CreateYourDescriptionViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.transitioningDelegate = self
+        
+        textFieldView.delegate = self
+        textFieldView.text = ""
         
         setupCornerRadius()
         setupBorderWidth()
@@ -62,6 +73,36 @@ class CreateYourDescriptionViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        
+        if let userID = Auth.auth().currentUser?.uid, let placeDescription = textFieldView.text {
+            
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.CreateYourDescription.createYourDescriptionField)
+                .document(listingID)
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.CreateYourDescription.placeDescriptionField: placeDescription,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved what your place has to offer to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.nowLetsGiveYourCasaATitleToCreateYourDescriptionSegue, sender: self)
+                    }
+                }
+            
+        }
+        
+    }
+    
 }
 
 extension CreateYourDescriptionViewController: UIViewControllerTransitioningDelegate {
@@ -70,4 +111,44 @@ extension CreateYourDescriptionViewController: UIViewControllerTransitioningDele
         return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
+}
+
+extension CreateYourDescriptionViewController: UITextViewDelegate {
+    
+    func updateCharacterCount() {
+        let currentText = textFieldView.text ?? ""
+        let charactersLeft = maxCharacterLimit - currentText.count
+        
+        // Update character count label
+        charactersAvailableCount.text = "\(charactersLeft)"
+        
+        // Enable/disable next button based on the character count
+        updateNextButtonState()
+    }
+    
+    func updateNextButtonState() {
+        let currentText = textFieldView.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        if currentText.isEmpty || currentText.count > maxCharacterLimit {
+            nextButtonLabel.isEnabled = false
+            nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+            nextButtonLabel.tintColor = UIColor.white
+        } else {
+            nextButtonLabel.isEnabled = true
+            nextButtonLabel.backgroundColor = UIColor.black
+            nextButtonLabel.tintColor = UIColor.white
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let currentText = textView.text ?? ""
+        
+        // If the current text exceeds the max limit, truncate it
+        if currentText.count > maxCharacterLimit {
+            textView.text = String(currentText.prefix(maxCharacterLimit))
+        }
+        
+        // Update character count
+        updateCharacterCount()
+    }
 }
