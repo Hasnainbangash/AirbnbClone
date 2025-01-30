@@ -37,6 +37,9 @@ class NowSetYourPriceViewController: UIViewController {
     
     @IBOutlet weak var showLessStackView: UIStackView!
     
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var priceTextFieldEditButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -111,6 +114,11 @@ class NowSetYourPriceViewController: UIViewController {
         
         // Optional: Change the text color (you can set any color you prefer)
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
+    }
+    
+    
+    @IBAction func priceEditButtonPressed(_ sender: UIButton) {
+        priceTextField.becomeFirstResponder()
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {

@@ -4960,16 +4960,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vIC-Wv-e8q">
-                                <rect key="frame" x="16" y="54.000000000000014" width="370" height="155.33333333333337"/>
+                                <rect key="frame" x="16" y="54" width="370" height="153"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-oc-0rQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="64.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="62"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AvY-Ao-HvM">
-                                                <rect key="frame" x="19" y="14" width="332" height="34"/>
+                                                <rect key="frame" x="19" y="14.000000000000002" width="332" height="31.666666666666671"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="axG-U3-AAN">
-                                                        <rect key="frame" x="0.0" y="0.99999999999999645" width="30" height="32.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="30" height="30"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="Jcc-rW-WeC"/>
@@ -4977,7 +4977,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myr-vB-dHJ">
-                                                        <rect key="frame" x="38" y="0.0" width="294" height="34"/>
+                                                        <rect key="frame" x="38" y="0.0" width="294" height="31.666666666666668"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="ZGw-hb-nM9"/>
                                                             <constraint firstAttribute="width" constant="292" id="d15-Gh-XwB"/>
@@ -4997,7 +4997,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-6z-W3m">
-                                        <rect key="frame" x="0.0" y="95.333333333333343" width="370" height="60"/>
+                                        <rect key="frame" x="0.0" y="93" width="370" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-3w-Znn">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -9006,7 +9006,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                 <rect key="frame" x="48" y="0.0" width="306" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hosted by Amir " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sys-MN-YS4">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="14"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="21" id="6fE-so-XVW"/>
                                                                             <constraint firstAttribute="width" constant="125" id="xbE-8D-96r"/>
@@ -9016,7 +9016,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super host. 9 years hosting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9j-7V-3Wi">
-                                                                        <rect key="frame" x="0.0" y="15" width="306" height="25"/>
+                                                                        <rect key="frame" x="0.0" y="22" width="306" height="18"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="25" id="oBC-NR-Vzk"/>
                                                                             <constraint firstAttribute="width" constant="306" id="pmE-uH-wcv"/>
@@ -15089,17 +15089,17 @@ Identity verification is one of the ways we keep Aironb secure.</string>
             <objects>
                 <viewController id="HN7-hk-qI7" customClass="NowSetYourPriceViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Oj-qd-O03">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UZr-Mb-oTR">
-                                <rect key="frame" x="0.0" y="62" width="404" height="778"/>
+                                <rect key="frame" x="0.0" y="62" width="398" height="1404"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BI3-jo-uwU">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="43"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="160" translatesAutoresizingMaskIntoConstraints="NO" id="R16-7c-pi0">
-                                                <rect key="frame" x="10" y="0.0" width="384" height="43"/>
+                                                <rect key="frame" x="10" y="0.0" width="378" height="43"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzW-qq-w1w">
                                                         <rect key="frame" x="0.0" y="0.0" width="109" height="43"/>
@@ -15112,7 +15112,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                         <buttonConfiguration key="configuration" style="plain" title="Save &amp; exit"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjT-a4-ci2">
-                                                        <rect key="frame" x="269" y="0.0" width="115" height="43"/>
+                                                        <rect key="frame" x="269" y="0.0" width="109" height="43"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="112" id="MeH-Qw-c6S"/>
                                                             <constraint firstAttribute="height" constant="43" id="oW2-p3-eVj"/>
@@ -15133,10 +15133,10 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUU-zH-sR5">
-                                        <rect key="frame" x="0.0" y="51" width="404" height="609"/>
+                                        <rect key="frame" x="0.0" y="51" width="398" height="1235"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qkJ-0d-Ysy">
-                                                <rect key="frame" x="74.666666666666686" y="513" width="255" height="81"/>
+                                                <rect key="frame" x="71.666666666666686" y="1139" width="255" height="81"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPo-UC-5AX">
                                                         <rect key="frame" x="0.0" y="0.0" width="255" height="44"/>
@@ -15188,26 +15188,21 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-mK-vvP">
-                                                <rect key="frame" x="50" y="21" width="304" height="567"/>
+                                                <rect key="frame" x="47" y="338.66666666666669" width="304" height="557.66666666666652"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-eR-VzG">
-                                                        <rect key="frame" x="37" y="0.0" width="230" height="105"/>
+                                                        <rect key="frame" x="37" y="0.0" width="230" height="95.666666666666671"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SgM-6X-7qj">
-                                                                <rect key="frame" x="22.333333333333329" y="0.0" width="185" height="67"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="SgM-6X-7qj">
+                                                                <rect key="frame" x="12.333333333333329" y="0.0" width="205" height="57.666666666666664"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US$19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-RL-K3B">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="67"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="67" id="6sc-9e-nZu"/>
-                                                                            <constraint firstAttribute="width" constant="130" id="uhy-t3-NB7"/>
-                                                                        </constraints>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="US$19" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTP-fX-OH6">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="57.666666666666664"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXk-Ea-xRi">
-                                                                        <rect key="frame" x="135" y="22" width="50" height="45"/>
+                                                                        <rect key="frame" x="155" y="12.666666666666629" width="50" height="45"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="pf2-Bp-OuS"/>
                                                                             <constraint firstAttribute="width" constant="50" id="yJ3-FA-o9E"/>
@@ -15215,11 +15210,14 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="priceEditButtonPressed:" destination="HN7-hk-qI7" eventType="touchUpInside" id="TPp-3W-V88"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PFX-0K-iiu">
-                                                                <rect key="frame" x="0.0" y="75" width="230" height="30"/>
+                                                                <rect key="frame" x="0.0" y="65.666666666666686" width="230" height="30"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg5-fw-vQi">
                                                                         <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
@@ -15290,7 +15288,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p64-eP-QiX">
-                                                        <rect key="frame" x="0.0" y="113" width="304" height="454"/>
+                                                        <rect key="frame" x="0.0" y="103.66666666666669" width="304" height="454.00000000000006"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mm6-uU-vMN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="424"/>
@@ -15645,7 +15643,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kis-Nz-03u">
-                                                                                        <rect key="frame" x="77" y="4.6666666666666634" width="15" height="8"/>
+                                                                                        <rect key="frame" x="77" y="4.6666666666666634" width="15" height="7.9999999999999991"/>
                                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="25" id="H24-mm-ECS"/>
@@ -15684,7 +15682,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3cS-HN-Idz">
-                                                <rect key="frame" x="50" y="49" width="257" height="65"/>
+                                                <rect key="frame" x="50" y="49" width="251" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now, set your price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-HJ-2IC">
                                                         <rect key="frame" x="0.0" y="0.0" width="251" height="36"/>
@@ -15722,13 +15720,13 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                         <viewLayoutGuide key="frameLayoutGuide" id="rwz-vP-xnb"/>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pB-qy-cE4">
-                                        <rect key="frame" x="0.0" y="668" width="404" height="110"/>
+                                        <rect key="frame" x="0.0" y="1294" width="398" height="110"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-bT-8RW">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="87"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="87"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8dK-13-Lpq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9O-2v-ovX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="5"/>
@@ -15821,7 +15819,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBG-pl-8fW">
-                                                                <rect key="frame" x="274" y="0.0" width="130" height="5"/>
+                                                                <rect key="frame" x="274" y="0.0" width="124" height="5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IC-TP-GHY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="26" height="5"/>
@@ -15856,7 +15854,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQ8-99-YUP">
-                                                                        <rect key="frame" x="104" y="0.0" width="26" height="5"/>
+                                                                        <rect key="frame" x="104" y="0.0" width="20" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="6Cb-D0-0Xa"/>
@@ -15868,10 +15866,10 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyi-Ne-yNk">
-                                                        <rect key="frame" x="0.0" y="30" width="404" height="57"/>
+                                                        <rect key="frame" x="0.0" y="30" width="398" height="57"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="210" translatesAutoresizingMaskIntoConstraints="NO" id="Ibm-zi-qhq">
-                                                                <rect key="frame" x="12" y="7" width="380" height="43"/>
+                                                                <rect key="frame" x="12" y="7" width="374" height="43"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijx-Op-FUf">
                                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="43"/>
@@ -15887,7 +15885,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TM-ZR-Lzm">
-                                                                        <rect key="frame" x="295" y="0.0" width="85" height="43"/>
+                                                                        <rect key="frame" x="295" y="0.0" width="79" height="43"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="43" id="9BB-Sc-zlH"/>
@@ -15933,6 +15931,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                             <constraint firstItem="UZr-Mb-oTR" firstAttribute="top" secondItem="bjh-zQ-KS0" secondAttribute="top" id="wzA-vi-M6J"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="402" height="1500"/>
                     <connections>
                         <outlet property="allPricesStackView" destination="p64-eP-QiX" id="Ar5-6Z-iz3"/>
                         <outlet property="backButtonLabel" destination="Ijx-Op-FUf" id="l6l-En-S4G"/>
@@ -15943,6 +15942,8 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="guestPricesBeforeTaxesStackView" destination="PFX-0K-iiu" id="gpV-vd-ULc"/>
                         <outlet property="learnMoreAboutPricingButtonLabel" destination="hOc-kt-6TR" id="YeA-Cb-f8R"/>
                         <outlet property="nextButtonLabel" destination="2TM-ZR-Lzm" id="Qy8-QQ-muP"/>
+                        <outlet property="priceTextField" destination="ZTP-fX-OH6" id="KNU-Jq-VGC"/>
+                        <outlet property="priceTextFieldEditButton" destination="oXk-Ea-xRi" id="iwb-Mm-WiO"/>
                         <outlet property="questionsButtonLabel" destination="NjT-a4-ci2" id="dPX-wx-xhJ"/>
                         <outlet property="saveAndExitButtonLabel" destination="rzW-qq-w1w" id="CZv-Nl-oe9"/>
                         <outlet property="showLessStackView" destination="2cq-lG-kXo" id="XrJ-95-dWS"/>
@@ -17093,7 +17094,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vBf-pG-tWj"/>
+        <segue reference="uTC-J7-xMi"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Door with flower" width="208.66667175292969" height="138.33332824707031"/>
