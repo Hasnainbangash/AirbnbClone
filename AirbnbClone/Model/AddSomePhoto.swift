@@ -5,10 +5,21 @@
 //  Created by Elexoft on 30/01/2025.
 //
 
-import Foundation
+import UIKit
 
 struct AddSomePhoto {
     
-    var image: String
+   let image: Any // Can be String or UIImage
+   let isAsset: Bool // To distinguish between asset names and UIImages
+   
+   init(image: String) {
+       self.image = image
+       self.isAsset = true
+   }
+   
+   init(uiImage: UIImage) {
+       self.image = uiImage
+       self.isAsset = false
+   }
     
 }

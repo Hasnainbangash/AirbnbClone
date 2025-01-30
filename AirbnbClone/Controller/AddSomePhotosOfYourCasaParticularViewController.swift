@@ -21,11 +21,7 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
     
     var addSomePhotos: [AddSomePhoto] = [
         
-        AddSomePhoto(image: "hotelroomimage4"),
-        AddSomePhoto(image: "hotelroomimage2"),
-        AddSomePhoto(image: "hotelroomimage5"),
-        AddSomePhoto(image: "hotelroomimage1"),
-        AddSomePhoto(image: "hotelroomimage3")
+        AddSomePhoto(image: "hotelroomimage4")
         
     ]
     
@@ -79,6 +75,19 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
     
+    @IBAction func addPhotosButtonPressed(_ sender: UIButton) {
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.allowsEditing = true
+        present(imagePickerController, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func takeNewPhotosButtonPressed(_ sender: UIButton) {
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -105,7 +114,7 @@ extension AddSomePhotosOfYourCasaParticularViewController: UICollectionViewDataS
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.HostYourPlaceCell.Identifiers.uploadedPhotosCollectionCellIdentifier, for: indexPath) as? UploadedPhotosCollectionCell
         
-        cell?.configureData(uploadedImage: addPhoto.image)
+        cell?.configureData(uploadedPhoto: addPhoto)
         
         return cell ?? UICollectionViewCell()
         
@@ -129,4 +138,40 @@ extension AddSomePhotosOfYourCasaParticularViewController: UICollectionViewDeleg
         return 5
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Show alert to confirm deletion
+        let alert = UIAlertController(title: "Remove Photo",
+                                    message: "Do you want to remove this photo?",
+                                    preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Remove", style: .destructive) { [weak self] _ in
+            self?.addSomePhotos.remove(at: indexPath.row)
+            self?.collectionView.deleteItems(at: [indexPath])
+        })
+        
+        present(alert, animated: true)
+    }
+    
+}
+
+extension AddSomePhotosOfYourCasaParticularViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            addSomePhotos.append(AddSomePhoto(uiImage: editedImage))
+            collectionView.reloadData()
+            print("Edited image added!")
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            addSomePhotos.append(AddSomePhoto(uiImage: originalImage))
+            collectionView.reloadData()
+            print("Original image added!")
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }

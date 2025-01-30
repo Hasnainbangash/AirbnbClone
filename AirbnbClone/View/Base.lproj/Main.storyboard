@@ -12802,14 +12802,26 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-iy-rCR">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="79"/>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                                <connections>
+                                                                                    <action selector="addPhotosButtonPressed:" destination="9ai-T6-TzD" eventType="touchUpInside" id="3eU-rE-H8D"/>
+                                                                                </connections>
+                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
+                                                                            <constraint firstAttribute="bottom" secondItem="F3r-iy-rCR" secondAttribute="bottom" id="8lc-jW-74o"/>
                                                                             <constraint firstAttribute="height" constant="79" id="CUI-Ih-Rb0"/>
+                                                                            <constraint firstItem="F3r-iy-rCR" firstAttribute="leading" secondItem="bVu-zl-MIm" secondAttribute="leading" id="Ma5-m0-jLM"/>
+                                                                            <constraint firstItem="F3r-iy-rCR" firstAttribute="top" secondItem="bVu-zl-MIm" secondAttribute="top" id="RcF-zT-khT"/>
                                                                             <constraint firstAttribute="bottom" secondItem="xb4-hp-5hi" secondAttribute="bottom" constant="25.5" id="S3z-Cl-Bnt"/>
                                                                             <constraint firstItem="xb4-hp-5hi" firstAttribute="leading" secondItem="bVu-zl-MIm" secondAttribute="leading" constant="8" id="gbu-uL-9KU"/>
                                                                             <constraint firstAttribute="width" constant="347" id="r67-BJ-Jo4"/>
                                                                             <constraint firstItem="xb4-hp-5hi" firstAttribute="top" secondItem="bVu-zl-MIm" secondAttribute="top" constant="25.5" id="uMO-ML-TZi"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="F3r-iy-rCR" secondAttribute="trailing" id="y7Y-k5-yL7"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AND-2m-ACn">
@@ -12838,14 +12850,26 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs8-gk-Cjx">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="79"/>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                                <connections>
+                                                                                    <action selector="takeNewPhotosButtonPressed:" destination="9ai-T6-TzD" eventType="touchUpInside" id="ge6-ns-dmg"/>
+                                                                                </connections>
+                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="qs8-gk-Cjx" secondAttribute="trailing" id="5zJ-Dm-8oO"/>
                                                                             <constraint firstItem="XXd-TN-EOU" firstAttribute="top" secondItem="AND-2m-ACn" secondAttribute="top" constant="25.5" id="BTf-0h-6v1"/>
                                                                             <constraint firstAttribute="bottom" secondItem="XXd-TN-EOU" secondAttribute="bottom" constant="25.5" id="CQX-Nr-qI7"/>
                                                                             <constraint firstItem="XXd-TN-EOU" firstAttribute="leading" secondItem="AND-2m-ACn" secondAttribute="leading" constant="8" id="OAQ-Qk-f46"/>
+                                                                            <constraint firstItem="qs8-gk-Cjx" firstAttribute="top" secondItem="AND-2m-ACn" secondAttribute="top" id="RXO-vU-azs"/>
                                                                             <constraint firstAttribute="height" constant="79" id="fIe-gH-dng"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="qs8-gk-Cjx" secondAttribute="bottom" id="h7D-I7-b2E"/>
                                                                             <constraint firstAttribute="width" constant="347" id="i9q-Fg-pdf"/>
+                                                                            <constraint firstItem="qs8-gk-Cjx" firstAttribute="leading" secondItem="AND-2m-ACn" secondAttribute="leading" id="jqi-cf-qBb"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>

@@ -16,8 +16,12 @@ class UploadedPhotosCollectionCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configureData(uploadedImage: String) {
-        self.uploadedImageVIew.image = UIImage(named: uploadedImage)
+    func configureData(uploadedPhoto: AddSomePhoto) {
+        if uploadedPhoto.isAsset {
+            self.uploadedImageVIew.image = UIImage(named: uploadedPhoto.image as! String)
+        } else {
+            self.uploadedImageVIew.image = uploadedPhoto.image as? UIImage
+        }
     }
     
 }
