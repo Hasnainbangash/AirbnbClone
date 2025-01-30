@@ -84,6 +84,12 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        
+        
+        
+    }
+    
     @IBAction func guestsButtons(_ sender: UIButton) {
         
         // Increase or decrease the guest count based on the tag

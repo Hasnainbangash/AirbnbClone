@@ -12016,7 +12016,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                                         <connections>
-                                                                            <segue destination="r3c-Zd-0ij" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="q1x-bo-jkw"/>
+                                                                            <action selector="nextButtonPressed:" destination="GO1-jo-K2t" eventType="touchUpInside" id="6gR-sW-IrW"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -12061,6 +12061,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="numberofGuests" destination="4zY-zl-8gf" id="xly-AC-9CJ"/>
                         <outlet property="questionsButtonLabel" destination="KET-ie-xzR" id="fwC-Mc-cFx"/>
                         <outlet property="saveAndExitButtonLabel" destination="117-6q-Ubz" id="Mbc-W8-Kvt"/>
+                        <segue destination="r3c-Zd-0ij" kind="custom" identifier="ShareSomeBasicAboutYourPlaceToMakeYourPlaceStandout" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="sdH-7M-WcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSU-36-Bhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -12393,6 +12394,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                             <constraint firstItem="XhA-aq-M04" firstAttribute="top" secondItem="esa-az-oqa" secondAttribute="top" id="hE4-qV-pWg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OfR-UR-kXA"/>
                     <connections>
                         <outlet property="backButtonLabel" destination="gc8-29-Lut" id="IHa-qe-cPV"/>
                         <outlet property="nextButtonLabel" destination="MiF-Zo-epd" id="SEg-0y-IaK"/>
