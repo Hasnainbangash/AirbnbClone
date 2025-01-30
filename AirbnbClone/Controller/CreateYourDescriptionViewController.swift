@@ -31,11 +31,17 @@ class CreateYourDescriptionViewController: UIViewController {
         self.transitioningDelegate = self
         
         textFieldView.delegate = self
-        textFieldView.text = ""
         
+        initialSetup()
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+    }
+    
+    func initialSetup() {
+        nextButtonLabel.isEnabled = false
+        nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+        nextButtonLabel.tintColor = UIColor.white
     }
     
     func setupCornerRadius() {
@@ -95,7 +101,7 @@ class CreateYourDescriptionViewController: UIViewController {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
                     } else {
                         print("Successfully saved what your place has to offer to Firestore.")
-                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.nowLetsGiveYourCasaATitleToCreateYourDescriptionSegue, sender: self)
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.createYourDescriptionToFinishUpAndPublishSegue, sender: self)
                     }
                 }
             
