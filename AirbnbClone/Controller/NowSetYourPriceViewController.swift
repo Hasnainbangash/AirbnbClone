@@ -151,7 +151,7 @@ class NowSetYourPriceViewController: UIViewController {
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
                     } else {
-                        print("Successfully saved what your place has to offer to Firestore.")
+                        print("Successfully saved yur place price to Firestore.")
                         self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.nowSetYourPriceToAddDiscountSegue, sender: self)
                     }
                 }
