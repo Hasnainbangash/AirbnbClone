@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class NowSetYourPriceViewController: UIViewController {
     
@@ -39,6 +41,8 @@ class NowSetYourPriceViewController: UIViewController {
     
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var priceTextFieldEditButton: UIButton!
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,7 +132,31 @@ class NowSetYourPriceViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
-        
+        if let userID = Auth.auth().currentUser?.uid, let placePrice = priceTextField.text {
+            
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.NowSetYourPrice.setYourPriceField)
+                .document(listingID)
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField : placePrice,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved what your place has to offer to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.nowSetYourPriceToAddDiscountSegue, sender: self)
+                    }
+                }
+            
+        }
         
     }
     
