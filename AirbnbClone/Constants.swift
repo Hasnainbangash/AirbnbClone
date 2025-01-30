@@ -28,6 +28,7 @@ struct K {
             static let whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue = "WhichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHave"
             static let whichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue = "WhichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue"
             static let shareSomeBasicAboutYourPlaceToMakeYourPlaceStandoutSegue = "ShareSomeBasicAboutYourPlaceToMakeYourPlaceStandout"
+            static let makeYourPlaceStandoutToTellGuestWhatyourPlaceHasToOfferSegue = "MakeYourPlaceStandoutToTellGuestWhatyourPlaceHasToOffer"
         }
         
         struct Identifiers {

@@ -12357,9 +12357,6 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                                                        <connections>
-                                                                            <segue destination="UtJ-dt-sA3" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="6wy-oN-z57"/>
-                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -12400,6 +12397,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="nextButtonLabel" destination="MiF-Zo-epd" id="SEg-0y-IaK"/>
                         <outlet property="questionsButtonLabel" destination="JOj-Rj-zWZ" id="reG-Wf-JVD"/>
                         <outlet property="saveAndExitButtonLabel" destination="2le-BN-4xc" id="6U4-W8-cFH"/>
+                        <segue destination="UtJ-dt-sA3" kind="custom" identifier="MakeYourPlaceStandoutToTellGuestWhatyourPlaceHasToOffer" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="Ouc-0D-qgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJO-oo-7lp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -12641,6 +12639,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                                         <connections>
+                                                                            <action selector="nextButtonPressed:" destination="UtJ-dt-sA3" eventType="touchUpInside" id="i6J-5P-aiG"/>
                                                                             <segue destination="9ai-T6-TzD" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="BL6-ea-Z86"/>
                                                                         </connections>
                                                                     </button>
@@ -12677,6 +12676,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                             <constraint firstItem="VlC-By-3xX" firstAttribute="top" secondItem="7xC-PL-kH8" secondAttribute="top" id="xvP-m6-3nJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bcf-ne-u1a"/>
                     <connections>
                         <outlet property="backButtonLabel" destination="nWq-R3-nT6" id="CN8-Yr-l16"/>
                         <outlet property="collectionView" destination="rhb-wz-WQ8" id="dMN-Ng-Mlz"/>
