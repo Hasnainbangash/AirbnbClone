@@ -11,6 +11,7 @@
 		6EF85CB38B5B2C0C556D9975 /* Pods_AirbnbClone_AirbnbCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5374581E137D374F410F205E /* Pods_AirbnbClone_AirbnbCloneUITests.framework */; };
 		D0002B5B2D4904D40006CDC3 /* CountryPickerView in Frameworks */ = {isa = PBXBuildFile; productRef = D0002B5A2D4904D40006CDC3 /* CountryPickerView */; };
 		D00DBBD22D38E0D600357168 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = D00DBBD12D38E0D600357168 /* FloatingPanel */; };
+		D01B353A2D4BAA74009BAECA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D01B35392D4BAA74009BAECA /* IQKeyboardManagerSwift */; };
 		D0DDF2602D48DE9900EAF68C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D0DDF25F2D48DE9900EAF68C /* FirebaseAuth */; };
 		D0DDF2622D48DE9900EAF68C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D0DDF2612D48DE9900EAF68C /* FirebaseFirestore */; };
 		E556AD1E2AA4986438485EC3 /* Pods_AirbnbClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E06278B4203BB890E8A0EAF /* Pods_AirbnbClone.framework */; };
@@ -89,6 +90,7 @@
 				D0DDF2622D48DE9900EAF68C /* FirebaseFirestore in Frameworks */,
 				D0DDF2602D48DE9900EAF68C /* FirebaseAuth in Frameworks */,
 				D00DBBD22D38E0D600357168 /* FloatingPanel in Frameworks */,
+				D01B353A2D4BAA74009BAECA /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +262,7 @@
 				D00DBBD02D38E0D600357168 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 				D0DDF25E2D48DE9900EAF68C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D0002B592D4904D40006CDC3 /* XCRemoteSwiftPackageReference "CountryPickerView" */,
+				D01B35382D4BAA74009BAECA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D03A19D52D2CEB2F00E1468E /* Products */;
@@ -711,6 +714,14 @@
 				minimumVersion = 2.8.6;
 			};
 		};
+		D01B35382D4BAA74009BAECA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		D0DDF25E2D48DE9900EAF68C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -731,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D00DBBD02D38E0D600357168 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
 			productName = FloatingPanel;
+		};
+		D01B35392D4BAA74009BAECA /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D01B35382D4BAA74009BAECA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		D0DDF25F2D48DE9900EAF68C /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
