@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
     
@@ -15,6 +17,11 @@ class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
     @IBOutlet weak var nextButtonLabel: UIButton!
     
     @IBOutlet weak var textFieldView: UITextView!
+    @IBOutlet weak var charactersAvailableCount: UILabel!
+    
+    let db = Firestore.firestore()
+    
+    let maxCharacterLimit = 32
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +74,32 @@ class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
+        if let userID = Auth.auth().currentUser?.uid, let placeTitle = textFieldView.text {
+            
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.giveYourCasaATitleField)
+                .document(listingID)
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.placeTitleField: placeTitle,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved what your place has to offer to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.nowLetsGiveYourCasaATitleToCreateYourDescriptionSegue, sender: self)
+                    }
+                }
+            
+        }
+        
     }
     
 }
@@ -81,8 +114,21 @@ extension NowLetsGiveYourCasaParticularaTitleViewController: UIViewControllerTra
 
 extension NowLetsGiveYourCasaParticularaTitleViewController: UITextViewDelegate {
     
+    func updateCharacterCount() {
+        let currentText = textFieldView.text ?? ""
+        let charactersLeft = maxCharacterLimit - currentText.count
+        
+        // Update character count label
+        charactersAvailableCount.text = "\(charactersLeft)"
+        
+        // Enable/disable next button based on the character count
+        updateNextButtonState()
+    }
+    
     func updateNextButtonState() {
-        if textFieldView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        let currentText = textFieldView.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        if currentText.isEmpty || currentText.count > maxCharacterLimit {
             nextButtonLabel.isEnabled = false
             nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
             nextButtonLabel.tintColor = UIColor.white
@@ -94,7 +140,14 @@ extension NowLetsGiveYourCasaParticularaTitleViewController: UITextViewDelegate 
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        // Update the next button state whenever the text changes
-        updateNextButtonState()
+        let currentText = textView.text ?? ""
+        
+        // If the current text exceeds the max limit, truncate it
+        if currentText.count > maxCharacterLimit {
+            textView.text = String(currentText.prefix(maxCharacterLimit))
+        }
+        
+        // Update character count
+        updateCharacterCount()
     }
 }
