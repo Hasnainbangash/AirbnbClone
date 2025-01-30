@@ -93,7 +93,7 @@ class CreateYourDescriptionViewController: UIViewController {
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
                     } else {
-                        print("Successfully saved what your place has to offer to Firestore.")
+                        print("Successfully saved your place description to Firestore.")
                         self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.createYourDescriptionToFinishUpAndPublishSegue, sender: self)
                     }
                 }

@@ -101,7 +101,7 @@ class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
                     } else {
-                        print("Successfully saved what your place has to offer to Firestore.")
+                        print("Successfully saved your place title to Firestore.")
                         self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.nowLetsGiveYourCasaATitleToCreateYourDescriptionSegue, sender: self)
                     }
                 }
