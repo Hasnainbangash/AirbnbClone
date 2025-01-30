@@ -89,7 +89,7 @@ struct K {
                 static let guestFavouratesFields = "GuestsFavourates"
                 static let standoutAmenitiesFields = "StandoutAmenities"
                 static let safetyItemsFields = "SafetyItems"
-                static let tellGuestWhatYourPlaceHasToOfferField = "TellGuestWhatYourPlaceHasToOffer"
+                static let tellGuestWhatYourPlaceHasToOfferField = "WhatYourPlaceHasToOffer"
             }
             
         }
