@@ -23,6 +23,8 @@ class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
         
         self.transitioningDelegate = self
         
+        textFieldView.delegate = self
+        
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
@@ -75,4 +77,24 @@ extension NowLetsGiveYourCasaParticularaTitleViewController: UIViewControllerTra
         return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
     }
     
+}
+
+extension NowLetsGiveYourCasaParticularaTitleViewController: UITextViewDelegate {
+    
+    func updateNextButtonState() {
+        if textFieldView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            nextButtonLabel.isEnabled = false
+            nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+            nextButtonLabel.tintColor = UIColor.white
+        } else {
+            nextButtonLabel.isEnabled = true
+            nextButtonLabel.backgroundColor = UIColor.black
+            nextButtonLabel.tintColor = UIColor.white
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        // Update the next button state whenever the text changes
+        updateNextButtonState()
+    }
 }
