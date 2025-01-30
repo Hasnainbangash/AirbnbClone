@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     
@@ -15,6 +17,8 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     @IBOutlet weak var nextButtonLabel: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let db = Firestore.firestore()
     
     var guestFavouratesField: [String] = []
     var standoutAmenitiesField: [String] = []
@@ -137,6 +141,34 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
+        if let userID = Auth.auth().currentUser?.uid {
+            
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.tellGuestWhatYourPlaceHasToOfferField)
+                .document(listingID)
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.guestFavouratesFields: guestFavouratesField,
+                    K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.standoutAmenitiesFields: standoutAmenitiesField,
+                    K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.safetyItemsFields: safetyItemsField,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved place description to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.tellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasaSegue, sender: self)
+                    }
+                }
+            
+        }
+        
     }
     
 }
@@ -229,7 +261,7 @@ extension TellGuestWhatYourPlaceHasToOfferViewController: UICollectionViewDataSo
             return UICollectionReusableView()
         }
     }
-
+    
     
 }
 
