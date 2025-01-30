@@ -16,44 +16,44 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var guestFavourates: [DescribeYourPlace] = [
+    var guestFavourates: [PlaceOffers] = [
         
-        DescribeYourPlace(placeImageName: "wifi", placeName: "Wifi"),
-        DescribeYourPlace(placeImageName: "tv", placeName: "TV"),
-        DescribeYourPlace(placeImageName: "square.split.bottomrightquarter", placeName: "Kitchen"),
-        DescribeYourPlace(placeImageName: "washer", placeName: "Washing machine"),
-        DescribeYourPlace(placeImageName: "parkingsign.radiowaves.left.and.right", placeName: "Free parking on premises"),
-        DescribeYourPlace(placeImageName: "parkingsign.radiowaves.left.and.right.slash", placeName: "Paid parking on premises"),
-        DescribeYourPlace(placeImageName: "snowflake", placeName: "Air conditioning"),
-        DescribeYourPlace(placeImageName: "lamp.table.fill", placeName: "Dedicated workspace"),
-        
-    ]
-    
-    var standoutAmenities: [DescribeYourPlace] = [
-        
-        DescribeYourPlace(placeImageName: "figure.pool.swim", placeName: "Pool"),
-        DescribeYourPlace(placeImageName: "bathtub", placeName: "Hot tub"),
-        DescribeYourPlace(placeImageName: "building", placeName: "Patio"),
-        DescribeYourPlace(placeImageName: "fork.knife", placeName: "BBQ grill"),
-        DescribeYourPlace(placeImageName: "table.furniture", placeName: "Outdoor dining area"),
-        DescribeYourPlace(placeImageName: "flame", placeName: "Firepit"),
-        DescribeYourPlace(placeImageName: "fork.knife", placeName: "Pool table"),
-        DescribeYourPlace(placeImageName: "fireplace", placeName: "Indoor fireplace"),
-        DescribeYourPlace(placeImageName: "pianokeys", placeName: "Piano"),
-        DescribeYourPlace(placeImageName: "figure.walk.treadmill", placeName: "Exercise equipment"),
-        DescribeYourPlace(placeImageName: "water.waves", placeName: "Lake access"),
-        DescribeYourPlace(placeImageName: "cloud.sun", placeName: "Beach access"),
-        DescribeYourPlace(placeImageName: "figure.skiing.downhill", placeName: "Ski-in/out"),
-        DescribeYourPlace(placeImageName: "shower", placeName: "Outdoor Shower"),
+        PlaceOffers(placeImageName: "wifi", placeName: "Wifi"),
+        PlaceOffers(placeImageName: "tv", placeName: "TV"),
+        PlaceOffers(placeImageName: "square.split.bottomrightquarter", placeName: "Kitchen"),
+        PlaceOffers(placeImageName: "washer", placeName: "Washing machine"),
+        PlaceOffers(placeImageName: "parkingsign.radiowaves.left.and.right", placeName: "Free parking on premises"),
+        PlaceOffers(placeImageName: "parkingsign.radiowaves.left.and.right.slash", placeName: "Paid parking on premises"),
+        PlaceOffers(placeImageName: "snowflake", placeName: "Air conditioning"),
+        PlaceOffers(placeImageName: "lamp.table.fill", placeName: "Dedicated workspace"),
         
     ]
     
-    var safetyItems: [DescribeYourPlace] = [
+    var standoutAmenities: [PlaceOffers] = [
         
-        DescribeYourPlace(placeImageName: "light.beacon.min", placeName: "Smoke alarm"),
-        DescribeYourPlace(placeImageName: "cross.case", placeName: "First aid kit"),
-        DescribeYourPlace(placeImageName: "fire.extinguisher", placeName: "Fire extingusher"),
-        DescribeYourPlace(placeImageName: "light.beacon.max", placeName: "Carbon monoxide alarm"),
+        PlaceOffers(placeImageName: "figure.pool.swim", placeName: "Pool"),
+        PlaceOffers(placeImageName: "bathtub", placeName: "Hot tub"),
+        PlaceOffers(placeImageName: "building", placeName: "Patio"),
+        PlaceOffers(placeImageName: "fork.knife", placeName: "BBQ grill"),
+        PlaceOffers(placeImageName: "table.furniture", placeName: "Outdoor dining area"),
+        PlaceOffers(placeImageName: "flame", placeName: "Firepit"),
+        PlaceOffers(placeImageName: "fork.knife", placeName: "Pool table"),
+        PlaceOffers(placeImageName: "fireplace", placeName: "Indoor fireplace"),
+        PlaceOffers(placeImageName: "pianokeys", placeName: "Piano"),
+        PlaceOffers(placeImageName: "figure.walk.treadmill", placeName: "Exercise equipment"),
+        PlaceOffers(placeImageName: "water.waves", placeName: "Lake access"),
+        PlaceOffers(placeImageName: "cloud.sun", placeName: "Beach access"),
+        PlaceOffers(placeImageName: "figure.skiing.downhill", placeName: "Ski-in/out"),
+        PlaceOffers(placeImageName: "shower", placeName: "Outdoor Shower"),
+        
+    ]
+    
+    var safetyItems: [PlaceOffers] = [
+        
+        PlaceOffers(placeImageName: "light.beacon.min", placeName: "Smoke alarm"),
+        PlaceOffers(placeImageName: "cross.case", placeName: "First aid kit"),
+        PlaceOffers(placeImageName: "fire.extinguisher", placeName: "Fire extingusher"),
+        PlaceOffers(placeImageName: "light.beacon.max", placeName: "Carbon monoxide alarm"),
         
     ]
     
