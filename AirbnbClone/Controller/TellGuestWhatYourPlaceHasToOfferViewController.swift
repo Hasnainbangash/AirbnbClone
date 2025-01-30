@@ -162,7 +162,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
                     } else {
-                        print("Successfully saved place description to Firestore.")
+                        print("Successfully saved what your place has to offer to Firestore.")
                         self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.tellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasaSegue, sender: self)
                     }
                 }
