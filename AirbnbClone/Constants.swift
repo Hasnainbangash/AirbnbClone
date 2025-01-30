@@ -43,6 +43,9 @@ struct K {
             
             static let standoutAmenitiesBodyCollectionCellIdentifier = "StandoutAmenitiesBodyReusebaleCell"
             static let standoutAmenitiesHeaderCellIdentifier = "StandoutAmenitiesHeaderReusebaleCell"
+            
+            static let uploadedPhotosCollectionCellIdentifier = "UploadedPhotosCollectionReuseableCell"
+            
         }
         
         struct NibNames {
@@ -57,6 +60,8 @@ struct K {
             
             static let standoutAmenitiesCollectionCellNibName = "StandoutAmenitiesBodyCell"
             static let standoutAmenitiesHeaderCellNibName = "StandoutAmenitiesHeaderCell"
+            
+            static let uploadedPhotosCollectionCellNibName = "UploadedPhotosCollectionCell"
         }
         
         struct FStore {

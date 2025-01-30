@@ -17,12 +17,29 @@ class AddSomePhotosOfYourCasaParticularViewController: UIViewController {
     @IBOutlet weak var addPhotosView: UIView!
     @IBOutlet weak var takeNewPhotosView: UIView!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var addSomePhotos: [AddSomePhoto] = [
+        
+        AddSomePhoto(image: "hotelroomimage4"),
+        AddSomePhoto(image: "hotelroomimage2"),
+        AddSomePhoto(image: "hotelroomimage5"),
+        AddSomePhoto(image: "hotelroomimage1"),
+        AddSomePhoto(image: "hotelroomimage3")
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
         self.transitioningDelegate = self
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.uploadedPhotosCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.uploadedPhotosCollectionCellIdentifier)
         
         setupCornerRadius()
         setupBorderWidth()
@@ -72,6 +89,44 @@ extension AddSomePhotosOfYourCasaParticularViewController: UIViewControllerTrans
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return SlideOutToLeftAnimator() // Use our custom animator for sliding out to the left
+    }
+    
+}
+
+extension AddSomePhotosOfYourCasaParticularViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return addSomePhotos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let addPhoto = addSomePhotos[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.HostYourPlaceCell.Identifiers.uploadedPhotosCollectionCellIdentifier, for: indexPath) as? UploadedPhotosCollectionCell
+        
+        cell?.configureData(uploadedImage: addPhoto.image)
+        
+        return cell ?? UICollectionViewCell()
+        
+    }
+    
+}
+
+extension AddSomePhotosOfYourCasaParticularViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemPerRow: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 6 : 3
+        let padding: CGFloat = 10
+        let totalPadding = padding * (itemPerRow - 1)
+        let availableWidth = collectionView.frame.width - totalPadding
+        let itemWidth = availableWidth / itemPerRow
+
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
     }
     
 }

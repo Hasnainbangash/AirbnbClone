@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UploadedPhotosCollectionReuseableCell" id="gTV-IL-0wX" customClass="UploadedPhotosCollectionCell" customModule="AirbnbClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="169"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="169"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W62-Jh-nh2">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="169"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSP-Xo-AZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="Lra-qR-W0c"/>
+                                    <constraint firstAttribute="width" constant="180" id="lFW-EX-FVR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OSP-Xo-AZZ" secondAttribute="bottom" id="88I-SW-doy"/>
+                            <constraint firstItem="OSP-Xo-AZZ" firstAttribute="leading" secondItem="W62-Jh-nh2" secondAttribute="leading" id="rNp-oJ-eEM"/>
+                            <constraint firstItem="OSP-Xo-AZZ" firstAttribute="top" secondItem="W62-Jh-nh2" secondAttribute="top" id="uDE-Th-dho"/>
+                            <constraint firstAttribute="trailing" secondItem="OSP-Xo-AZZ" secondAttribute="trailing" id="z0i-8T-Xx3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="W62-Jh-nh2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="78D-Ea-8Hu"/>
+                <constraint firstAttribute="trailing" secondItem="W62-Jh-nh2" secondAttribute="trailing" id="LAj-4g-osL"/>
+                <constraint firstAttribute="bottom" secondItem="W62-Jh-nh2" secondAttribute="bottom" id="Pxd-Zx-k4d"/>
+                <constraint firstItem="W62-Jh-nh2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gpe-GF-85H"/>
+            </constraints>
+            <size key="customSize" width="180" height="169"/>
+            <connections>
+                <outlet property="uploadedImageVIew" destination="OSP-Xo-AZZ" id="a1Z-Oa-Bhx"/>
+            </connections>
+            <point key="canvasLocation" x="6.1068702290076331" y="61.619718309859159"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
