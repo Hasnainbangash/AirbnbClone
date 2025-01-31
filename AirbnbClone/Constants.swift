@@ -82,15 +82,15 @@ struct K {
             }
             
             struct WhichTypeOfplaceWillGuestHave {
-                static let placeNameField = "Placename"
-                static let placeDescriptionField = "PlaceDescription"
+                static let placeNameField = "TypeOfPlaceGuestHaveName"
+                static let placeDescriptionField = "TypeOfPlaceGuestHaveDescription"
                 static let placeTypeDescriptionField = "PlaceTypeDescription"
             }
             
             struct WhereYourPlaceLocated {
-                static let placeNameField = "Placename"
-                static let placeLatitudeField = "PlaceLatitude"
-                static let placeLongitudeField = "PlaceLongitude"
+                static let placeNameField = "PlaceLocationName"
+                static let placeLatitudeField = "PlaceLocationLatitude"
+                static let placeLongitudeField = "PlaceLocationLongitude"
                 static let whereYourPlaceLocatedField = "WhereYourPlaceLocated"
             }
             
