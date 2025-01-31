@@ -146,16 +146,13 @@ class WhereYourPlaceLocatedViewController: UIViewController {
             print(listingID)
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
-                .document(userID)
-                .collection(K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.whereYourPlaceLocatedField)
-                .document(listingID)  // Use the unique listing ID
+                .document(listingID)
                 .setData([
                     K.HostYourPlaceCell.FStore.userIDField : userID,
                     K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField : placeName,
                     K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField : placelatitude,
                     K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField : placelongitude,
                     K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
-                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
                 ]) { error in
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
