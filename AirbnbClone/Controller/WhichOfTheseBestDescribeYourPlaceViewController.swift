@@ -121,13 +121,13 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         
         if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName {
             
-            let listingID = UUID().uuidString
-            UserDefaults.standard.set(listingID, forKey: "Listing ID")
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
             print(listingID)
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
-                .document(userID)
-                .collection(K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.placeDescriptionField)
                 .document(listingID)
                 .setData([
                 K.HostYourPlaceCell.FStore.userIDField : userID,
@@ -143,6 +143,27 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
             }
             
             /*
+             
+             let listingID = UUID().uuidString
+             UserDefaults.standard.set(listingID, forKey: "Listing ID")
+             print(listingID)
+             
+             db.collection(K.HostYourPlaceCell.FStore.postsField)
+                 .document(userID)
+                 .collection(K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.placeDescriptionField)
+                 .document(listingID)
+                 .setData([
+                 K.HostYourPlaceCell.FStore.userIDField : userID,
+                 K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.bestDescribeYourPlaceNameField : placeName,
+                 K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+             ]) { error in
+                 if let e = error {
+                     print("There was an issue saving data to Firestore, \(e.localizedDescription)")
+                 } else {
+                     print("Successfully saved place description to Firestore.")
+                     self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue, sender: self)
+                 }
+             }
             
             db.collection(K.HostYourPlaceCell.FStore.placeDescriptionField).addDocument(data: [
                 K.HostYourPlaceCell.FStore.userIDField : userID,

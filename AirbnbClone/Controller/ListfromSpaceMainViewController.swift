@@ -22,4 +22,11 @@ class ListfromSpaceMainViewController: UIViewController {
         getStartedButtonLabel.layer.cornerRadius = getStartedButtonLabel.frame.height / 5
     }
 
+    @IBAction func getStartedButton(_ sender: UIButton) {
+        let listingID = UUID().uuidString
+        UserDefaults.standard.set(listingID, forKey: "Listing ID")
+        print(listingID)
+        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.listFromSpaceToTellUsAbutYourPlaceSegue, sender: self)
+    }
+    
 }

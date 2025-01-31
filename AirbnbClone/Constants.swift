@@ -25,6 +25,7 @@ struct K {
     struct HostYourPlaceCell {
         
         struct Segues {
+            static let listFromSpaceToTellUsAbutYourPlaceSegue = "ListFromSpaceToTellUsAbutYourPlace"
             static let whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue = "WhichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHave"
             static let whichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue = "WhichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue"
             static let whereYourPlaceLocatedToShareSomebasicAboutYourPlaceSegue = "WhereYourPlaceLocatedToShareSomebasicAboutYourPlace"
