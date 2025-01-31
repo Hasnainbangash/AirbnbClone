@@ -41,6 +41,7 @@ class ExploreSecondScreenViewController: UIViewController {
             }
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
+                .order(by: K.HostYourPlaceCell.FStore.dateField, descending: true)
                 .addSnapshotListener { querySnapshot, error in
                     
                     if let e = error {
