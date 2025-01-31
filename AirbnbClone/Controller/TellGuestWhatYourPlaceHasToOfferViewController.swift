@@ -147,7 +147,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
                 return
             }
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField)
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(userID)
                 .collection(K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.tellGuestWhatYourPlaceHasToOfferField)
                 .document(listingID)

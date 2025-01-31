@@ -80,7 +80,7 @@ class CreateYourDescriptionViewController: UIViewController {
                 return
             }
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField)
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(userID)
                 .collection(K.HostYourPlaceCell.FStore.CreateYourDescription.createYourDescriptionField)
                 .document(listingID)

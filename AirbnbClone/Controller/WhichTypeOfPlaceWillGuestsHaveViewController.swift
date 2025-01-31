@@ -100,7 +100,7 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
             
             print(listingID)
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField)
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(userID)
                 .collection(K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeTypeDescriptionField)
                 .document(listingID)  // Use the unique listing ID

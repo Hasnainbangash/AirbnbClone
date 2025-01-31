@@ -125,7 +125,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
             UserDefaults.standard.set(listingID, forKey: "Listing ID")
             print(listingID)
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField)
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(userID)
                 .collection(K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.placeDescriptionField)
                 .document(listingID)

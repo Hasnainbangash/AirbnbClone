@@ -15,10 +15,6 @@ class ExploreSecondScreenViewController: UIViewController {
     
     var ExplorelocationsData: [ExploreLocationData] = [
         
-        ExploreLocationData(images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(images: ["hotelroomimage2", "hotelroomimage1", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(images: ["hotelroomimage3", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        ExploreLocationData(images: ["hotelroomimage4", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98")
         
     ]
     
@@ -32,11 +28,44 @@ class ExploreSecondScreenViewController: UIViewController {
         tableView.delegate = self
         
         tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
+        
+        fetchDataFromFirestore()
     }
     
     func fetchDataFromFirestore() {
         
-        
+        if let userID = Auth.auth().currentUser?.uid {
+            
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.NowSetYourPrice.setYourPriceField)
+                .addSnapshotListener { querySnapshot, error in
+                    
+                    if let e = error {
+                        print("There was an issue retrieving data from Firestore: \(e)")
+                        return
+                    }
+                    
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            
+                            if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String {
+                                
+                                print(price)
+                                
+                                let newData = ExploreLocationData(images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: "4.98")
+                                self.ExplorelocationsData.append(newData)
+                                
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+        }
         
     }
 

@@ -69,7 +69,7 @@ struct K {
         }
         
         struct FStore {
-            static let usersField = "users"
+            static let postsField = "Posts"
             static let userIDField = "userID"
             static let dateField = "date"
             static let listingIDField = "ListingID"

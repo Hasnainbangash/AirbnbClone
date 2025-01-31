@@ -145,7 +145,7 @@ class WhereYourPlaceLocatedViewController: UIViewController {
             
             print(listingID)
             
-            db.collection(K.HostYourPlaceCell.FStore.usersField)
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(userID)
                 .collection(K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.whereYourPlaceLocatedField)
                 .document(listingID)  // Use the unique listing ID
