@@ -52,11 +52,11 @@ class ExploreSecondScreenViewController: UIViewController {
                         for doc in snapshotDocuments {
                             let data = doc.data()
                             
-                            if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String {
+                            if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let hostname = data[K.HostYourPlaceCell.FStore.hostNameField] as? String {
                                 
                                 print(price)
                                 
-                                let newData = ExploreLocationData(images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: locationName, hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: "4.98")
+                                let newData = ExploreLocationData(images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: "4.98")
                                 self.ExplorelocationsData.append(newData)
                                 
                                 DispatchQueue.main.async {
