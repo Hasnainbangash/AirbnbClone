@@ -27,6 +27,7 @@ struct K {
         struct Segues {
             static let whichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHaveSegue = "WhichOfTheseBestDescribeYourPlaceToWhichTypeOfPlaceGuestHave"
             static let whichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue = "WhichTypeOfPlaceGuestHaveSegueToWhereYourPlaceLocatedSegue"
+            static let whereYourPlaceLocatedToShareSomebasicAboutYourPlaceSegue = "WhereYourPlaceLocatedToShareSomebasicAboutYourPlace"
             static let shareSomeBasicAboutYourPlaceToMakeYourPlaceStandoutSegue = "ShareSomeBasicAboutYourPlaceToMakeYourPlaceStandout"
             static let tellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasaSegue = "TellGuestWhatyourPlaceHasToOfferToAddSomePhotosOFyourCasa"
             static let nowLetsGiveYourCasaATitleToCreateYourDescriptionSegue = "NowLetsGiveYourCasaATitleToCreateYourDescription"
@@ -83,6 +84,13 @@ struct K {
                 static let placeNameField = "Placename"
                 static let placeDescriptionField = "PlaceDescription"
                 static let placeTypeDescriptionField = "PlaceTypeDescription"
+            }
+            
+            struct WhereYourPlaceLocated {
+                static let placeNameField = "Placename"
+                static let placeLatitudeField = "PlaceLatitude"
+                static let placeLongitudeField = "PlaceLongitude"
+                static let whereYourPlaceLocatedField = "WhereYourPlaceLocated"
             }
             
             struct ShareSomeBasicAboutYourPlace {
