@@ -39,6 +39,10 @@ class WhereYourPlaceLocatedViewController: UIViewController {
     
     let db = Firestore.firestore()
     
+    var selectedPlaceName: String?
+    var selectedPlaceLatitude: Double?
+    var selectedPlaceLongitude: Double?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -133,7 +137,7 @@ class WhereYourPlaceLocatedViewController: UIViewController {
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
-        if let userID = Auth.auth().currentUser?.uid, let placeName = "", let placelatitude = "", let placelongitude = "" {
+        if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName, let placelatitude = selectedPlaceLatitude, let placelongitude = selectedPlaceLongitude {
     
             guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
                 return
@@ -240,8 +244,16 @@ extension WhereYourPlaceLocatedViewController: UITableViewDelegate, UITableViewD
             guard let response = response,
                   let firstItem = response.mapItems.first else { return }
             
+            // Update the text field with the selected location's name
             self.enterYourAddressTextField.text = completion.title
             self.searchResultsTableView.isHidden = true
+            
+            // Save the selected location's details
+            self.selectedPlaceName = completion.title
+            self.selectedPlaceLatitude = firstItem.placemark.coordinate.latitude
+            self.selectedPlaceLongitude = firstItem.placemark.coordinate.longitude
+            
+            // Update the map with the selected location
             self.updateMap(with: firstItem)
             self.updateNextButtonState()
         }
@@ -308,6 +320,11 @@ extension WhereYourPlaceLocatedViewController: MKLocalSearchCompleterDelegate {
             self.mapView.removeAnnotations(self.mapView.annotations)
             
             if let location = response.mapItems.last {
+                
+                // Saving the searched locations details
+                self.selectedPlaceName = location.name
+                self.selectedPlaceLatitude = location.placemark.coordinate.latitude
+                self.selectedPlaceLongitude = location.placemark.coordinate.longitude
                 
                 let pin = MKPointAnnotation()
                 pin.title = location.name
