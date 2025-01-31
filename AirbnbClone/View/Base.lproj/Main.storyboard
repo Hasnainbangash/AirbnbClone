@@ -11445,7 +11445,6 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                                         <connections>
                                                                             <action selector="nextButtonPressed:" destination="Hmm-Nv-8xK" eventType="touchUpInside" id="yZo-DE-sH2"/>
-                                                                            <segue destination="GO1-jo-K2t" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="0iX-Lb-qiQ"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -11489,6 +11488,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="nextButtonLabel" destination="pjw-sg-7i4" id="0Mm-JX-n8X"/>
                         <outlet property="questionsButtonLabel" destination="RIb-9R-wWy" id="r1G-Rx-Xfi"/>
                         <outlet property="saveAndExitButtonLabel" destination="L0L-mY-0Bs" id="O1M-Tf-wCP"/>
+                        <segue destination="GO1-jo-K2t" kind="custom" identifier="WhereYourPlaceLocatedToShareSomebasicAboutYourPlace" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="v3Q-HH-C12"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hya-e2-0C9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -12059,6 +12059,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                             <constraint firstItem="Yha-QN-lIf" firstAttribute="bottom" secondItem="56H-nG-5no" secondAttribute="bottom" id="lY5-Tt-CdY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PV9-c8-VYO"/>
                     <connections>
                         <outlet property="backButtonLabel" destination="vc1-yA-D89" id="G2Y-f8-jPa"/>
                         <outlet property="nextButtonLabel" destination="xC2-OL-crx" id="mlu-jy-0cp"/>
