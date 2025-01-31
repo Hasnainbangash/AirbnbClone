@@ -7,6 +7,8 @@
 
 import UIKit
 import MapKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class WhereYourPlaceLocatedViewController: UIViewController {
 
@@ -34,6 +36,8 @@ class WhereYourPlaceLocatedViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocationCoordinate2D?
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +132,36 @@ class WhereYourPlaceLocatedViewController: UIViewController {
     }
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        
+        if let userID = Auth.auth().currentUser?.uid, let placeName = "", let placelatitude = "", let placelongitude = "" {
+    
+            guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
+                return
+            }
+            
+            print(listingID)
+            
+            db.collection(K.HostYourPlaceCell.FStore.usersField)
+                .document(userID)
+                .collection(K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.whereYourPlaceLocatedField)
+                .document(listingID)  // Use the unique listing ID
+                .setData([
+                    K.HostYourPlaceCell.FStore.userIDField : userID,
+                    K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField : placeName,
+                    K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField : placelatitude,
+                    K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField : placelongitude,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved place location to Firestore.")
+                        self.performSegue(withIdentifier: K.HostYourPlaceCell.Segues.whereYourPlaceLocatedToShareSomebasicAboutYourPlaceSegue, sender: self)
+                    }
+                }
+        }
+        
     }
     
 }
