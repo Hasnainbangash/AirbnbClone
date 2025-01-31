@@ -102,7 +102,7 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeNameField : placeName,
                     K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeDescriptionField : placeDescription,
                     K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970

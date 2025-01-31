@@ -82,7 +82,7 @@ class CreateYourDescriptionViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.CreateYourDescription.placeDescriptionField: placeDescription,
                     K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
                 ]) { error in

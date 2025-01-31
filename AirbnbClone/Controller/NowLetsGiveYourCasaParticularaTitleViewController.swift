@@ -90,7 +90,7 @@ class NowLetsGiveYourCasaParticularaTitleViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.placeTitleField: placeTitle,
                     K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
                 ]) { error in

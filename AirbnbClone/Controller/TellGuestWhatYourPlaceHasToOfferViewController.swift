@@ -149,7 +149,7 @@ class TellGuestWhatYourPlaceHasToOfferViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.guestFavouratesFields: guestFavouratesField,
                     K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.standoutAmenitiesFields: standoutAmenitiesField,
                     K.HostYourPlaceCell.FStore.TellGuestWhatYourPlaceOffer.safetyItemsFields: safetyItemsField,

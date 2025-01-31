@@ -98,7 +98,7 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField : currentGuests,
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField : currentBedrooms,
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField : currentBeds,

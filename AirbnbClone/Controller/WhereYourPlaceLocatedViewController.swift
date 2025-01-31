@@ -147,7 +147,7 @@ class WhereYourPlaceLocatedViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField : placeName,
                     K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField : placelatitude,
                     K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField : placelongitude,

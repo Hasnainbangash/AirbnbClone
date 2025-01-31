@@ -140,7 +140,7 @@ class NowSetYourPriceViewController: UIViewController {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
-                .setData([
+                .updateData([
                     K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField : placePrice,
                     K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
                 ]) { error in
