@@ -43,6 +43,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
     ]
     
+    var listingID: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -73,6 +75,8 @@ class ExploreLocationDetailViewController: UIViewController {
         setupCornerRadius()
         setupBorderRadius()
         setupBorderShadow()
+        
+        print(listingID ?? "No lisitng ID")
         
     }
     

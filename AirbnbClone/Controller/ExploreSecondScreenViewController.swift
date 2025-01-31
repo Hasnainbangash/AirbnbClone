@@ -18,6 +18,8 @@ class ExploreSecondScreenViewController: UIViewController {
         
     ]
     
+    var listingID: String?
+    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -55,9 +57,11 @@ class ExploreSecondScreenViewController: UIViewController {
                             
                             if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let hostname = data[K.HostYourPlaceCell.FStore.hostNameField] as? String, let rating = data[K.HostYourPlaceCell.FStore.ratingField] as? String {
                                 
+                                let listingID = doc.documentID
+                                
                                 print(price)
                                 
-                                let newData = ExploreLocationData(images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
+                                let newData = ExploreLocationData(listingID: listingID, images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
                                 self.ExplorelocationsData.append(newData)
                                 
                                 DispatchQueue.main.async {
@@ -104,9 +108,18 @@ extension ExploreSecondScreenViewController: UITableViewDelegate {
         
         let locationData = ExplorelocationsData[indexPath.row]
         
+        self.listingID = locationData.listingID
+        
         self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
         
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue {
+            if let destinationVC = segue.destination as? ExploreLocationDetailViewController {
+                    destinationVC.listingID = listingID
+                }
+        }
     }
     
 }

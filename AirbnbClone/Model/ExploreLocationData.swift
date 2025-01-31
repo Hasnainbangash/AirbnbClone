@@ -8,6 +8,7 @@
 import Foundation
 
 struct ExploreLocationData {
+    let listingID: String
     let images: [String]
     let locationName: String
     let hosterName: String
