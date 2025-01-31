@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class ExploreSecondScreenViewController: UIViewController {
 
@@ -20,6 +22,8 @@ class ExploreSecondScreenViewController: UIViewController {
         
     ]
     
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +34,11 @@ class ExploreSecondScreenViewController: UIViewController {
         tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
     }
     
+    func fetchDataFromFirestore() {
+        
+        
+        
+    }
 
 }
 
