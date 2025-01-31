@@ -51,6 +51,7 @@ class WhereYourPlaceLocatedViewController: UIViewController {
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+        updateNextButtonState()
     }
     
     private func setupSearchResultsTableView() {
@@ -104,6 +105,18 @@ class WhereYourPlaceLocatedViewController: UIViewController {
         backButtonLabel.setTitleColor(UIColor.black, for: .normal)
     }
     
+    private func updateNextButtonState() {
+        if let text = enterYourAddressTextField.text, !text.isEmpty {
+            nextButtonLabel.isEnabled = true
+            nextButtonLabel.backgroundColor = UIColor.black
+            nextButtonLabel.tintColor = UIColor.white
+        } else {
+            nextButtonLabel.isEnabled = false
+            nextButtonLabel.backgroundColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1)
+            nextButtonLabel.tintColor = UIColor.white
+        }
+    }
+    
     @IBAction func currentLocationButtonPressed(_ sender: UIButton) {
         print("Location button pressed")
         locationManager.requestLocation()
@@ -134,6 +147,7 @@ extension WhereYourPlaceLocatedViewController: UITextFieldDelegate {
         searchCompleter.queryFragment = newText
         
         searchResultsTableView.isHidden = newText.isEmpty
+        updateNextButtonState()
         return true
     }
     
@@ -144,6 +158,7 @@ extension WhereYourPlaceLocatedViewController: UITextFieldDelegate {
         if let query = textField.text, !query.isEmpty {
             performSearch(query: query)
         }
+        updateNextButtonState()
         return true
     }
     
@@ -151,6 +166,7 @@ extension WhereYourPlaceLocatedViewController: UITextFieldDelegate {
         if let text = textField.text, !text.isEmpty {
             searchResultsTableView.isHidden = false
         }
+        updateNextButtonState()
     }
     
 }
@@ -193,6 +209,7 @@ extension WhereYourPlaceLocatedViewController: UITableViewDelegate, UITableViewD
             self.enterYourAddressTextField.text = completion.title
             self.searchResultsTableView.isHidden = true
             self.updateMap(with: firstItem)
+            self.updateNextButtonState()
         }
     }
 }
