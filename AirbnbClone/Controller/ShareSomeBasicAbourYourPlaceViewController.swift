@@ -97,17 +97,13 @@ class ShareSomeBasicAbourYourPlaceViewController: UIViewController {
             }
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
-                .document(userID)
-                .collection(K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.shareSomeBasicAboutYourPlaceField)
                 .document(listingID)
                 .setData([
-                    K.HostYourPlaceCell.FStore.userIDField : userID,
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField : currentGuests,
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField : currentBedrooms,
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField : currentBeds,
                     K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField : currentBathrooms,
-                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
-                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
                 ]) { error in
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")

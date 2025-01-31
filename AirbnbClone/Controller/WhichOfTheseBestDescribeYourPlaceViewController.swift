@@ -132,7 +132,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
                 .setData([
                 K.HostYourPlaceCell.FStore.userIDField : userID,
                 K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.bestDescribeYourPlaceNameField : placeName,
-                K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
             ]) { error in
                 if let e = error {
                     print("There was an issue saving data to Firestore, \(e.localizedDescription)")

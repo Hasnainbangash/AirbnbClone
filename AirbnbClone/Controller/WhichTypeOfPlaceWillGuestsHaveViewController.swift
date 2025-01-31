@@ -103,10 +103,9 @@ class WhichTypeOfPlaceWillGuestsHaveViewController: UIViewController {
             db.collection(K.HostYourPlaceCell.FStore.postsField)
                 .document(listingID)
                 .setData([
-                    K.HostYourPlaceCell.FStore.userIDField : userID,
                     K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeNameField : placeName,
                     K.HostYourPlaceCell.FStore.WhichTypeOfplaceWillGuestHave.placeDescriptionField : placeDescription,
-                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
                 ]) { error in
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")

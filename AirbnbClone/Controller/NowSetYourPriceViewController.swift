@@ -139,14 +139,10 @@ class NowSetYourPriceViewController: UIViewController {
             }
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
-                .document(userID)
-                .collection(K.HostYourPlaceCell.FStore.NowSetYourPrice.setYourPriceField)
                 .document(listingID)
                 .setData([
-                    K.HostYourPlaceCell.FStore.userIDField : userID,
                     K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField : placePrice,
-                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970,
-                    K.HostYourPlaceCell.FStore.listingIDField: listingID // Store listing ID for easy reference
+                    K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
                 ]) { error in
                     if let e = error {
                         print("There was an issue saving data to Firestore: \(e.localizedDescription)")
