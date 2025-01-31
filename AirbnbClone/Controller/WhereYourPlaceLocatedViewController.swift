@@ -114,6 +114,9 @@ class WhereYourPlaceLocatedViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+    }
+    
 }
 
 extension WhereYourPlaceLocatedViewController: UIViewControllerTransitioningDelegate {
@@ -124,7 +127,6 @@ extension WhereYourPlaceLocatedViewController: UIViewControllerTransitioningDele
     
 }
 
-// MARK: - UITextFieldDelegate
 extension WhereYourPlaceLocatedViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

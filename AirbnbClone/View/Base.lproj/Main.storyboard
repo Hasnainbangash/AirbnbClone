@@ -11444,6 +11444,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                                         <connections>
+                                                                            <action selector="nextButtonPressed:" destination="Hmm-Nv-8xK" eventType="touchUpInside" id="yZo-DE-sH2"/>
                                                                             <segue destination="GO1-jo-K2t" kind="custom" customClass="SlideFromRightSegue" customModule="AirbnbClone" customModuleProvider="target" id="0iX-Lb-qiQ"/>
                                                                         </connections>
                                                                     </button>
