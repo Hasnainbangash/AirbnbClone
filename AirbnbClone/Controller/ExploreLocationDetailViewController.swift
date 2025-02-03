@@ -77,6 +77,8 @@ class ExploreLocationDetailViewController: UIViewController {
         scrollView.delegate = self
         navigationBar.isHidden = false
         
+        mapView.delegate = self
+        
         imagesCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.locationImagesCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.locationImagesCellIdentifier)
         
         bedroomCollectionView.register(UINib(nibName: K.ExploreLocationDetailCells.NibNames.bedroomCellNibName, bundle: nil), forCellWithReuseIdentifier: K.ExploreLocationDetailCells.Identifiers.bedroomCellIdentifier)
@@ -382,6 +384,37 @@ extension ExploreLocationDetailViewController: MKMapViewDelegate {
             return circle
         }
         return MKOverlayRenderer()
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        // Create and tint the image
+        let image = UIImage(systemName: "house.circle.fill")
+        let tintedImage = image?.withTintColor(UIColor(red: 219/255, green: 12/255, blue: 100/255, alpha: 1))
+        
+        // Resize the tinted image
+        let size = CGSize(width: 70, height: 70)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        tintedImage?.draw(in: CGRect(origin: .zero, size: size))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        annotationView?.image = resizedImage
+        annotationView?.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        
+        return annotationView
     }
     
 }
