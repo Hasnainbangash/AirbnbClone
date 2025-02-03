@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import MapKit
 
 class ExploreLocationDetailViewController: UIViewController {
 
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var hosterImageView1: UIImageView!
     @IBOutlet weak var hosterImageView2: UIImageView!
@@ -24,6 +27,11 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var totalImagesCountLabel: UILabel!
     @IBOutlet weak var totalReviewPercentLabel: UILabel!
     @IBOutlet weak var checkAvailabilityButtonLabel: UIButton!
+    
+    @IBOutlet weak var hostName: UILabel!
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var hostAnotherName: UILabel!
+    
     
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
