@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ExploreSecondScreenViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var ExplorelocationsData: [ExploreLocationData] = [
@@ -24,7 +24,7 @@ class ExploreSecondScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
@@ -75,7 +75,7 @@ class ExploreSecondScreenViewController: UIViewController {
         }
         
     }
-
+    
 }
 
 extension ExploreSecondScreenViewController: UITableViewDataSource {
@@ -119,8 +119,8 @@ extension ExploreSecondScreenViewController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue {
             if let destinationVC = segue.destination as? ExploreLocationDetailViewController {
-                    destinationVC.listingID = listingID
-                }
+                destinationVC.listingID = listingID
+            }
         }
     }
     
