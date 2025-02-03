@@ -198,8 +198,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
         let region = MKCoordinateRegion(
             center: coordinate,
-            latitudinalMeters: 13000,
-            longitudinalMeters: 130000
+            latitudinalMeters: 20000,
+            longitudinalMeters: 20000
         )
         
         mapView.setRegion(region, animated: true)
@@ -412,7 +412,7 @@ extension ExploreLocationDetailViewController: MKMapViewDelegate {
         let tintedImage = image?.withTintColor(UIColor(red: 219/255, green: 12/255, blue: 100/255, alpha: 1))
         
         // Resize the tinted image
-        let size = CGSize(width: 70, height: 70)
+        let size = CGSize(width: 60, height: 60)
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         tintedImage?.draw(in: CGRect(origin: .zero, size: size))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
