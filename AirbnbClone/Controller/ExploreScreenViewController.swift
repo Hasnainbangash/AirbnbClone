@@ -202,12 +202,19 @@ class ExploreScreenViewController: UIViewController {
     }
     
     func addCustomPin(latitute: CLLocationDegrees, longitude: CLLocationDegrees, locationData: MapLocationData) {
+        
         let coordinate = CLLocationCoordinate2D(latitude: latitute, longitude: longitude)
+        
+        mapView.setRegion(MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(
+                latitudeDelta: 0.1,
+                longitudeDelta: 0.1)
+        ), animated: true)
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = locationData.price
-        // Store the location ID in the subtitle to retrieve the correct data later
         pin.subtitle = locationData.id
         mapView.addAnnotation(pin)
     }

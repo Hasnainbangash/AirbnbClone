@@ -198,8 +198,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
         let region = MKCoordinateRegion(
             center: coordinate,
-            latitudinalMeters: 20000,
-            longitudinalMeters: 20000
+            latitudinalMeters: 13000,
+            longitudinalMeters: 130000
         )
         
         mapView.setRegion(region, animated: true)
