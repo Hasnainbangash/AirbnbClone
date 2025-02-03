@@ -32,6 +32,7 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var anotherLocationName: UILabel!
     @IBOutlet weak var NoOfGuestsBedroomBedBathroom: UILabel!
     @IBOutlet weak var reviewRating: UILabel!
+    @IBOutlet weak var reviewAnotherRating: UILabel!
     @IBOutlet weak var hostName: UILabel!
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var hostAnotherName: UILabel!
@@ -161,7 +162,8 @@ class ExploreLocationDetailViewController: UIViewController {
                             self.totalReviewPercentLabel.text = reviewRating
                             self.anotherLocationName.text = "Farm stay in \(locationName)"
                             self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests) Guests. \(NoOfBedrooms) Bedrooms. \(NoOfBeds) Beds. \(NoOfBathrooms) Bathrooms."
-                            self.reviewRating.text = reviewRating
+                            self.reviewRating.text = "/(reviewRating) ."
+                            self.reviewAnotherRating.text = "/(reviewRating) ."
                             self.showLocationOnMap(latitude: locationLatitude, longitude: locationLongitude)
                         }
                     }
