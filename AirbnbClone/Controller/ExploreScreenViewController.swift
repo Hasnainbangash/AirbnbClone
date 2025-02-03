@@ -243,6 +243,16 @@ class ExploreScreenViewController: UIViewController {
                                 id: doc.documentID
                             )
                             
+                            print("===================================================================")
+                            print(price)
+                            print(locationName)
+                            print(hostname)
+                            print(rating)
+                            print(placeLatitude)
+                            print(placeLongitude)
+                            print(price)
+                            print("===================================================================")
+                            
                             self.mapLocationsData.append(newData)
                             
                             DispatchQueue.main.async {
