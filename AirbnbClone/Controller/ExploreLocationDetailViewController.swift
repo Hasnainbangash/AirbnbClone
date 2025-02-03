@@ -151,7 +151,9 @@ class ExploreLocationDetailViewController: UIViewController {
                            let NoOfGuests = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField] as? Int,
                            let NoOfBedrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField] as? Int,
                            let NoOfBeds = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField] as? Int,
-                           let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? Int {
+                           let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? Int,
+                           let locationLatitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
+                           let locationLongitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double {
                             
                             self.hostName.text = hostName
                             self.locationName.text = locationName
@@ -160,12 +162,32 @@ class ExploreLocationDetailViewController: UIViewController {
                             self.anotherLocationName.text = "Farm stay in \(locationName)"
                             self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests) Guests. \(NoOfBedrooms) Bedrooms. \(NoOfBeds) Beds. \(NoOfBathrooms) Bathrooms."
                             self.reviewRating.text = reviewRating
-                            
+                            self.showLocationOnMap(latitude: locationLatitude, longitude: locationLongitude)
                         }
                     }
                 }
         }
         
+    }
+    
+    func showLocationOnMap(latitude: Double, longitude: Double) {
+        
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinate
+        pin.title = "Exact location provided after booking."
+        
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(pin)
+        
+        let region = MKCoordinateRegion(
+            center: coordinate,
+            latitudinalMeters: 5000,
+            longitudinalMeters: 5000
+        )
+        
+        mapView.setRegion(region, animated: true)
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
