@@ -143,10 +143,11 @@ class ExploreScreenViewController: UIViewController {
         
         setupFloatingPanel()
         
-        addCustomPin(latitute: 40.712742, longitude: -74.006001)
-        addCustomPin(latitute: 40.731245, longitude: -73.997115)
-        addCustomPin(latitute: 40.732706, longitude: -74.035835)
-        addCustomPin(latitute: 40.707320, longitude: -74.037380)
+        // addCustomPin(latitute: 40.712742, longitude: -74.006001)
+        // addCustomPin(latitute: 40.731245, longitude: -73.997115)
+        // addCustomPin(latitute: 40.732706, longitude: -74.035835)
+        // addCustomPin(latitute: 40.707320, longitude: -74.037380)
+        fetchDataFromFirebase()
 
     }
     
@@ -240,8 +241,17 @@ class ExploreScreenViewController: UIViewController {
                     for doc in snapshotDocuments {
                         let data = doc.data()
                         
-                        if let placeLatitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
+                        if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String,
+                           let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String,
+                           let hostname = data[K.HostYourPlaceCell.FStore.hostNameField] as? String,
+                           let rating = data[K.HostYourPlaceCell.FStore.ratingField] as? String,
+                           let placeLatitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
                            let placeLongitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double {
+                            
+                            let newData = MapLocationData(locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
+                            
+                            self.mapLocationsData.append(newData)
+                            
                             
                             DispatchQueue.main.async {
                                 self.addCustomPin(latitute: placeLatitude, longitude: placeLongitude)
