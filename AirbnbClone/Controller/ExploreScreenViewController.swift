@@ -120,11 +120,6 @@ class ExploreScreenViewController: UIViewController {
     
     var mapLocationsData: [MapLocationData] = [
         
-        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98"),
-        MapLocationData(locationName: "Barrio Melos, Brazil", hosterName: "Kellen", availableDates: ["28 Feb", "6 March"], price: "$232", dateNightTime: "night", rating: "4.98")
-        
     ]
     
     override func viewDidLoad() {
@@ -206,38 +201,28 @@ class ExploreScreenViewController: UIViewController {
         searchBarView.layer.shadowPath = shadowPath.cgPath
     }
     
-    func addCustomPin(latitute: CLLocationDegrees, longitude: CLLocationDegrees) {
-        
-        // let coordinate = CLLocationCoordinate2D(latitude: 40.728, longitude: -74)
+    func addCustomPin(latitute: CLLocationDegrees, longitude: CLLocationDegrees, locationData: MapLocationData) {
         let coordinate = CLLocationCoordinate2D(latitude: latitute, longitude: longitude)
-        
-        mapView.setRegion(MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(
-                latitudeDelta: 0.1,
-                longitudeDelta: 0.1)
-        ), animated: true)
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
-        // pin.title = "Location Title"
-        pin.title = "$30"
-        pin.subtitle = "Location subtitle"
+        pin.title = locationData.price
+        // Store the location ID in the subtitle to retrieve the correct data later
+        pin.subtitle = locationData.id
         mapView.addAnnotation(pin)
-        
     }
     
     func fetchDataFromFirebase() {
-        
         db.collection(K.HostYourPlaceCell.FStore.postsField)
             .addSnapshotListener { querySnapshot, error in
-                
                 if let e = error {
                     print("There was an issue retrieving data from Firestore: \(e)")
                     return
                 }
                 
                 if let snapshotDocuments = querySnapshot?.documents {
+                    self.mapLocationsData.removeAll() // Clear existing data
+                    
                     for doc in snapshotDocuments {
                         let data = doc.data()
                         
@@ -248,16 +233,26 @@ class ExploreScreenViewController: UIViewController {
                            let placeLatitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
                            let placeLongitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double {
                             
-                            let newData = MapLocationData(locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
+                            let newData = MapLocationData(
+                                locationName: locationName,
+                                hosterName: hostname,
+                                availableDates: ["28 Feb", "6 March"],
+                                price: price,
+                                dateNightTime: "night",
+                                rating: rating,
+                                id: doc.documentID
+                            )
                             
                             self.mapLocationsData.append(newData)
                             
-                            
                             DispatchQueue.main.async {
-                                self.addCustomPin(latitute: placeLatitude, longitude: placeLongitude)
+                                self.addCustomPin(
+                                    latitute: placeLatitude,
+                                    longitude: placeLongitude,
+                                    locationData: newData
+                                )
                             }
                         }
-                        
                     }
                 }
             }
@@ -326,45 +321,35 @@ extension ExploreScreenViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
-        
         guard !(annotation is MKUserLocation) else { return }
         
         fpc?.hide(animated: true)
         
         if let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "MapLocationMainViewController") as? MapLocationMainViewController {
-            
             if let sheet = detailVC.sheetPresentationController {
                 sheet.detents = [.custom(resolver: { context in
                     0.55 * context.maximumDetentValue
                 })]
-                
                 sheet.preferredCornerRadius = 20
             }
             
-            // You have mapLocationsData array with sample data, so you can use that
-            // For this example, I'll use the first item, but you might want to match it with the selected annotation
-            let locationData = mapLocationsData[0]
+            // Find the correct location data using the annotation's subtitle (which contains the ID)
+            if let locationId = annotation.subtitle,
+               let locationData = mapLocationsData.first(where: { $0.id == locationId }) {
+                
+                detailVC.configureCell(
+                    placeName: locationData.locationName,
+                    placeHosterName: locationData.hosterName,
+                    availableDates: locationData.availableDates,
+                    priceOfPlace: locationData.price,
+                    dayTime: locationData.dateNightTime,
+                    rating: locationData.rating
+                )
+            }
             
-            // Pass data to the detail view controller
-            detailVC.configureCell(
-                placeName: locationData.locationName,
-                placeHosterName: locationData.hosterName,
-                availableDates: locationData.availableDates,
-                priceOfPlace: locationData.price,
-                dayTime: locationData.dateNightTime,
-                rating: locationData.rating
-            )
-            
-            
-            
-            // This will get called when detailVC is dismissed
             detailVC.presentationController?.delegate = self
-            
-            // Present the detail view controller
-            // self.navigationController?.pushViewController(detailVC, animated: true)
             self.present(detailVC, animated: true)
         }
-        
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {

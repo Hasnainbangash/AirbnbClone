@@ -14,4 +14,5 @@ struct MapLocationData {
     let price: String
     let dateNightTime: String
     let rating: String
+    let id: String  // Add this to uniquely identify each location
 }
