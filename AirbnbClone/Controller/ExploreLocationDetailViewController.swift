@@ -131,7 +131,7 @@ class ExploreLocationDetailViewController: UIViewController {
         if let listingID = listingID {
             
             db.collection(K.HostYourPlaceCell.FStore.postsField)
-                .whereField(K.HostYourPlaceCell.FStore.listingIDField, isEqualTo: listingID)
+                .document(listingID)
                 .addSnapshotListener { querySnapshot, error in
                     
                     if let e = error {
@@ -139,18 +139,15 @@ class ExploreLocationDetailViewController: UIViewController {
                         return
                     }
                     
-                    if let snapshotDocuments = querySnapshot?.documents {
-                        for doc in snapshotDocuments {
-                            let data = doc.data()
+                    if let snapshotDocuments = querySnapshot {
+                        let data = snapshotDocuments.data()
+                        
+                        if let hostName = data?[K.HostYourPlaceCell.FStore.hostNameField] as? String, let locationName = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let reviewRating = data?[K.HostYourPlaceCell.FStore.ratingField] as? String {
                             
-                            if let hostName = data[K.HostYourPlaceCell.FStore.hostNameField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let reviewRating = data[K.HostYourPlaceCell.FStore.ratingField] as? String {
-                                
-                                self.hostName.text = hostName
-                                self.locationName.text = locationName
-                                self.hostAnotherName.text = hostName
-                                self.totalReviewPercentLabel.text = reviewRating
-                                
-                            }
+                            self.hostName.text = hostName
+                            self.locationName.text = locationName
+                            self.hostAnotherName.text = hostName
+                            self.totalReviewPercentLabel.text = reviewRating
                             
                         }
                     }
