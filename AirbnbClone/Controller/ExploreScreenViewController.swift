@@ -9,6 +9,8 @@ import UIKit
 import FloatingPanel
 import MapKit
 import CoreLocation
+import FirebaseAuth
+import FirebaseFirestore
 
 // Custom Layout for Floating Panel
 class CustomPanelLayout: FloatingPanelLayout {
@@ -46,6 +48,8 @@ class ExploreScreenViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var fpc: FloatingPanelController?
+    
+    let db = Firestore.firestore()
     
     var exploreCategories: [ExploreCategories] = [
         
@@ -220,6 +224,33 @@ class ExploreScreenViewController: UIViewController {
         pin.subtitle = "Location subtitle"
         mapView.addAnnotation(pin)
         
+    }
+    
+    func fetchDataFromFirebase() {
+        
+        db.collection(K.HostYourPlaceCell.FStore.postsField)
+            .addSnapshotListener { querySnapshot, error in
+                
+                if let e = error {
+                    print("There was an issue retrieving data from Firestore: \(e)")
+                    return
+                }
+                
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        
+                        if let placeLatitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
+                           let placeLongitude = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double {
+                            
+                            DispatchQueue.main.async {
+                                self.addCustomPin(latitute: placeLatitude, longitude: placeLongitude)
+                            }
+                        }
+                        
+                    }
+                }
+            }
     }
     
 }
