@@ -17,6 +17,8 @@ class ExploreLocationDetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    
+    @IBOutlet weak var placeTitleName: UILabel!
     @IBOutlet weak var hosterImageView1: UIImageView!
     @IBOutlet weak var hosterImageView2: UIImageView!
     @IBOutlet weak var meetYourHostView: UIView!
@@ -156,8 +158,10 @@ class ExploreLocationDetailViewController: UIViewController {
                            let NoOfBeds = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField] as? Int,
                            let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? Int,
                            let locationLatitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
-                           let locationLongitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double {
+                           let locationLongitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double,
+                           let placeName = data?[K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.placeTitleField] as? String {
                             
+                            self.placeTitleName.text = placeName
                             self.hostName.text = hostName
                             self.locationName.text = locationName
                             self.hostAnotherName.text = hostName
