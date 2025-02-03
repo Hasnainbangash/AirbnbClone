@@ -7,9 +7,10 @@
 
 import UIKit
 import MapKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class ExploreLocationDetailViewController: UIViewController {
-
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -50,6 +51,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
     ]
     
+    let db = Firestore.firestore()
+    
     var listingID: String?
     
     override func viewDidLoad() {
@@ -84,6 +87,7 @@ class ExploreLocationDetailViewController: UIViewController {
         setupBorderShadow()
         
         print(listingID ?? "No lisitng ID")
+        fetchDataFromFirestore()
         
     }
     
@@ -120,6 +124,39 @@ class ExploreLocationDetailViewController: UIViewController {
         // Make the shadow more "realistic" by enabling shadow path
         meetYourHostView.layer.masksToBounds = false // Important for shadow to appear outside bounds
         meetYourHostView.layer.shadowPath = UIBezierPath(rect: meetYourHostView.bounds).cgPath
+    }
+    
+    func fetchDataFromFirestore() {
+        
+        if let listingID = listingID {
+            
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
+                .whereField(K.HostYourPlaceCell.FStore.listingIDField, isEqualTo: listingID)
+                .addSnapshotListener { querySnapshot, error in
+                    
+                    if let e = error {
+                        print("There was an issue retrieving data from Firestore: \(e)")
+                        return
+                    }
+                    
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            
+                            if let hostName = data[K.HostYourPlaceCell.FStore.hostNameField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let reviewRating = data[K.HostYourPlaceCell.FStore.ratingField] as? String {
+                                
+                                self.hostName.text = hostName
+                                self.locationName.text = locationName
+                                self.hostAnotherName.text = hostName
+                                self.totalReviewPercentLabel.text = reviewRating
+                                
+                            }
+                            
+                        }
+                    }
+                }
+        }
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
