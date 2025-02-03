@@ -176,6 +176,10 @@ class ExploreLocationDetailViewController: UIViewController {
         
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
+        let clLocation = CLLocation(latitude: latitude, longitude: longitude)
+        
+        addRadiusCircle(location: clLocation)
+        
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = "Exact location provided after booking."
@@ -185,8 +189,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
         let region = MKCoordinateRegion(
             center: coordinate,
-            latitudinalMeters: 5000,
-            longitudinalMeters: 5000
+            latitudinalMeters: 10000,
+            longitudinalMeters: 10000
         )
         
         mapView.setRegion(region, animated: true)
@@ -357,6 +361,27 @@ extension ExploreLocationDetailViewController: UICollectionViewDelegateFlowLayou
             totalImagesCountLabel.text = "\(currentIndex + 1) / \(images.count)"
         }
         
+    }
+    
+}
+
+extension ExploreLocationDetailViewController: MKMapViewDelegate {
+    
+    func addRadiusCircle(location: CLLocation){
+        self.mapView.delegate = self
+        let circle = MKCircle(center: location.coordinate, radius: 800 as CLLocationDistance)
+        self.mapView.addOverlay(circle)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKCircle {
+            let circle = MKCircleRenderer(overlay: overlay)
+            circle.strokeColor = UIColor.red
+            circle.fillColor = UIColor.red.withAlphaComponent(0.1)
+            circle.lineWidth = 1
+            return circle
+        }
+        return MKOverlayRenderer()
     }
     
 }
