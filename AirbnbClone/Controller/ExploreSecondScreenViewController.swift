@@ -112,6 +112,8 @@ extension ExploreSecondScreenViewController: UITableViewDelegate {
         
         self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
         
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
