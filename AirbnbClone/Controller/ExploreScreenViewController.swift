@@ -343,9 +343,13 @@ extension ExploreScreenViewController: MKMapViewDelegate {
                 sheet.preferredCornerRadius = 20
             }
             
-            // Find the correct location data using the annotation's subtitle (which contains the ID)
             if let locationId = annotation.subtitle,
                let locationData = mapLocationsData.first(where: { $0.id == locationId }) {
+                
+                print(locationId ?? "No location id")
+                print("----------------------------")
+                print(locationData.locationName)
+                print("----------------------------")
                 
                 detailVC.configureCell(
                     placeName: locationData.locationName,

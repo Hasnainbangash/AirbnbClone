@@ -65,12 +65,14 @@ class MapLocationMainViewController: UIViewController {
     
     func configureCell(placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
         
-        self.placeName?.text = placeName
-        self.placeHostedName?.text = "Hosted by \(placeHosterName)"
-        self.availableDates?.text = "\(availableDates[0]) - \(availableDates[1])"
-        self.placePrice?.text = priceOfPlace
-        self.dayNightLabel?.text = dayTime
-        self.rating?.text = rating
+        DispatchQueue.main.async {
+            self.placeName?.text = placeName
+            self.placeHostedName?.text = "Hosted by \(placeHosterName)"
+            self.availableDates?.text = "\(availableDates[0]) - \(availableDates[1])"
+            self.placePrice?.text = priceOfPlace
+            self.dayNightLabel?.text = dayTime
+            self.rating?.text = rating
+        }
         
     }
 
