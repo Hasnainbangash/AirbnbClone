@@ -9616,26 +9616,26 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-jE-RhL">
                                                                         <rect key="frame" x="0.0" y="43" width="352" height="250"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="mPL-DZ-PG5">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="mPL-DZ-PG5">
                                                                                 <rect key="frame" x="12" y="34" width="329" height="183"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="97o-99-67h">
-                                                                                        <rect key="frame" x="0.0" y="17.66666666666697" width="90" height="148"/>
+                                                                                        <rect key="frame" x="0.0" y="17.66666666666697" width="119" height="148"/>
                                                                                         <subviews>
                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotelroomimage1" translatesAutoresizingMaskIntoConstraints="NO" id="W9b-gV-vQA">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                                                <rect key="frame" x="14.666666666666664" y="0.0" width="90" height="90"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="height" constant="90" id="WQR-Sp-2Pm"/>
                                                                                                     <constraint firstAttribute="width" constant="90" id="YHD-3W-KYV"/>
                                                                                                 </constraints>
                                                                                             </imageView>
-                                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gb2-Vd-x8u">
-                                                                                                <rect key="frame" x="6" y="95" width="78" height="53"/>
+                                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gb2-Vd-x8u">
+                                                                                                <rect key="frame" x="4.6666666666666643" y="95" width="110" height="53"/>
                                                                                                 <subviews>
-                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aamir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7a-qu-5lh">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="34"/>
+                                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aamir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7a-qu-5lh">
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="34"/>
                                                                                                         <constraints>
-                                                                                                            <constraint firstAttribute="width" constant="78" id="SZ8-JT-lcI"/>
+                                                                                                            <constraint firstAttribute="width" constant="110" id="SZ8-JT-lcI"/>
                                                                                                             <constraint firstAttribute="height" constant="34" id="YrC-W9-3uO"/>
                                                                                                         </constraints>
                                                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -9643,7 +9643,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-Lf-aAn">
-                                                                                                        <rect key="frame" x="0.0" y="38" width="78" height="15"/>
+                                                                                                        <rect key="frame" x="12.333333333333336" y="38" width="85" height="15"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E7E-87-9fm">
                                                                                                                 <rect key="frame" x="0.0" y="1.9999999999999982" width="12" height="12.000000000000002"/>
@@ -9654,7 +9654,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                                                                 </constraints>
                                                                                                             </imageView>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superhost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="bRN-hX-Duv">
-                                                                                                                <rect key="frame" x="14" y="0.0" width="64" height="15"/>
+                                                                                                                <rect key="frame" x="14" y="0.0" width="71" height="15"/>
                                                                                                                 <constraints>
                                                                                                                     <constraint firstAttribute="height" constant="18" id="41P-Mh-hOY"/>
                                                                                                                     <constraint firstAttribute="width" constant="71" id="9hI-09-YFM"/>
