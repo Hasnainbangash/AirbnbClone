@@ -148,17 +148,17 @@ class ExploreLocationDetailViewController: UIViewController {
                         if let hostName = data?[K.HostYourPlaceCell.FStore.hostNameField] as? String,
                            let locationName = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String,
                            let reviewRating = data?[K.HostYourPlaceCell.FStore.ratingField] as? String,
-                           let NoOfGuests = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField] as? String,
-                           let NoOfBedrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField] as? String,
-                           let NoOfBeds = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField] as? String,
-                           let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? String {
+                           let NoOfGuests = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField] as? Int,
+                           let NoOfBedrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField] as? Int,
+                           let NoOfBeds = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField] as? Int,
+                           let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? Int {
                             
                             self.hostName.text = hostName
                             self.locationName.text = locationName
                             self.hostAnotherName.text = hostName
                             self.totalReviewPercentLabel.text = reviewRating
                             self.anotherLocationName.text = "Farm stay in \(locationName)"
-                            self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests)Guests. \(NoOfBedrooms)Bedrooms. \(NoOfBeds)Beds. \(NoOfBathrooms)Bathrooms."
+                            self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests) Guests. \(NoOfBedrooms) Bedrooms. \(NoOfBeds) Beds. \(NoOfBathrooms) Bathrooms."
                             self.reviewRating.text = reviewRating
                             
                         }
