@@ -161,16 +161,19 @@ class ExploreLocationDetailViewController: UIViewController {
                            let locationLongitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double,
                            let placeName = data?[K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.placeTitleField] as? String {
                             
-                            self.placeTitleName.text = placeName
-                            self.hostName.text = hostName
-                            self.locationName.text = locationName
-                            self.hostAnotherName.text = hostName
-                            self.totalReviewPercentLabel.text = reviewRating
-                            self.anotherLocationName.text = "Farm stay in \(locationName)"
-                            self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests) Guests. \(NoOfBedrooms) Bedrooms. \(NoOfBeds) Beds. \(NoOfBathrooms) Bathrooms."
-                            self.reviewRating.text = "\(reviewRating) ."
-                            self.reviewAnotherRating.text = "\(reviewRating) ."
-                            self.showLocationOnMap(latitude: locationLatitude, longitude: locationLongitude)
+                            DispatchQueue.main.async {
+                                self.placeTitleName.text = placeName
+                                self.hostName.text = hostName
+                                self.locationName.text = locationName
+                                self.hostAnotherName.text = hostName
+                                self.totalReviewPercentLabel.text = reviewRating
+                                self.anotherLocationName.text = "Farm stay in \(locationName)"
+                                self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests) Guests. \(NoOfBedrooms) Bedrooms. \(NoOfBeds) Beds. \(NoOfBathrooms) Bathrooms."
+                                self.reviewRating.text = "\(reviewRating) ."
+                                self.reviewAnotherRating.text = "\(reviewRating) ."
+                                self.showLocationOnMap(latitude: locationLatitude, longitude: locationLongitude)
+                            }
+                            
                         }
                     }
                 }
