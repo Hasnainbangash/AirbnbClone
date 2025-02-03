@@ -32,7 +32,6 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var hostAnotherName: UILabel!
     
-    
     var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
     
     var roomsData: [RoomData] = [
