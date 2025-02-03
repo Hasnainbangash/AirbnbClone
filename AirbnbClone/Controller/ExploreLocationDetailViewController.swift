@@ -189,8 +189,8 @@ class ExploreLocationDetailViewController: UIViewController {
         
         let region = MKCoordinateRegion(
             center: coordinate,
-            latitudinalMeters: 10000,
-            longitudinalMeters: 10000
+            latitudinalMeters: 20000,
+            longitudinalMeters: 20000
         )
         
         mapView.setRegion(region, animated: true)
@@ -369,7 +369,7 @@ extension ExploreLocationDetailViewController: MKMapViewDelegate {
     
     func addRadiusCircle(location: CLLocation){
         self.mapView.delegate = self
-        let circle = MKCircle(center: location.coordinate, radius: 800 as CLLocationDistance)
+        let circle = MKCircle(center: location.coordinate, radius: 5000 as CLLocationDistance)
         self.mapView.addOverlay(circle)
     }
     
