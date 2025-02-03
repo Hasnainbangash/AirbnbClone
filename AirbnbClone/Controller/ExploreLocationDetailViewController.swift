@@ -29,6 +29,9 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var totalReviewPercentLabel: UILabel!
     @IBOutlet weak var checkAvailabilityButtonLabel: UIButton!
     
+    @IBOutlet weak var anotherLocationName: UILabel!
+    @IBOutlet weak var NoOfGuestsBedroomBedBathroom: UILabel!
+    @IBOutlet weak var reviewRating: UILabel!
     @IBOutlet weak var hostName: UILabel!
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var hostAnotherName: UILabel!
@@ -142,12 +145,21 @@ class ExploreLocationDetailViewController: UIViewController {
                     if let snapshotDocuments = querySnapshot {
                         let data = snapshotDocuments.data()
                         
-                        if let hostName = data?[K.HostYourPlaceCell.FStore.hostNameField] as? String, let locationName = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let reviewRating = data?[K.HostYourPlaceCell.FStore.ratingField] as? String {
+                        if let hostName = data?[K.HostYourPlaceCell.FStore.hostNameField] as? String,
+                           let locationName = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String,
+                           let reviewRating = data?[K.HostYourPlaceCell.FStore.ratingField] as? String,
+                           let NoOfGuests = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfGuestsField] as? String,
+                           let NoOfBedrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedroomsField] as? String,
+                           let NoOfBeds = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBedsField] as? String,
+                           let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? String {
                             
                             self.hostName.text = hostName
                             self.locationName.text = locationName
                             self.hostAnotherName.text = hostName
                             self.totalReviewPercentLabel.text = reviewRating
+                            self.anotherLocationName.text = "Farm stay in \(locationName)"
+                            self.NoOfGuestsBedroomBedBathroom.text = "\(NoOfGuests)Guests. \(NoOfBedrooms)Bedrooms. \(NoOfBeds)Beds. \(NoOfBathrooms)Bathrooms."
+                            self.reviewRating.text = reviewRating
                             
                         }
                     }
