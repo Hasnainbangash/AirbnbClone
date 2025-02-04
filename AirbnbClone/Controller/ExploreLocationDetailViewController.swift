@@ -17,7 +17,6 @@ class ExploreLocationDetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    
     @IBOutlet weak var placeTitleName: UILabel!
     @IBOutlet weak var hosterImageView1: UIImageView!
     @IBOutlet weak var hosterImageView2: UIImageView!
