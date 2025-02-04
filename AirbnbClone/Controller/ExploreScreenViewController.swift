@@ -475,6 +475,13 @@ extension ExploreScreenViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ExploreCells.Identifiers.categoryCellIdentifier, for: indexPath) as? CategoryCell
         cell?.configureCell(categoryImageName: exploreCategory.categoryImage, categoryName: exploreCategory.categoryName)
         cell?.selectedViewColor(indexNum: indexPath.row)
+        
+        if collectionView.indexPathsForSelectedItems?.contains(indexPath) ?? false {
+            cell?.categorySelectView.backgroundColor = UIColor.black
+        } else {
+            cell?.categorySelectView.backgroundColor = UIColor.white
+        }
+        
         return cell ?? UICollectionViewCell()
     }
     
