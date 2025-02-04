@@ -36,7 +36,7 @@ class MapLocationMainViewController: UIViewController {
         collectionView.isPagingEnabled = true
         
         // Setup page control
-        pageControl.numberOfPages = 4
+        pageControl.numberOfPages = 5
         pageControl.currentPage = 0
         pageControl.hidesForSinglePage = true
         
@@ -101,7 +101,7 @@ extension MapLocationMainViewController {
 extension MapLocationMainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let suffleImages = Array(images.shuffled().prefix(4))
+        let suffleImages = Array(images.shuffled().prefix(5))
         return suffleImages.count
     }
     
