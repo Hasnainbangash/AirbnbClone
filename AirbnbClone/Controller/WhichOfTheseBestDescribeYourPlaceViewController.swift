@@ -22,7 +22,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     
     var selectedPlaceName: String?
     
-    var rating: Double?
+    var rating: String?
     var hostName: String?
     
     var describeYourPlace: [DescribeYourPlace] = [
@@ -90,7 +90,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     }
     
     func randomSetupForRatingAndHostName() {
-        rating = Double.random(in: 0.0...5.0)
+        rating = String(Double.random(in: 0.0...5.0))
         let names = ["John", "Bob", "Charlie", "David", "Michael", "Jimmy", "Trevor", "Franklin", "Tommy Vercette"]
         hostName = names.randomElement()
     }
