@@ -215,15 +215,15 @@ private var previousOffset: CGFloat = 0
 
 extension ExploreLocationDetailViewController: UIScrollViewDelegate {
 
-    // Track the scrolling behavior
+    // Tracking the behaviour of scrolling
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
         
-        // If scrolling down, hide navigation bar
+        // Here hiding navigation bar as scrolling down
         if currentOffset > previousOffset {
             hideNavigationBar()
         }
-        // If scrolling up, show navigation bar
+        // Here showing navigation bar as scrolling up
         else if currentOffset < previousOffset {
             showNavigationBar()
         }
