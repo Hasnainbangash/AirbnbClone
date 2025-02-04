@@ -22,6 +22,9 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     
     var selectedPlaceName: String?
     
+    var rating: Double?
+    var hostName: String?
+    
     var describeYourPlace: [DescribeYourPlace] = [
         
         DescribeYourPlace(placeImageName: "house", placeName: "House"),
@@ -80,9 +83,16 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
         
         collectionView.register(UINib(nibName: K.HostYourPlaceCell.NibNames.describeYourPlaceCollectionCellNibName, bundle: nil), forCellWithReuseIdentifier: K.HostYourPlaceCell.Identifiers.describeYourPlaceCollectionCellIdentifier)
         
+        randomSetupForRatingAndHostName()
         setupCornerRadius()
         setupBorderWidth()
         setupButtonUnderline()
+    }
+    
+    func randomSetupForRatingAndHostName() {
+        rating = Double.random(in: 0.0...5.0)
+        let names = ["John", "Bob", "Charlie", "David", "Michael", "Jimmy", "Trevor", "Franklin", "Tommy Vercette"]
+        hostName = names.randomElement()
     }
     
     func setupCornerRadius() {
@@ -119,7 +129,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         print("Next Button is pressed")
         
-        if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName {
+        if let userID = Auth.auth().currentUser?.uid, let placeName = selectedPlaceName, let placeHostName = hostName, let placeRating = rating {
             
             guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
                 return
@@ -131,6 +141,8 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
                 .document(listingID)
                 .setData([
                 K.HostYourPlaceCell.FStore.userIDField : userID,
+                K.HostYourPlaceCell.FStore.hostNameField : placeHostName,
+                K.HostYourPlaceCell.FStore.ratingField : placeRating,
                 K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.bestDescribeYourPlaceNameField : placeName,
                 K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
             ]) { error in
