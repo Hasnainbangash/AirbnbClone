@@ -61,7 +61,10 @@ class ExploreSecondScreenViewController: UIViewController {
                                 
                                 print(price)
                                 
-                                let newData = ExploreLocationData(listingID: listingID, images: ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"], locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
+                                let images = ["hotelroomimage3", "hotelroomimage5", "hotelroomimage1", "hotelroomimage4", "hotelroomimage2", "hotelroomimage6", "hotelroomimage7", "hotelroomimage8", "hotelroomimage9", "hotelroomimage10", "hotelroomimage11", "hotelroomimage12"]
+                                let suffleImage = Array(images.shuffled().prefix(5))
+                                
+                                let newData = ExploreLocationData(listingID: listingID, images: suffleImage, locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
                                 self.ExplorelocationsData.append(newData)
                                 
                                 DispatchQueue.main.async {
