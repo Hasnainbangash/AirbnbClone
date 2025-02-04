@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "hotelroomimage5.png",
+      "filename" : "hotelroomimage6.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hotelroomimage5@2x.png",
+      "filename" : "hotelroomimage6@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "hotelroomimage5@3x.png",
+      "filename" : "hotelroomimage6@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
