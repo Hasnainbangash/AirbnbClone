@@ -90,7 +90,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
     }
     
     func randomSetupForRatingAndHostName() {
-        rating = String(Double.random(in: 0.0...5.0))
+        rating = String(format: "%.2f", Float.random(in: 0.0...5.0))
         let names = ["John", "Bob", "Charlie", "David", "Michael", "Jimmy", "Trevor", "Franklin", "Tommy Vercette"]
         hostName = names.randomElement()
     }
