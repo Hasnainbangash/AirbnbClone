@@ -39,7 +39,7 @@ class ExploreLocationDetailViewController: UIViewController {
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var hostAnotherName: UILabel!
     
-    var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
+    var images: [String] = ["hotelroomimage7", "hotelroomimage8", "hotelroomimage9", "hotelroomimage10"]
     
     var roomsData: [RoomData] = [
         RoomData(noOfBedrooms: "1", bedSize: "1"),
@@ -253,7 +253,8 @@ extension ExploreLocationDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case imagesCollectionView:
-            return images.count
+            let suffleImages = Array(images.shuffled().prefix(5))
+            return suffleImages.count
         case bedroomCollectionView:
             return roomsData.count
         case reviewCollectionView:
