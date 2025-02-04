@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LocationCellDelegateProtocol{
+    func movingListingID(listingId: String)
+}
+
 class LocationCell: UITableViewCell {
     
     @IBOutlet weak var placeName: UILabel!
@@ -21,6 +25,10 @@ class LocationCell: UITableViewCell {
     
     var images: [String] = []
 
+    var listingID: String?
+    
+    var delegate: LocationCellDelegateProtocol?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -51,7 +59,7 @@ class LocationCell: UITableViewCell {
         collectionView.layer.cornerRadius = collectionView.frame.height / 17
     }
     
-    func configureCell(images: [String], placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String) {
+    func configureCell(images: [String], placeName: String, placeHosterName: String, availableDates: [String], priceOfPlace: String, dayTime: String, rating: String, listingId: String) {
         
         self.images = images
         self.placeName.text = placeName
@@ -60,7 +68,7 @@ class LocationCell: UITableViewCell {
         self.placePrice.text = priceOfPlace
         self.dayNightLabel.text = dayTime
         self.rating.text = rating
-        
+        self.listingID = listingId
     }
     
 }
@@ -117,6 +125,14 @@ extension LocationCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let listingid = listingID {
+            self.delegate?.movingListingID(listingId: listingid)
+        }
+        
     }
     
 }

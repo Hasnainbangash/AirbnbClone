@@ -29,6 +29,7 @@ class ExploreSecondScreenViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        
         tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
         
         fetchDataFromFirestore()
@@ -93,7 +94,9 @@ extension ExploreSecondScreenViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier, for: indexPath) as? LocationCell
         
-        cell?.configureCell(images: locationData.images, placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating)
+        cell?.configureCell(images: locationData.images, placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating, listingId: locationData.listingID)
+        
+        cell?.delegate = self
         
         return cell ?? UITableViewCell()
         
@@ -127,5 +130,12 @@ extension ExploreSecondScreenViewController: UITableViewDelegate {
         }
     }
     
+}
+
+extension ExploreSecondScreenViewController: LocationCellDelegateProtocol {
+    func movingListingID(listingId: String) {
+        self.listingID = listingId
+        self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
+    }
 }
 
