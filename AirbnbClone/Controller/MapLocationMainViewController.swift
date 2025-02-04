@@ -24,7 +24,8 @@ class MapLocationMainViewController: UIViewController {
     @IBOutlet weak var detailViewStack: UIStackView!
     @IBOutlet weak var collectionViewStackView: UIStackView!
     
-    var images: [String] = ["hotelroomimage1", "hotelroomimage2", "hotelroomimage3", "hotelroomimage4"]
+    var images: [String] = ["hotelroomimage3", "hotelroomimage5", "hotelroomimage1", "hotelroomimage4", "hotelroomimage2", "hotelroomimage6", "hotelroomimage7", "hotelroomimage8", "hotelroomimage9", "hotelroomimage10", "hotelroomimage11"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class MapLocationMainViewController: UIViewController {
         collectionView.isPagingEnabled = true
         
         // Setup page control
-        pageControl.numberOfPages = images.count
+        pageControl.numberOfPages = 4
         pageControl.currentPage = 0
         pageControl.hidesForSinglePage = true
         
@@ -100,7 +101,8 @@ extension MapLocationMainViewController {
 extension MapLocationMainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        let suffleImages = Array(images.shuffled().prefix(4))
+        return suffleImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
