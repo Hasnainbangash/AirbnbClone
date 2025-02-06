@@ -9,6 +9,18 @@ import Foundation
 
 struct K {
     
+    struct WishlistScreenCell {
+        
+        struct Identifiers {
+            static let wishlistHeaderCellIdentifier = "WishlistHeaderReuseableCell"
+        }
+        
+        struct NibNames {
+            static let wishlistHeaderCellNibName = "WishlistHeaderCell"
+        }
+        
+    }
+    
     struct LoginAndSignupScreen {
         
         struct Segues {
