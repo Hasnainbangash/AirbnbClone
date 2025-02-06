@@ -143,6 +143,7 @@ class WhichOfTheseBestDescribeYourPlaceViewController: UIViewController {
                 K.HostYourPlaceCell.FStore.userIDField : userID,
                 K.HostYourPlaceCell.FStore.hostNameField : placeHostName,
                 K.HostYourPlaceCell.FStore.ratingField : placeRating,
+                K.HostYourPlaceCell.FStore.isFavourateField : false,
                 K.HostYourPlaceCell.FStore.WhichOfTheseBestDescribeYourPlace.bestDescribeYourPlaceNameField : placeName,
                 K.HostYourPlaceCell.FStore.dateField : Date().timeIntervalSince1970
             ]) { error in
