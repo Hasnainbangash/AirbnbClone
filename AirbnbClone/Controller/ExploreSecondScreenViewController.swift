@@ -40,12 +40,12 @@ class ExploreSecondScreenViewController: UIViewController {
     }
     
     func setupActivityIndicator() {
-            // Create and configure the activity indicator
-            let size: CGFloat = 50.0
-            let frame = CGRect(x: (view.frame.width - size) / 2, y: (view.frame.height - size) / 2, width: size, height: size)
-        activityIndicator = NVActivityIndicatorView(frame: frame, type: .ballPulse, color: .systemPink, padding: 0)
-            
-            // Add activity indicator to the view
+        // Create and configure the activity indicator
+        let size: CGFloat = 50.0
+        let frame = CGRect(x: (view.frame.width - size) / 2, y: (view.frame.height - size) / 2, width: size, height: size)
+        activityIndicator = NVActivityIndicatorView(frame: frame, type: .ballSpinFadeLoader, color: UIColor(red: 228/255, green: 29/255, blue: 86/255, alpha: 1), padding: 0)
+        
+        // Add activity indicator to the view
         view.addSubview(activityIndicator)
     }
     
