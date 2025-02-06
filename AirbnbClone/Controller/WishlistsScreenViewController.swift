@@ -96,6 +96,8 @@ extension WishlistsScreenViewController: UITableViewDataSource {
         
         cell?.configureCell(images: locationData.images, placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating, listingId: locationData.listingID)
         
+        cell?.delegate = self
+        
         return cell ?? UITableViewCell()
         
     }
@@ -137,4 +139,11 @@ extension WishlistsScreenViewController: UITableViewDelegate {
         }
     }
     
+}
+
+extension WishlistsScreenViewController: LocationCellDelegateProtocol {
+    func movingListingID(listingId: String) {
+        self.listingID = listingId
+        self.performSegue(withIdentifier: K.WishlistScreenCell.Segues.wishlistScreenToExploreLocationScreenSegue, sender: self)
+    }
 }
