@@ -51,7 +51,7 @@ class ExploreSecondScreenViewController: UIViewController {
     
     func fetchDataFromFirestore() {
         
-        activityIndicator?.startAnimating()
+        activityIndicator.startAnimating()
         
         if let userID = Auth.auth().currentUser?.uid {
             
