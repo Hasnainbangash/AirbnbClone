@@ -176,6 +176,8 @@ class ExploreLocationDetailViewController: UIViewController {
                                 self.reviewAnotherRating.text = "\(reviewRating) ."
                                 self.showLocationOnMap(latitude: locationLatitude, longitude: locationLongitude)
                                 
+                                self.isFavourate = isFavourate
+                                
                                 if isFavourate == true {
                                     self.likeButtonLabel.image = UIImage(systemName: "heart.circle.fill")
                                 } else {
