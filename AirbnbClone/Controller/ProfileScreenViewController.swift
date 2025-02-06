@@ -83,7 +83,7 @@ class ProfileScreenViewController: UIViewController {
             
             // Set modal presentation style and transition
             alertVC.modalPresentationStyle = .overFullScreen
-            alertVC.modalTransitionStyle = .crossDissolve
+            alertVC.modalTransitionStyle = .coverVertical
             
             // Present the view controller first
             self.present(alertVC, animated: false, completion: nil)
