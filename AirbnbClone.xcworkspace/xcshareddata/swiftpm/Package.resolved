@@ -1,5 +1,5 @@
 {
-  "originHash" : "ebd78b45f3ace9219b8bc6ac14d19979e900f4598a3292aa446e48869d357660",
+  "originHash" : "bce0dea087e8aa0c801083f60af1ad717fbad07093f5b09f615104d96fe3ffd3",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -188,6 +188,15 @@
       "state" : {
         "revision" : "b7e1104502eca3a213b46303391ca4d3bc8ddec1",
         "version" : "2.30910.0"
+      }
+    },
+    {
+      "identity" : "nvactivityindicatorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ninjaprox/NVActivityIndicatorView",
+      "state" : {
+        "revision" : "121455c4e630fcb95aaefd7e4257b0c2e3cfe6d5",
+        "version" : "5.2.0"
       }
     },
     {
