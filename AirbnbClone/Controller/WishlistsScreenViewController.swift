@@ -22,6 +22,11 @@ class WishlistsScreenViewController: UIViewController {
     
     let db = Firestore.firestore()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDataFromFirestore()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +37,7 @@ class WishlistsScreenViewController: UIViewController {
         tableView.register(UINib(nibName: K.WishlistScreenCell.NibNames.wishlistHeaderCellNibName, bundle: nil), forCellReuseIdentifier: K.WishlistScreenCell.Identifiers.wishlistHeaderCellIdentifier)
         tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
         
-        fetchDataFromFirestore()
+        // fetchDataFromFirestore()
     }
     
     func fetchDataFromFirestore() {
@@ -95,16 +100,19 @@ extension WishlistsScreenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let locationData = wishlistLocationData[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier, for: indexPath) as? LocationCell
-        
-        cell?.configureCell(images: locationData.images, placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating, listingId: locationData.listingID)
-        
-        cell?.delegate = self
-        
-        return cell ?? UITableViewCell()
-        
+        if indexPath.row < wishlistLocationData.count {
+            let locationData = wishlistLocationData[indexPath.row]
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier, for: indexPath) as? LocationCell
+            
+            cell?.configureCell(images: locationData.images, placeName: locationData.locationName, placeHosterName: locationData.hosterName, availableDates: locationData.availableDates, priceOfPlace: locationData.price, dayTime: locationData.dateNightTime, rating: locationData.rating, listingId: locationData.listingID)
+            
+            cell?.delegate = self
+            
+            return cell ?? UITableViewCell()
+            
+        }
+        return UITableViewCell()
     }
     
 }
@@ -121,14 +129,17 @@ extension WishlistsScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let locationData = wishlistLocationData[indexPath.row]
-        
-        self.listingID = locationData.listingID
-        
-        self.performSegue(withIdentifier: K.WishlistScreenCell.Segues.wishlistScreenToExploreLocationScreenSegue, sender: self)
-        
-        self.tableView.deselectRow(at: indexPath, animated: true)
-        
+        if indexPath.row < wishlistLocationData.count {
+            
+            let locationData = wishlistLocationData[indexPath.row]
+            
+            self.listingID = locationData.listingID
+            
+            self.performSegue(withIdentifier: K.WishlistScreenCell.Segues.wishlistScreenToExploreLocationScreenSegue, sender: self)
+            
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
