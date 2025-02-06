@@ -38,7 +38,7 @@ class LocationCell: UITableViewCell {
         collectionView.isPagingEnabled = true
         
         // Setup page control
-        pageControl.numberOfPages = images.count
+        pageControl.numberOfPages = 5
         pageControl.currentPage = 0
         pageControl.hidesForSinglePage = true
         
