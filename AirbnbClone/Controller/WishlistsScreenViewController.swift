@@ -37,6 +37,8 @@ class WishlistsScreenViewController: UIViewController {
     
     func fetchDataFromFirestore() {
         
+        wishlistLocationData.removeAll()
+        
         if let userID = Auth.auth().currentUser?.uid {
             
             guard let listingID = UserDefaults.standard.string(forKey: "Listing ID") else {
@@ -56,22 +58,25 @@ class WishlistsScreenViewController: UIViewController {
                         for doc in snapshotDocuments {
                             let data = doc.data()
                             
-                            if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let hostname = data[K.HostYourPlaceCell.FStore.hostNameField] as? String, let rating = data[K.HostYourPlaceCell.FStore.ratingField] as? String {
+                            if let isFavourate = data[K.HostYourPlaceCell.FStore.isFavourateField] as? Bool, isFavourate == true {
                                 
-                                let listingID = doc.documentID
-                                
-                                print(price)
-                                
-                                let images = ["hotelroomimage3", "hotelroomimage5", "hotelroomimage1", "hotelroomimage4", "hotelroomimage2", "hotelroomimage6", "hotelroomimage7", "hotelroomimage8", "hotelroomimage9", "hotelroomimage10", "hotelroomimage11"]
-                                let suffleImage = Array(images.shuffled().prefix(5))
-                                
-                                let newData = WishlistLocationData(listingID: listingID, images: suffleImage, locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
-                                self.wishlistLocationData.append(newData)
-                                
-                                DispatchQueue.main.async {
-                                    self.tableView.reloadData()
+                                if let price = data[K.HostYourPlaceCell.FStore.NowSetYourPrice.placePriceField] as? String, let locationName = data[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeNameField] as? String, let hostname = data[K.HostYourPlaceCell.FStore.hostNameField] as? String, let rating = data[K.HostYourPlaceCell.FStore.ratingField] as? String {
+                                    
+                                    let listingID = doc.documentID
+                                    
+                                    print(price)
+                                    
+                                    let images = ["hotelroomimage3", "hotelroomimage5", "hotelroomimage1", "hotelroomimage4", "hotelroomimage2", "hotelroomimage6", "hotelroomimage7", "hotelroomimage8", "hotelroomimage9", "hotelroomimage10", "hotelroomimage11"]
+                                    let suffleImage = Array(images.shuffled().prefix(5))
+                                    
+                                    let newData = WishlistLocationData(listingID: listingID, images: suffleImage, locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
+                                    self.wishlistLocationData.append(newData)
+                                    
+                                    DispatchQueue.main.async {
+                                        self.tableView.reloadData()
+                                    }
+                                    
                                 }
-                                
                             }
                         }
                     }
