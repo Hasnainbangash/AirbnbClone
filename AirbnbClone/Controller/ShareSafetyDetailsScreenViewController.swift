@@ -74,7 +74,7 @@ class ShareSafetyDetailsScreenViewController: UIViewController {
             
             if let sheet = detailVC.sheetPresentationController {
                 sheet.detents = [.custom(resolver: { context in
-                    0.7 * context.maximumDetentValue
+                    0.85 * context.maximumDetentValue
                 })]
                 
                 sheet.preferredCornerRadius = 20
