@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import NVActivityIndicatorView
 
 class ExploreSecondScreenViewController: UIViewController {
     
@@ -22,6 +23,8 @@ class ExploreSecondScreenViewController: UIViewController {
     
     let db = Firestore.firestore()
     
+    var activityIndicator: NVActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,10 +35,23 @@ class ExploreSecondScreenViewController: UIViewController {
         
         tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
         
+        setupActivityIndicator()
         fetchDataFromFirestore()
     }
     
+    func setupActivityIndicator() {
+            // Create and configure the activity indicator
+            let size: CGFloat = 50.0
+            let frame = CGRect(x: (view.frame.width - size) / 2, y: (view.frame.height - size) / 2, width: size, height: size)
+        activityIndicator = NVActivityIndicatorView(frame: frame, type: .ballPulse, color: .systemPink, padding: 0)
+            
+            // Add activity indicator to the view
+        view.addSubview(activityIndicator)
+    }
+    
     func fetchDataFromFirestore() {
+        
+        activityIndicator?.startAnimating()
         
         if let userID = Auth.auth().currentUser?.uid {
             
@@ -49,6 +65,7 @@ class ExploreSecondScreenViewController: UIViewController {
                     
                     if let e = error {
                         print("There was an issue retrieving data from Firestore: \(e)")
+                        self.activityIndicator.stopAnimating()
                         return
                     }
                     
@@ -75,6 +92,9 @@ class ExploreSecondScreenViewController: UIViewController {
                             }
                         }
                     }
+                    
+                    self.activityIndicator?.stopAnimating()
+                    
                 }
         }
         
