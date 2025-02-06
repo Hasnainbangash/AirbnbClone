@@ -22,10 +22,21 @@ class LogoutCustomAlertViewController: UIViewController {
 
     func setupCornerRadius() {
         
-        yesButtonLabel.layer.cornerRadius = yesButtonLabel.frame.height / 3
-        noButtonLabel.layer.cornerRadius = noButtonLabel.frame.height / 3
-        logoutAlertMainView.layer.cornerRadius = logoutAlertMainView.frame.height / 4
+        yesButtonLabel.layer.cornerRadius = yesButtonLabel.frame.height / 2
+        noButtonLabel.layer.cornerRadius = noButtonLabel.frame.height / 2
+        logoutAlertMainView.layer.cornerRadius = logoutAlertMainView.frame.height / 9
         
+    }
+    
+    @IBAction func yesButtonPressed(_ sender: UIButton) {
+        print("Yess button pressed")
+    }
+    
+    @IBAction func noButtonPressed(_ sender: UIButton) {
+        print("No button pressed")
+        UIView.animate(withDuration: 0.3) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }

@@ -55,24 +55,38 @@ class ProfileScreenViewController: UIViewController {
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         
         print("Logout button pressed")
-        do {
-            try Auth.auth().signOut()
+//        do {
+//            try Auth.auth().signOut()
+//            
+//            // Instantiate the storyboard and the login view controller
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginAndSignupToAirbnbScreenViewController") as? LoginAndSignupToAirbnbScreenViewController {
+//                
+//                // Create a new UINavigationController with loginVC as the root
+//                let navController = UINavigationController(rootViewController: loginVC)
+//                
+//                // Set the new navigation controller as the root view controller of the app window
+//                if let window = UIApplication.shared.keyWindow {
+//                    window.rootViewController = navController
+//                    window.makeKeyAndVisible()
+//                }
+//            }
+//        } catch let signOutError as NSError {
+//            print("Error signing out: %@", signOutError)
+//        }
+        
+        // Create a storyboard reference
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // Try to instantiate the view controller from the storyboard
+        if let alertVC = storyboard.instantiateViewController(withIdentifier: "LogoutCustomAlertViewController") as? LogoutCustomAlertViewController {
             
-            // Instantiate the storyboard and the login view controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginAndSignupToAirbnbScreenViewController") as? LoginAndSignupToAirbnbScreenViewController {
-                
-                // Create a new UINavigationController with loginVC as the root
-                let navController = UINavigationController(rootViewController: loginVC)
-                
-                // Set the new navigation controller as the root view controller of the app window
-                if let window = UIApplication.shared.keyWindow {
-                    window.rootViewController = navController
-                    window.makeKeyAndVisible()
-                }
-            }
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
+            // Set modal presentation style and transition
+            alertVC.modalPresentationStyle = .overFullScreen
+            alertVC.modalTransitionStyle = .crossDissolve
+            
+            // Present the view controller first
+            self.present(alertVC, animated: false, completion: nil)
         }
         
     }
