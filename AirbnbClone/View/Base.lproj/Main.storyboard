@@ -8745,6 +8745,9 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                 </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" title="Item" image="heart.circle.fill" catalog="system" id="2Uz-Fh-5KC">
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="likeButtonPressed:" destination="s27-dg-Ftb" id="QpN-d0-eLP"/>
+                                                    </connections>
                                                 </barButtonItem>
                                             </navigationItem>
                                         </items>
@@ -10268,6 +10271,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                         <outlet property="hosterImageView1" destination="H62-XV-0bu" id="jkm-eT-wz1"/>
                         <outlet property="hosterImageView2" destination="W9b-gV-vQA" id="usK-Xi-dKk"/>
                         <outlet property="imagesCollectionView" destination="qvM-wr-Td8" id="qcW-an-9P9"/>
+                        <outlet property="likeButtonLabel" destination="2Uz-Fh-5KC" id="nf0-Lv-7iV"/>
                         <outlet property="locationName" destination="yYj-x5-QSE" id="MQd-lu-59y"/>
                         <outlet property="mapView" destination="tj1-mV-pFC" id="OjT-23-Jvn"/>
                         <outlet property="meetYourHostView" destination="NNZ-jE-RhL" id="GaM-5P-C05"/>

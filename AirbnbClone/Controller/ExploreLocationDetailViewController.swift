@@ -17,6 +17,7 @@ class ExploreLocationDetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var likeButtonLabel: UIBarButtonItem!
     @IBOutlet weak var placeTitleName: UILabel!
     @IBOutlet weak var hosterImageView1: UIImageView!
     @IBOutlet weak var hosterImageView2: UIImageView!
@@ -59,6 +60,8 @@ class ExploreLocationDetailViewController: UIViewController {
     let db = Firestore.firestore()
     
     var listingID: String?
+    
+    var isFavourate: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,7 +161,8 @@ class ExploreLocationDetailViewController: UIViewController {
                            let NoOfBathrooms = data?[K.HostYourPlaceCell.FStore.ShareSomeBasicAboutYourPlace.numberOfBathroomsField] as? Int,
                            let locationLatitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLatitudeField] as? Double,
                            let locationLongitude = data?[K.HostYourPlaceCell.FStore.WhereYourPlaceLocated.placeLongitudeField] as? Double,
-                           let placeName = data?[K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.placeTitleField] as? String {
+                           let placeName = data?[K.HostYourPlaceCell.FStore.NowLetsGiveYourCasaATitle.placeTitleField] as? String,
+                           let isFavourate = data?[K.HostYourPlaceCell.FStore.isFavourateField] as? Bool {
                             
                             DispatchQueue.main.async {
                                 self.placeTitleName.text = placeName
@@ -171,6 +175,13 @@ class ExploreLocationDetailViewController: UIViewController {
                                 self.reviewRating.text = "\(reviewRating) ."
                                 self.reviewAnotherRating.text = "\(reviewRating) ."
                                 self.showLocationOnMap(latitude: locationLatitude, longitude: locationLongitude)
+                                
+                                if isFavourate == true {
+                                    self.likeButtonLabel.image = UIImage(systemName: "heart.circle.fill")
+                                } else {
+                                    self.likeButtonLabel.image = UIImage(systemName: "heart.circle")
+                                }
+                                
                             }
                             
                         }
@@ -202,6 +213,33 @@ class ExploreLocationDetailViewController: UIViewController {
         )
         
         mapView.setRegion(region, animated: true)
+    }
+    
+    @IBAction func likeButtonPressed(_ sender: UIBarButtonItem) {
+        
+        if let listingID = listingID {
+            
+            isFavourate.toggle()
+            
+            if isFavourate == true {
+                likeButtonLabel.image = UIImage(systemName: "heart.circle.fill")
+            } else {
+                likeButtonLabel.image = UIImage(systemName: "heart.circle")
+            }
+            
+            db.collection(K.HostYourPlaceCell.FStore.postsField)
+                .document(listingID)
+                .updateData([
+                    K.HostYourPlaceCell.FStore.isFavourateField : isFavourate
+                ]) { error in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e.localizedDescription)")
+                    } else {
+                        print("Successfully saved favourate location to Firestore.")
+                    }
+                }
+            
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {

@@ -92,6 +92,7 @@ struct K {
             static let listingIDField = "ListingID"
             static let hostNameField = "hostname"
             static let ratingField = "rating"
+            static let isFavourateField = "isFavourate"
             
             struct WhichOfTheseBestDescribeYourPlace {
                 static let bestDescribeYourPlaceNameField = "BestDescribeYourPlaceName"
