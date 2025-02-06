@@ -29,10 +29,10 @@ class WishlistsScreenViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        
+        tableView.register(UINib(nibName: K.WishlistScreenCell.NibNames.wishlistHeaderCellNibName, bundle: nil), forCellReuseIdentifier: K.WishlistScreenCell.Identifiers.wishlistHeaderCellIdentifier)
         tableView.register(UINib(nibName: K.ExploreCells.NibNames.locationCellNibName, bundle: nil), forCellReuseIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier)
         
-        // fetchDataFromFirestore()
+        fetchDataFromFirestore()
     }
     
     func fetchDataFromFirestore() {
