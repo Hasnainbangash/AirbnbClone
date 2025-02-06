@@ -43,6 +43,10 @@ class WishlistsScreenViewController: UIViewController {
     func fetchDataFromFirestore() {
         
         wishlistLocationData.removeAll()
+        tableView.reloadData()
+        
+        print("--------------------------------------")
+        print("Fetching the data from firestore in wishlist screen")
         
         if let userID = Auth.auth().currentUser?.uid {
             
