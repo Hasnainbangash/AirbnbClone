@@ -11,6 +11,10 @@ struct K {
     
     struct WishlistScreenCell {
         
+        struct Segues {
+            static let wishlistScreenToExploreLocationScreenSegue = "WishlistScreenToExploreLocationScreen"
+        }
+        
         struct Identifiers {
             static let wishlistHeaderCellIdentifier = "WishlistHeaderReuseableCell"
         }

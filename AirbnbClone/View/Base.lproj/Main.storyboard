@@ -862,6 +862,7 @@
                     <navigationItem key="navigationItem" id="NCO-jY-PZq"/>
                     <connections>
                         <outlet property="tableView" destination="ckI-yP-G1I" id="Uep-fo-Fgf"/>
+                        <segue destination="s27-dg-Ftb" kind="presentation" identifier="WishlistScreenToExploreLocationScreen" modalPresentationStyle="fullScreen" id="fHk-z7-HSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1A-Fu-9Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -17051,6 +17052,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="fHk-z7-HSI"/>
         <segue reference="uTC-J7-xMi"/>
     </inferredMetricsTieBreakers>
     <resources>

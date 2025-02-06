@@ -13,7 +13,7 @@ class WishlistsScreenViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var ExplorelocationsData: [ExploreLocationData] = [
+    var wishlistLocationData: [WishlistLocationData] = [
         
         
     ]
@@ -65,8 +65,8 @@ class WishlistsScreenViewController: UIViewController {
                                 let images = ["hotelroomimage3", "hotelroomimage5", "hotelroomimage1", "hotelroomimage4", "hotelroomimage2", "hotelroomimage6", "hotelroomimage7", "hotelroomimage8", "hotelroomimage9", "hotelroomimage10", "hotelroomimage11"]
                                 let suffleImage = Array(images.shuffled().prefix(5))
                                 
-                                let newData = ExploreLocationData(listingID: listingID, images: suffleImage, locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
-                                self.ExplorelocationsData.append(newData)
+                                let newData = WishlistLocationData(listingID: listingID, images: suffleImage, locationName: locationName, hosterName: hostname, availableDates: ["28 Feb", "6 March"], price: price, dateNightTime: "night", rating: rating)
+                                self.wishlistLocationData.append(newData)
                                 
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
@@ -85,12 +85,12 @@ class WishlistsScreenViewController: UIViewController {
 extension WishlistsScreenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ExplorelocationsData.count
+        return wishlistLocationData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let locationData = ExplorelocationsData[indexPath.row]
+        let locationData = wishlistLocationData[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.ExploreCells.Identifiers.locationCellIdentifier, for: indexPath) as? LocationCell
         
@@ -114,11 +114,11 @@ extension WishlistsScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let locationData = ExplorelocationsData[indexPath.row]
+        let locationData = wishlistLocationData[indexPath.row]
         
         self.listingID = locationData.listingID
         
-        self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
+        self.performSegue(withIdentifier: K.WishlistScreenCell.Segues.wishlistScreenToExploreLocationScreenSegue, sender: self)
         
         self.tableView.deselectRow(at: indexPath, animated: true)
         
@@ -130,7 +130,7 @@ extension WishlistsScreenViewController: UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue {
+        if segue.identifier == K.WishlistScreenCell.Segues.wishlistScreenToExploreLocationScreenSegue {
             if let destinationVC = segue.destination as? ExploreLocationDetailViewController {
                 destinationVC.listingID = listingID
             }
