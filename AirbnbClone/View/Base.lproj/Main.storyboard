@@ -837,6 +837,100 @@
             </objects>
             <point key="canvasLocation" x="1106" y="3"/>
         </scene>
+        <!--Logout Custom Alert View Controller-->
+        <scene sceneID="I0m-Tm-Quh">
+            <objects>
+                <viewController id="HfL-j6-gvM" customClass="LogoutCustomAlertViewController" customModule="AirbnbClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bha-fc-lL7">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUG-VY-ezm">
+                                <rect key="frame" x="87" y="356.66666666666669" width="228" height="161.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J8j-Qg-9lY">
+                                        <rect key="frame" x="13.666666666666671" y="12.333333333333314" width="201" height="136"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fka-rZ-ldE">
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="73"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51c-T6-Yud">
+                                                        <rect key="frame" x="63.333333333333329" y="0.0" width="68.999999999999986" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="69" id="1lw-an-FTP"/>
+                                                            <constraint firstAttribute="height" constant="26" id="mPe-f1-15r"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <color key="textColor" red="0.89411764709999997" green="0.1137254902" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to logout?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0q-1U-H4V">
+                                                        <rect key="frame" x="0.0" y="32" width="196" height="41"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="41" id="k2d-qa-lhB"/>
+                                                            <constraint firstAttribute="width" constant="196" id="ps8-vK-zkc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Xh4-7I-0jy">
+                                                <rect key="frame" x="0.0" y="93" width="201" height="43"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L46-15-lJA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="43"/>
+                                                        <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="9Bv-bx-9Ph"/>
+                                                            <constraint firstAttribute="width" constant="75" id="zB9-TD-QFP"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.89411764709999997" green="0.1137254902" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="No"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcf-Wp-gZa">
+                                                        <rect key="frame" x="126" y="0.0" width="75" height="43"/>
+                                                        <color key="backgroundColor" red="0.89411764705882346" green="0.11372549019607843" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="pXr-S1-BVb"/>
+                                                            <constraint firstAttribute="width" constant="75" id="rHC-rU-n87"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Yes"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="J8j-Qg-9lY" secondAttribute="bottom" constant="12.5" id="0Uf-8W-hPV"/>
+                                    <constraint firstAttribute="trailing" secondItem="J8j-Qg-9lY" secondAttribute="trailing" constant="13.5" id="LZQ-dI-2cd"/>
+                                    <constraint firstItem="J8j-Qg-9lY" firstAttribute="top" secondItem="EUG-VY-ezm" secondAttribute="top" constant="12.5" id="XxU-ja-Dw8"/>
+                                    <constraint firstItem="J8j-Qg-9lY" firstAttribute="leading" secondItem="EUG-VY-ezm" secondAttribute="leading" constant="13.5" id="gNu-9S-LOK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dK2-sG-Vbk"/>
+                        <constraints>
+                            <constraint firstItem="EUG-VY-ezm" firstAttribute="centerY" secondItem="bha-fc-lL7" secondAttribute="centerY" id="VBb-Ah-R2M"/>
+                            <constraint firstItem="EUG-VY-ezm" firstAttribute="centerX" secondItem="bha-fc-lL7" secondAttribute="centerX" id="VSe-O4-uFE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoutAlertMainView" destination="EUG-VY-ezm" id="MwY-CE-hHt"/>
+                        <outlet property="noButtonLabel" destination="L46-15-lJA" id="ux8-bE-PCr"/>
+                        <outlet property="yesButtonLabel" destination="Tcf-Wp-gZa" id="4FJ-T6-31o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6X6-kv-7Q5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3753.7313432835817" y="-636.38443935926773"/>
+        </scene>
         <!--Wishlists Screen View Controller-->
         <scene sceneID="akq-Wd-fkO">
             <objects>
@@ -12980,7 +13074,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRZ-yc-7sT">
-                                                                        <rect key="frame" x="78" y="0.0" width="26" height="5"/>
+                                                                        <rect key="frame" x="78" y="0.0" width="50" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="jp7-6q-QYs"/>
@@ -12988,7 +13082,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0m-q8-n6i">
-                                                                        <rect key="frame" x="104" y="0.0" width="50" height="5"/>
+                                                                        <rect key="frame" x="128" y="0.0" width="26" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="KEI-Wx-8Yc"/>
@@ -14492,7 +14586,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lac-VO-hO9">
-                                                                        <rect key="frame" x="78" y="0.0" width="26" height="5"/>
+                                                                        <rect key="frame" x="78" y="0.0" width="50" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="5" id="UuZ-MH-kul"/>
@@ -14500,7 +14594,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-UF-0CK">
-                                                                        <rect key="frame" x="104" y="0.0" width="50" height="5"/>
+                                                                        <rect key="frame" x="128" y="0.0" width="26" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="BhL-6y-MvK"/>
@@ -14938,7 +15032,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgT-va-I8t">
-                                                                        <rect key="frame" x="78" y="0.0" width="26" height="5"/>
+                                                                        <rect key="frame" x="78" y="0.0" width="50" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="GHK-Rc-mTI"/>
@@ -14946,7 +15040,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WM-ee-Hr6">
-                                                                        <rect key="frame" x="104" y="0.0" width="50" height="5"/>
+                                                                        <rect key="frame" x="128" y="0.0" width="26" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="jnC-1R-Gcy"/>
@@ -16344,7 +16438,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bye-PK-4vi">
-                                                                        <rect key="frame" x="78" y="0.0" width="26" height="5"/>
+                                                                        <rect key="frame" x="78" y="0.0" width="50" height="5"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="26" id="A2z-1r-Wk2"/>
@@ -16352,7 +16446,7 @@ Identity verification is one of the ways we keep Aironb secure.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-wn-arv">
-                                                                        <rect key="frame" x="104" y="0.0" width="50" height="5"/>
+                                                                        <rect key="frame" x="128" y="0.0" width="26" height="5"/>
                                                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="5" id="Fi7-2C-yQV"/>
