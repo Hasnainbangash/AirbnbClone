@@ -133,14 +133,22 @@ extension ExploreSecondScreenViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let locationData = ExplorelocationsData[indexPath.row]
-        
         self.listingID = locationData.listingID
         
-        self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
+        // Added the animations of the skrink to the table view cell
+        UIView.animate(withDuration: 0.3, animations: {
+            tableView.cellForRow(at: indexPath)?.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }) { _ in
+            UIView.animate(withDuration: 0.3) {
+                tableView.cellForRow(at: indexPath)?.transform = .identity
+            }
+            
+            self.performSegue(withIdentifier: K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue, sender: self)
+        }
         
         self.tableView.deselectRow(at: indexPath, animated: true)
-        
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.ExploreCells.Segue.ExploreSecondScreenToExploreLocationDataSegue {
